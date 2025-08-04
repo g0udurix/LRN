@@ -1,0 +1,30 @@
+{
+  "se:1": [
+    {
+      "date": "20120901",
+      "path": "history/se:1/20120901.html"
+    }
+  ],
+  "se:2": [
+    {
+      "date": "20120901",
+      "path": "history/se:2/20120901.html"
+    }
+  ],
+  "se:3": [
+    {
+      "date": "20120901",
+      "path": "history/se:3/20120901.html"
+    }
+  ],
+  "sc-nb:1": [
+    {
+      "date": "20200513",
+      "path": "history/sc-nb:1/20200513.html"
+    },
+    {
+      "date": "20120901",
+      "path": "history/sc-nb:1/20120901.html"
+    }
+  ]
+}
