@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; CHARSET=utf-8"></meta>
+		<meta name="dc.title" content=" - Règlement sur les conditions sanitaires des campements industriels ou autres">
+		<meta name="dc.creator" content="">
+		<meta name="dc.language" scheme="ISO639-2"	content="fre">
+		<meta name="dc.subject" content="">
+		<meta name="Keywords" content="">
+		<meta name="dc.Publisher" content="">
+		<meta name="dc.Contributor" content="Irosoft, architecture de gestion de l'information législative - legal information management system">
+		<meta name="dc.Description" content="">
+		<meta name="Description" content="">
+		<meta name="Title" content=" - Règlement sur les conditions sanitaires des campements industriels ou autres">
+		<meta name="dc.date.created" content="2022-09-02">
+		<meta name="dc.date.modified" content="2022-09-02">
+
+		<title>Légis Québec</title>
+		
+		<link rel="shortcut icon" href="/img/favicon.ico">
+		<link rel="stylesheet" href="/bootstrap/5.1.3/css/bootstrap.min.css">
+		<link rel='stylesheet' href='/CSS/jquery.loadmask.css?v=2.1'>
+		<link rel='stylesheet' href='/CSS/cyberlex.jquery.loadmask.css?v=2.1'>
+		
+		
+<link rel="stylesheet" type="text/css" href="/CSS/FragmentView.css?v=2.2"></link>
+
+		<link rel="stylesheet" href="/css/publishing-bootstrap.css?v=2.1">
+		<link rel="stylesheet" href="/css/publishing.css?v=2.1">
+		<link rel="stylesheet" href="/CSS/cyberlex-bootstrap.min.css?v=2.1">
+		<link rel="stylesheet" href="/CSS/cyberlex.css?v=2.1">
+		<link rel="stylesheet" href="/css/font-awesome.min.css?v=2.1">
+		<link rel="stylesheet" href="/CSS/core.css?v=2.1">
+		<link rel="stylesheet" href="/CSS/client.css?v=2.1">
+		<link rel="stylesheet" href="/css/publications-quebec.css?v=2.1">
+		<link rel="stylesheet" href="/css/eoq.css?v=2.1">
+
+		<script type="text/javascript" src="/jquery-ui/1.13.0/external/jquery/jquery.js?v=2.1"></script>
+		<script type="text/javascript" src="/jquery-ui/1.13.0/jquery-ui.min.js?v=2.1"></script>
+		<script type="text/javascript" src="/jquery/3.6.0/jquery.min.js?v=2.1"></script>
+		<script type="text/javascript" src="/DOMPurify/dist/purify.min.js?v=2.1"></script>
+	</head>
+
+	<body>
+		<div id="wrap">
+			<div class="main-header">
+				<div class="float-end">
+					<div class="vague"></div>
+					<ul class="pub-quebec">
+						<li><a href="/fr/">Accueil</a></li>
+						<li><a href="/fr/contenu/joindre" >Nous joindre</a></li>
+						<li><a href="/fr/contenu/plan" >Plan du site</a></li>
+						<li><a href="https://www.quebec.ca/" target="_blank">Québec.ca</a></li>
+						<li><a href="/fr/contenu/FAQ" >FAQ</a></li>
+						<li class='spacer-pub-quebec'></li>
+						<li><a id="langSwitcher" class="" href="/en/document/cr/S-2.1,%20r.%205.1%20">English</a></li>
+
+					</ul>
+					<div class="mtess">
+						<a href="https://www.mtess.gouv.qc.ca/" class="mtessTitle" target="_blank">Ministère de l'Emploi et de la Solidarité sociale</a>
+					</div>
+				</div>
+				<a class="logo-pub-quebec" href="http://www.publicationsduquebec.gouv.qc.ca/" target="_blank"></a>
+			</div>
+			<hr/>
+			
+			<!-- Header -->
+			<nav class="navbar navbar-light">
+				<div class="container-fluid colorTheme">
+					<div class="navbar-header">
+						<div class="row">
+							<div class="col-sm-3">
+								<div class="input-group" class="pt-2">
+									<input type="text" class="form-control" data-bs-placement="top" data-bs-toggle="tooltip" placeholder="Recherche" id="quickSearchText" title="Rechercher dans lois et règlements codifiés">
+									<span class="input-group-btn">
+										<button class="btn btn-primary" type="button" id="goResult" data-bs-placement="top" data-bs-toggle="tooltip" title="Recherche">
+											<span class="fa fa-search" aria-hidden="true"></span>
+										</button>
+									</span>
+								</div>
+								<div class="py-2"><a href="/fr/recherche?t=a">Recherche avancée</a></div>
+							</div><div class="col-sm-9 d-flex justify-content-between">
+									<a class="navbar-brand logo-fr logo" title="Accueil" href="/fr/"></a>
+							</div>
+						</div>
+					</div>
+				</div><!-- /.container-fluid -->
+			</nav>
+			<!-- Content -->			
+			<div class="row">
+				<div class="col-sm-3">
+					<div class="list-group">
+	<a href="#" class="list-group-item active disabled bg-primary bg-gradient text-white">Lois et règlements codifiés</a>
+	<a href="/fr/chapitres?corpus=lois" id="chapterStatutes" class="list-group-item">Lois codifiées</a>
+	<a href="/fr/chapitres?corpus=regs" id="chapterRegulations" class="list-group-item">Règlements codifiés</a>
+	
+	<a href="#" class="list-group-item active disabled bg-primary bg-gradient text-white">Lois et règlements annuels</a>
+	<a href="/fr/annuels?filtre=lois" id="browseannual-statutes" class="list-group-item">Lois annuelles</a>
+	<a href="/fr/annuels?filtre=regs" id="browseannual-regs" class="list-group-item">Règlements annuels</a>
+	
+	<a href="#" class="list-group-item active disabled bg-primary bg-gradient text-white">Information complémentaire</a>
+	<a id="content-editoff" href="/fr/contenu/editeurofficiel" class="list-group-item">L’Éditeur officiel du Québec</a>
+	<a id="content-neuf" href="/fr/contenu/neuf" class="list-group-item">Quoi de neuf?</a>
+	<a id="content-noteinfo" href="/fr/contenu/noteinfo" class="list-group-item">Note d’information</a>
+	<a id="content-mjqpol" href="/fr/contenu/mjqpol" class="list-group-item">Politique du ministre de la Justice</a>
+	<a id="content-modlois" href="/fr/contenu/modlois" class="list-group-item">Lois : Modifications</a>
+	<a id="content-nevlois" href="/fr/contenu/nevlois" class="list-group-item">Lois : Dispositions non en vigueur</a>
+	<a id="content-eevlois" href="/fr/contenu/eevlois" class="list-group-item">Lois : Entrées en vigueur</a>
+	<a id="content-loisann" href="/fr/contenu/loisann" class="list-group-item">Lois annuelles : Versions PDF depuis 1996</a>
+	<a id="content-modreg" href="/fr/contenu/modreg" class="list-group-item">Règlements : Modifications</a>
+	<a id="content-regann" href="/fr/contenu/regann" class="list-group-item">Règlements annuels : Versions PDF depuis 1996</a>
+	<a id="content-decision" href="/fr/contenu/decision" class="list-group-item">Décisions des tribunaux</a>
+</div>
+					
+				</div>
+				<div id="contentDiv" class="col-sm-9">
+					<form id="form" onsubmit="" method="post" action="">
+	<div>
+		<input alt="Champ caché" name="command" type="hidden" value=""></input>
+		<input alt="Champ caché" name="shorttitle" type="hidden" value=""></input>
+		<input alt="Champ caché" name="marginalnotexml" type="hidden" value=""></input>
+		<input alt="Champ caché" name="heading" type="hidden" value=""></input>
+		<input alt="Champ caché" name="fragment" type="hidden" value=""></input>
+		<input alt="Champ caché" name="selfrag" type="hidden" value=""></input>
+		<input alt="Champ caché" name="search_type" type="hidden" value=""></input>
+		<input alt="Champ caché" name="title_search_type" type="hidden" value=""></input>		
+		<input alt="Champ caché" name="anchor" type="hidden" value=""></input>
+		<input alt="Champ caché" name="dateEEV" type="hidden" value=""></input>
+		<input alt="Champ caché" name="statuteyear" type="hidden" value=""></input>
+		<input alt="Champ caché" name="isPrinting" type="hidden" value="false"></input>
+		<input alt="Champ caché" name="from" type="hidden" value=""></input>
+		<input alt="Champ caché" name="output" type="hidden" value="printFull"></input>
+		<input alt="Champ caché" name="page" type="hidden" value="<<page>>"></input>
+		<input alt="Champ caché" name="length" type="hidden" value=""></input>
+		<input alt="Champ caché" name="instrumentnumber" type="hidden" value="S-2.1, r. 5.1 "></input>
+		<input alt="Champ caché" name="instrumentnumbersearch" type="hidden" value=""></input>
+		<input alt="Champ caché" name="stemmed" type="hidden" value=""></input>
+		
+	</div>
+
+	<div class="card">
+		<div class="card-header p-3 bg-gradient docHeader">
+						<h3 class="card-title"><span class="fw-bold">S-2.1, r. 5.1 </span> - Règlement sur les conditions sanitaires des campements industriels ou autres</h3>
+					</div>
+		
+		<div class="card-body">
+			<div class="d-flex justify-content-between align-items-center">
+				<div class="flex-row d-flex align-items-center">
+					<div class="pr-1">
+						<a href="/fr/tdm/rc/S-2.1,%20r.%205.1%20" class="btn btn-outline-secondary bg-gradient" role="button" title="Afficher la table des matières du document" alt="Afficher la table des matières du document" data-bs-toggle="tooltip" data-bs-placement="top">Table des matières <span class="fa fa-list smallLeftSpacer" aria-hidden="true"></span></a>
+					</div>
+					<div class="px-1">
+						
+				<div class="btn-group">
+					<button id="relatedLegislativeDocument" type="button" class="btn btn-outline-secondary bg-gradient dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="-100, 0">
+						Loi habilitante <span class="badge rounded-pill bg-secondary smallLeftSpacer">1</span> <span class="caret smallLeftSpacer"></span>
+					</button>
+					<table class="table table-responsive table-hover dropdown-menu relatedDoc" role="menu">
+						<thead>
+							<tr>
+								<th width="15%">Alphanumérique</th>
+								<th width="85%">Titre</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+<td>S-2.1 </td>
+<td>
+<a class="hand boldLink" href="/fr/document/lc/S-2.1%20/">Loi sur la santé et la sécurité du travail   
+</a>
+</td>
+</tr>
+						</tbody>
+					</table>
+					</div>
+					</div>
+					<div class="px-1">
+						<span id="occurrenceButton" class="d-none">
+							Occurrences<span class="badge rounded-pill bg-secondary ms-3" id="occurrenceCount">0</span>
+						</span>
+					</div>
+					<div class="px-1">
+						
+					</div>
+				</div>
+
+				<div class="flex-row d-flex align-items-center">
+					<div class="px-1">
+						<a id="renditionPdf" target="_blank" class="btn btn-outline-secondary bg-gradient d-none" 
+							role="button" title="Ouvrir la version PDF" alt="Ouvrir la version PDF"
+							data-bs-toggle="tooltip" data-bs-placement="top">
+							 <span class="fa pdf-icon" aria-hidden="true"></span>
+						</a>
+					</div>
+					<div class="px-1">
+						<a id="renditionEpub" target="_blank" class="btn btn-outline-secondary bg-gradient d-none" 
+							role="button" title="Télécharger la version ePUB" alt="Télécharger la version ePUB"
+							data-bs-toggle="tooltip" data-bs-placement="top">
+							 <span class="fa epub-icon" aria-hidden="true"></span>
+						</a>
+					</div>
+					<div class="px-1">
+						<a id="btnPrintPreview" class="btn btn-outline-secondary bg-gradient last"
+							role="button" title="Préparer le document pour l'impression"
+							alt="Préparer le document pour l'impression" data-bs-toggle="tooltip" data-bs-placement="top"><span id="printBtnIcon"
+								class="fa fa-print" aria-hidden="true"></span>
+						</a>
+					</div>
+				</div>
+				
+			</div>
+			<div class="row pt-2">
+				<div class="col">
+					<div class="card ">
+						
+							<div class="card-header official-heading bg-gradient ">
+								<div class="row">
+									<div class="col">
+										<div class="text-end"></div>
+										Texte complet 
+									</div>
+								
+									<div class="col">
+										<div class="text-end">
+											À jour au 1<sup>er</sup> avril 2025
+										</div>
+										<div class="text-end">
+											Ce document a valeur officielle.
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="card-body history current conso" id="mainContent-document">
+								<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE div
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:exsl="http://exslt.org/common" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:integrity="http://ref.irosoft.com/integrity/" integrity:Digest="AEA93454C87FF4FCD092055F65CA1B72"><meta title="Ministère de la Justice du Québec" author="Ministère de la Justice du Québec" subject="Ministère de la Justice du Québec" keywords="Ministère de la Justice du Québec" description="Ministère de la Justice du Québec" timestamp="n'est pas supporter" application="CYBERLEX" version="2.2.0.2" provider="Irosoft" source="xsl"/><div xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns:law="http://ref.irosoft.com/LIMS/1.0/law" class="DefaultPageSequence BodyPageSequence"><div class="LegislativeDocument Global Style_Extra_Class"><div class="Identification"><div integrity:added="1" class="Identification-Id"><span integrity:added="1">chapitre </span><span integrity:order="1">S-2.1, r. 5.1</span></div><div integrity:order="2" class="titre-reglement-left titre-reglement-left customLongTitleWord">Règlement sur les conditions sanitaires des campements industriels ou autres</div><span class="Hidden" integrity:order="3">SANTÉ ET SÉCURITÉ DU TRAVAIL — CONDITIONS SANITAIRES DES CAMPEMENTS</span><div><div class="enabling-identification"><div integrity:order="5" class="LongTitle-enabling">Loi sur la santé et la sécurité du travail</div></div><div class="HistoricalNote-LongTitle"><span><span integrity:order="6">(chapitre S-2.1, a. 310)</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div><span class="Hidden" integrity:order="4">S-2.1</span></div><span class="Hidden"><span integrity:order="9" class="date-txt-statut Hidden">01</span><span integrity:added="1">1</span><span integrity:added="1" class="superscript_7point">er</span><span integrity:added="1"> </span><span integrity:order="8" class="Hidden">09</span><span integrity:added="1">septembre </span><span integrity:order="7" class="date-txt-statut">2012</span></span><div integrity:added="1" class="Note italic"><div integrity:added="1" class="Note italic NoteDisplayDiv NoteImageWidthSpaceDiv" id="Note"><img integrity:added="1" src="/img/Note.png"/></div><div integrity:order="10" class="Note italic NoteDisplayDiv NoteContentWidthSpaceDiv" id="d216722124e27">Ce règlement portait auparavant la désignation alphanumérique suivante: chapitre Q-2, r. 11.</div></div></div><div class="section" id="se:1"><div class="Subsection SubsectionFirst" id="se:1-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 5.1 ?code=se:1&historique=20250804#20250804"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:1" data-code="se:1"><span integrity:order="11" class="Label-Section consolidationWhipeTextDecoration consolidationClean">1<span integrity:added="1">.</span></span></a> <span integrity:order="12" class="Subsection"><span integrity:order="13" class="bold">Définitions:</span> Dans le présent règlement, les expressions suivantes signifient:</span><div class="Paragraph" id="se:1-ss:1-p1:a"><span integrity:order="14" class="Label-L LabelBase">a<span integrity:added="1" class="normal LabelBase italic">) </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="15" class="Paragraph">«campements industriels»: ensemble d’installations temporaires ou permanentes, ainsi que leurs dépendances, que l’employeur organise pour loger des personnes à son emploi dans des travaux d’exploitation forestière, minière, de voie ferrée, de voirie, de barrage et autres du même genre, dans des scieries et des moulins à préparer le bois de pulpe, qu’il s’agisse de campements permanents, de campements permanents d’été ou de campements temporaires;</span></div><div class="Paragraph" id="se:1-ss:1-p1:b"><span integrity:order="16" class="Label-L LabelBase">b<span integrity:added="1" class="normal LabelBase italic">) </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="17" class="Paragraph">«employeur»: concessionnaire, compagnie, société, personne, entrepreneur, sous-entrepreneur, engagés dans l’exploitation d’une des industries ou entreprises mentionnées au paragraphe <span integrity:order="18" class="italic">a</span>;</span></div><div class="Paragraph" id="se:1-ss:1-p1:c"><span integrity:order="19" class="Label-L LabelBase">c<span integrity:added="1" class="normal LabelBase italic">) </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="20" class="Paragraph">«ouvrier»: toute personne occupée à un travail quelconque dans une des industries ou entreprises telles que définies;</span></div><div class="Paragraph" id="se:1-ss:1-p1:d"><span integrity:order="21" class="Label-L LabelBase">d<span integrity:added="1" class="normal LabelBase italic">) </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="22" class="Paragraph">«ministre»: le ministre du Développement durable, de l’Environnement et des Parcs;</span></div><div class="Paragraph" id="se:1-ss:1-p1:e"><span integrity:order="23" class="Label-L LabelBase">e<span integrity:added="1" class="normal LabelBase italic">) </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="24" class="Paragraph">«inspecteur»: tout fonctionnaire du ministère du Développement durable, de l’Environnement et des Parcs;</span></div><div class="Paragraph" id="se:1-ss:1-p1:f"><span integrity:order="25" class="Label-L LabelBase">f<span integrity:added="1" class="normal LabelBase italic">) </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="26" class="Paragraph">«campement permanent»: l’ensemble des constructions et de leurs dépendances où les employés doivent habiter au cours du travail, pendant plus de 15 jours successifs, et quelle que soit la saison;</span></div><div class="Paragraph" id="se:1-ss:1-p1:g"><span integrity:order="27" class="Label-L LabelBase">g<span integrity:added="1" class="normal LabelBase italic">) </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="28" class="Paragraph">«campement permanent d’été»: tout campement dont les opérations durent 15 jours ou plus, et qui ne peut être utilisé que du 15 mai au 1<span integrity:order="29" class="superscript">er</span> octobre exclusivement;</span></div><div class="Paragraph" id="se:1-ss:1-p1:h"><span integrity:order="30" class="Label-L LabelBase">h<span integrity:added="1" class="normal LabelBase italic">) </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="31" class="Paragraph">«campement temporaire»: une construction, une bâtisse ou une tente où les employés ne sont que de passage au cours du travail, et où ils ne sont pas appelés à vivre plus de 15 jours successifs, en un site donné.</span></div></div><div class="Subsection" id="se:1-ss:2"><span integrity:order="32" class="Subsection">Les camps communément appelés «camps de batch» sont interdits. Un «camp de batch» est celui où les travailleurs s’arrangent seuls et où, par conséquent, il n’y a ni cuisinier, ni contremaître, ni aucun préposé à l’entretien des lieux.</span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span integrity:order="33">R.R.Q., 1981, c. Q-2, r. 3, a. 1</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div></div><div class="section" id="se:2"><div class="Subsection SubsectionFirst" id="se:2-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 5.1 ?code=se:2&historique=20250804#20250804"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:2" data-code="se:2"><span integrity:order="34" class="Label-Section consolidationWhipeTextDecoration consolidationClean">2<span integrity:added="1">.</span></span></a> <span integrity:order="35" class="Subsection"><span integrity:order="36" class="bold">Avis au ministre:</span> Tout employeur qui se propose d’établir un campement permanent, un campement permanent d’été ou un campement temporaire, doit aviser le ministre, des campements anciens et nouveaux qu’il projette d’utiliser durant la prochaine saison d’exploitation. Le ministre doit être avisé au moins 3 semaines avant le début de la construction ou de l’installation des campements ou de la réouverture des campements anciens.</span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span integrity:order="37">R.R.Q., 1981, c. Q-2, r. 3, a. 2</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div></div><div class="section" id="se:3"><div class="Subsection SubsectionFirst" id="se:3-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 5.1 ?code=se:3&historique=20250804#20250804"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:3" data-code="se:3"><span integrity:order="38" class="Label-Section consolidationWhipeTextDecoration consolidationClean">3<span integrity:added="1">.</span></span></a> <span integrity:order="39" class="Subsection"><span integrity:order="40" class="bold">Plans et devis:</span> Les bâtisses et dépendances d’un campement industriel qui sont utilisées pour fins d’une exploitation mentionnée ci-dessus, doivent être construites et aménagées selon les plans et devis acceptés ou fournis par le ministre; les plans et devis du ministre font partie intégrale du présent règlement.</span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span integrity:order="41">R.R.Q., 1981, c. Q-2, r. 3, a. 3</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div></div><div class="section" id="se:4"><div class="Subsection SubsectionFirst" id="se:4-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 5.1 ?code=se:4&historique=20250804#20250804"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:4" data-code="se:4"><span integrity:order="42" class="Label-Section consolidationWhipeTextDecoration consolidationClean">4<span integrity:added="1">.</span></span></a> <span integrity:order="43" class="Subsection"><span integrity:order="44" class="bold">Murs:</span> Les murs intérieurs doivent avoir au moins 8 pi de hauteur entre le plancher et le plafond.</span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span integrity:order="45">R.R.Q., 1981, c. Q-2, r. 3, a. 4</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div></div><div class="section" id="se:5"><div class="Subsection SubsectionFirst" id="se:5-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 5.1 ?code=se:5&historique=20250804#20250804"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:5" data-code="se:5"><span integrity:order="46" class="Label-Section consolidationWhipeTextDecoration consolidationClean">5<span integrity:added="1">.</span></span></a> <span integrity:order="47" class="Subsection"><span integrity:order="48" class="bold">Site:</span> Lorsque la chose est possible, les bâtisses et dépendances d’un campement industriel doivent être situées dans un endroit sec et ensoleillé; chacune de ces bâtisses et dépendances doit être à une distance d’au moins 100 pi ou plus (distance horizontale) du plus haut niveau des eaux d’un lac ou d’un cours d’eau, quelle que soit la raison de la montée de l’eau.</span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span integrity:order="49">R.R.Q., 1981, c. Q-2, r. 3, a. 5</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div></div><div class="section" id="se:6"><div class="Subsection SubsectionFirst" id="se:6-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 5.1 ?code=se:6&historique=20250804#20250804"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:6" data-code="se:6"><span integrity:order="50" class="Label-Section consolidationWhipeTextDecoration consolidationClean">6<span integrity:added="1">.</span></span></a> <span integrity:order="51" class="Subsection"><span integrity:order="52" class="bold">Drainage:</span> Les eaux usées doivent être dirigées dans un puisard couvert dans tous les cas où les conditions du terrain le permettent. Dans le cas contraire, elles doivent être menées par conduite étanche jusqu’à une distance de 100 pi ou plus du camp, de tout lac, ruisseau, rivière ou autre cours d’eau. Le puisard doit être situé au delà des limites de la bâtisse dont dépend le puisard, et à au moins 100 pi ou plus de tout lac, ruisseau, rivière ou autre cours d’eau. Ce puisard doit avoir une sortie d’air et la partie supérieure de cette sortie d’air doit être plus élevée que le niveau de l’évier de la bâtisse.</span></div><div class="Subsection" id="se:6-ss:2"><span integrity:order="53" class="Subsection">Cet article ne s’applique pas aux campements industriels situés dans les limites d’une municipalité et reliés à un système d’aqueduc et d’égout.</span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span integrity:order="54">R.R.Q., 1981, c. Q-2, r. 3, a. 6</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div></div><div class="section" id="se:7"><div class="Subsection SubsectionFirst" id="se:7-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 5.1 ?code=se:7&historique=20250804#20250804"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:7" data-code="se:7"><span integrity:order="55" class="Label-Section consolidationWhipeTextDecoration consolidationClean">7<span integrity:added="1">.</span></span></a> <span integrity:order="56" class="Subsection"><span integrity:order="57" class="bold">Matières résiduelles:</span> Les matières résiduelles produites par un campement industriel doivent être éliminées conformément aux dispositions du Règlement sur l’enfouissement et l’incinération de matières résiduelles (chapitre Q-2, r. 19).</span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span integrity:order="58">R.R.Q., 1981, c. Q-2, r. 3, a. 7</span><span><span integrity:added="1">; </span></span></span><span><span integrity:order="59">D. 451-2005, a. 171</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div></div><div class="section" id="se:8"><div class="Subsection SubsectionFirst" id="se:8-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 5.1 ?code=se:8&historique=20250804#20250804"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:8" data-code="se:8"><span integrity:order="60" class="Label-Section consolidationWhipeTextDecoration consolidationClean">8<span integrity:added="1">.</span></span></a> <span integrity:order="61" class="Subsection"><span integrity:order="62" class="bold">Latrines et écuries:</span> Les latrines et écuries doivent être construites en tenant compte des conditions du terrain, de façon que les matières d’égout ne puissent pas contaminer l’approvisionnement d’eau et ne deviennent pas une nuisance pour les habitants des campements. Les latrines extérieures doivent être érigées à 50 pi ou plus des constructions et à 100 pi ou plus de tout lac ou cours d’eau. Les excréments dans les latrines extérieures doivent être entièrement recouverts d’un désinfectant approprié au moins une fois par semaine durant la saison d’été. Pour ce qui est des latrines chimiques ou bactériologiques, celles-ci peuvent être placées à l’intérieur des dortoirs à un endroit convenablement aménagé ou dans des appentis connexes convenablement construits. Les latrines doivent être construites suivant les plans et devis fournis ou acceptés par le ministre. Quant aux écuries, elles doivent être érigées à 100 pi ou plus des constructions et de tout lac, ruisseau, rivière ou autre cours d’eau.</span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span integrity:order="63">R.R.Q., 1981, c. Q-2, r. 3, a. 8</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div></div><div class="section" id="se:9"><div class="Subsection SubsectionFirst" id="se:9-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 5.1 ?code=se:9&historique=20250804#20250804"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:9" data-code="se:9"><span integrity:order="64" class="Label-Section consolidationWhipeTextDecoration consolidationClean">9<span integrity:added="1">.</span></span></a> <span integrity:order="65" class="Subsection"><span integrity:order="66" class="bold">Animaux domestiques:</span> Les animaux tels que porcs, boeufs, vaches ou autres doivent être gardés dans des enclos, étables ou porcheries situés à une distance de 100 pi ou plus des parties habitées du campement, de tout lac, ruisseau, rivière ou autre cours d’eau, ainsi que de la prise d’eau.</span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span integrity:order="67">R.R.Q., 1981, c. Q-2, r. 3, a. 9</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div></div><div class="section" id="se:10"><div class="Subsection SubsectionFirst" id="se:10-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 5.1 ?code=se:10&historique=20250804#20250804"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:10" data-code="se:10"><span integrity:order="68" class="Label-Section consolidationWhipeTextDecoration consolidationClean">10<span integrity:added="1">.</span></span></a> <span integrity:order="69" class="Subsection"><span integrity:order="70" class="bold">Déchets d’abattoirs — carcasses:</span> Dès que le terrain le permet, les restes d’animaux morts ou tués doivent être immédiatement enterrés à au moins 2 pi sous terre à une distance de 100 pi ou plus des campements, de tout lac, ruisseau, rivière ou autre cours d’eau, ainsi que de la prise d’eau.</span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span integrity:order="71">R.R.Q., 1981, c. Q-2, r. 3, a. 10</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div></div><div class="section" id="se:11"><div class="Subsection SubsectionFirst" id="se:11-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 5.1 ?code=se:11&historique=20250804#20250804"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:11" data-code="se:11"><span integrity:order="72" class="Label-Section consolidationWhipeTextDecoration consolidationClean">11<span integrity:added="1">.</span></span></a> <span integrity:order="73" class="Subsection"><span integrity:order="74" class="bold">Approvisionnement d’eau:</span> La prise d’eau d’alimentation doit être située à une distance d’au moins 150 pi ou plus du campement et de toute source de contamination; lorsqu’il s’agit d’un puits de surface bien protégé, la distance doit être de 100 pi ou plus des latrines, puisards, dépotoirs, étables ou autre source de contamination. Dans le cas d’une source qui serait située à un niveau beaucoup plus élevé que toute bâtisse et dépendance du campement ou d’un puits tubé, cette distance est laissée à la discrétion du ministre. De toute façon, la prise d’eau d’alimentation doit être située en amont du campement ou de toute source de contamination. De plus, toute eau de rivière ou de lac contaminée ne doit jamais être utilisée comme eau d’alimentation.</span></div><div class="Subsection" id="se:11-ss:2"><span integrity:order="75" class="Subsection">Un réservoir d’eau de dimensions convenables et bien entretenu, muni d’une chantepleure et couvert, doit être placé à la disposition des ouvriers. La tasse commune est formellement défendue.</span></div><div class="Subsection" id="se:11-ss:3"><span integrity:order="76" class="Subsection">Sauf pour ce qui regarde l’usage de la tasse commune, cet article ne s’applique pas aux campements industriels situés dans les limites d’une municipalité et reliés à un système d’aqueduc et d’égout.</span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span integrity:order="77">R.R.Q., 1981, c. Q-2, r. 3, a. 11</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div></div><div class="section" id="se:12"><div class="Subsection SubsectionFirst" id="se:12-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 5.1 ?code=se:12&historique=20250804#20250804"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:12" data-code="se:12"><span integrity:order="78" class="Label-Section consolidationWhipeTextDecoration consolidationClean">12<span integrity:added="1">.</span></span></a> <span integrity:order="79" class="Subsection"><span integrity:order="80" class="bold">Cuisiniers et aides-cuisiniers:</span> Il est interdit à l’employeur de prendre à son service tout cuisinier, ou aide-cuisinier, ou tout manipulateur d’aliments qui ne peut fournir un certificat datant de moins de 7 ans, attestant son immunité à la variole — vaccination réussie ou réaction accélérée — et un certificat médical datant de moins de 3 mois au moment de l’embauchage, établissant qu’il ne souffre pas de maladie contagieuse ou vénérienne et qu’il n’est pas porteur de germes pouvant causer une infection transmissible par les aliments. Ce certificat médical doit comporter les mêmes examens que ceux qui sont spécifiés sur la formule-certificat fournie par le ministre. Ce certificat n’est valable que pour 1 an de la date de son émission.</span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span integrity:order="81">R.R.Q., 1981, c. Q-2, r. 3, a. 12</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div></div><div class="section" id="se:13"><div class="Subsection SubsectionFirst" id="se:13-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 5.1 ?code=se:13&historique=20250804#20250804"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:13" data-code="se:13"><span integrity:order="82" class="Label-Section consolidationWhipeTextDecoration consolidationClean">13<span integrity:added="1">.</span></span></a> <span integrity:order="83" class="Subsection"><span integrity:order="84" class="bold">Nécessaire de premiers soins:</span> L’employeur doit voir à ce que chaque campement soit muni d’un nécessaire de premiers soins équipé à la satisfaction de l’inspecteur.</span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span integrity:order="85">R.R.Q., 1981, c. Q-2, r. 3, a. 13</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div></div><div class="section" id="se:14"><div class="Subsection SubsectionFirst" id="se:14-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 5.1 ?code=se:14&historique=20250804#20250804"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:14" data-code="se:14"><span integrity:order="86" class="Label-Section consolidationWhipeTextDecoration consolidationClean">14<span integrity:added="1">.</span></span></a> <span integrity:order="87" class="Subsection"><span integrity:order="88" class="bold">Devoirs de l’employeur:</span> L’employeur est tenu:</span><div class="Paragraph" id="se:14-ss:1-p1:a"><span integrity:order="89" class="Label-L LabelBase">a<span integrity:added="1" class="normal LabelBase italic">) </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="90" class="Paragraph">de mettre à la disposition des ouvriers des lits simples avec sommiers à ressorts. Ces lits doivent être munis d’un matelas ou d’une paillasse et d’un oreiller. Ces articles doivent être propres, en bon état, et avoir été désinfectés au préalable.</span><div class="ContinuedParagraph"><span integrity:order="91" class="ContinuedParagraph"> Les lits superposés sont prohibés dans toute construction servant de dortoir de campement;</span></div></div><div class="Paragraph" id="se:14-ss:1-p1:b"><span integrity:order="92" class="Label-L LabelBase">b<span integrity:added="1" class="normal LabelBase italic">) </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="93" class="Paragraph">de fournir à l’ouvrier lors de son arrivée au campement, des couvertures de lit propres, en bon ordre et désinfectées; ces couvertures doivent être pour son usage personnel exclusif, et doivent être lavées au moins une fois par mois. Si, en outre des couvertures de laine, l’employeur fournit des draps de flanellette ou autres, ceux-ci doivent être désinfectés lors de l’arrivée de l’ouvrier au campement, puis lavés une fois par mois. Dans ce cas, les couvertures de laine peuvent être lavées et désinfectées au début de chaque période saisonnière de travail seulement;</span></div><div class="Paragraph" id="se:14-ss:1-p1:c"><span integrity:order="94" class="Label-L LabelBase">c<span integrity:added="1" class="normal LabelBase italic">) </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="95" class="Paragraph">d’ériger et d’aménager une pièce séparée et destinée à servir de buanderie afin de permettre aux ouvriers de laver leur linge personnel;</span></div><div class="Paragraph" id="se:14-ss:1-p1:d"><span integrity:order="96" class="Label-L LabelBase">d<span integrity:added="1" class="normal LabelBase italic">) </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="97" class="Paragraph">d’installer une bouilloire d’une capacité suffisante en vue de fournir l’eau chaude nécessaire au lavage de la lingerie personnelle. L’employeur peut organiser un service de buanderie. La pièce servant de buanderie peut être utilisée comme chambre de bain par les ouvriers ou bien l’employeur doit aménager un local spécial à cette fin et y installer, dans les deux cas, des cuves appropriées;</span></div><div class="Paragraph" id="se:14-ss:1-p1:e"><span integrity:order="98" class="Label-L LabelBase">e<span integrity:added="1" class="normal LabelBase italic">) </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="99" class="Paragraph">d’aménager, selon les plans et devis fournis ou approuvés par le ministre, un séchoir destiné à sécher le linge trempé des ouvriers;</span></div><div class="Paragraph" id="se:14-ss:1-p1:f"><span integrity:order="100" class="Label-L LabelBase">f<span integrity:added="1" class="normal LabelBase italic">) </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="101" class="Paragraph">de prévoir un approvisionnement suffisant d’eau chaude dans les dortoirs et un assez grand espace pour aménager un évier étanche et permettre l’installation d’au moins 1 bassin par 5 ouvriers;</span></div><div class="Paragraph" id="se:14-ss:1-p1:g"><span integrity:order="102" class="Label-L LabelBase">g<span integrity:added="1" class="normal LabelBase italic">) </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="103" class="Paragraph">d’aménager un endroit pour permettre aux ouvriers de placer leur linge et effets de façon à éviter que ceux-ci ne traînent sur le plancher et à faciliter le nettoyage des campements;</span></div><div class="Paragraph" id="se:14-ss:1-p1:h"><span integrity:order="104" class="Label-L LabelBase">h<span integrity:added="1" class="normal LabelBase italic">) </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="105" class="Paragraph">de fournir aux femmes qui doivent loger dans chaque campement une chambre munie d’une fenêtre et complètement séparée de la cuisine;</span></div><div class="Paragraph" id="se:14-ss:1-p1:i"><span integrity:order="106" class="Label-L LabelBase">i<span integrity:added="1" class="normal LabelBase italic">) </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="107" class="Paragraph">dans le cas de femmes avec 1 ou des enfants, d’ériger et d’aménager selon les plans et devis fournis ou acceptés par le ministre, un logement séparé des dortoirs et de la cuisine;</span></div><div class="Paragraph" id="se:14-ss:1-p1:j"><span integrity:order="108" class="Label-L LabelBase">j<span integrity:added="1" class="normal LabelBase italic">) </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="109" class="Paragraph">d’aménager, selon les plans et devis fournis par le ministre, une dépense pour entreposer les aliments susceptibles de se décomposer. Ce garde-manger doit avoir un plancher en planches, une fenêtre et un ventilateur;</span></div><div class="Paragraph" id="se:14-ss:1-p1:k"><span integrity:order="110" class="Label-L LabelBase">k<span integrity:added="1" class="normal LabelBase italic">) </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="111" class="Paragraph">de protéger les aliments contre les mouches, les insectes, la vermine, la poussière, etc. et de ne placer aucune provision sur le plancher;</span></div><div class="Paragraph" id="se:14-ss:1-p1:l"><span integrity:order="112" class="Label-L LabelBase">l<span integrity:added="1" class="normal LabelBase italic">) </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="113" class="Paragraph">de prévoir un endroit convenable pour y placer les légumes;</span></div><div class="Paragraph" id="se:14-ss:1-p1:m"><span integrity:order="114" class="Label-L LabelBase">m<span integrity:added="1" class="normal LabelBase italic">) </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="115" class="Paragraph">de protéger toute provision et particulièrement les viandes, contre toute souillure au cours de leur transport;</span></div><div class="Paragraph" id="se:14-ss:1-p1:n"><span integrity:order="116" class="Label-L LabelBase">n<span integrity:added="1" class="normal LabelBase italic">) </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="117" class="Paragraph">de voir à ce que les ustensiles de cuisine soient lavés convenablement après chaque usage et tenus en bon état. Il est loisible à l’inspecteur de défendre que l’on utilise des ustensiles de cuisine qu’il trouve en mauvais état;</span></div><div class="Paragraph" id="se:14-ss:1-p1:o"><span integrity:order="118" class="Label-L LabelBase">o<span integrity:added="1" class="normal LabelBase italic">) </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="119" class="Paragraph">de voir à ce que les planchers des campements soient lavés au moins une fois par semaine, et balayés à l’humide tous les jours;</span></div><div class="Paragraph" id="se:14-ss:1-p1:p"><span integrity:order="120" class="Label-L LabelBase">p<span integrity:added="1" class="normal LabelBase italic">) </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="121" class="Paragraph">de voir à ce que les harnais et tout ce qui peut servir pour l’équipement des chevaux ou bêtes de somme soient placés dans un endroit où ils ne seront pas une cause de malpropreté ou de nuisance à l’entretien hygiénique du campement;</span></div><div class="Paragraph" id="se:14-ss:1-p1:q"><span integrity:order="122" class="Label-L LabelBase">q<span integrity:added="1" class="normal LabelBase italic">) </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="123" class="Paragraph">de placer des crachoirs dans les salles de réunion et les dortoirs et de voir à ce que ces crachoirs soient nettoyés tous les jours;</span></div><div class="Paragraph" id="se:14-ss:1-p1:r"><span integrity:order="124" class="Label-L LabelBase">r<span integrity:added="1" class="normal LabelBase italic">) </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="125" class="Paragraph">de prendre les moyens nécessaires pour protéger les travailleurs contre les mouches et les moustiques, en installant des moustiquaires à toutes les ouvertures;</span></div><div class="Paragraph" id="se:14-ss:1-p1:s"><span integrity:order="126" class="Label-L LabelBase">s<span integrity:added="1" class="normal LabelBase italic">) </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="127" class="Paragraph">de permettre aux inspecteurs du ministère du Développement durable, de l’Environnement et des Parcs de visiter en tout temps son campement et ses dépendances, ainsi que la prise d’eau d’alimentation et le système d’égoût.</span></div></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span integrity:order="128">R.R.Q., 1981, c. Q-2, r. 3, a. 14</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div></div><div class="section" id="se:15"><div class="Subsection SubsectionFirst" id="se:15-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 5.1 ?code=se:15&historique=20250804#20250804"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:15" data-code="se:15"><span integrity:order="129" class="Label-Section consolidationWhipeTextDecoration consolidationClean">15<span integrity:added="1">.</span></span></a> <span integrity:order="130" class="Subsection"><span integrity:order="131" class="bold">Campements permanents d’été:</span> Les campements permanents d’été sont sujets aux prescriptions suivantes:</span><div class="Paragraph" id="se:15-ss:1-p1:a"><span integrity:order="132" class="Label-L LabelBase">a<span integrity:added="1" class="normal LabelBase italic">) </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="133" class="Paragraph">les tentes peuvent être utilisées comme campements durant la période s’étendant du 15 mai au 1<span integrity:order="134" class="superscript">er</span> octobre exclusivement;</span></div><div class="Paragraph" id="se:15-ss:1-p1:b"><span integrity:order="135" class="Label-L LabelBase">b<span integrity:added="1" class="normal LabelBase italic">) </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="136" class="Paragraph">les dimensions des tentes-dortoirs doivent être calculées sur une base d’au moins 250 pi<span integrity:order="137" class="superscript">3</span> par lit simple;</span></div><div class="Paragraph" id="se:15-ss:1-p1:c"><span integrity:order="138" class="Label-L LabelBase">c<span integrity:added="1" class="normal LabelBase italic">) </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="139" class="Paragraph">chaque tente doit être pourvue d’une double toiture;</span></div><div class="Paragraph" id="se:15-ss:1-p1:d"><span integrity:order="140" class="Label-L LabelBase">d<span integrity:added="1" class="normal LabelBase italic">) </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="141" class="Paragraph">les tentes-dortoirs et les tentes qui servent de cuisine et de salle à manger doivent être pourvues d’un mur en bois de pas moins de 4 pi de hauteur à partir du plancher, mais la hauteur totale des murs des tentes ne doit pas être moins de 8 pi à partir du plancher. Le mur doit être convenablement calfeutré et les murs extérieurs rechaussés de terre;</span></div><div class="Paragraph" id="se:15-ss:1-p1:e"><span integrity:order="142" class="Label-L LabelBase">e<span integrity:added="1" class="normal LabelBase italic">) </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="143" class="Paragraph">les planchers doivent être à une distance de 12 po du sol et couvrir entièrement l’intérieur des tentes; une distance moindre peut être tolérée si le terrain est très sec. Les planchers faits de billes de bois bien aplanies et présentant une surface suffisamment lisse pour qu’elle puisse être facilement lavée et nettoyée, peuvent être tolérés;</span></div><div class="Paragraph" id="se:15-ss:1-p1:f"><span integrity:order="144" class="Label-L LabelBase">f<span integrity:added="1" class="normal LabelBase italic">) </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="145" class="Paragraph">les tentes doivent être chauffées à la satisfaction de l’inspecteur;</span></div><div class="Paragraph" id="se:15-ss:1-p1:g"><span integrity:order="146" class="Label-L LabelBase">g<span integrity:added="1" class="normal LabelBase italic">) </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="147" class="Paragraph">une tente spéciale, chauffée, doit être érigée pour permettre aux employés de faire sécher leurs vêtements de travail; le lavoir peut être installé dans cette tente. Il n’est pas nécessaire que cette tente soit pourvue d’un mur en bois, mais elle doit être pourvue d’un plancher de bois;</span></div><div class="Paragraph" id="se:15-ss:1-p1:h"><span integrity:order="148" class="Label-L LabelBase">h<span integrity:added="1" class="normal LabelBase italic">) </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="149" class="Paragraph">un évier doit être installé de façon à ce qu’on puisse y utiliser un bassin par 5 hommes;</span></div><div class="Paragraph" id="se:15-ss:1-p1:i"><span integrity:order="150" class="Label-L LabelBase">i<span integrity:added="1" class="normal LabelBase italic">) </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="151" class="Paragraph">le patron doit prendre les moyens nécessaires pour protéger les travailleurs contres les mouches et les moustiques en installant des moustiquaires à toutes les ouvertures;</span></div><div class="Paragraph" id="se:15-ss:1-p1:j"><span integrity:order="152" class="Label-L LabelBase">j<span integrity:added="1" class="normal LabelBase italic">) </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="153" class="Paragraph">les tentes doivent être faites d’un matériel pouvant fournir une bonne ventilation et un éclairage suffisant; les tentes dortoirs et les tentes servant de cuisine ou de salle à manger ne doivent pas être utilisées comme boutique;</span></div><div class="Paragraph" id="se:15-ss:1-p1:k"><span integrity:order="154" class="Label-L LabelBase">k<span integrity:added="1" class="normal LabelBase italic">) </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="155" class="Paragraph">toutes les autres prescriptions concernant les campements permanents et touchant le site, l’eau, les latrines, les étables, les lavoirs, les lits, les puisards, les matières résiduelles, doivent être strictement respectées.</span></div></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span integrity:order="156">R.R.Q., 1981, c. Q-2, r. 3, a. 15</span><span><span integrity:added="1">; </span></span></span><span><span integrity:order="157">D. 451-2005, a. 172</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div></div><div class="section" id="se:16"><div class="Subsection SubsectionFirst" id="se:16-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 5.1 ?code=se:16&historique=20250804#20250804"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:16" data-code="se:16"><span integrity:order="158" class="Label-Section consolidationWhipeTextDecoration consolidationClean">16<span integrity:added="1">.</span></span></a> <span integrity:order="159" class="Subsection"><span integrity:order="160" class="bold">Campements temporaires:</span> Les campements temporaires sont sujets aux prescriptions suivantes:</span><div class="Paragraph" id="se:16-ss:1-p1:a"><span integrity:order="161" class="Label-L LabelBase">a<span integrity:added="1" class="normal LabelBase italic">) </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="162" class="Paragraph">tout campement temporaire servant de dortoir, doit être muni d’un plancher de bois et d’une tente chauffée destinée à être utilisée pour sécher les vêtements des employés;</span></div><div class="Paragraph" id="se:16-ss:1-p1:b"><span integrity:order="163" class="Label-L LabelBase">b<span integrity:added="1" class="normal LabelBase italic">) </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="164" class="Paragraph">une tente ou un abri convenable jugé satisfaisant par l’inspecteur, qui servira de salle à manger, doit être aménagée dans le cas des campements temporaires;</span></div><div class="Paragraph" id="se:16-ss:1-p1:c"><span integrity:order="165" class="Label-L LabelBase">c<span integrity:added="1" class="normal LabelBase italic">) </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="166" class="Paragraph">toutes les autres prescriptions concernant le site, l’eau, les latrines, les étables, les lavoirs, les lits, les puisards, les matières résiduelles, doivent être strictement respectées;</span></div><div class="Paragraph" id="se:16-ss:1-p1:d"><span integrity:order="167" class="Label-L LabelBase">d<span integrity:added="1" class="normal LabelBase italic">) </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="168" class="Paragraph">l’employeur doit prendre les moyens nécessaires pour protéger les travailleurs contre les mouches et les moustiques en installant des moustiquaires à toutes les ouvertures.</span></div></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span integrity:order="169">R.R.Q., 1981, c. Q-2, r. 3, a. 16</span><span><span integrity:added="1">; </span></span></span><span><span integrity:order="170">D. 451-2005, a. 173</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div></div><div class="section" id="se:17"><div class="Subsection SubsectionFirst" id="se:17-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 5.1 ?code=se:17&historique=20250804#20250804"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:17" data-code="se:17"><span integrity:order="171" class="Label-Section consolidationWhipeTextDecoration consolidationClean">17<span integrity:added="1">.</span></span></a> <span integrity:order="172" class="Subsection"><span integrity:order="173" class="bold">Infraction:</span> Est coupable d’infraction toute personne ou association qui viole quelqu’une des dispositions du présent règlement, ou qui refuse d’accomplir un devoir qui lui est prescrit par quelque disposition du présent règlement.</span></div><div class="Subsection" id="se:17-ss:2"><span integrity:order="174" class="Subsection">Commet une infraction quiconque, directement ou indirectement, empêche un fonctionnaire, un inspecteur ou tout fonctionnaire, employé et représentant du ministère de l’Environnement et de la Faune, d’exercer les pouvoirs ou d’accomplir les devoirs qui leur sont assignés par la Loi sur la qualité de l’environnement (chapitre Q-2) ou par ses règlements.</span></div><div class="Subsection" id="se:17-ss:3"><span integrity:order="175" class="Subsection">Est partie à une infraction et passible de la peine prévue au même titre qu’une personne qui la commet, quiconque aide ou incite à la commettre; lorsque l’infraction est commise par une personne morale ou par une association, est coupable de l’infraction tout directeur, administrateur, gérant ou dirigeant qui, de quelque manière, approuve l’acte qui constitue l’infraction ou y acquiesce.</span></div><div class="Subsection" id="se:17-ss:4"><span integrity:order="176" class="Subsection">Quiconque, sciemment, détruit ou altère une affiche du ministère du Développement durable, de l’Environnement et des Parcs, commet une infraction et est passible d’une amende n’excédant pas 20 $ et les frais.</span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span integrity:order="177">R.R.Q., 1981, c. Q-2, r. 3, a. 17</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div></div><div class="section" id="se:18"><div class="Subsection SubsectionFirst" id="se:18-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 5.1 ?code=se:18&historique=20250804#20250804"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:18" data-code="se:18"><span integrity:order="178" class="Label-Section consolidationWhipeTextDecoration consolidationClean">18<span integrity:added="1">.</span></span></a> <span integrity:order="179" class="Subsection"><span integrity:order="180" class="bold">Pénalité:</span> Toute personne ou association qui viole quelqu’une des dispositions du présent règlement, est passible d’une amende n’excédant pas 20 $, et d’une amende additionnelle n’excédant pas 20 $ par jour, pour chaque jour, en plus de 2, durant lesquels l’infraction se continue.</span></div><div class="Subsection" id="se:18-ss:2"><span integrity:order="181" class="Subsection">Si l’infraction est commise par une personne physique, elle est passible, à défaut de paiement de l’amende et des frais, d’un emprisonnement n’excédant pas 8 jours, pour la première infraction, et n’excédant pas 30 jours pour les infractions subséquentes.</span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span integrity:order="182">R.R.Q., 1981, c. Q-2, r. 3, a. 18</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div></div><div class="AmendedTextTitle"><div class="ligne"><span integrity:added="1">
+                    </span></div><span integrity:added="1">RÉFÉRENCES</span></div><div><span><span integrity:order="183">R.R.Q., 1981, c. Q-2, r. 3</span></span></div><div><span><span integrity:order="184">D. 451-2005, 2005 G.O. 2, 1880</span></span></div></div></div></div>
+							</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</form>
+
+<ul id="contextMenu" class="dropdown-menu" role="menu" >
+	<li id="contextMenuCopy" class="disabled dropdown-item"><a tabindex="-1">Copier</a></li>
+	<li class="dropdown-divider"></li>
+	<li class="dropdown-item"><a tabindex="-1"">Sélectionner cet élément</a></li>
+	<li id="contextMenuSelectParent" class="dropdown-item"><a tabindex="-1">Sélectionner l'élément parent</a></li>
+	<li id="contextMenuUnselectAll" class="disabled dropdown-item"><a tabindex="-1">Désélectionner tous les éléments</a></li>
+	<li class="dropdown-divider"></li>
+	<li id="contextMenuCopyToArbortext" class="disabled dropdown-item"><a tabindex="-1">Copier vers Rédaction</a></li>
+	<li id="contextMenuCopyToLaw" class="d-block disable dropdown-item"><a tabindex="-1">Copier vers LAW</a></li>
+</ul>
+<input type="text" class="copyContainer" id="copyToClipboardMenu">
+<div id="copyToClipboard" class="modal fade">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">
+					Copier vers le presse-papier
+				</h4>
+				<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>				
+			</div>
+			<div class="modal-body">
+				<p>
+				<div class="description">
+					Pour copier : Ctrl+C
+				</div>
+				<input type="text" class="form-control" name="copyToInput" id="copyToInput">
+				</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-outline-secondary bg-gradient" data-bs-dismiss="modal">OK</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<a href="#" class="back-to-top"><span class="fa fa-chevron-up"></span></a>
+
+
+	<!-- migration rapide - éventuellement call ajax JSON -->
+	<input type="hidden" id="alpha" value="S-2.1, r. 5.1 ">
+	<input type="hidden" id="title"  value='S-2.1, r. 5.1  - Règlement sur les conditions sanitaires des campements industriels ou autres'>
+	<input type="hidden" id="dbType"  value="cr">
+	<input type="hidden" id="langCont"  value="fr">
+	<input type="hidden" id="otherLangCont" value="en">
+
+	<input type="hidden" id="contextMenu_copy" value="Copier"/>
+	<input type="hidden" id="contextMenu_selectElement" value="Sélectionner cet élément"/>
+	<input type="hidden" id="contextMenu_selectParentElement" value="Sélectionner l'élément parent"/>
+	<input type="hidden" id="contextMenu_unselectElement" value="<<SR_contextMenu_unselectElement>>"/>
+	<input type="hidden" id="contextMenu_unselectAll" value="Désélectionner tous les éléments"/>
+
+	<input type="hidden" id="contextMenu_copyToArbortext" value="Copier vers Rédaction"/>
+	<input type="hidden" id="contextMenu_copyToLaw" value="Copier vers LAW"/>
+	<input type="hidden" id="contextMenu_FragmentSelection" value="<<SR_contextMenu_FragmentSelection>>"/>
+	<input type="hidden" id="ctrlC_toCopyToClipboard" value="Pour copier : Ctrl+C"/>
+	<input type="hidden" id="readyToPaste" value="Vos sélections ont été copiées dans le presse-papier."/>
+
+	<input type="hidden" id="readyToPasteInLAW" value="Vous pouvez coller vos sélections dans LAW en utilisant la fonction appropriée."/>
+	<input type="hidden" id="readyToPasteInArbortext" value="Vous pouvez coller vos sélections dans Arbortext en utilisant la fonction appropriée."/>
+	<input type="hidden" id="errorWhileCopyingTo" value="Une erreur est survenue lors de la préparation des données."/>
+	<input type="hidden" id="showSelections" value="false"/>
+	<input type="hidden" id="consolidetedDateLabel" value=""/>
+	<input type="hidden" id="renditions" value='{"Epub":"/fr/epub/cr/S-2.1, R. 5.1 .epub","Pdf":"/fr/pdf/rc/S-2.1, R. 5.1 .pdf"}'/>
+	<input type="hidden" id="output" value=""/>
+	
+					
+<div data-bs-toggle="modal" data-bs-target="#myModal" id="printPreviewButton" class="printPreviewButton d-none">
+<button type="button" class="btn btn-primary my-2 rounded-pill" id="goPrintPreview" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">
+<span class="fa fa-check-square-o" aria-hidden="true"></span> <span class="badge rounded-pill bg-secondary badgeWhite">0</span>
+</button>
+</div>
+
+				</div>
+			</div>
+			
+			<!-- Footer -->
+		<div class="row pt-4">
+			<hr/>
+			<div align="center" class="pt-4">
+				<ul class="footer-options">
+					<li><a href="/fr/contenu/joindre/" >Nous joindre</a></li>
+					<li><a href="/fr/contenu/plan/" >Plan du site</a></li>
+					<li><a href="https://www.quebec.ca/" target="_blank">Québec.ca</a></li>
+					<li><a href="/fr/contenu/access/" >Accessibilité</a></li>
+					<li><a href="/fr/contenu/confid/" >Politique de confidentialité</a></li>
+				</ul>
+			</div>
+			<div  align="center"><a href="https://www.quebec.ca/" target="_blank"><img src="/img/quebec.gif" width="105" height="32" border="0"></a></div>
+			<div  align="center" class="copyright pt-2"><a class="footer-options" href="http://www.droitauteur.gouv.qc.ca/copyright.php" target="_blank">&copy; Gouvernement du Qu&eacute;bec</a></div>
+
+		</div>
+			
+		</div>
+			
+		<!-- Fenetre modal pour l'impression -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-impression">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="myModalLabel">Sélections</h4>
+						<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div>
+							<h4 id="myModalSubtitle"><small></small></h4>
+						</div>
+						<div class="list-group">
+							<a href="#" class="list-group-item active disabled bg-primary bg-gradient text-white">Afficher</a>
+							<a href="#" id="showSelectionsInCurrentDocument" class="list-group-item d-none">Les sélections du document courant</a>
+							<a href="#" id="showAllSelectionsInCollection" class="list-group-item">Toutes les sélections de la collection</a>
+							<a href="#" class="list-group-item active disabled bg-primary bg-gradient text-white">Fragments sélectionnés</a>
+							<a href="#" id="printPreviewResetSelections" class="list-group-item">Supprimer toutes les sélections</a>
+							<a href="#" id="printPreviewShowSelections" class="list-group-item d-none">Afficher les sélections</a>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-outline-secondary bg-gradient" data-bs-dismiss="modal">Fermer</button>
+					</div>
+				</div>
+			</div>
+			<form name="printForm" id="printForm" encType="application/x-www-form-urlencoded" method="post">
+				<input type="hidden" name="newQuery" value=""></input>
+				<input type="hidden" name="text" value=""></input>
+				<input type="hidden" name="isPrinting" value="false"></input>
+				<input type="hidden" name="title" value=""></input>
+				<input type="hidden" name="langCont" value="fr"></input>
+				<input type="hidden" name="type" value="cs"></input>
+				<input type="hidden" name="printType" value=""></input>
+				<input type="hidden" name="summary" value=""></input>
+				<input type="hidden" name="instrumentNumber" value=""></input>
+				<input type="hidden" name="selfrag" value=""></input>
+				<input type="hidden" name="anchor" value=""></input>
+				<input type="hidden" name="anchorSS" value=""></input>
+				<input type="hidden" name="recordsWithHits" value="false"></input>
+				<input type="hidden" name="validSearch" value="false"></input>
+				<input type="hidden" name="sortmode" value="false"></input>
+				<input type="hidden" name="output" value="selections"></input>
+			</form>
+		</div>
+		
+		<div class="modal fade bs-example-modal-sm" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+			<div class="modal-dialog modal-sm">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="mySmallModalLabel">Cyberlex</h4>
+						<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+					</div>
+					<div class="modal-body">
+						Version 2.2.5.0
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div>
+
+	
+		
+		<!-- migration rapide - éventuellement call ajax JSON -->
+		<input type="hidden" id="token" name="token" value="<<token>>">
+		<input type="hidden" id="config" name="config" value='{"ConfigurationMenu":{"params":{},"enabled":false},"XSLT":{"params":{"CocoonFullTextUrl":"ace-xslt-web.html","CocoonTOCUrl":"ace-xslt-toc.html"},"enabled":true},"Import":{"params":{"odbc-AnnualStatutes":"","odbc-Regulations":"","odbc-Statutes":"","odbc-AnnualRegulations":""},"enabled":false},"GoogleAnalytic":{"params":{"trackingId":""},"enabled":false},"Export":{"params":{"exportLast":["last","external-last","report"],"formatOptions":["Xml","Html"],"export-Regulations":true,"export-AnnualRegulations":true,"typeFileOptions":["",""],"exportFull":["all","external-all","report","orphans"],"modeOptions":["Last","All","Full"],"exportAll":["all","external-all","report"],"export-DtdClient":"Quebec","export-Statutes":true,"export-AnnualStatutes":true,"exportHtml-CocoonUrl":"ace-xslt-export.html"},"enabled":true},"Conversion":{"params":{"generatePdf-Statutes":"single","generatePdf-Regulations-Overwrite":true,"generatePdf-Statutes-Path":"master\\cs\\pdf","generateEpub-Statutes-Overwrite":true,"generateEpub-Statutes-Storage":"disk","generatePdf-Regulations-SoapEnvelope":"config/conversion/single-regulations.xml","generateEpub-AnnualStatutes-SoapEnvelope":"","generateEpub-Regulations-Storage":"disk","generatePdf-AnnualStatutes-SoapEnvelope":"","generateEpub-AnnualStatutes-Storage":"none","generatePdf-Regulations-Storage":"disk","generatePdf-AnnualRegulations-Storage":"none","generatePdf-AnnualRegulations-Overwrite":false,"generatePdf-Statutes-SoapEnvelope":"config/conversion/single-statutes.xml","generateEpub-AnnualRegulations-Storage":"none","generateEpub-AnnualStatutes":"none","renditionOptions":["Pdf","Epub"],"generateEpub-AnnualRegulations-SoapEnvelope":"","generatePdf-AnnualStatutes-Storage":"none","generateEpub-Statutes-SoapEnvelope":"config/conversion/epub.xml","generateEpub-Statutes-Path":"master\\cs\\epub","generatePdf-Regulations-SoapEnvelope-TwoPhase":"config/conversion/fo-to-pdf.xml","generateEpub-Regulations-Path":"master\\cr\\epub","generateEpub-AnnualStatutes-Overwrite":false,"generateEpub-Regulations-Overwrite":true,"generateEpub-Regulations-SoapEnvelope":"config/conversion/epub.xml","generateEpub-AnnualRegulations-Path":"annuals_master\\ar\\epub","generatePdf-Regulations-Path":"master\\cr\\pdf","generatePdf-AnnualStatutes":"none","generateEpub-Statutes":"single","generatePdf-AnnualRegulations-SoapEnvelope":"","generatePdf-AnnualRegulations":"none","generateEpub-AnnualStatutes-Path":"annuals_master\\as\\epub","generateEpub-AnnualRegulations-Overwrite":false,"generatePdf-Statutes-Overwrite":true,"generateEpub-AnnualRegulations":"none","generatePdf-AnnualStatutes-Path":"annuals_master\\as\\pdf","generatePdf-Statutes-Storage":"disk","generatePdf-AnnualRegulations-Path":"annuals_master\\ar\\pdf","generatePdf-AnnualStatutes-Overwrite":false,"generatePdf-Regulations":"single","generatePdf-Statutes-SoapEnvelope-TwoPhase":"config/conversion/fo-to-pdf.xml","generateEpub-Regulations":"single"},"enabled":true},"Core":{"params":{"CopyToLaw":false,"Browse-cr-Category-Id":"","ShowBarLetter":true,"Browse-cs-Category-Id":"","CopyToArbortext":false,"Template-NotFound":"notfound.html","DoTreatment-ConsoDate":true,"Menu-cs-Category-Id":"","FutureDate":29990101000000,"ShowFutureDate":true,"Search-OptionInForce":true,"Search-OptionStemming":true,"MasterToServerChunkSize":2000,"DefaultCorpus":"statutes","StopWordsFiles":["config/StopWordFr.txt","config/StopWordEn.txt"],"CutOffDate":19990401000000,"ShowTypeFileOptions":false,"Browse-cr-HideRepealed":false,"StrikethroughConsoDateException_selectionPage":false,"FragmentSelection":true,"Browse-DefaultRecentYear":false,"Browse-cs-HideRepealed":false},"enabled":true},"ContentSecurityPolicy":{"params":{},"enabled":true},"Backup":{"params":{"backupDbList":["master","annuals_master"],"backupExternalFolderList":["master=master","annuals_master=annuals_master","loose=loose"]},"enabled":true},"Integrity":{"params":{"Validate-Conversion-Pdf":true,"Exceptions":"","Validate-Exportation":true,"RemoveIntegrityAttributesOnConversion":true,"RemoveIntegrityAttributesOnExportation":true},"enabled":true}}'>
+		<input type="hidden" id="cmdId" name="cmdId" value="">
+		<input type="hidden" id="langInt" name="langInt" value="fr">
+		<input type="hidden" id="filter" name="filter" value="">
+
+		<input type="hidden" id="langCont" name="langCont" value="fr">
+		<input type="hidden" id="hideMenu" name="hideMenu" value="Fermer le menu">				
+		<input type="hidden" id="diplayMenu" name="diplayMenu" value="Afficher le menu">						
+		<input type="hidden" id="printPreview" name="printPreview" value="<<SR_printPreview>>">						
+		<input type="hidden" id="loadingMaskText" name="loadingMaskText" value="Chargement en cours...">					
+			
+		<input type="hidden" id="showSelectionsButtonTooltipSingleFrag" name="showSelectionsButtonTooltipSingleFrag" value="1 fragment a été sélectionné">				
+		<input type="hidden" id="showSelectionsButtonTooltipMultipleFrags" name="showSelectionsButtonTooltipMultipleFrags" value="fragments ont été sélectionnés">				
+		<input type="hidden" id="bootstrapMultiselect_nonSelectedText_limitSearch" name="bootstrapMultiselect_nonSelectedText_limitSearch" value="Aucune limite">				
+		<input type="hidden" id="bootstrapMultiselect_nSelectedText_limitSearch" name="bootstrapMultiselect_nSelectedText_limitSearch" value="limites">																
+		<input type="hidden" id="bootstrapMultiselect_allSelectedText_limitSearch" name="bootstrapMultiselect_allSelectedText_limitSearch" value="Toutes les limites">																			
+		<input type="hidden" id="corpusQuickSearch" name="corpusQuickSearch" value="all">
+
+		<script type="text/javascript" src="/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+		<script type="text/javascript" src="/bootstrap-notify/3.1.5/bootstrap-notify.min.js"></script>
+		<script type="text/javascript" src="/js/Config.js?v=2.1"></script>
+		<script type="text/javascript" src="/js/Object.js?v=2.1"></script>
+		<script type="text/javascript" src="/js/mainMenu.js?v=2.1"></script>
+		<script type='text/javascript' src='/js/jquery.loadmask.js?v=2.1'></script>
+		<script type='text/javascript' src='/js/cyberlex.jquery.loadmask.js?v=2.1'></script>
+		<script type='text/javascript' src='/js/selections.js?v=2.1'></script>
+		<script type='text/javascript' src='/js/UrlHelper.js?v=2.1'></script>
+		
+<script type="text/javascript" src="/js/Config.js?v=2.2"></script>
+
+<script type="text/javascript" src="/js/showdoc.js?v=2.2"></script>
+
+	</body>
+</html>

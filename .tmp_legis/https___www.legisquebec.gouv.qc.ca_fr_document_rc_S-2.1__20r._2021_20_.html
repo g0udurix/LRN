@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; CHARSET=utf-8"></meta>
+		<meta name="dc.title" content=" - Règlement sur la mise en application des dispositions relatives aux accidents du travail et aux maladies professionnelles contenues dans l’Avenant à l’Entente en matière de sécurité sociale entre le Gouvernement du Québec et le Gouvernement de la République de Finlande">
+		<meta name="dc.creator" content="">
+		<meta name="dc.language" scheme="ISO639-2"	content="fre">
+		<meta name="dc.subject" content="">
+		<meta name="Keywords" content="">
+		<meta name="dc.Publisher" content="">
+		<meta name="dc.Contributor" content="Irosoft, architecture de gestion de l'information législative - legal information management system">
+		<meta name="dc.Description" content="">
+		<meta name="Description" content="">
+		<meta name="Title" content=" - Règlement sur la mise en application des dispositions relatives aux accidents du travail et aux maladies professionnelles contenues dans l’Avenant à l’Entente en matière de sécurité sociale entre le Gouvernement du Québec et le Gouvernement de la République de Finlande">
+		<meta name="dc.date.created" content="2022-09-02">
+		<meta name="dc.date.modified" content="2022-09-02">
+
+		<title>Légis Québec</title>
+		
+		<link rel="shortcut icon" href="/img/favicon.ico">
+		<link rel="stylesheet" href="/bootstrap/5.1.3/css/bootstrap.min.css">
+		<link rel='stylesheet' href='/CSS/jquery.loadmask.css?v=2.1'>
+		<link rel='stylesheet' href='/CSS/cyberlex.jquery.loadmask.css?v=2.1'>
+		
+		
+<link rel="stylesheet" type="text/css" href="/CSS/FragmentView.css?v=2.2"></link>
+
+		<link rel="stylesheet" href="/css/publishing-bootstrap.css?v=2.1">
+		<link rel="stylesheet" href="/css/publishing.css?v=2.1">
+		<link rel="stylesheet" href="/CSS/cyberlex-bootstrap.min.css?v=2.1">
+		<link rel="stylesheet" href="/CSS/cyberlex.css?v=2.1">
+		<link rel="stylesheet" href="/css/font-awesome.min.css?v=2.1">
+		<link rel="stylesheet" href="/CSS/core.css?v=2.1">
+		<link rel="stylesheet" href="/CSS/client.css?v=2.1">
+		<link rel="stylesheet" href="/css/publications-quebec.css?v=2.1">
+		<link rel="stylesheet" href="/css/eoq.css?v=2.1">
+
+		<script type="text/javascript" src="/jquery-ui/1.13.0/external/jquery/jquery.js?v=2.1"></script>
+		<script type="text/javascript" src="/jquery-ui/1.13.0/jquery-ui.min.js?v=2.1"></script>
+		<script type="text/javascript" src="/jquery/3.6.0/jquery.min.js?v=2.1"></script>
+		<script type="text/javascript" src="/DOMPurify/dist/purify.min.js?v=2.1"></script>
+	</head>
+
+	<body>
+		<div id="wrap">
+			<div class="main-header">
+				<div class="float-end">
+					<div class="vague"></div>
+					<ul class="pub-quebec">
+						<li><a href="/fr/">Accueil</a></li>
+						<li><a href="/fr/contenu/joindre" >Nous joindre</a></li>
+						<li><a href="/fr/contenu/plan" >Plan du site</a></li>
+						<li><a href="https://www.quebec.ca/" target="_blank">Québec.ca</a></li>
+						<li><a href="/fr/contenu/FAQ" >FAQ</a></li>
+						<li class='spacer-pub-quebec'></li>
+						<li><a id="langSwitcher" class="" href="/en/document/cr/S-2.1,%20r.%2021%20">English</a></li>
+
+					</ul>
+					<div class="mtess">
+						<a href="https://www.mtess.gouv.qc.ca/" class="mtessTitle" target="_blank">Ministère de l'Emploi et de la Solidarité sociale</a>
+					</div>
+				</div>
+				<a class="logo-pub-quebec" href="http://www.publicationsduquebec.gouv.qc.ca/" target="_blank"></a>
+			</div>
+			<hr/>
+			
+			<!-- Header -->
+			<nav class="navbar navbar-light">
+				<div class="container-fluid colorTheme">
+					<div class="navbar-header">
+						<div class="row">
+							<div class="col-sm-3">
+								<div class="input-group" class="pt-2">
+									<input type="text" class="form-control" data-bs-placement="top" data-bs-toggle="tooltip" placeholder="Recherche" id="quickSearchText" title="Rechercher dans lois et règlements codifiés">
+									<span class="input-group-btn">
+										<button class="btn btn-primary" type="button" id="goResult" data-bs-placement="top" data-bs-toggle="tooltip" title="Recherche">
+											<span class="fa fa-search" aria-hidden="true"></span>
+										</button>
+									</span>
+								</div>
+								<div class="py-2"><a href="/fr/recherche?t=a">Recherche avancée</a></div>
+							</div><div class="col-sm-9 d-flex justify-content-between">
+									<a class="navbar-brand logo-fr logo" title="Accueil" href="/fr/"></a>
+							</div>
+						</div>
+					</div>
+				</div><!-- /.container-fluid -->
+			</nav>
+			<!-- Content -->			
+			<div class="row">
+				<div class="col-sm-3">
+					<div class="list-group">
+	<a href="#" class="list-group-item active disabled bg-primary bg-gradient text-white">Lois et règlements codifiés</a>
+	<a href="/fr/chapitres?corpus=lois" id="chapterStatutes" class="list-group-item">Lois codifiées</a>
+	<a href="/fr/chapitres?corpus=regs" id="chapterRegulations" class="list-group-item">Règlements codifiés</a>
+	
+	<a href="#" class="list-group-item active disabled bg-primary bg-gradient text-white">Lois et règlements annuels</a>
+	<a href="/fr/annuels?filtre=lois" id="browseannual-statutes" class="list-group-item">Lois annuelles</a>
+	<a href="/fr/annuels?filtre=regs" id="browseannual-regs" class="list-group-item">Règlements annuels</a>
+	
+	<a href="#" class="list-group-item active disabled bg-primary bg-gradient text-white">Information complémentaire</a>
+	<a id="content-editoff" href="/fr/contenu/editeurofficiel" class="list-group-item">L’Éditeur officiel du Québec</a>
+	<a id="content-neuf" href="/fr/contenu/neuf" class="list-group-item">Quoi de neuf?</a>
+	<a id="content-noteinfo" href="/fr/contenu/noteinfo" class="list-group-item">Note d’information</a>
+	<a id="content-mjqpol" href="/fr/contenu/mjqpol" class="list-group-item">Politique du ministre de la Justice</a>
+	<a id="content-modlois" href="/fr/contenu/modlois" class="list-group-item">Lois : Modifications</a>
+	<a id="content-nevlois" href="/fr/contenu/nevlois" class="list-group-item">Lois : Dispositions non en vigueur</a>
+	<a id="content-eevlois" href="/fr/contenu/eevlois" class="list-group-item">Lois : Entrées en vigueur</a>
+	<a id="content-loisann" href="/fr/contenu/loisann" class="list-group-item">Lois annuelles : Versions PDF depuis 1996</a>
+	<a id="content-modreg" href="/fr/contenu/modreg" class="list-group-item">Règlements : Modifications</a>
+	<a id="content-regann" href="/fr/contenu/regann" class="list-group-item">Règlements annuels : Versions PDF depuis 1996</a>
+	<a id="content-decision" href="/fr/contenu/decision" class="list-group-item">Décisions des tribunaux</a>
+</div>
+					
+				</div>
+				<div id="contentDiv" class="col-sm-9">
+					<form id="form" onsubmit="" method="post" action="">
+	<div>
+		<input alt="Champ caché" name="command" type="hidden" value=""></input>
+		<input alt="Champ caché" name="shorttitle" type="hidden" value=""></input>
+		<input alt="Champ caché" name="marginalnotexml" type="hidden" value=""></input>
+		<input alt="Champ caché" name="heading" type="hidden" value=""></input>
+		<input alt="Champ caché" name="fragment" type="hidden" value=""></input>
+		<input alt="Champ caché" name="selfrag" type="hidden" value=""></input>
+		<input alt="Champ caché" name="search_type" type="hidden" value=""></input>
+		<input alt="Champ caché" name="title_search_type" type="hidden" value=""></input>		
+		<input alt="Champ caché" name="anchor" type="hidden" value=""></input>
+		<input alt="Champ caché" name="dateEEV" type="hidden" value=""></input>
+		<input alt="Champ caché" name="statuteyear" type="hidden" value=""></input>
+		<input alt="Champ caché" name="isPrinting" type="hidden" value="false"></input>
+		<input alt="Champ caché" name="from" type="hidden" value=""></input>
+		<input alt="Champ caché" name="output" type="hidden" value="printFull"></input>
+		<input alt="Champ caché" name="page" type="hidden" value="<<page>>"></input>
+		<input alt="Champ caché" name="length" type="hidden" value=""></input>
+		<input alt="Champ caché" name="instrumentnumber" type="hidden" value="S-2.1, r. 21 "></input>
+		<input alt="Champ caché" name="instrumentnumbersearch" type="hidden" value=""></input>
+		<input alt="Champ caché" name="stemmed" type="hidden" value=""></input>
+		
+	</div>
+
+	<div class="card">
+		<div class="card-header p-3 bg-gradient docHeader">
+						<h3 class="card-title"><span class="fw-bold">S-2.1, r. 21 </span> - Règlement sur la mise en application des dispositions relatives aux accidents du travail et aux maladies professionnelles contenues dans l’Avenant à l’Entente en matière de sécurité sociale entre le Gouvernement du Québec et le Gouvernement de la République de Finlande</h3>
+					</div>
+		
+		<div class="card-body">
+			<div class="d-flex justify-content-between align-items-center">
+				<div class="flex-row d-flex align-items-center">
+					<div class="pr-1">
+						<a href="/fr/tdm/rc/S-2.1,%20r.%2021%20" class="btn btn-outline-secondary bg-gradient" role="button" title="Afficher la table des matières du document" alt="Afficher la table des matières du document" data-bs-toggle="tooltip" data-bs-placement="top">Table des matières <span class="fa fa-list smallLeftSpacer" aria-hidden="true"></span></a>
+					</div>
+					<div class="px-1">
+						
+				<div class="btn-group">
+					<button id="relatedLegislativeDocument" type="button" class="btn btn-outline-secondary bg-gradient dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="-100, 0">
+						Loi habilitante <span class="badge rounded-pill bg-secondary smallLeftSpacer">1</span> <span class="caret smallLeftSpacer"></span>
+					</button>
+					<table class="table table-responsive table-hover dropdown-menu relatedDoc" role="menu">
+						<thead>
+							<tr>
+								<th width="15%">Alphanumérique</th>
+								<th width="85%">Titre</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+<td>S-2.1 </td>
+<td>
+<a class="hand boldLink" href="/fr/document/lc/S-2.1%20/">Loi sur la santé et la sécurité du travail   
+</a>
+</td>
+</tr>
+						</tbody>
+					</table>
+					</div>
+					</div>
+					<div class="px-1">
+						<span id="occurrenceButton" class="d-none">
+							Occurrences<span class="badge rounded-pill bg-secondary ms-3" id="occurrenceCount">0</span>
+						</span>
+					</div>
+					<div class="px-1">
+						
+					</div>
+				</div>
+
+				<div class="flex-row d-flex align-items-center">
+					<div class="px-1">
+						<a id="renditionPdf" target="_blank" class="btn btn-outline-secondary bg-gradient d-none" 
+							role="button" title="Ouvrir la version PDF" alt="Ouvrir la version PDF"
+							data-bs-toggle="tooltip" data-bs-placement="top">
+							 <span class="fa pdf-icon" aria-hidden="true"></span>
+						</a>
+					</div>
+					<div class="px-1">
+						<a id="renditionEpub" target="_blank" class="btn btn-outline-secondary bg-gradient d-none" 
+							role="button" title="Télécharger la version ePUB" alt="Télécharger la version ePUB"
+							data-bs-toggle="tooltip" data-bs-placement="top">
+							 <span class="fa epub-icon" aria-hidden="true"></span>
+						</a>
+					</div>
+					<div class="px-1">
+						<a id="btnPrintPreview" class="btn btn-outline-secondary bg-gradient last"
+							role="button" title="Préparer le document pour l'impression"
+							alt="Préparer le document pour l'impression" data-bs-toggle="tooltip" data-bs-placement="top"><span id="printBtnIcon"
+								class="fa fa-print" aria-hidden="true"></span>
+						</a>
+					</div>
+				</div>
+				
+			</div>
+			<div class="row pt-2">
+				<div class="col">
+					<div class="card ">
+						
+							<div class="card-header official-heading bg-gradient ">
+								<div class="row">
+									<div class="col">
+										<div class="text-end"></div>
+										Texte complet 
+									</div>
+								
+									<div class="col">
+										<div class="text-end">
+											À jour au 1<sup>er</sup> avril 2025
+										</div>
+										<div class="text-end">
+											Ce document a valeur officielle.
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="card-body history current conso" id="mainContent-document">
+								<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE div
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:exsl="http://exslt.org/common" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:integrity="http://ref.irosoft.com/integrity/" integrity:Digest="9F09FE2D6CB9B5FAC33E06F229236C2F"><meta title="Ministère de la Justice du Québec" author="Ministère de la Justice du Québec" subject="Ministère de la Justice du Québec" keywords="Ministère de la Justice du Québec" description="Ministère de la Justice du Québec" timestamp="n'est pas supporter" application="CYBERLEX" version="2.2.0.2" provider="Irosoft" source="xsl"/><div xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns:law="http://ref.irosoft.com/LIMS/1.0/law" class="DefaultPageSequence BodyPageSequence"><div class="LegislativeDocument Global Style_Extra_Class"><div class="Identification"><div integrity:added="1" class="Identification-Id"><span integrity:added="1">chapitre </span><span integrity:order="1">S-2.1, r. 21</span></div><div integrity:order="2" class="titre-reglement-left titre-reglement-left customLongTitleWord">Règlement sur la mise en application des dispositions relatives aux accidents du travail et aux maladies professionnelles contenues dans l’Avenant à l’Entente en matière de sécurité sociale entre le Gouvernement du Québec et le Gouvernement de la République de Finlande</div><span class="Hidden" integrity:order="3">SANTÉ ET SÉCURITÉ DU TRAVAIL — ENTENTE — QUÉBEC-FINLANDE</span><div><div class="enabling-identification"><div integrity:order="5" class="LongTitle-enabling">Loi sur la santé et la sécurité du travail</div></div><div class="HistoricalNote-LongTitle"><span><span integrity:order="6">(chapitre S-2.1, a. 223, 1<span integrity:order="7" class="superscript">er</span> al., par. 39)</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div><span class="Hidden" integrity:order="4">S-2.1</span></div><span class="Hidden"><span integrity:order="10" class="date-txt-statut Hidden">01</span><span integrity:added="1">1</span><span integrity:added="1" class="superscript_7point">er</span><span integrity:added="1"> </span><span integrity:order="9" class="Hidden">09</span><span integrity:added="1">septembre </span><span integrity:order="8" class="date-txt-statut">2012</span></span></div><div class="section" id="se:1"><div class="Subsection SubsectionFirst" id="se:1-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 21 ?code=se:1&historique=20250804#20250804"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:1" data-code="se:1"><span integrity:order="11" class="Label-Section consolidationWhipeTextDecoration consolidationClean">1<span integrity:added="1">.</span></span></a> <span integrity:order="12" class="Subsection">Les bénéfices de la Loi sur les accidents du travail et les maladies professionnelles (chapitre A-3.001) et des règlements adoptés en vertu de cette loi sont étendus à toute personne visée dans l’Avenant à l’Entente en matière de sécurité sociale entre le Gouvernement du Québec et le Gouvernement de la République de Finlande du 30 octobre 1986, avenant signé le 12 juillet 1995 et apparaissant à l’annexe 1.</span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span integrity:order="13">D. 991-98, a. 1</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div></div><div class="section" id="se:2"><div class="Subsection SubsectionFirst" id="se:2-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 21 ?code=se:2&historique=20250804#20250804"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:2" data-code="se:2"><span integrity:order="14" class="Label-Section consolidationWhipeTextDecoration consolidationClean">2<span integrity:added="1">.</span></span></a> <span integrity:order="15" class="Subsection">Ces bénéfices s’appliquent de la manière prévue à cet Avenant et à l’Avenant à l’Arrangement administratif apparaissant à l’annexe 2.</span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span integrity:order="16">D. 991-98, a. 2</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div></div><div class="section" id="se:3"><div class="Subsection SubsectionFirst" id="se:3-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 21 ?code=se:3&historique=20250804#20250804"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:3" data-code="se:3"><span integrity:order="17" class="Label-Section consolidationWhipeTextDecoration consolidationClean">3<span integrity:added="1">.</span></span></a> <span class="Subsection"><span integrity:order="18" class="Repealed-Text">(Omis).</span></span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span integrity:order="19">D. 991-98, a. 3</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div></div><div class="Schedule-abrogative PageBreakBefore" id="sc-nb:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 21 ?code=sc-nb:1&historique=20250804#20250804"><img xmlns="" src="/img/history.png"/></a></div><div class="ScheduleHeading" id="d560047690e63"><a class="linkOtherLang" href="#sc-nb:1" data-code="sc-nb:1"><span integrity:order="20" class="Label-ScheduleHeading">ANNEXE 1</span></a></div><div class="ScheduleContent"><div><div class="indent-0-0"><span integrity:order="21" class="Provision">AVENANT À L’ENTENTE EN MATIÈRE DE SÉCURITÉ SOCIALE ENTRE LE GOUVERNEMENT DU QUÉBEC ET LE GOUVERNEMENT DE LA RÉPUBLIQUE DE FINLANDE</span></div><div class="indent-0-0"><span integrity:order="22" class="Provision">LE GOUVERNEMENT DU QUÉBEC</span></div><div class="indent-0-0"><span integrity:order="23" class="Provision">ET</span></div><div class="indent-0-0"><span integrity:order="24" class="Provision">LE GOUVERNEMENT DE LA RÉPUBLIQUE DE FINLANDE</span></div><div class="indent-0-0"><span integrity:order="25" class="Provision">DÉSIREUX de renforcer leur coopération dans le domaine de la sécurité sociale et, à cette fin,</span></div><div class="indent-0-0"><span integrity:order="26" class="Provision">SOUHAITANT modifier l’Entente en matière de sécurité sociale qu’ils ont signée à Québec le 30 octobre 1986 (dans cet Avenant, ci-après appelée l’«Entente»);</span></div><div class="indent-0-0"><span integrity:order="27" class="Provision">SONT CONVENUS DES DISPOSITIONS SUIVANTES:</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="28" class="bold">Article 1</span></span></div><div class="indent-0-0"><span integrity:order="29" class="Provision">L’article 1 de l’Entente est modifié par le remplacement de l’alinéa <span integrity:order="30" class="italic">d</span> par le suivant:</span></div><div class="Paragraph"><span integrity:order="31" class="Label-L LabelBase"><span integrity:order="32" class="normal">«</span>d<span integrity:added="1" class="normal LabelBase italic">) </span></span><span integrity:order="33" class="Provision">«prestation»: une pension, une allocation ou une autre prestation en espèces ou en nature prévue par la législation de chaque Partie, y compris tout complément, supplément ou majoration;».</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="34" class="bold">Article 2</span></span></div><div class="indent-0-0"><span integrity:order="35" class="Provision">L’article 2 de l’Entente est modifié par le remplacement de l’alinéa <span integrity:order="36" class="italic">b</span> par le suivant:</span></div><div class="Paragraph"><span integrity:order="37" class="Label-L LabelBase"><span integrity:order="38" class="normal">«</span>b<span integrity:added="1" class="normal LabelBase italic">) </span></span><span integrity:order="39" class="Provision">pour la Finlande:</span></div><div class="Paragraph"><span integrity:order="40" class="Label-R LabelBase">i<span integrity:added="1">. </span></span><span integrity:order="41" class="Provision">la législation relative au Régime de pensions du travail,</span></div><div class="Paragraph"><span integrity:order="42" class="Label-R LabelBase">ii<span integrity:added="1">. </span></span><span integrity:order="43" class="Provision">la législation relative au Régime d’assurance des accidents du travail et au Régime d’assurance des maladies professionnelles,</span></div><div class="Paragraph"><span integrity:order="44" class="Label-R LabelBase">iii<span integrity:added="1">. </span></span><span integrity:order="45" class="Provision">la législation relative au Régime général des soins de santé,</span></div><div class="Paragraph"><span integrity:order="46" class="Label-R LabelBase">iv<span integrity:added="1">. </span></span><span integrity:order="47" class="Provision">la législation relative au Régime d’assurance maladie à l’exception des allocations maternelles, paternelles et parentales,</span></div><div class="Paragraph"><span integrity:order="48" class="Label-R LabelBase">v<span integrity:added="1">. </span></span><span integrity:order="49" class="Provision">la Loi sur les cotisations de sécurité sociale de l’employeur.».</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="50" class="bold">Article 3</span></span></div><div class="indent-0-0"><span integrity:order="51" class="Provision">L’article 4 de l’Entente est modifié par le remplacement de l’alinéa <span integrity:order="52" class="italic">d</span> par le suivant:</span></div><div class="Paragraph"><span integrity:order="53" class="Label-L LabelBase"><span integrity:order="54" class="normal">«</span>d<span integrity:added="1" class="normal LabelBase italic">) </span></span><span integrity:order="55" class="Provision">à toute autre personne qui est ou a été soumise à la législation d’une Partie ou qui a acquis des droits en vertu de cette législation.».</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="56" class="bold">Article 4</span></span></div><div class="indent-0-0"><span integrity:order="57" class="Provision">L’article 5 de l’Entente est modifié par le remplacement du paragraphe 1 par le suivant:</span></div><div class="Paragraph"><span integrity:order="58" class="Label-P LabelBase"><span integrity:order="59" class="normal">«</span>1<span integrity:added="1">. </span></span><span integrity:order="60" class="Provision">Sauf disposition contraire de l’Entente:</span></div><div class="Paragraph"><span integrity:order="61" class="Label-L LabelBase">a<span integrity:added="1" class="normal LabelBase italic">) </span></span><span integrity:order="62" class="Provision">les personnes désignées à l’article 4 reçoivent, dans l’application de la législation du Québec, le même traitement que les ressortissants de cette Partie;</span></div><div class="Paragraph"><span integrity:order="63" class="Label-L LabelBase">b<span integrity:added="1" class="normal LabelBase italic">) </span></span><span integrity:order="64" class="Provision">les personnes désignées à l’article 4 qui résident sur le territoire d’une des Parties reçoivent, dans l’application de la législation de la Finlande, le même traitement que les ressortissants de cette Partie.».</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="65" class="bold">Article 5</span></span></div><div class="indent-0-0"><span integrity:order="66" class="Provision">L’article 7 de l’Entente est modifié:</span></div><div class="Paragraph"><span integrity:order="67" class="Label-L LabelBase">a<span integrity:added="1" class="normal LabelBase italic">) </span></span><span integrity:order="68" class="Provision">par le remplacement du paragraphe 1 par le suivant:</span></div><div class="Paragraph"><span integrity:order="69" class="Label-P LabelBase"><span integrity:order="70" class="normal">«</span>1<span integrity:added="1">. </span></span><span integrity:order="71" class="Provision">1. Une personne soumise à la législation d’une Partie et travaillant pour un employeur sur le territoire de cette Partie au moment où elle est détachée par ce dernier pour travailler temporairement pour ce même employeur ou pour un employeur affilié sur le territoire de l’autre Partie continue, en ce qui a trait à ce travail, d’être soumise à la législation de la première Partie tout comme le conjoint et les personnes à charge qui l’accompagnent, pourvu qu’ils ne travaillent pas et ne soient pas soumis au Régime de pensions du travail de l’autre Partie, jusqu’à l’expiration du trente-sixième (36) mois de détachement.»;</span></div><div class="Paragraph"><span integrity:order="72" class="Label-L LabelBase">b<span integrity:added="1" class="normal LabelBase italic">) </span></span><span integrity:order="73" class="Provision">par le remplacement, dans le paragraphe 2, des mots «vingt-quatre» par les mots «trente-six» (36)»;</span></div><div class="Paragraph"><span integrity:order="74" class="Label-L LabelBase">c<span integrity:added="1" class="normal LabelBase italic">) </span></span><span integrity:order="75" class="Provision">par l’insertion, dans le paragraphe 2 et après les mots «les autorités compétentes des deux Parties», des mots «ou les institutions qu’elles désignent».</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="76" class="bold">Article 6</span></span></div><div class="indent-0-0"><span integrity:order="77" class="Provision">L’article 10 de l’Entente est modifié par l’insertion après les mots «Les autorités compétentes des deux Parties», des mots «ou les institutions qu’elles désignent».</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="78" class="bold">Article 7</span></span></div><div class="indent-0-0"><span integrity:order="79" class="Provision">L’article 13 de l’Entente est remplacé par le suivant:</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="80" class="bold">Article 13</span></span></div><div class="Paragraph"><span integrity:order="81" class="Label-P LabelBase"><span integrity:order="82" class="normal">«</span>1<span integrity:added="1">. </span></span><span integrity:order="83" class="Provision">Sauf disposition contraire du présent article, l’institution compétente de la Finlande applique la législation finlandaise pour déterminer le droit à une prestation en vertu du Régime de pensions du travail et le montant de cette prestation.</span></div><div class="Paragraph"><span integrity:order="84" class="Label-P LabelBase">2<span integrity:added="1">. </span></span><span integrity:order="85" class="Provision">Si une personne qui devient invalide ou décède ne remplit par la condition de résidence en vertu de la législation finlandaise relative au Régime de pensions du travail pour satisfaire à l’exigence quant à la période future, les périodes d’assurance en vertu du Régime de rentes du Québec sont considérées à cette fin comme des périodes accomplies en Finlande, pourvu qu’elles ne se superposent pas.</span></div><div class="Paragraph"><span integrity:order="86" class="Label-P LabelBase">3<span integrity:added="1">. </span></span><span integrity:order="87" class="Provision">Si une personne ne travaille plus pour autrui ou à son compte en Finlande, que la pension à laquelle elle aurait droit en vertu de la législation finlandaise relative au Régime de pensions du travail ne comprend pas la période future et que le risque survient au moment où elle occupe un travail pour autrui ou à son compte assujetti à la Loi sur le Régime de rentes du Québec, les périodes d’assurance en vertu du Régime de rentes du Québec sont prises en compte par l’institution compétente de la Finlande pour satisfaire à l’exigence quant à la période future.</span></div><div class="Paragraph"><span integrity:order="88" class="Label-P LabelBase">4<span integrity:added="1">. </span></span><span integrity:order="89" class="Provision">Lorsque les paragraphes 2 ou 3 s’appliquent, l’institution compétente de la Finlande détermine le montant de la prestation comme suit:</span></div><div class="Paragraph"><span integrity:order="90" class="Label-L LabelBase">a<span integrity:added="1" class="normal LabelBase italic">) </span></span><span integrity:order="91" class="Provision">Le montant de la prestation basé sur les périodes d’assurance effectives en vertu de la législation de la Finlande est déterminé selon les dispositions de la législation finlandaise relative au Régime de pensions du travail.</span></div><div class="Paragraph"><span integrity:order="92" class="Label-L LabelBase">b<span integrity:added="1" class="normal LabelBase italic">) </span></span><span integrity:order="93" class="Provision">Le montant de la prestation basé sur la période se situant entre la survenance du risque et l’âge de la retraite est calculé en proportion des périodes d’assurance effectives en vertu de la législation finlandaise relative au Régime de pensions du travail sur quatre cent quatre-vingts (480) mois.».</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="94" class="bold">Article 8</span></span></div><div class="indent-0-0"><span integrity:order="95" class="Provision">L’article 15 de l’Entente est modifié:</span></div><div class="Paragraph"><span integrity:order="96" class="Label-L LabelBase">a<span integrity:added="1" class="normal LabelBase italic">) </span></span><span integrity:order="97" class="Provision">par l’insertion, dans l’alinéa <span integrity:order="98" class="italic">a</span> et après les mots «Fédération des institutions d’assurance accident», des mots «ou l’institution d’assurance qu’elle désigne»;</span></div><div class="Paragraph"><span integrity:order="99" class="Label-L LabelBase">b<span integrity:added="1" class="normal LabelBase italic">) </span></span><span integrity:order="100" class="Provision">par l’addition, après l’alinéa <span integrity:order="101" class="italic">b</span>, de l’alinéa suivant:</span></div><div class="Paragraph"><span integrity:order="102" class="Label-L LabelBase"><span integrity:order="103" class="normal">«</span>c<span integrity:added="1" class="normal LabelBase italic">) </span></span><span integrity:order="104" class="Provision">Les dispositions de l’alinéa <span integrity:order="105" class="italic">a</span> ne s’appliquent pas lorsque le séjour sur le territoire d’une Partie s’effectue dans le but de recevoir des prestations en nature et que ces prestations peuvent être dispensées sur le territoire de l’autre Partie.».</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="106" class="bold">Article 9</span></span></div><div class="indent-0-0"><span integrity:order="107" class="Provision">Après l’article 16, l’article suivant est inséré:</span></div><div class="indent-0-0"><span integrity:order="108" class="Provision">«<span integrity:order="109" class="bold">Article 16 A</span></span></div><div class="Paragraph"><span integrity:order="110" class="Label-P LabelBase">1<span integrity:added="1">. </span></span><span integrity:order="111" class="Provision">Lorsqu’une personne ayant contracté une maladie professionnelle a exercé, selon la législation des deux Parties, une activité susceptible de provoquer ladite maladie, les prestations auxquelles la personne ou ses survivants peuvent prétendre sont accordées exclusivement en vertu de la législation de la dernière de ces Parties.</span></div><div class="Paragraph"><span integrity:order="112" class="Label-P LabelBase">2<span integrity:added="1">. </span></span><span integrity:order="113" class="Provision">Cependant, si aucune prestation ne peut être accordée en vertu de la législation de la dernière Partie, l’institution de cette Partie transmet la demande l’institution de la première Partie qui étudie le cas selon les dispositions de sa propre législation.».</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="114" class="bold">Article 10</span></span></div><div class="indent-0-0"><span integrity:order="115" class="Provision">L’article 19 de l’Entente est modifié:</span></div><div class="Paragraph"><span integrity:order="116" class="Label-L LabelBase">a<span integrity:added="1" class="normal LabelBase italic">) </span></span><span integrity:order="117" class="Provision">par le remplacement, au paragraphe 2, des mots «de l’Hôpital général et de la Santé publique» par les mots «générale des soins de santé»;</span></div><div class="Paragraph"><span integrity:order="118" class="Label-L LabelBase">b<span integrity:added="1" class="normal LabelBase italic">) </span></span><span integrity:order="119" class="Provision">par l’addition, après le paragraphe 2, du paragraphe suivant:</span></div><div class="Paragraph"><span integrity:order="120" class="Label-P LabelBase"><span integrity:order="121" class="normal">«</span>3<span integrity:added="1">. </span></span><span integrity:order="122" class="Provision">Aux fins du présent chapitre, l’expression «personne assurée» désigne toute personne qui, immédiatement avant son départ pour le territoire de l’une des Parties, a droit aux prestations en vertu de la législation de l’autre Partie, que ce soit en sa qualité propre ou comme ayant droit.  Toutefois, le présent chapitre ne s’applique pas à une personne visée aux articles 8 et 9, ni à son conjoint et à ses personnes à charge.».</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="123" class="bold">Article 11</span></span></div><div class="indent-0-0"><span integrity:order="124" class="Provision">L’article 20 de l’Entente est modifié:</span></div><div class="Paragraph"><span integrity:order="125" class="Label-L LabelBase">a<span integrity:added="1" class="normal LabelBase italic">) </span></span><span integrity:order="126" class="Provision">par le remplacement des mots «les personnes à sa charge» par les mots «son conjoint et les personnes à charge»;</span></div><div class="Paragraph"><span integrity:order="127" class="Label-L LabelBase">b<span integrity:added="1" class="normal LabelBase italic">) </span></span><span integrity:order="128" class="Provision">par l’addition, à la fin, de la phrase suivante:</span></div><div class="indent-0-0"><span integrity:order="129" class="Provision">«Après cette date, elle n’a plus aucun droit à des prestations prévues à la législation de la première Partie.».</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="130" class="bold">Article 12</span></span></div><div class="indent-0-0"><span integrity:order="131" class="Provision">L’article 21 de l’Entente est modifié:</span></div><div class="Paragraph"><span integrity:order="132" class="Label-L LabelBase">a<span integrity:added="1" class="normal LabelBase italic">) </span></span><span integrity:order="133" class="Provision">par le remplacement, au paragraphe 1, des mots «les personnes à sa charge» par les mots «le conjoint et les personnes à charge»;</span></div><div class="Paragraph"><span integrity:order="134" class="Label-L LabelBase">b<span integrity:added="1" class="normal LabelBase italic">) </span></span><span integrity:order="135" class="Provision">par l’addition à la toute fin du paragraphe 1, des mots «aux mêmes conditions que celles applicables aux résidents de cette Partie»;</span></div><div class="Paragraph"><span integrity:order="136" class="Label-L LabelBase">c<span integrity:added="1" class="normal LabelBase italic">) </span></span><span integrity:order="137" class="Provision">par le remplacement des paragraphes 2 et 3 par le paragraphe suivant:</span></div><div class="Paragraph"><span integrity:order="138" class="Label-P LabelBase"><span integrity:order="139" class="normal">«</span>2<span integrity:added="1">. </span></span><span integrity:order="140" class="Provision">2. Les dispositions du paragraphe 1 s’appliquent également aux travailleurs détachés, aux étudiants inscrits dans un établissement d’enseignement sur le territoire de séjour et aux personnes effectuant des recherches de niveau universitaire ou post-universitaire ou effectuant un stage dans le cadre d’un programme collégial ou universitaire.».</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="141" class="bold">Article 13</span></span></div><div class="indent-0-0"><span integrity:order="142" class="Provision">L’article de l’Entente est modifié par le remplacement des mots «les personnes à leur charge» par les mots «leur conjoint et les personnes à charge».</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="143" class="bold">Article 14</span></span></div><div class="indent-0-0"><span integrity:order="144" class="Provision">L’article 23 de l’Entente est modifié:</span></div><div class="Paragraph"><span integrity:order="145" class="Label-L LabelBase">a<span integrity:added="1" class="normal LabelBase italic">) </span></span><span integrity:order="146" class="Provision">par le remplacement, dans le paragraphe 1, des mots «Une personne à la charge d’une personne assurée» par les mots «Le conjoint ou la personne à charge d’une personne assurée»;</span></div><div class="Paragraph"><span integrity:order="147" class="Label-L LabelBase">b<span integrity:added="1" class="normal LabelBase italic">) </span></span><span integrity:order="148" class="Provision">par le remplacement, dans le paragraphe 2, des mots «personne à charge» par les mots «conjoint ou personne à charge».</span></div><div class="Paragraph"><span integrity:order="149" class="Label-L LabelBase">c<span integrity:added="1" class="normal LabelBase italic">) </span></span><span integrity:order="150" class="Provision">par le remplacement, dans le paragraphe 2, des mots «du territoire» par les mots «de leur territoire».</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="151" class="bold">Article 15</span></span></div><div class="indent-0-0"><span integrity:order="152" class="Provision">L’article 24 de l’Entente est modifié par le remplacement du paragraphe 1 par le suivant:</span></div><div class="Paragraph"><span integrity:order="153" class="Label-P LabelBase"><span integrity:order="154" class="normal">«</span>1<span integrity:added="1">. </span></span><span integrity:order="155" class="Provision">L’institution compétente qui sert les prestations en nature visées dans ce chapitre en assume les coûts.».</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="156" class="bold">Article 16</span></span></div><div class="Paragraph"><span integrity:order="157" class="Label-P LabelBase">1<span integrity:added="1">. </span></span><span integrity:order="158" class="Provision">Toute période d’assurance accomplie avant la date d’entrée en vigueur du présent Avenant est prise en compte pour déterminer le droit à une prestation en vertu de l’Entente modifiée par cet Avenant.</span></div><div class="Paragraph"><span integrity:order="159" class="Label-P LabelBase">2<span integrity:added="1">. </span></span><span integrity:order="160" class="Provision">Le présent Avenant n’ouvre aucun droit au paiement d’une prestation ou d’une partie de prestation pour une période antérieure à la date de son entrée en vigueur.</span></div><div class="Paragraph"><span integrity:order="161" class="Label-P LabelBase">3<span integrity:added="1">. </span></span><span integrity:order="162" class="Provision">Les prestations en vertu de l’Entente modifiée par le présent Avenant sont également payables à l’égard d’événements antérieurs à la date d’entrée en vigueur du présent Avenant.</span></div><div class="Paragraph"><span integrity:order="163" class="Label-P LabelBase">4<span integrity:added="1">. </span></span><span integrity:order="164" class="Provision">Une prestation accordée en vertu des dispositions de l’Entente appliquées antérieurement ne peut être réduite ou annulée par aucune des dispositions du présent Avenant.</span></div><div class="Paragraph"><span integrity:order="165" class="Label-P LabelBase">5<span integrity:added="1">. </span></span><span integrity:order="166" class="Provision">Une prestation accordée en vertu des dispositions de l’Entente appliquées antérieurement est transformée, à la demande du bénéficiaire, en une prestation calculée selon les dispositions de l’Entente modifiée par cet Avenant.</span></div><div class="Paragraph"><span integrity:order="167" class="Label-P LabelBase">6<span integrity:added="1">. </span></span><span integrity:order="168" class="Provision">Si, à la date d’entrée en vigueur du présent Avenant, une demande de la prestation en vertu de la législation d’une Partie est en suspens, et que l’institution compétente de cette Partie détermine par la suite que le requérant a droit à une prestation à la fois avant et après la date d’entrée en vigueur de l’Avenant, l’institution compétente détermine le montant de la prestation payable comme suit:</span></div><div class="Paragraph"><span integrity:order="169" class="Label-L LabelBase">a<span integrity:added="1" class="normal LabelBase italic">) </span></span><span integrity:order="170" class="Provision">le montant de la prestation payable pour toute période accomplie avant la date d’entrée en vigueur du présent Avenant est déterminé conformément aux dispositions de l’Entente appliquées antérieurement;</span></div><div class="Paragraph"><span integrity:order="171" class="Label-L LabelBase">b<span integrity:added="1" class="normal LabelBase italic">) </span></span><span integrity:order="172" class="Provision">le montant de la prestation payable pour toute période postérieure à la date d’entrée en vigueur du présent Avenant est déterminé de nouveau conformément aux dispositions de l’Entente modifiée par cet Avenant pourvu que la prestation ainsi calculée soit plus avantageuse pour le bénéficiaire que si elle était calculée en vertu des dispositions de l’Entente appliquées antérieurement.</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="173" class="bold">Article 17</span></span></div><div class="Paragraph"><span integrity:order="174" class="Label-P LabelBase">1<span integrity:added="1">. </span></span><span integrity:order="175" class="Provision">Chacune des Parties notifie à l’autre Partie l’accomplissement des procédures internes requises pour l’entrée en vigueur du présent Avenant.</span></div><div class="Paragraph"><span integrity:order="176" class="Label-P LabelBase">2<span integrity:added="1">. </span></span><span integrity:order="177" class="Provision">Sous réserve du paragraphe 3, le présent Avenant est conclu pour une durée indéfinie à compter de la date de son entrée en vigueur laquelle est fixée par échange de lettres entre les Parties.</span></div><div class="Paragraph"><span integrity:order="178" class="Label-P LabelBase">3<span integrity:added="1">. </span></span><span integrity:order="179" class="Provision">En cas de dénonciation de l’Entente en vertu du paragraphe 2 de l’article 35, le présent Avenant est également dénoncé et prend fin à la même date que l’Entente.</span><div class="section"><span integrity:order="180" class="Provision">Fait à Québec, le 12 juillet 1995</span></div></div><div class="indent-0-0"><span integrity:order="181" class="Provision">en double exemplaire, en langue française et en langue finnoise, les 2 textes faisant également foi.</span></div><div class="indent-0-0"><span integrity:order="182" class="Provision">POUR LE<span><span width="210pt" class="inputHTML"><span integrity:added="1"> </span></span></span>POUR LE</span></div><div class="indent-0-0"><span integrity:order="183" class="Provision">GOUVERNEMENT<span><span width="159pt" class="inputHTML"><span integrity:added="1"> </span></span></span>GOUVERNEMENT</span></div><div class="indent-0-0"><span integrity:order="184" class="Provision">DU QUÉBEC<span><span width="192pt" class="inputHTML"><span integrity:added="1"> </span></span></span>DE LA RÉPUBLIQUE</span></div><div class="indent-0-0"><span integrity:order="185" class="Provision"><span><span width="255pt" class="inputHTML"><span integrity:added="1"> </span></span></span>DE FINLANDE</span></div><div class="indent-0-0"><br/></div><div class="indent-0-0"><span integrity:order="186" class="Provision">________________________________________<span><span width="21pt" class="inputHTML"><span integrity:added="1"> </span></span></span>________________________________________</span></div><div class="indent-0-0"><span integrity:order="187" class="Provision">B<span integrity:order="188" class="smallcaps">ERNARD</span> L<span integrity:order="189" class="smallcaps">ANDRY</span><span><span width="150pt" class="inputHTML"><span integrity:added="1"> </span></span></span>E<span integrity:order="190" class="smallcaps">RIK</span> A. H. H<span integrity:order="191" class="smallcaps">EINRICHS</span></span></div></div></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span integrity:order="192">D. 991-98, Ann. 1</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div></div><div class="Schedule-abrogative PageBreakBefore" id="sc-nb:2"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 21 ?code=sc-nb:2&historique=20250804#20250804"><img xmlns="" src="/img/history.png"/></a></div><div class="ScheduleHeading" id="d560047690e564"><a class="linkOtherLang" href="#sc-nb:2" data-code="sc-nb:2"><span integrity:order="193" class="Label-ScheduleHeading">ANNEXE 2</span></a></div><div class="ScheduleContent"><div><div class="indent-0-0"><span integrity:order="194" class="Provision">AVENANT À L’ARRANGEMENT ADMINISTRATIF À L’ENTENTE EN MATIÈRE DE SÉCURITÉ SOCIALE ENTRE LE GOUVERNEMENT DU QUÉBEC ET LE GOUVERNEMENT DE LA RÉPUBLIQUE DE FINLANDE</span></div><div class="indent-0-0"><span integrity:order="195" class="Provision">Conformément à l’article 25 de l’Entente de sécurité sociale entre le Québec et la Finlande, ci-après appelée l’«Entente», les Parties ne sont entendues sur un Arrangement administratif à l’Entente signée à Québec le 30 octobre 1986, ci-après appelé l’«Arrangement administratif» et sont convenues de le modifier comme suit:</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="196" class="bold">Article 1</span></span></div><div class="indent-0-0"><span integrity:order="197" class="Provision">L’article 1 de l’Arrangement administratif est remplacé par le suivant:</span></div><div class="indent-0-0"><span integrity:order="198" class="Provision">«<span integrity:order="199" class="bold">Article 1</span></span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="200" class="bold">Définitions</span></span></div><div class="indent-0-0"><span integrity:order="201" class="Provision">Dans le présent Arrangement administratif,</span></div><div class="Paragraph"><span integrity:order="202" class="Label-L LabelBase">a<span integrity:added="1" class="normal LabelBase italic">) </span></span><span integrity:order="203" class="Provision">«Entente» signifie l’Entente en matière de sécurité sociale entre le gouvernement du Québec et le gouvernement de la République de Finlande signée à Québec le 30 octobre 1986 et modifiée par l’Avenant à l’Entente;</span></div><div class="Paragraph"><span integrity:order="204" class="Label-L LabelBase">b<span integrity:added="1" class="normal LabelBase italic">) </span></span><span integrity:order="205" class="Provision">«Avenant à l’Entente» signifie l’Avenant à l’Entente entre le gouvernement du Québec et le gouvernement de la République de Finlande signé à Québec, le 12 juillet 1995;</span></div><div class="Paragraph"><span integrity:order="206" class="Label-L LabelBase">c<span integrity:added="1" class="normal LabelBase italic">) </span></span><span integrity:order="207" class="Provision">tous les autres termes ont le sens défini dans l’Entente.».</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="208" class="bold">Article 2</span></span></div><div class="indent-0-0"><span integrity:order="209" class="Provision">L’article 2 de l’Arrangement administratif est modifié;</span></div><div class="Paragraph"><span integrity:order="210" class="Label-L LabelBase">a<span integrity:added="1" class="normal LabelBase italic">) </span></span><span integrity:order="211" class="Provision">par le remplacement, à l’alinéa <span integrity:order="212" class="italic">a</span>, du mot «Secrétariat» par le mot «Direction»;</span></div><div class="Paragraph"><span integrity:order="213" class="Label-L LabelBase">b<span integrity:added="1" class="normal LabelBase italic">) </span></span><span integrity:order="214" class="Provision">par le remplacement de l’alinéa <span integrity:order="215" class="italic">b</span> par le suivant:</span></div><div class="Paragraph"><span integrity:order="216" class="Label-L LabelBase"><span integrity:order="217" class="normal">«</span>b<span integrity:added="1" class="normal LabelBase italic">) </span></span><span integrity:order="218" class="Provision">pour la Finlande, l’Institution d’assurance sociale en ce qui a trait à l’assurance maladie; l’Institut central des pensions du travail en ce qui a trait au Régime de pensions du travail; et la Fédération des institutions d’assurance accident en ce qui a trait à l’assurance des accidents du travail et des maladies professionnelles.».</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="219" class="bold">Article 3</span></span></div><div class="indent-0-0"><span integrity:order="220" class="Provision">L’article 3 de l’Arrangement administratif est modifié:</span></div><div class="Paragraph"><span integrity:order="221" class="Label-L LabelBase">a<span integrity:added="1" class="normal LabelBase italic">) </span></span><span integrity:order="222" class="Provision">par le remplacement du paragraphe 1 par le suivant:</span></div><div class="Paragraph"><span integrity:order="223" class="Label-P LabelBase"><span integrity:order="224" class="normal">«</span>1<span integrity:added="1">. </span></span><span integrity:order="225" class="Provision">Dans les cas visé dans les articles 7 et 10 de l’Entente et, pour le Québec, au paragraphe 3 de l’article 6, un certificat est émis pour attester que la personne détachée ou la personne travaillant à son compte et, le cas échéant, l’employeur sont soumis à la législation d’affiliation.  Le certificat couvre également le conjoint et les personnes à charge qui l’accompagnent.»;</span></div><div class="Paragraph"><span integrity:order="226" class="Label-L LabelBase">b<span integrity:added="1" class="normal LabelBase italic">) </span></span><span integrity:order="227" class="Provision">par l’insertion, après le paragraphe 2, du paragraphe suivant:</span></div><div class="Paragraph"><span integrity:order="228" class="Label-P LabelBase"><span integrity:order="229" class="normal">«</span>3<span integrity:added="1">. </span></span><span integrity:order="230" class="Provision">3. Pour la Finlande, l’Institution central des pensions du travail est l’institution désignée par l’autorité compétente pour l’application des articles 7 et 10.»;</span></div><div class="Paragraph"><span integrity:order="231" class="Label-L LabelBase">c<span integrity:added="1" class="normal LabelBase italic">) </span></span><span integrity:order="232" class="Provision">par la rémunération du paragraphe 3 «paragraphe 4» et par l’addition, à la fin, des mots «ou à la personne travaillant à son compte».</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="233" class="bold">Article 4</span></span></div><div class="indent-0-0"><span integrity:order="234" class="Provision">L’article 4 de l’Arrangement administratif est modifié par la suppression des mots «ou, si la personne employée occupe déjà l’emploi à la date d’entrée en vigueur de l’Entente, dans les 6 mois suivant cette date».</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="235" class="bold">Article 5</span></span></div><div class="indent-0-0"><span integrity:order="236" class="Provision">L’article 6 de l’Arrangement administratif est modifié par la suppression, au paragraphe 3, des mots «, avec l’assentiment de leurs autorités compétentes respectives,».</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="237" class="bold">Article 6</span></span></div><div class="indent-0-0"><span integrity:order="238" class="Provision">L’article 8 de l’Arrangement administratif est remplacé par le suivant:</span></div><div class="indent-0-0"><span integrity:order="239" class="Provision">«<span integrity:order="240" class="bold">Article 8</span></span></div><div class="Paragraph"><span integrity:order="241" class="Label-P LabelBase">1<span integrity:added="1">. </span></span><span integrity:order="242" class="Provision">Pour bénéficier des prestations en nature sur le territoire du Québec, une personne visée dans les articles 20 à 23 de l’Entente doit, ainsi que le conjoint et les personnes à charge qui l’accompagnent, s’inscrire auprès de la Régie de l’assurance maladie du Québec en utilisant le formulaire d’inscription prévu à cette fin.</span></div><div class="Paragraph"><span integrity:order="243" class="Label-P LabelBase">2<span integrity:added="1">. </span></span><span integrity:order="244" class="Provision">Lors de son inscription et de celle de son conjoint et des personnes à charge qui l’accompagnent, cette personne doit également présenter:</span></div><div class="Paragraph"><span integrity:order="245" class="Label-L LabelBase">a<span integrity:added="1" class="normal LabelBase italic">) </span></span><span integrity:order="246" class="Provision">un certificat délivré par l’Institution d’assurance sociale de la Finlande attestant de son droit aux prestations en nature et le document d’immigration requis pour une personne effectuant un séjour temporaire en vertu du paragraphe 1 de l’article 21 de l’Entente;</span></div><div class="Paragraph"><span integrity:order="247" class="Label-L LabelBase">b<span integrity:added="1" class="normal LabelBase italic">) </span></span><span integrity:order="248" class="Provision">un certificat d’assujettissement délivré par l’Institut central des pensions du travail si elle est une personne détachée visée dans le paragraphe 2 de l’article 21 de l’Entente;</span></div><div class="Paragraph"><span integrity:order="249" class="Label-L LabelBase">c<span integrity:added="1" class="normal LabelBase italic">) </span></span><span integrity:order="250" class="Provision">une attestation délivrée par l’Institution d’assurance sociale de la Finlande certifiant son droit aux prestations en nature, le document d’immigration requis et une attestation de son inscription comme étudiant à temps plein dans une institution d’enseignement reconnue par un des ministères responsables au Québec ou une attestation confirmant son acceptation comme chercheur ou comme stagiaire dont le stage est effectué dans le cadre du programme d’études si, comme étudiant chercheur ou stagiaire, elle est visée dans le paragraphe 2 de l’article 21 de l’Entente.».</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="251" class="bold">Article 7</span></span></div><div class="indent-0-0"><span integrity:order="252" class="Provision">L’article 9 de l’Arrangement administratif est modifié:</span></div><div class="Paragraph"><span integrity:order="253" class="Label-L LabelBase">a<span integrity:added="1" class="normal LabelBase italic">) </span></span><span integrity:order="254" class="Provision">par le remplacement, dans le paragraphe 1, des mots «chaque personne à sa charge qui l’accompagne» par les mots «le conjoint et les personnes à charge qui l’accompagnent»;</span></div><div class="Paragraph"><span integrity:order="255" class="Label-L LabelBase">b<span integrity:added="1" class="normal LabelBase italic">) </span></span><span integrity:order="256" class="Provision">par le remplacement, dans le paragraphe 2, à la fin de la première phrase, du mot «étudiant» par les mots «étudiant à temps plein ou une attestation de son acceptation comme chercheur ou comme stagiaire dont le stage est effectué dans le cadre de son programme d’études».</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="257" class="bold">Article 8</span></span></div><div class="indent-0-0"><span integrity:order="258" class="Provision">L’article 10 de l’Arrangement administratif est abrogé.</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="259" class="bold">Article 9</span></span></div><div class="indent-0-0"><span integrity:order="260" class="Provision">Le présent Avenant à l’Arrangement administratif entre en vigueur à la même date que l’Avenant à l’Entente et a la même durée. La dénonciation de l’Entente vaut dénonciation du présent Avenant.</span></div><div class="indent-0-0"><span integrity:order="261" class="Provision">Fait à Québec, le 12 juillet 1995</span></div><div class="indent-0-0"><span integrity:order="262" class="Provision">en double exemplaire, en langue française et en langue finnoise, les deux textes faisant également foi.</span></div><div class="indent-0-0"><span integrity:order="263" class="Provision">POUR LE<span><span width="210pt" class="inputHTML"><span integrity:added="1"> </span></span></span>POUR LE</span></div><div class="indent-0-0"><span integrity:order="264" class="Provision">GOUVERNEMENT<span><span width="159pt" class="inputHTML"><span integrity:added="1"> </span></span></span>GOUVERNEMENT</span></div><div class="indent-0-0"><span integrity:order="265" class="Provision">DU QUÉBEC<span><span width="192pt" class="inputHTML"><span integrity:added="1"> </span></span></span>DE LA RÉPUBLIQUE</span></div><div class="indent-0-0"><span integrity:order="266" class="Provision"><span><span width="255pt" class="inputHTML"><span integrity:added="1"> </span></span></span>DE FINLANDE</span></div><div class="indent-0-0"><br/></div><div class="indent-0-0"><span integrity:order="267" class="Provision">________________________________________<span><span width="21pt" class="inputHTML"><span integrity:added="1"> </span></span></span>________________________________________</span></div><div class="indent-0-0"><span integrity:order="268" class="Provision">B<span integrity:order="269" class="smallcaps">ERNARD</span> L<span integrity:order="270" class="smallcaps">ANDRY</span><span><span width="150pt" class="inputHTML"><span integrity:added="1"> </span></span></span>E<span integrity:order="271" class="smallcaps">RIK</span> A. H. H<span integrity:order="272" class="smallcaps">EINRICHS</span></span></div></div></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span integrity:order="273">D. 991-98, Ann. 2</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div></div><div class="AmendedTextTitle"><div class="ligne"><span integrity:added="1">
+                    </span></div><span integrity:added="1">RÉFÉRENCES</span></div><div><span><span integrity:order="274">D. 991-98 1998 G.O. 2, 4794</span></span></div></div></div></div>
+							</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</form>
+
+<ul id="contextMenu" class="dropdown-menu" role="menu" >
+	<li id="contextMenuCopy" class="disabled dropdown-item"><a tabindex="-1">Copier</a></li>
+	<li class="dropdown-divider"></li>
+	<li class="dropdown-item"><a tabindex="-1"">Sélectionner cet élément</a></li>
+	<li id="contextMenuSelectParent" class="dropdown-item"><a tabindex="-1">Sélectionner l'élément parent</a></li>
+	<li id="contextMenuUnselectAll" class="disabled dropdown-item"><a tabindex="-1">Désélectionner tous les éléments</a></li>
+	<li class="dropdown-divider"></li>
+	<li id="contextMenuCopyToArbortext" class="disabled dropdown-item"><a tabindex="-1">Copier vers Rédaction</a></li>
+	<li id="contextMenuCopyToLaw" class="d-block disable dropdown-item"><a tabindex="-1">Copier vers LAW</a></li>
+</ul>
+<input type="text" class="copyContainer" id="copyToClipboardMenu">
+<div id="copyToClipboard" class="modal fade">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">
+					Copier vers le presse-papier
+				</h4>
+				<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>				
+			</div>
+			<div class="modal-body">
+				<p>
+				<div class="description">
+					Pour copier : Ctrl+C
+				</div>
+				<input type="text" class="form-control" name="copyToInput" id="copyToInput">
+				</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-outline-secondary bg-gradient" data-bs-dismiss="modal">OK</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<a href="#" class="back-to-top"><span class="fa fa-chevron-up"></span></a>
+
+
+	<!-- migration rapide - éventuellement call ajax JSON -->
+	<input type="hidden" id="alpha" value="S-2.1, r. 21 ">
+	<input type="hidden" id="title"  value='S-2.1, r. 21  - Règlement sur la mise en application des dispositions relatives aux accidents du travail et aux maladies professionnelles contenues dans l’Avenant à l’Entente en matière de sécurité sociale entre le Gouvernement du Québec et le Gouvernement de la République de Finlande'>
+	<input type="hidden" id="dbType"  value="cr">
+	<input type="hidden" id="langCont"  value="fr">
+	<input type="hidden" id="otherLangCont" value="en">
+
+	<input type="hidden" id="contextMenu_copy" value="Copier"/>
+	<input type="hidden" id="contextMenu_selectElement" value="Sélectionner cet élément"/>
+	<input type="hidden" id="contextMenu_selectParentElement" value="Sélectionner l'élément parent"/>
+	<input type="hidden" id="contextMenu_unselectElement" value="<<SR_contextMenu_unselectElement>>"/>
+	<input type="hidden" id="contextMenu_unselectAll" value="Désélectionner tous les éléments"/>
+
+	<input type="hidden" id="contextMenu_copyToArbortext" value="Copier vers Rédaction"/>
+	<input type="hidden" id="contextMenu_copyToLaw" value="Copier vers LAW"/>
+	<input type="hidden" id="contextMenu_FragmentSelection" value="<<SR_contextMenu_FragmentSelection>>"/>
+	<input type="hidden" id="ctrlC_toCopyToClipboard" value="Pour copier : Ctrl+C"/>
+	<input type="hidden" id="readyToPaste" value="Vos sélections ont été copiées dans le presse-papier."/>
+
+	<input type="hidden" id="readyToPasteInLAW" value="Vous pouvez coller vos sélections dans LAW en utilisant la fonction appropriée."/>
+	<input type="hidden" id="readyToPasteInArbortext" value="Vous pouvez coller vos sélections dans Arbortext en utilisant la fonction appropriée."/>
+	<input type="hidden" id="errorWhileCopyingTo" value="Une erreur est survenue lors de la préparation des données."/>
+	<input type="hidden" id="showSelections" value="false"/>
+	<input type="hidden" id="consolidetedDateLabel" value=""/>
+	<input type="hidden" id="renditions" value='{"Epub":"/fr/epub/cr/S-2.1, R. 21 .epub","Pdf":"/fr/pdf/rc/S-2.1, R. 21 .pdf"}'/>
+	<input type="hidden" id="output" value=""/>
+	
+					
+<div data-bs-toggle="modal" data-bs-target="#myModal" id="printPreviewButton" class="printPreviewButton d-none">
+<button type="button" class="btn btn-primary my-2 rounded-pill" id="goPrintPreview" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">
+<span class="fa fa-check-square-o" aria-hidden="true"></span> <span class="badge rounded-pill bg-secondary badgeWhite">0</span>
+</button>
+</div>
+
+				</div>
+			</div>
+			
+			<!-- Footer -->
+		<div class="row pt-4">
+			<hr/>
+			<div align="center" class="pt-4">
+				<ul class="footer-options">
+					<li><a href="/fr/contenu/joindre/" >Nous joindre</a></li>
+					<li><a href="/fr/contenu/plan/" >Plan du site</a></li>
+					<li><a href="https://www.quebec.ca/" target="_blank">Québec.ca</a></li>
+					<li><a href="/fr/contenu/access/" >Accessibilité</a></li>
+					<li><a href="/fr/contenu/confid/" >Politique de confidentialité</a></li>
+				</ul>
+			</div>
+			<div  align="center"><a href="https://www.quebec.ca/" target="_blank"><img src="/img/quebec.gif" width="105" height="32" border="0"></a></div>
+			<div  align="center" class="copyright pt-2"><a class="footer-options" href="http://www.droitauteur.gouv.qc.ca/copyright.php" target="_blank">&copy; Gouvernement du Qu&eacute;bec</a></div>
+
+		</div>
+			
+		</div>
+			
+		<!-- Fenetre modal pour l'impression -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-impression">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="myModalLabel">Sélections</h4>
+						<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div>
+							<h4 id="myModalSubtitle"><small></small></h4>
+						</div>
+						<div class="list-group">
+							<a href="#" class="list-group-item active disabled bg-primary bg-gradient text-white">Afficher</a>
+							<a href="#" id="showSelectionsInCurrentDocument" class="list-group-item d-none">Les sélections du document courant</a>
+							<a href="#" id="showAllSelectionsInCollection" class="list-group-item">Toutes les sélections de la collection</a>
+							<a href="#" class="list-group-item active disabled bg-primary bg-gradient text-white">Fragments sélectionnés</a>
+							<a href="#" id="printPreviewResetSelections" class="list-group-item">Supprimer toutes les sélections</a>
+							<a href="#" id="printPreviewShowSelections" class="list-group-item d-none">Afficher les sélections</a>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-outline-secondary bg-gradient" data-bs-dismiss="modal">Fermer</button>
+					</div>
+				</div>
+			</div>
+			<form name="printForm" id="printForm" encType="application/x-www-form-urlencoded" method="post">
+				<input type="hidden" name="newQuery" value=""></input>
+				<input type="hidden" name="text" value=""></input>
+				<input type="hidden" name="isPrinting" value="false"></input>
+				<input type="hidden" name="title" value=""></input>
+				<input type="hidden" name="langCont" value="fr"></input>
+				<input type="hidden" name="type" value="cs"></input>
+				<input type="hidden" name="printType" value=""></input>
+				<input type="hidden" name="summary" value=""></input>
+				<input type="hidden" name="instrumentNumber" value=""></input>
+				<input type="hidden" name="selfrag" value=""></input>
+				<input type="hidden" name="anchor" value=""></input>
+				<input type="hidden" name="anchorSS" value=""></input>
+				<input type="hidden" name="recordsWithHits" value="false"></input>
+				<input type="hidden" name="validSearch" value="false"></input>
+				<input type="hidden" name="sortmode" value="false"></input>
+				<input type="hidden" name="output" value="selections"></input>
+			</form>
+		</div>
+		
+		<div class="modal fade bs-example-modal-sm" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+			<div class="modal-dialog modal-sm">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="mySmallModalLabel">Cyberlex</h4>
+						<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+					</div>
+					<div class="modal-body">
+						Version 2.2.5.0
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div>
+
+	
+		
+		<!-- migration rapide - éventuellement call ajax JSON -->
+		<input type="hidden" id="token" name="token" value="<<token>>">
+		<input type="hidden" id="config" name="config" value='{"ConfigurationMenu":{"params":{},"enabled":false},"XSLT":{"params":{"CocoonFullTextUrl":"ace-xslt-web.html","CocoonTOCUrl":"ace-xslt-toc.html"},"enabled":true},"Import":{"params":{"odbc-AnnualStatutes":"","odbc-Regulations":"","odbc-Statutes":"","odbc-AnnualRegulations":""},"enabled":false},"GoogleAnalytic":{"params":{"trackingId":""},"enabled":false},"Export":{"params":{"exportLast":["last","external-last","report"],"formatOptions":["Xml","Html"],"export-Regulations":true,"export-AnnualRegulations":true,"typeFileOptions":["",""],"exportFull":["all","external-all","report","orphans"],"modeOptions":["Last","All","Full"],"exportAll":["all","external-all","report"],"export-DtdClient":"Quebec","export-Statutes":true,"export-AnnualStatutes":true,"exportHtml-CocoonUrl":"ace-xslt-export.html"},"enabled":true},"Conversion":{"params":{"generatePdf-Statutes":"single","generatePdf-Regulations-Overwrite":true,"generatePdf-Statutes-Path":"master\\cs\\pdf","generateEpub-Statutes-Overwrite":true,"generateEpub-Statutes-Storage":"disk","generatePdf-Regulations-SoapEnvelope":"config/conversion/single-regulations.xml","generateEpub-AnnualStatutes-SoapEnvelope":"","generateEpub-Regulations-Storage":"disk","generatePdf-AnnualStatutes-SoapEnvelope":"","generateEpub-AnnualStatutes-Storage":"none","generatePdf-Regulations-Storage":"disk","generatePdf-AnnualRegulations-Storage":"none","generatePdf-AnnualRegulations-Overwrite":false,"generatePdf-Statutes-SoapEnvelope":"config/conversion/single-statutes.xml","generateEpub-AnnualRegulations-Storage":"none","generateEpub-AnnualStatutes":"none","renditionOptions":["Pdf","Epub"],"generateEpub-AnnualRegulations-SoapEnvelope":"","generatePdf-AnnualStatutes-Storage":"none","generateEpub-Statutes-SoapEnvelope":"config/conversion/epub.xml","generateEpub-Statutes-Path":"master\\cs\\epub","generatePdf-Regulations-SoapEnvelope-TwoPhase":"config/conversion/fo-to-pdf.xml","generateEpub-Regulations-Path":"master\\cr\\epub","generateEpub-AnnualStatutes-Overwrite":false,"generateEpub-Regulations-Overwrite":true,"generateEpub-Regulations-SoapEnvelope":"config/conversion/epub.xml","generateEpub-AnnualRegulations-Path":"annuals_master\\ar\\epub","generatePdf-Regulations-Path":"master\\cr\\pdf","generatePdf-AnnualStatutes":"none","generateEpub-Statutes":"single","generatePdf-AnnualRegulations-SoapEnvelope":"","generatePdf-AnnualRegulations":"none","generateEpub-AnnualStatutes-Path":"annuals_master\\as\\epub","generateEpub-AnnualRegulations-Overwrite":false,"generatePdf-Statutes-Overwrite":true,"generateEpub-AnnualRegulations":"none","generatePdf-AnnualStatutes-Path":"annuals_master\\as\\pdf","generatePdf-Statutes-Storage":"disk","generatePdf-AnnualRegulations-Path":"annuals_master\\ar\\pdf","generatePdf-AnnualStatutes-Overwrite":false,"generatePdf-Regulations":"single","generatePdf-Statutes-SoapEnvelope-TwoPhase":"config/conversion/fo-to-pdf.xml","generateEpub-Regulations":"single"},"enabled":true},"Core":{"params":{"CopyToLaw":false,"Browse-cr-Category-Id":"","ShowBarLetter":true,"Browse-cs-Category-Id":"","CopyToArbortext":false,"Template-NotFound":"notfound.html","DoTreatment-ConsoDate":true,"Menu-cs-Category-Id":"","FutureDate":29990101000000,"ShowFutureDate":true,"Search-OptionInForce":true,"Search-OptionStemming":true,"MasterToServerChunkSize":2000,"DefaultCorpus":"statutes","StopWordsFiles":["config/StopWordFr.txt","config/StopWordEn.txt"],"CutOffDate":19990401000000,"ShowTypeFileOptions":false,"Browse-cr-HideRepealed":false,"StrikethroughConsoDateException_selectionPage":false,"FragmentSelection":true,"Browse-DefaultRecentYear":false,"Browse-cs-HideRepealed":false},"enabled":true},"ContentSecurityPolicy":{"params":{},"enabled":true},"Backup":{"params":{"backupDbList":["master","annuals_master"],"backupExternalFolderList":["master=master","annuals_master=annuals_master","loose=loose"]},"enabled":true},"Integrity":{"params":{"Validate-Conversion-Pdf":true,"Exceptions":"","Validate-Exportation":true,"RemoveIntegrityAttributesOnConversion":true,"RemoveIntegrityAttributesOnExportation":true},"enabled":true}}'>
+		<input type="hidden" id="cmdId" name="cmdId" value="">
+		<input type="hidden" id="langInt" name="langInt" value="fr">
+		<input type="hidden" id="filter" name="filter" value="">
+
+		<input type="hidden" id="langCont" name="langCont" value="fr">
+		<input type="hidden" id="hideMenu" name="hideMenu" value="Fermer le menu">				
+		<input type="hidden" id="diplayMenu" name="diplayMenu" value="Afficher le menu">						
+		<input type="hidden" id="printPreview" name="printPreview" value="<<SR_printPreview>>">						
+		<input type="hidden" id="loadingMaskText" name="loadingMaskText" value="Chargement en cours...">					
+			
+		<input type="hidden" id="showSelectionsButtonTooltipSingleFrag" name="showSelectionsButtonTooltipSingleFrag" value="1 fragment a été sélectionné">				
+		<input type="hidden" id="showSelectionsButtonTooltipMultipleFrags" name="showSelectionsButtonTooltipMultipleFrags" value="fragments ont été sélectionnés">				
+		<input type="hidden" id="bootstrapMultiselect_nonSelectedText_limitSearch" name="bootstrapMultiselect_nonSelectedText_limitSearch" value="Aucune limite">				
+		<input type="hidden" id="bootstrapMultiselect_nSelectedText_limitSearch" name="bootstrapMultiselect_nSelectedText_limitSearch" value="limites">																
+		<input type="hidden" id="bootstrapMultiselect_allSelectedText_limitSearch" name="bootstrapMultiselect_allSelectedText_limitSearch" value="Toutes les limites">																			
+		<input type="hidden" id="corpusQuickSearch" name="corpusQuickSearch" value="all">
+
+		<script type="text/javascript" src="/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+		<script type="text/javascript" src="/bootstrap-notify/3.1.5/bootstrap-notify.min.js"></script>
+		<script type="text/javascript" src="/js/Config.js?v=2.1"></script>
+		<script type="text/javascript" src="/js/Object.js?v=2.1"></script>
+		<script type="text/javascript" src="/js/mainMenu.js?v=2.1"></script>
+		<script type='text/javascript' src='/js/jquery.loadmask.js?v=2.1'></script>
+		<script type='text/javascript' src='/js/cyberlex.jquery.loadmask.js?v=2.1'></script>
+		<script type='text/javascript' src='/js/selections.js?v=2.1'></script>
+		<script type='text/javascript' src='/js/UrlHelper.js?v=2.1'></script>
+		
+<script type="text/javascript" src="/js/Config.js?v=2.2"></script>
+
+<script type="text/javascript" src="/js/showdoc.js?v=2.2"></script>
+
+	</body>
+</html>
