@@ -46,3 +46,8 @@ Next steps
 Notes
 - For annex PDF→MD quality, marker is preferred; OCR pipeline to be added later for scanned PDFs.
 - History crawl volume should be bounded via flags; implement caching by URL and ETag when available.
+### Next Steps (Tasks 7–10)
+- [ ] Tests: enumerate_versions parsing with recorded HTML fixtures (no network)
+- [ ] Tests: snapshot pathing and history/index.json schema validation
+- [ ] End-to-end: small offline fixture test wiring CLI + history to verify outputs and injected Versions
+- [ ] CI: GitHub Actions workflow to run tests offline (disable network), cache fixtures, and report artifacts
