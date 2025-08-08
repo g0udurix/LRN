@@ -1,0 +1,6 @@
+$ gh label create milestone/phase-1 -R g0udurix/LRN --color bfd4f2 --description Phase 1 – Corpus & Standards --force
+[rc=0]
+
+$ gh label create milestone/phase-2 -R g0udurix/LRN --color bfd4f2 --description Phase 2 – Comparison Engine --force
+[rc=0]
+
