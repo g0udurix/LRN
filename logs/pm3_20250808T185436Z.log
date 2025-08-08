@@ -1,0 +1,9 @@
+$ gh label create milestone/phase-4 -R g0udurix/LRN --color bfd4f2 --description Phase 4 – Guidance UI --force
+[rc=0]
+
+$ gh api repos/g0udurix/LRN/milestones --paginate -q .[?title=='Phase 0 – Baseline']|[0].number
+[rc=1]
+
+failed to parse jq expression (line 1, column 3)
+    .[?title=='Phase 0 – Baseline']|[0].number
+      ^  unexpected token "?"
