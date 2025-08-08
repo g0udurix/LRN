@@ -1,0 +1,11 @@
+$ gh api repos/g0udurix/LRN/milestones -X POST -f title=Phase 2 – Comparison Engine -f description=Matrix/ranking across jurisdictions -f due_on=2025-10-22T18:59:38Z
+[rc=1]
+{"message":"Validation Failed","errors":[{"resource":"Milestone","code":"already_exists","field":"title"}],"documentation_url":"https://docs.github.com/rest/issues/milestones#create-a-milestone","status":"422"}
+gh: Validation Failed (HTTP 422)
+[WARN] failed to create milestone 'Phase 2 – Comparison Engine': gh: Validation Failed (HTTP 422)
+$ gh api repos/g0udurix/LRN/milestones --paginate -q .[?title=='Phase 3 – Annotations & Issues']|[0].number
+[rc=1]
+
+failed to parse jq expression (line 1, column 3)
+    .[?title=='Phase 3 – Annotations & Issues']|[0].number
+      ^  unexpected token "?"
