@@ -117,3 +117,117 @@ $ /Users/jeremie/miniforge3/envs/legis/bin/python /Users/jeremie/Documents/@2025
 [rc=0]
 
 Bundled 4476 files from /Users/jeremie/Documents/@2025/scripts/Legislation -> /Users/jeremie/Documents/@2025/scripts/Legislation/codebase.md
+$ git add -A
+[rc=0]
+
+
+$ git diff --cached --quiet
+[rc=1]
+
+
+$ git commit -m chore: run upgrade_and_roadmap (at 2025-08-08 16:14:57Z UTC)
+[rc=0]
+[feat/history-crawl 6e81742] chore: run upgrade_and_roadmap (at 2025-08-08 16:14:57Z UTC)
+ 150 files changed, 181934 insertions(+), 22606 deletions(-)
+ create mode 100644 .github/ISSUE_TEMPLATE/bug_report.md
+ create mode 100644 .github/ISSUE_TEMPLATE/feature_request.md
+ create mode 100644 .github/PULL_REQUEST_TEMPLATE.md
+ create mode 100644 .github/workflows/add_to_project.yml
+ create mode 100644 .github/workflows/project_fields.yml
+ create mode 100644 .kilocode/mcp.json
+ create mode 100644 .roo-global/.DS_Store
+ create mode 100644 .roo-global/rules-code/testing-requirements.md
+ create mode 100644 .roo-global/rules-code/typescript-rules.md
+ create mode 100644 .roo-global/rules-docs-extractor/documentation-style.md
+ create mode 100644 .roo-global/rules-{mode}/mode-specific-rules.md
+ create mode 100644 .roo-global/rules/coding-standards.md
+ create mode 100644 .roo-global/rules/formatting-rules.md
+ create mode 100644 .roo-global/rules/security-guidelines.md
+ create mode 100644 .roo/mcp.json
+ create mode 100644 .roo/rules/01-general.md
+ create mode 100644 .roo/rules/02-coding-style.txt
+ create mode 100644 .tmp_legis/https___www.legisquebec.gouv.qc.ca_en_document_lc_S-2.1.html
+ create mode 100644 .tmp_legis/https___www.legisquebec.gouv.qc.ca_fr_document_lc_S-2.1.html
+ create mode 100644 .tmp_legis/https___www.legisquebec.gouv.qc.ca_fr_document_rc_S-2.1__20r._200.1_20_.html
+ create mode 100644 .tmp_legis/https___www.legisquebec.gouv.qc.ca_fr_document_rc_S-2.1__20r._2010_20_.html
+ create mode 100644 .tmp_legis/https___www.legisquebec.gouv.qc.ca_fr_document_rc_S-2.1__20r._2011.2_20_.html
+ create mode 100644 .tmp_legis/https___www.legisquebec.gouv.qc.ca_fr_document_rc_S-2.1__20r._2012.1_20_.html
+ create mode 100644 .tmp_legis/https___www.legisquebec.gouv.qc.ca_fr_document_rc_S-2.1__20r._2013_20_.html
+ create mode 100644 .tmp_legis/https___www.legisquebec.gouv.qc.ca_fr_document_rc_S-2.1__20r._2014_20_.html
+ create mode 100644 .tmp_legis/https___www.legisquebec.gouv.qc.ca_fr_document_rc_S-2.1__20r._2015_20_.html
+ create mode 100644 .tmp_legis/https___www.legisquebec.gouv.qc.ca_fr_document_rc_S-2.1__20r._2016_20_.html
+ create mode 100644 .tmp_legis/https___www.legisquebec.gouv.qc.ca_fr_document_rc_S-2.1__20r._2017.2_20_.html
+ create mode 100644 .tmp_legis/https___www.legisquebec.gouv.qc.ca_fr_document_rc_S-2.1__20r._2018_20_.html
+ create mode 100644 .tmp_legis/https___www.legisquebec.gouv.qc.ca_fr_document_rc_S-2.1__20r._2019_20_.html
+ create mode 100644 .tmp_legis/https___www.legisquebec.gouv.qc.ca_fr_document_rc_S-2.1__20r._201_20_.html
+ create mode 100644 .tmp_legis/https___www.legisquebec.gouv.qc.ca_fr_document_rc_S-2.1__20r._2020_20_.html
+ create mode 100644 .tmp_legis/https___www.legisquebec.gouv.qc.ca_fr_document_rc_S-2.1__20r._2021_20_.html
+ create mode 100644 .tmp_legis/https___www.legisquebec.gouv.qc.ca_fr_document_rc_S-2.1__20r._2022.1_20_.html
+ create mode 100644 .tmp_legis/https___www.legisquebec.gouv.qc.ca_fr_document_rc_S-2.1__20r._2023.1_20_.html
+ create mode 100644 .tmp_legis/https___www.legisquebec.gouv.qc.ca_fr_document_rc_S-2.1__20r._2024_20_.html
+ create mode 100644 .tmp_legis/https___www.legisquebec.gouv.qc.ca_fr_document_rc_S-2.1__20r._2025_20_.html
+ create mode 100644 .tmp_legis/https___www.legisquebec.gouv.qc.ca_fr_document_rc_S-2.1__20r._2026.1_20_.html
+ create mode 100644 .tmp_legis/https___www.legisquebec.gouv.qc.ca_fr_document_rc_S-2.1__20r._2027.2_20_.html
+ create mode 100644 .tmp_legis/https___www.legisquebec.gouv.qc.ca_fr_document_rc_S-2.1__20r._2028_20_.html
+ create mode 100644 .tmp_legis/https___www.legisquebec.gouv.qc.ca_fr_document_rc_S-2.1__20r._2029_20_.html
+ create mode 100644 .tmp_legis/https___www.legisquebec.gouv.qc.ca_fr_document_rc_S-2.1__20r._202_20_.html
+ create mode 100644 .tmp_legis/https___www.legisquebec.gouv.qc.ca_fr_document_rc_S-2.1__20r._2030.2_20_.html
+ create mode 100644 .tmp_legis/https___www.legisquebec.gouv.qc.ca_fr_document_rc_S-2.1__20r._2031_20_.html
+ create mode 100644 .tmp_legis/https___www.legisquebec.gouv.qc.ca_fr_document_rc_S-2.1__20r._2032.1_20_.html
+ create mode 100644 .tmp_legis/https___www.legisquebec.gouv.qc.ca_fr_document_rc_S-2.1__20r._2033.3_20_.html
+ create mode 100644 .tmp_legis/https___www.legisquebec.gouv.qc.ca_fr_document_rc_S-2.1__20r._2034_20_.html
+ create mode 100644 .tmp_legis/https___www.legisquebec.gouv.qc.ca_fr_document_rc_S-2.1__20r._2035_20_.html
+ create mode 100644 .tmp_legis/https___www.legisquebec.gouv.qc.ca_fr_document_rc_S-2.1__20r._203_20_.html
+ create mode 100644 .tmp_legis/https___www.legisquebec.gouv.qc.ca_fr_document_rc_S-2.1__20r._204_20_.html
+ create mode 100644 .tmp_legis/https___www.legisquebec.gouv.qc.ca_fr_document_rc_S-2.1__20r._205.1_20_.html
+ create mode 100644 .tmp_legis/https___www.legisquebec.gouv.qc.ca_fr_document_rc_S-2.1__20r._206_20_.html
+ create mode 100644 .tmp_legis/https___www.legisquebec.gouv.qc.ca_fr_document_rc_S-2.1__20r._207.1_20_.html
+ create mode 100644 .tmp_legis/https___www.legisquebec.gouv.qc.ca_fr_document_rc_S-2.1__20r._208.2_20_.html
+ create mode 100644 .tmp_legis/https___www.legisquebec.gouv.qc.ca_fr_document_rc_S-2.1__20r._209_20_.html
+ create mode 100644 CHANGELOG.md
+ create mode 100644 NEXT_STEPS.md
+ create mode 100644 ROADMAP.md
+ create mode 100644 __pycache__/sitecustomize.cpython-311.pyc
+ create mode 100644 bundle_codebase.py
+ create mode 100644 codebase.md
+ create mode 100644 legislation.sqlite
+ create mode 100644 logs/bundle_output.txt
+ create mode 100644 logs/upgrade_20250808T161442Z.log
+ create mode 100644 lrn/.DS_Store
+ create mode 100644 lrn/persist.py
+ create mode 100644 qdrant_storage/aliases/data.json
+ create mode 100644 qdrant_storage/raft_state.json
+ create mode 100644 tests/.DS_Store
+ create mode 100644 tests/__pycache__/test_cli_db_import_history.cpython-310-pytest-8.4.1.pyc
+ create mode 100644 tests/__pycache__/test_cli_db_import_legacy_apply.cpython-310-pytest-8.4.1.pyc
+ create mode 100644 tests/__pycache__/test_cli_db_import_legacy_error_handling.cpython-310-pytest-8.4.1.pyc
+ create mode 100644 tests/__pycache__/test_cli_db_import_legacy_jurisdiction_default.cpython-310-pytest-8.4.1.pyc
+ create mode 100644 tests/__pycache__/test_cli_db_import_legacy_preview.cpython-310-pytest-8.4.1.pyc
+ create mode 100644 tests/__pycache__/test_cli_db_import_legacy_with_outdir.cpython-310-pytest-8.4.1.pyc
+ create mode 100644 tests/__pycache__/test_cli_db_init.cpython-310-pytest-8.4.1.pyc
+ create mode 100644 tests/__pycache__/test_cli_db_query.cpython-310-pytest-8.4.1.pyc
+ create mode 100644 tests/__pycache__/test_cli_db_verify.cpython-310-pytest-8.4.1.pyc
+ create mode 100644 tests/__pycache__/test_db_annex_persistence.cpython-310-pytest-8.4.1.pyc
+ create mode 100644 tests/__pycache__/test_db_content_hash_integrity.cpython-310-pytest-8.4.1.pyc
+ create mode 100644 tests/__pycache__/test_db_jurisdiction_assignment.cpython-310-pytest-8.4.1.pyc
+ create mode 100644 tests/__pycache__/test_db_snapshot_link_parity.cpython-310-pytest-8.4.1.pyc
+ create mode 100644 tests/test_cli_db_import_history.py
+ create mode 100644 tests/test_cli_db_import_legacy_apply.py
+ create mode 100644 tests/test_cli_db_import_legacy_error_handling.py
+ create mode 100644 tests/test_cli_db_import_legacy_jurisdiction_default.py
+ create mode 100644 tests/test_cli_db_import_legacy_preview.py
+ create mode 100644 tests/test_cli_db_import_legacy_with_outdir.py
+ create mode 100644 tests/test_cli_db_init.py
+ create mode 100644 tests/test_cli_db_query.py
+ create mode 100644 tests/test_cli_db_verify.py
+ create mode 100644 tests/test_db_annex_persistence.py
+ create mode 100644 tests/test_db_content_hash_integrity.py
+ create mode 100644 tests/test_db_jurisdiction_assignment.py
+ create mode 100644 tests/test_db_snapshot_link_parity.py
+ create mode 100644 upgrade_and_roadmap.py
+
+$ git push
+[rc=0]
+
+To https://github.com/g0udurix/LRN.git
+   edafc6c..6e81742  feat/history-crawl -> feat/history-crawl

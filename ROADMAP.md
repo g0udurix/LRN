@@ -1,7 +1,7 @@
 # Roadmap
 
 <!-- BEGIN:AUTO-ROADMAP -->
-**Auto-generated on 2025-08-08 16:14:43Z (UTC).**
+**Auto-generated on 2025-08-08 16:34:16Z (UTC).**
 
 ### What this run ensured
 - • baseline v1 schema — already present
@@ -40,4 +40,5 @@ conda install -c conda-forge sqlite requests beautifulsoup4 lxml pytest
 ### Seeding
 - The script seeds a minimal topic taxonomy and standard bodies on --apply (idempotent).
 <!-- END:AUTO-ROADMAP -->
+
 

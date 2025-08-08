@@ -1,17 +1,38 @@
 
-name: Set Project fields
+name: Set Project fields from labels
 on:
   issues:
-    types: [opened, labeled]
+    types: [opened, labeled, unlabeled, reopened, edited]
   pull_request:
-    types: [opened, labeled, ready_for_review]
+    types: [opened, labeled, unlabeled, reopened, edited, ready_for_review]
+  workflow_dispatch:
 jobs:
   set-fields:
     runs-on: ubuntu-latest
     steps:
+      - name: Derive values from labels
+        id: derive
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const payload = context.payload.issue || context.payload.pull_request;
+            const labels = (payload.labels || []).map(l => l.name);
+            function has(name) { return labels.some(n => n.toLowerCase() === name.toLowerCase()); }
+            let status = 'Todo';
+            if (has('status/Blocked')) status = 'Blocked';
+            else if (has('status/Doing')) status = 'Doing';
+            else if (has('status/Review')) status = 'Review';
+            else if (has('status/Done')) status = 'Done';
+            else if (has('status/Backlog') || has('needs-triage')) status = 'Backlog';
+            let priority = 'P2';
+            if (has('priority/P0')) priority = 'P0';
+            else if (has('priority/P1')) priority = 'P1';
+            else if (has('priority/P2')) priority = 'P2';
+            core.setOutput('Status', status);
+            core.setOutput('Priority', priority);
       - uses: leonsteinhaeuser/project-fields@v2
         with:
           github_token: ${{ secrets.PROJECT_PAT }}
           project_url: https://github.com/users/g0udurix/projects/3
           fields: Status,Priority
-          values: Todo,P2
+          values: ${{ steps.derive.outputs.Status }},${{ steps.derive.outputs.Priority }}
