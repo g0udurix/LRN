@@ -1,0 +1,1 @@
+- 2025-08-08 16:14:57Z upgrade_and_roadmap: topics taxonomy, standards corpus, citations mapping, annotations & issues, orientations, QA, guides, attachments, comparisons & benchmarks, users & events, seed standard bodies, seed topics (fall protection subset), FTS5 on current_pages, update ROADMAP.md

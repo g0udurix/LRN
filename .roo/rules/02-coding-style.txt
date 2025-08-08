@@ -1,0 +1,93 @@
+LRN Coding Style
+
+Language level
+- Python 3.10+
+
+General principles
+- Prefer readability and explicit behavior over clever one-liners.
+- Isolate side effects: IO, network, subprocess calls should be thin wrappers around pure logic where feasible.
+- Preserve source data; avoid lossy transforms unless protected behind explicit flags.
+
+Imports
+- Standard library, then third-party, then local modules; blank line between groups.
+- Avoid wildcard imports. Use explicit names.
+- For typing, prefer from __future__ annotations where appropriate in larger modules; otherwise keep runtime import costs low.
+
+Type hints
+- Use type annotations for public functions and significant internal helpers.
+- Favor typing.Optional, typing.Dict, typing.List for clarity. In Python 3.10+, builtin generics list[str] are acceptable and preferred.
+
+Error handling and logging
+- Fail soft on enrichment operations; warn and continue:
+  - Network fetch failures
+  - marker conversion failures
+- Use stderr for warnings with a clear prefix: [WARN] message
+- Use stdout for progress/info with prefix: [INFO] message
+
+Functions
+- Keep functions small and focused; a single responsibility where possible.
+- Pass dependencies explicitly to enable test stubbing and monkeypatching.
+- Avoid deep nesting; return early on invalid inputs or error conditions.
+
+CLI conventions
+- argparse for flags and subcommands.
+- Sensible defaults:
+  - Keep-all metadata
+  - Enrichment flags enabled when safe but not required for core correctness in tests
+- Avoid noisy output; print concise info lines and actionable warnings.
+
+Filesystem layout and outputs
+- Write deterministic, stable paths:
+  - instrument/current.xhtml
+  - instrument/history/index.json
+  - instrument/history/<fragment-code>/YYYYMMDD.html
+  - instrument/annexes/<filename>.pdf and .md
+- Use UTF-8 encoding for all text IO.
+- Normalize path separators in emitted links with forward slashes.
+
+Networking
+- requests with explicit timeouts
+- Respect user-agent override
+- Provide simple cache mechanism keyed by URL when cache_dir is configured
+
+Parsing and HTML handling
+- BeautifulSoup with "lxml" parser
+- Be tolerant of malformed HTML; fallback behavior should still produce a minimal valid XHTML container for downstream steps.
+
+Testing
+- pytest
+- Test behavior, not implementation details:
+  - Given inputs, outputs exist and contain expected structures
+  - Use tmp_path for filesystem operations
+  - Monkeypatch network and converter dependencies
+- Offline-friendly tests: avoid real network unless explicitly allowed.
+
+Style details
+- 4-space indentation; no tabs
+- Max line length ~ 100-120 chars; wrap long expressions sensibly
+- Use f-strings for string formatting
+- One logical statement per line
+- Docstrings for non-trivial public functions describing inputs, outputs, and side effects
+
+Commit discipline
+- One topic per commit
+- Imperative mood in messages: "Add", "Fix", "Refactor"
+- Reference issues or milestones when relevant
+
+Security and compliance
+- Respect robots and site terms during crawling features
+- Implement timeouts and basic backoff; avoid hammering servers
+- Do not commit large binaries; treat outputs as artifacts, not source
+
+Examples
+- Logging:
+  [INFO] Crawling history for se:1
+  [WARN] marker conversion failed for path/to/file.pdf: error text
+
+- File writing:
+  with open(path, "w", encoding="utf-8") as f:
+      f.write(content)
+
+- Requests with timeout:
+  r = session.get(url, timeout=timeout)
+  r.raise_for_status()

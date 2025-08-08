@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; CHARSET=utf-8"></meta>
+		<meta name="dc.title" content=" - Règlement sur la mise en oeuvre de l’entente relative au travail effectué dans le cadre de mesures de réadaptation arrêtées par la Société de l’assurance automobile du Québec">
+		<meta name="dc.creator" content="">
+		<meta name="dc.language" scheme="ISO639-2"	content="fre">
+		<meta name="dc.subject" content="">
+		<meta name="Keywords" content="">
+		<meta name="dc.Publisher" content="">
+		<meta name="dc.Contributor" content="Irosoft, architecture de gestion de l'information législative - legal information management system">
+		<meta name="dc.Description" content="">
+		<meta name="Description" content="">
+		<meta name="Title" content=" - Règlement sur la mise en oeuvre de l’entente relative au travail effectué dans le cadre de mesures de réadaptation arrêtées par la Société de l’assurance automobile du Québec">
+		<meta name="dc.date.created" content="2022-09-02">
+		<meta name="dc.date.modified" content="2022-09-02">
+
+		<title>Légis Québec</title>
+		
+		<link rel="shortcut icon" href="/img/favicon.ico">
+		<link rel="stylesheet" href="/bootstrap/5.1.3/css/bootstrap.min.css">
+		<link rel='stylesheet' href='/CSS/jquery.loadmask.css?v=2.1'>
+		<link rel='stylesheet' href='/CSS/cyberlex.jquery.loadmask.css?v=2.1'>
+		
+		
+<link rel="stylesheet" type="text/css" href="/CSS/FragmentView.css?v=2.2"></link>
+
+		<link rel="stylesheet" href="/css/publishing-bootstrap.css?v=2.1">
+		<link rel="stylesheet" href="/css/publishing.css?v=2.1">
+		<link rel="stylesheet" href="/CSS/cyberlex-bootstrap.min.css?v=2.1">
+		<link rel="stylesheet" href="/CSS/cyberlex.css?v=2.1">
+		<link rel="stylesheet" href="/css/font-awesome.min.css?v=2.1">
+		<link rel="stylesheet" href="/CSS/core.css?v=2.1">
+		<link rel="stylesheet" href="/CSS/client.css?v=2.1">
+		<link rel="stylesheet" href="/css/publications-quebec.css?v=2.1">
+		<link rel="stylesheet" href="/css/eoq.css?v=2.1">
+
+		<script type="text/javascript" src="/jquery-ui/1.13.0/external/jquery/jquery.js?v=2.1"></script>
+		<script type="text/javascript" src="/jquery-ui/1.13.0/jquery-ui.min.js?v=2.1"></script>
+		<script type="text/javascript" src="/jquery/3.6.0/jquery.min.js?v=2.1"></script>
+		<script type="text/javascript" src="/DOMPurify/dist/purify.min.js?v=2.1"></script>
+	</head>
+
+	<body>
+		<div id="wrap">
+			<div class="main-header">
+				<div class="float-end">
+					<div class="vague"></div>
+					<ul class="pub-quebec">
+						<li><a href="/fr/">Accueil</a></li>
+						<li><a href="/fr/contenu/joindre" >Nous joindre</a></li>
+						<li><a href="/fr/contenu/plan" >Plan du site</a></li>
+						<li><a href="https://www.quebec.ca/" target="_blank">Québec.ca</a></li>
+						<li><a href="/fr/contenu/FAQ" >FAQ</a></li>
+						<li class='spacer-pub-quebec'></li>
+						<li><a id="langSwitcher" class="" href="/en/document/cr/S-2.1,%20r.%2031%20">English</a></li>
+
+					</ul>
+					<div class="mtess">
+						<a href="https://www.mtess.gouv.qc.ca/" class="mtessTitle" target="_blank">Ministère de l'Emploi et de la Solidarité sociale</a>
+					</div>
+				</div>
+				<a class="logo-pub-quebec" href="http://www.publicationsduquebec.gouv.qc.ca/" target="_blank"></a>
+			</div>
+			<hr/>
+			
+			<!-- Header -->
+			<nav class="navbar navbar-light">
+				<div class="container-fluid colorTheme">
+					<div class="navbar-header">
+						<div class="row">
+							<div class="col-sm-3">
+								<div class="input-group" class="pt-2">
+									<input type="text" class="form-control" data-bs-placement="top" data-bs-toggle="tooltip" placeholder="Recherche" id="quickSearchText" title="Rechercher dans lois et règlements codifiés">
+									<span class="input-group-btn">
+										<button class="btn btn-primary" type="button" id="goResult" data-bs-placement="top" data-bs-toggle="tooltip" title="Recherche">
+											<span class="fa fa-search" aria-hidden="true"></span>
+										</button>
+									</span>
+								</div>
+								<div class="py-2"><a href="/fr/recherche?t=a">Recherche avancée</a></div>
+							</div><div class="col-sm-9 d-flex justify-content-between">
+									<a class="navbar-brand logo-fr logo" title="Accueil" href="/fr/"></a>
+							</div>
+						</div>
+					</div>
+				</div><!-- /.container-fluid -->
+			</nav>
+			<!-- Content -->			
+			<div class="row">
+				<div class="col-sm-3">
+					<div class="list-group">
+	<a href="#" class="list-group-item active disabled bg-primary bg-gradient text-white">Lois et règlements codifiés</a>
+	<a href="/fr/chapitres?corpus=lois" id="chapterStatutes" class="list-group-item">Lois codifiées</a>
+	<a href="/fr/chapitres?corpus=regs" id="chapterRegulations" class="list-group-item">Règlements codifiés</a>
+	
+	<a href="#" class="list-group-item active disabled bg-primary bg-gradient text-white">Lois et règlements annuels</a>
+	<a href="/fr/annuels?filtre=lois" id="browseannual-statutes" class="list-group-item">Lois annuelles</a>
+	<a href="/fr/annuels?filtre=regs" id="browseannual-regs" class="list-group-item">Règlements annuels</a>
+	
+	<a href="#" class="list-group-item active disabled bg-primary bg-gradient text-white">Information complémentaire</a>
+	<a id="content-editoff" href="/fr/contenu/editeurofficiel" class="list-group-item">L’Éditeur officiel du Québec</a>
+	<a id="content-neuf" href="/fr/contenu/neuf" class="list-group-item">Quoi de neuf?</a>
+	<a id="content-noteinfo" href="/fr/contenu/noteinfo" class="list-group-item">Note d’information</a>
+	<a id="content-mjqpol" href="/fr/contenu/mjqpol" class="list-group-item">Politique du ministre de la Justice</a>
+	<a id="content-modlois" href="/fr/contenu/modlois" class="list-group-item">Lois : Modifications</a>
+	<a id="content-nevlois" href="/fr/contenu/nevlois" class="list-group-item">Lois : Dispositions non en vigueur</a>
+	<a id="content-eevlois" href="/fr/contenu/eevlois" class="list-group-item">Lois : Entrées en vigueur</a>
+	<a id="content-loisann" href="/fr/contenu/loisann" class="list-group-item">Lois annuelles : Versions PDF depuis 1996</a>
+	<a id="content-modreg" href="/fr/contenu/modreg" class="list-group-item">Règlements : Modifications</a>
+	<a id="content-regann" href="/fr/contenu/regann" class="list-group-item">Règlements annuels : Versions PDF depuis 1996</a>
+	<a id="content-decision" href="/fr/contenu/decision" class="list-group-item">Décisions des tribunaux</a>
+</div>
+					
+				</div>
+				<div id="contentDiv" class="col-sm-9">
+					<form id="form" onsubmit="" method="post" action="">
+	<div>
+		<input alt="Champ caché" name="command" type="hidden" value=""></input>
+		<input alt="Champ caché" name="shorttitle" type="hidden" value=""></input>
+		<input alt="Champ caché" name="marginalnotexml" type="hidden" value=""></input>
+		<input alt="Champ caché" name="heading" type="hidden" value=""></input>
+		<input alt="Champ caché" name="fragment" type="hidden" value=""></input>
+		<input alt="Champ caché" name="selfrag" type="hidden" value=""></input>
+		<input alt="Champ caché" name="search_type" type="hidden" value=""></input>
+		<input alt="Champ caché" name="title_search_type" type="hidden" value=""></input>		
+		<input alt="Champ caché" name="anchor" type="hidden" value=""></input>
+		<input alt="Champ caché" name="dateEEV" type="hidden" value=""></input>
+		<input alt="Champ caché" name="statuteyear" type="hidden" value=""></input>
+		<input alt="Champ caché" name="isPrinting" type="hidden" value="false"></input>
+		<input alt="Champ caché" name="from" type="hidden" value=""></input>
+		<input alt="Champ caché" name="output" type="hidden" value="printFull"></input>
+		<input alt="Champ caché" name="page" type="hidden" value="<<page>>"></input>
+		<input alt="Champ caché" name="length" type="hidden" value=""></input>
+		<input alt="Champ caché" name="instrumentnumber" type="hidden" value="S-2.1, r. 31 "></input>
+		<input alt="Champ caché" name="instrumentnumbersearch" type="hidden" value=""></input>
+		<input alt="Champ caché" name="stemmed" type="hidden" value=""></input>
+		
+	</div>
+
+	<div class="card">
+		<div class="card-header p-3 bg-gradient docHeader">
+						<h3 class="card-title"><span class="fw-bold">S-2.1, r. 31 </span> - Règlement sur la mise en oeuvre de l’entente relative au travail effectué dans le cadre de mesures de réadaptation arrêtées par la Société de l’assurance automobile du Québec</h3>
+					</div>
+		
+		<div class="card-body">
+			<div class="d-flex justify-content-between align-items-center">
+				<div class="flex-row d-flex align-items-center">
+					<div class="pr-1">
+						<a href="/fr/tdm/rc/S-2.1,%20r.%2031%20" class="btn btn-outline-secondary bg-gradient" role="button" title="Afficher la table des matières du document" alt="Afficher la table des matières du document" data-bs-toggle="tooltip" data-bs-placement="top">Table des matières <span class="fa fa-list smallLeftSpacer" aria-hidden="true"></span></a>
+					</div>
+					<div class="px-1">
+						
+				<div class="btn-group">
+					<button id="relatedLegislativeDocument" type="button" class="btn btn-outline-secondary bg-gradient dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="-100, 0">
+						Loi habilitante <span class="badge rounded-pill bg-secondary smallLeftSpacer">1</span> <span class="caret smallLeftSpacer"></span>
+					</button>
+					<table class="table table-responsive table-hover dropdown-menu relatedDoc" role="menu">
+						<thead>
+							<tr>
+								<th width="15%">Alphanumérique</th>
+								<th width="85%">Titre</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+<td>S-2.1 </td>
+<td>
+<a class="hand boldLink" href="/fr/document/lc/S-2.1%20/">Loi sur la santé et la sécurité du travail   
+</a>
+</td>
+</tr>
+						</tbody>
+					</table>
+					</div>
+					</div>
+					<div class="px-1">
+						<span id="occurrenceButton" class="d-none">
+							Occurrences<span class="badge rounded-pill bg-secondary ms-3" id="occurrenceCount">0</span>
+						</span>
+					</div>
+					<div class="px-1">
+						
+					</div>
+				</div>
+
+				<div class="flex-row d-flex align-items-center">
+					<div class="px-1">
+						<a id="renditionPdf" target="_blank" class="btn btn-outline-secondary bg-gradient d-none" 
+							role="button" title="Ouvrir la version PDF" alt="Ouvrir la version PDF"
+							data-bs-toggle="tooltip" data-bs-placement="top">
+							 <span class="fa pdf-icon" aria-hidden="true"></span>
+						</a>
+					</div>
+					<div class="px-1">
+						<a id="renditionEpub" target="_blank" class="btn btn-outline-secondary bg-gradient d-none" 
+							role="button" title="Télécharger la version ePUB" alt="Télécharger la version ePUB"
+							data-bs-toggle="tooltip" data-bs-placement="top">
+							 <span class="fa epub-icon" aria-hidden="true"></span>
+						</a>
+					</div>
+					<div class="px-1">
+						<a id="btnPrintPreview" class="btn btn-outline-secondary bg-gradient last"
+							role="button" title="Préparer le document pour l'impression"
+							alt="Préparer le document pour l'impression" data-bs-toggle="tooltip" data-bs-placement="top"><span id="printBtnIcon"
+								class="fa fa-print" aria-hidden="true"></span>
+						</a>
+					</div>
+				</div>
+				
+			</div>
+			<div class="row pt-2">
+				<div class="col">
+					<div class="card ">
+						
+							<div class="card-header official-heading bg-gradient ">
+								<div class="row">
+									<div class="col">
+										<div class="text-end"></div>
+										Texte complet 
+									</div>
+								
+									<div class="col">
+										<div class="text-end">
+											À jour au 1<sup>er</sup> avril 2025
+										</div>
+										<div class="text-end">
+											Ce document a valeur officielle.
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="card-body history current conso" id="mainContent-document">
+								<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE div
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:exsl="http://exslt.org/common" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:integrity="http://ref.irosoft.com/integrity/" integrity:Digest="2617599B10B7899A6603FC31660A1692"><meta title="Ministère de la Justice du Québec" author="Ministère de la Justice du Québec" subject="Ministère de la Justice du Québec" keywords="Ministère de la Justice du Québec" description="Ministère de la Justice du Québec" timestamp="n'est pas supporter" application="CYBERLEX" version="2.2.0.2" provider="Irosoft" source="xsl"/><div xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns:law="http://ref.irosoft.com/LIMS/1.0/law" class="DefaultPageSequence BodyPageSequence"><div class="LegislativeDocument Global Style_Extra_Class"><div class="Identification"><div integrity:added="1" class="Identification-Id"><span integrity:added="1">chapitre </span><span integrity:order="1">S-2.1, r. 31</span></div><div integrity:order="2" class="titre-reglement-left titre-reglement-left customLongTitleWord">Règlement sur la mise en oeuvre de l’entente relative au travail effectué dans le cadre de mesures de réadaptation arrêtées par la Société de l’assurance automobile du Québec</div><span class="Hidden" integrity:order="3">SANTÉ ET SÉCURITÉ DU TRAVAIL — ENTENTE — TRAVAIL POUR MESURES DE RÉADAPTATION</span><div><div class="enabling-identification"><div integrity:order="5" class="LongTitle-enabling">Loi sur la santé et la sécurité du travail</div></div><div class="HistoricalNote-LongTitle"><span><span integrity:order="6">(chapitre S-2.1, a. 223, 1<span integrity:order="7" class="superscript">er</span> al., par. 39)</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div><span class="Hidden" integrity:order="4">S-2.1</span></div><span class="Hidden"><span integrity:order="10" class="date-txt-statut Hidden">01</span><span integrity:added="1">1</span><span integrity:added="1" class="superscript_7point">er</span><span integrity:added="1"> </span><span integrity:order="9" class="Hidden">09</span><span integrity:added="1">septembre </span><span integrity:order="8" class="date-txt-statut">2012</span></span></div><div class="section" id="se:1"><div class="Subsection SubsectionFirst" id="se:1-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 31 ?code=se:1&historique=20250807#20250807"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:1" data-code="se:1"><span integrity:order="11" class="Label-Section consolidationWhipeTextDecoration consolidationClean">1<span integrity:added="1">.</span></span></a> <span integrity:order="12" class="Subsection">La Loi sur les accidents du travail et les maladies professionnelles (chapitre A-3.001) s’applique aux personnes qui accomplissent un travail non rémunérateur dans le cadre de mesures de réadaptation arrêtées par la Société de l’assurance automobile du Québec dans la mesure et aux conditions fixées dans l’entente conclue entre la Société et la Commission des normes, de l’équité, de la santé et de la sécurité du travail, apparaissant à l’annexe 1.</span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span integrity:order="13">D. 1199-2010, a. 1</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div></div><div class="section" id="se:2"><div class="Subsection SubsectionFirst" id="se:2-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 31 ?code=se:2&historique=20250807#20250807"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:2" data-code="se:2"><span integrity:order="14" class="Label-Section consolidationWhipeTextDecoration consolidationClean">2<span integrity:added="1">.</span></span></a> <span integrity:order="15" class="Subsection">Le présent règlement remplace le Règlement sur la mise en oeuvre de l’entente relative au travail effectué dans le cadre de mesures de réadaptation arrêtées par la Société de l’assurance automobile du Québec (D. 408-96, 96-03-27).</span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span integrity:order="16">D. 1199-2010, a. 2</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div></div><div class="section" id="se:3"><div class="Subsection SubsectionFirst" id="se:3-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 31 ?code=se:3&historique=20250807#20250807"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:3" data-code="se:3"><span integrity:order="17" class="Label-Section consolidationWhipeTextDecoration consolidationClean">3<span integrity:added="1">.</span></span></a> <span class="Subsection"><span integrity:order="18" class="Repealed-Text">(Omis).</span></span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span integrity:order="19">D. 1199-2010, a. 3</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div></div><div class="Schedule-abrogative PageBreakBefore" id="sc-nb:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 31 ?code=sc-nb:1&historique=20250807#20250807"><img xmlns="" src="/img/history.png"/></a></div><div class="ScheduleHeading" id="d366843829e63"><a class="linkOtherLang" href="#sc-nb:1" data-code="sc-nb:1"><span integrity:order="20" class="Label-ScheduleHeading">ANNEXE I</span></a></div><div class="ScheduleContent"><div><div class="indent-0-0"><span integrity:order="21" class="Provision">ENTENTE RELATIVE AU TRAVAIL EFFECTUÉ DANS LE CADRE DE MESURES DE RÉADAPTATION ARRÊTÉES PAR LA SOCIÉTÉ DE L’ASSURANCE AUTOMOBILE DU QUÉBEC</span></div><div class="indent-0-0"><span integrity:order="22" class="Provision">CONCLUE ENTRE</span></div><div class="indent-0-0"><span integrity:order="23" class="Provision">LA SOCIÉTÉ DE L’ASSURANCE AUTOMOBILE DU QUÉBEC</span></div><div class="indent-0-0"><span integrity:order="24" class="Provision">ET</span></div><div class="indent-0-0"><span integrity:order="25" class="Provision">LA COMMISSION DE LA SANTÉ ET DE LA SÉCURITÉ DU TRAVAIL</span></div><div class="indent-0-0"><span integrity:order="26" class="Provision">EN VERTU DE L’ARTICLE 16 DE LA LOI SUR LES ACCIDENTS DU TRAVAIL ET LES MALADIES PROFESSIONNELLES</span></div><div class="indent-0-0"><span integrity:order="27" class="Provision">A<span integrity:order="28" class="smallcaps">TTENDU QUE</span> la Commission est, en vertu de l’article 138 de la Loi sur la santé et la sécurité du travail (chapitre S-2.1), une personne morale au sens du Code civil du Québec et qu’elle est investie des pouvoirs généraux d’une telle personne morale et des pouvoirs particuliers que cette loi lui confère;</span></div><div class="indent-0-0"><span integrity:order="29" class="Provision">A<span integrity:order="30" class="smallcaps">TTENDU QUE</span> la Commission peut, en vertu de l’article 170 de la même loi, conclure des ententes conformément à la loi avec un ministère ou un organisme du gouvernement, un autre gouvernement ou l’un de ses ministères ou organisme en vue de l’application des lois et des règlements qu’elle administre;</span></div><div class="indent-0-0"><span integrity:order="31" class="Provision">A<span integrity:order="32" class="smallcaps">TTENDU QUE</span> la Société est une personne morale au sens du Code civil du Québec en vertu de l’article 4 de la Loi sur la Société de l’assurance automobile du Québec (chapitre S-11.011);</span></div><div class="indent-0-0"><span integrity:order="33" class="Provision">A<span integrity:order="34" class="smallcaps">TTENDU QUE</span> la Société peut conclure toute entente en vue de l’application de la Loi sur l’assurance automobile (chapitre A-25) en vertu de l’article 17 de la Loi sur la Société de l’assurance automobile du Québec;</span></div><div class="indent-0-0"><span integrity:order="35" class="Provision">A<span integrity:order="36" class="smallcaps">TTENDU QUE</span> la Société demande à ce que la Loi sur les accidents du travail et les maladies professionnelles (chapitre A-3.001) soit applicable à certains stagiaires et qu’elle entend assumer les obligations prévues pour un employeur, y inclus celles relatives aux cotisations dues;</span></div><div class="indent-0-0"><span integrity:order="37" class="Provision">A<span integrity:order="38" class="smallcaps">TTENDU QUE</span> l’article 16 de la même loi édicte qu’une personne qui accomplit un travail dans le cadre d’un projet d’un gouvernement, qu’elle soit ou non un travailleur, peut être considérée un travailleur à l’emploi de ce gouvernement, d’un organisme ou d’une personne morale, aux conditions et dans la mesure prévues par une entente conclue entre la Commission et le gouvernement, l’organisme ou la personne morale concernée;</span></div><div class="indent-0-0"><span integrity:order="39" class="Provision">A<span integrity:order="40" class="smallcaps">TTENDU QUE</span> l’article 16 prévoit que le deuxième alinéa de l’article 170 de la Loi sur la santé et la sécurité du travail s’applique à une telle entente, à savoir que la Commission doit procéder par règlement pour donner effet à une entente qui étend le bénéfice des lois et des règlements qu’elle administre;</span></div><div class="indent-0-0"><span integrity:order="41" class="Provision">E<span integrity:order="42" class="smallcaps">N CONSÉQUENCE LES PARTIES CONVIENNENT DE CE QUI SUIT</span>:</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="43" class="bold">CHAPITRE 1</span></span></div><div class="indent-0-0"><span integrity:order="44" class="Provision">DISPOSITION HABILITANTE</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="45" class="bold">Disposition habilitante</span></span></div><div class="indent-0-0"><span integrity:order="46" class="Provision">1.1<span><span width="9pt" class="inputHTML"><span integrity:added="1"> </span></span></span>La présente entente est conclue en vertu de l’article 16 de la Loi sur les accidents du travail et les maladies professionnelles.</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="47" class="bold">CHAPITRE 2</span></span></div><div class="indent-0-0"><span integrity:order="48" class="Provision">OBJETS</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="49" class="bold">Objets</span></span></div><div class="indent-0-0"><span integrity:order="50" class="Provision">2.1<span><span width="9pt" class="inputHTML"><span integrity:added="1"> </span></span></span>La présente entente a pour objets de prévoir, aux conditions et dans la mesure de la présente, l’application de la Loi sur les accidents du travail et les maladies professionnelles aux stagiaires de la Société et de déterminer les obligations de la Société et de la Commission.</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="51" class="bold">CHAPITRE 3</span></span></div><div class="indent-0-0"><span integrity:order="52" class="Provision">DÉFINITIONS</span></div><div class="indent-0-0"><span integrity:order="53" class="Provision">Aux fins de la présente entente, on entend par:</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="54" class="bold">«Commission»</span></span></div><div class="Paragraph"><span integrity:order="55" class="Label-L LabelBase">a<span integrity:added="1" class="normal LabelBase italic">) </span></span><span integrity:order="56" class="Provision">Commission: la Commission de la santé et de la sécurité du travail instituée en vertu de l’article 137 de la Loi sur la santé et la sécurité du travail (chapitre S-2.1);</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="57" class="bold">«emploi»</span></span></div><div class="Paragraph"><span integrity:order="58" class="Label-L LabelBase">b<span integrity:added="1" class="normal LabelBase italic">) </span></span><span integrity:order="59" class="Provision">emploi: l’emploi du stagiaire est l’emploi qu’il occupe au moment où se manifeste la lésion professionnelle;</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="60" class="bold">«établissement»</span></span></div><div class="Paragraph"><span integrity:order="61" class="Label-L LabelBase">c<span integrity:added="1" class="normal LabelBase italic">) </span></span><span integrity:order="62" class="Provision">établissement: un établissement au sens de la Loi sur la santé et la sécurité du travail;</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="63" class="bold">«établissement d’enseignement»</span></span></div><div class="Paragraph"><span integrity:order="64" class="Label-L LabelBase">d<span integrity:added="1" class="normal LabelBase italic">) </span></span><span integrity:order="65" class="Provision">établissement d’enseignement: un organisme dispensant des programmes de formation en vertu de la Loi sur l’instruction publique (chapitre I-13.3), en vertu de la Loi sur les collèges d’enseignement général et professionnel (chapitre C-29), en vertu de la Loi sur l’enseignement privé (chapitre E-9.1) ou un établissement d’enseignement universitaire;</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="66" class="bold">«lésion professionnelle»</span></span></div><div class="Paragraph"><span integrity:order="67" class="Label-L LabelBase">e<span integrity:added="1" class="normal LabelBase italic">) </span></span><span integrity:order="68" class="Provision">lésion professionnelle: une blessure ou une maladie qui survient par le fait ou à l’occasion d’un accident du travail, ou une maladie professionnelle, y compris la récidive, la rechute ou l’aggravation;</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="69" class="bold">«Loi»</span></span></div><div class="Paragraph"><span integrity:order="70" class="Label-L LabelBase">f<span integrity:added="1" class="normal LabelBase italic">) </span></span><span integrity:order="71" class="Provision">Loi: la Loi sur les accidents du travail et les maladies professionnelles (chapitre A-3.001);</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="72" class="bold">«Société»</span></span></div><div class="Paragraph"><span integrity:order="73" class="Label-L LabelBase">g<span integrity:added="1" class="normal LabelBase italic">) </span></span><span integrity:order="74" class="Provision">Société: la Société de l’assurance automobile du Québec constituée en vertu de l’article 1 de la Loi sur la Société de l’assurance automobile du Québec (chapitre S-11.011);</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="75" class="bold">«stagiaire»</span></span></div><div class="Paragraph"><span integrity:order="76" class="Label-L LabelBase">h<span integrity:added="1" class="normal LabelBase italic">) </span></span><span integrity:order="77" class="Provision">stagiaire: la personne qui accomplit un travail non rémunéré dans le cadre de mesures de réadaptation arrêtées par la Société et qui:</span></div><div class="Paragraph"><span integrity:order="78" class="Label-L LabelBase">a<span integrity:added="1" class="normal LabelBase italic">) </span></span><span integrity:order="79" class="Provision">reçoit ou aurait droit de recevoir de la Société, au moment où survient une lésion professionnelle, une indemnité de remplacement du revenu non réduite;</span></div><div class="Paragraph"><span integrity:order="80" class="Label-L LabelBase">b<span integrity:added="1" class="normal LabelBase italic">) </span></span><span integrity:order="81" class="Provision">n’est pas une personne qui effectue un stage non rémunéré sous la responsabilité d’un établissement d’enseignement.</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="82" class="bold">CHAPITRE 4</span></span></div><div class="indent-0-0"><span integrity:order="83" class="Provision">OBLIGATIONS DE LA SOCIÉTÉ</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="84" class="bold">Employeur</span></span></div><div class="indent-0-0"><span integrity:order="85" class="Provision">4.1<span><span width="9pt" class="inputHTML"><span integrity:added="1"> </span></span></span>La Société est réputée être l’employeur de tout stagiaire visé par la présente entente.</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="86" class="bold">Restrictions</span></span></div><div class="indent-0-0"><span integrity:order="87" class="Provision">Toutefois, cette relation employeur-employé n’est reconnue que pour fins de cotisation et d’indemnisation en vertu de la Loi et ne doit pas être considérée comme une admission d’état de fait pouvant prêter à interprétation dans d’autres champs d’activités.</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="88" class="bold">Obligations générales</span></span></div><div class="indent-0-0"><span integrity:order="89" class="Provision">4.2<span><span width="9pt" class="inputHTML"><span integrity:added="1"> </span></span></span>À titre d’employeur, la Société est, avec les adaptations qui s’imposent, tenue à toutes les obligations prévues par la Loi, lesquelles comprennent notamment l’obligation de tenir un registre des accidents du travail survenus dans les établissements où se retrouvent les stagiaires et l’obligation d’aviser la Commission, sur le formulaire prescrit par celle-ci, qu’un stagiaire est incapable de poursuivre le travail qu’il accomplissait dans le cadre des mesures de réadaptation arrêtées et ce, en raison d’une lésion professionnelle.</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="90" class="bold">Registre des accidents</span></span></div><div class="indent-0-0"><span integrity:order="91" class="Provision">Néanmoins, dans le cas du registre des accidents du travail visé par l’alinéa précédent, la Société n’est tenue de mettre ce registre qu’à la disposition de la Commission.</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="92" class="bold">Informations</span></span></div><div class="indent-0-0"><span integrity:order="93" class="Provision">Sur demande de la Commission, la Société transmet une description des tâches ou des activités effectuées par le stagiaire au moment où se manifeste la lésion professionnelle.</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="94" class="bold">Exceptions</span></span></div><div class="indent-0-0"><span integrity:order="95" class="Provision">4.3<span><span width="9pt" class="inputHTML"><span integrity:added="1"> </span></span></span>Malgré l’article 4.2, l’article 32 de la Loi relatif à certaines mesures prohibées, les articles 179 et 180 concernant l’assignation temporaire de même que le chapitre VII ayant trait au droit de retour au travail ne sont pas applicables à la Société.</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="96" class="bold">Premiers secours</span></span></div><div class="indent-0-0"><span integrity:order="97" class="Provision">Bien que la Société ne soit pas tenue de donner elle-même les premiers secours à un stagiaire victime d’une lésion professionnelle, conformément aux articles 190 et 191 de la Loi, elle doit cependant veiller à ce qu’ils soient dispensés, si nécessaires, et en assumer les coûts afférents.</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="98" class="bold">Paiement de la cotisation</span></span></div><div class="indent-0-0"><span integrity:order="99" class="Provision">4.4<span><span width="9pt" class="inputHTML"><span integrity:added="1"> </span></span></span>La Société s’engage à payer la cotisation calculée par la Commission conformément à la Loi et à ses règlements d’application ainsi que les frais fixes d’administration propres au dossier financier.</span></div><div class="indent-0-0"><span integrity:order="100" class="Provision">Aux fins de la présente entente, la Société est en outre tenue de faire des versements périodiques, conformément à l’article 315.1 de la Loi.</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="101" class="bold">Minimum</span></span></div><div class="indent-0-0"><span integrity:order="102" class="Provision">4.5<span><span width="9pt" class="inputHTML"><span integrity:added="1"> </span></span></span>Pour les fins de la cotisation, la Société est réputée verser un salaire qui correspond à l’indemnité de remplacement du revenu non réduite à laquelle a droit le stagiaire pendant la durée du stage.</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="103" class="bold">État annuel</span></span></div><div class="indent-0-0"><span integrity:order="104" class="Provision">4.6<span><span width="9pt" class="inputHTML"><span integrity:added="1"> </span></span></span>La Société transmet chaque année à la Commission, avant le 15 mars, un état qui indique notamment le montant des revenus bruts annuels d’emploi, calculés en fonction de la durée du stage, versés aux stagiaires pendant l’année civile précédente.</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="105" class="bold">Registre</span></span></div><div class="indent-0-0"><span integrity:order="106" class="Provision">4.7<span><span width="9pt" class="inputHTML"><span integrity:added="1"> </span></span></span>La Société tient un registre détaillé des noms et adresses des stagiaires ainsi que du nom et de l’adresse de l’employeur où s’effectue le stage.</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="107" class="bold">Disponibilité</span></span></div><div class="indent-0-0"><span integrity:order="108" class="Provision">La Société met ce registre à la disposition de la Commission si celle-ci le requiert.</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="109" class="bold">CHAPITRE 5</span></span></div><div class="indent-0-0"><span integrity:order="110" class="Provision">OBLIGATIONS DE LA COMMISSION</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="111" class="bold">Statut de travailleur</span></span></div><div class="indent-0-0"><span integrity:order="112" class="Provision">5.1<span><span width="9pt" class="inputHTML"><span integrity:added="1"> </span></span></span>La Commission considère le stagiaire de la Société comme étant un travailleur au sens de la Loi.</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="113" class="bold">Indemnité</span></span></div><div class="indent-0-0"><span integrity:order="114" class="Provision">5.2<span><span width="9pt" class="inputHTML"><span integrity:added="1"> </span></span></span>Le stagiaire victime d’une lésion professionnelle a droit de recevoir une indemnité de remplacement du revenu de la Commission à compter du moment où le droit de recevoir une indemnité de remplacement du revenu non réduite de la Société s’éteint.</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="115" class="bold">Calcul de l’indemnité</span></span></div><div class="indent-0-0"><span integrity:order="116" class="Provision">5.3<span><span width="9pt" class="inputHTML"><span integrity:added="1"> </span></span></span>Aux fins du calcul de l’indemnité de remplacement du revenu, le revenu brut annuel d’emploi du stagiaire est l’indemnité de remplacement du revenu non réduite versée par la Société.</span></div><div class="indent-0-0"><span integrity:order="117" class="Provision"><span integrity:order="118" class="bold">Dossier financie</span>r</span></div><div class="indent-0-0"><span integrity:order="119" class="Provision">5.4<span><span width="9pt" class="inputHTML"><span integrity:added="1"> </span></span></span>La Commission accorde un dossier financier classé dans l’unité «Exploitation d’une entreprise adaptée; exploitation d’un atelier de réinsertion par le travail» ou, le cas échéant, à la suite de modifications subséquentes à la signature de la présente entente, dans l’unité correspondante.</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="120" class="bold">CHAPITRE 6</span></span></div><div class="indent-0-0"><span integrity:order="121" class="Provision">DISPOSITIONS DIVERSES</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="122" class="bold">Suivi de l’entente</span></span></div><div class="indent-0-0"><span integrity:order="123" class="Provision">6.1<span><span width="9pt" class="inputHTML"><span integrity:added="1"> </span></span></span>Tant la Société que la Commission désignent, dans les quinze (15) jours suivant l’entrée en vigueur de la présente entente, un responsable qui en est chargé du suivi.</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="124" class="bold">Adresses des avis</span></span></div><div class="indent-0-0"><span integrity:order="125" class="Provision">6.2<span><span width="9pt" class="inputHTML"><span integrity:added="1"> </span></span></span>Tout avis prévu par la présente entente est expédié aux adresses suivantes:</span></div><div class="Paragraph"><span integrity:order="126" class="Label-L LabelBase">a<span integrity:added="1" class="normal LabelBase italic">) </span></span><span integrity:order="127" class="Provision">Le Secrétaire de la Société</span></div><div class="indent-0-0"><span integrity:order="128" class="Provision">Société de l’assurance automobile du Québec</span></div><div class="indent-0-0"><span integrity:order="129" class="Provision">333, boulevard Jean-Lesage</span></div><div class="indent-0-0"><span integrity:order="130" class="Provision">Québec (Québec) G1K 8J6</span></div><div class="Paragraph"><span integrity:order="131" class="Label-L LabelBase">b<span integrity:added="1" class="normal LabelBase italic">) </span></span><span integrity:order="132" class="Provision">Le secrétaire de la Commission</span></div><div class="indent-0-0"><span integrity:order="133" class="Provision">Commission de la santé et de la sécurité du travail</span></div><div class="indent-0-0"><span integrity:order="134" class="Provision">1199, rue De Bleury, 14<span integrity:order="135" class="superscript">e</span> étage</span></div><div class="indent-0-0"><span integrity:order="136" class="Provision">Montréal (Québec) H3C 4E1</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="137" class="bold">CHAPITRE 7</span></span></div><div class="indent-0-0"><span integrity:order="138" class="Provision">MISE EN VIGUEUR, DURÉE ET RÉSILIATION</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="139" class="bold">Prise d’effet</span></span></div><div class="indent-0-0"><span integrity:order="140" class="Provision">7.1<span><span width="9pt" class="inputHTML"><span integrity:added="1"> </span></span></span>La présente entente prend effet à la date d’entrée en vigueur du règlement adopté à cet effet par la Commission en vertu de l’article 170 de la Loi sur la santé et la sécurité du travail.</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="141" class="bold">Durée</span></span></div><div class="indent-0-0"><span integrity:order="142" class="Provision">Elle demeure en vigueur jusqu’au 31 décembre 2011.</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="143" class="bold">Reconduction tacite</span></span></div><div class="indent-0-0"><span integrity:order="144" class="Provision">7.2<span><span width="9pt" class="inputHTML"><span integrity:added="1"> </span></span></span>Elle est par la suite reconduite tacitement d’une année civile à l’autre, sauf si l’une des parties transmet à l’autre partie, par courrier recommandé ou certifié au moins quatre-vingt-dix (90) jours avant l’avènement du terme, un avis écrit à l’effet qu’elle entend y mettre fin ou y apporter des modifications.</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="145" class="bold">Modifications</span></span></div><div class="indent-0-0"><span integrity:order="146" class="Provision">7.3<span><span width="9pt" class="inputHTML"><span integrity:added="1"> </span></span></span>Dans ce dernier cas, l’avis doit comporter les modifications que la partie désire apporter.</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="147" class="bold">Renouvellement</span></span></div><div class="indent-0-0"><span integrity:order="148" class="Provision">La transmission d’un tel avis n’empêche pas le renouvellement de la présente entente par tacite reconduction pour une période d’un (1) an. Si les parties ne s’entendent pas sur les modifications à apporter à l’entente, celle-ci prend fin, sans autre avis, au terme de cette période de reconduction.</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="149" class="bold">CHAPITRE 8</span></span></div><div class="indent-0-0"><span integrity:order="150" class="Provision">RÉSILIATION DE L’ENTENTE</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="151" class="bold">Défaut</span></span></div><div class="indent-0-0"><span integrity:order="152" class="Provision">8.1<span><span width="9pt" class="inputHTML"><span integrity:added="1"> </span></span></span>La Commission peut, si la Société fait défaut de respecter l’une ou l’autre de ses obligations, lui demander de corriger, dans un délai qu’elle fixe, la situation de défaut. En l’absence de correction dans le délai fixé, la Commission peut unilatéralement résilier la présente entente, sur avis écrit.</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="153" class="bold">Date</span></span></div><div class="indent-0-0"><span integrity:order="154" class="Provision">L’entente est alors résiliée à la date de l’envoi de l’avis écrit.</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="155" class="bold">Ajustements financiers</span></span></div><div class="indent-0-0"><span integrity:order="156" class="Provision">8.2<span><span width="9pt" class="inputHTML"><span integrity:added="1"> </span></span></span>En cas de résiliation, la Commission procède aux ajustements financiers en tenant compte des montants exigibles en vertu de la présente entente.</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="157" class="bold">Somme due</span></span></div><div class="indent-0-0"><span integrity:order="158" class="Provision">Toute somme due à la suite de ces ajustements financiers est payable à la date d’échéance apparaissant à l’avis de cotisation.</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="159" class="bold">Commun accord</span></span></div><div class="indent-0-0"><span integrity:order="160" class="Provision">8.3<span><span width="9pt" class="inputHTML"><span integrity:added="1"> </span></span></span>Les parties peuvent, en tout temps, d’un commun accord, résilier la présente entente.</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="161" class="bold">Dommages</span></span></div><div class="indent-0-0"><span integrity:order="162" class="Provision">8.4<span><span width="9pt" class="inputHTML"><span integrity:added="1"> </span></span></span>En cas de résiliation, une partie ne peut être tenue de payer des dommages, intérêts ou quelqu’autre forme d’indemnité ou de frais à l’autre partie.</span></div><div class="indent-0-0"><span integrity:order="163" class="Provision">E<span integrity:order="164" class="smallcaps">N FOI DE QUOI</span>, les parties ont signé</span></div><div class="indent-0-0"><span integrity:order="165" class="Provision">_____________________________________<span><span width="39pt" class="inputHTML"><span integrity:added="1"> </span></span></span>_____________________________________</span></div><div class="indent-0-0"><span integrity:order="166" class="Provision">N<span integrity:order="167" class="smallcaps">ATHALIE</span> T<span integrity:order="168" class="smallcaps">REMBLAY</span>, FCA<span><span width="108pt" class="inputHTML"><span integrity:added="1"> </span></span></span>L<span integrity:order="169" class="smallcaps">UC</span> M<span integrity:order="170" class="smallcaps">EUNIER</span>,</span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="171" class="italic">présidente et chef de la<span><span width="156pt" class="inputHTML"><span integrity:added="1"> </span></span></span>président du conseil</span></span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="172" class="italic">direction<span><span width="219pt" class="inputHTML"><span integrity:added="1"> </span></span></span>d’administration</span></span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="173" class="italic">Société de l’assurance<span><span width="156pt" class="inputHTML"><span integrity:added="1"> </span></span></span>et chef de la direction,</span></span></div><div class="indent-0-0"><span class="Provision"><span integrity:order="174" class="italic">automobile du Québec</span><span integrity:order="175" class="italic"><span><span width="150pt" class="inputHTML"><span integrity:added="1"> </span></span></span>Commission de la santé et</span></span></div><div class="indent-0-0"><span class="Provision"><span><span width="258pt" class="inputHTML"><span integrity:added="1"> </span></span></span><span integrity:order="176" class="italic">de la sécurité du travail</span></span></div></div></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span integrity:order="177">D. 1199-2010, Ann. I</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div><div integrity:added="1" class="Note italic"><div integrity:added="1" class="Note italic NoteDisplayDiv NoteImageWidthSpaceDiv"><img integrity:added="1" src="/img/Note.png"/></div><div class="Note italic NoteDisplayDiv NoteContentWidthSpaceDiv" id="d366843829e644"><div class="indent-0-0"><span integrity:order="178" class="Provision">À compter du 1<span integrity:order="179" class="superscript">er</span> janvier 2016, conformément à l’article 237 du chapitre 15 des lois de 2015, les mots «Commission de la santé et de la sécurité du travail» sont remplacés dans le présent règlement par les mots «Commission des normes, de l’équité, de la santé et de la sécurité du travail»</span></div></div></div></div><div class="AmendedTextTitle"><div class="ligne"><span integrity:added="1">
+                    </span></div><span integrity:added="1">RÉFÉRENCES</span></div><div><span><span integrity:order="180">D. 1199-2010, 2010 G.O. 2, 5498B</span></span></div><div><span><span integrity:order="181">L.Q. 2015, c. 15, a. 237</span></span></div></div></div></div>
+							</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</form>
+
+<ul id="contextMenu" class="dropdown-menu" role="menu" >
+	<li id="contextMenuCopy" class="disabled dropdown-item"><a tabindex="-1">Copier</a></li>
+	<li class="dropdown-divider"></li>
+	<li class="dropdown-item"><a tabindex="-1"">Sélectionner cet élément</a></li>
+	<li id="contextMenuSelectParent" class="dropdown-item"><a tabindex="-1">Sélectionner l'élément parent</a></li>
+	<li id="contextMenuUnselectAll" class="disabled dropdown-item"><a tabindex="-1">Désélectionner tous les éléments</a></li>
+	<li class="dropdown-divider"></li>
+	<li id="contextMenuCopyToArbortext" class="disabled dropdown-item"><a tabindex="-1">Copier vers Rédaction</a></li>
+	<li id="contextMenuCopyToLaw" class="d-block disable dropdown-item"><a tabindex="-1">Copier vers LAW</a></li>
+</ul>
+<input type="text" class="copyContainer" id="copyToClipboardMenu">
+<div id="copyToClipboard" class="modal fade">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">
+					Copier vers le presse-papier
+				</h4>
+				<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>				
+			</div>
+			<div class="modal-body">
+				<p>
+				<div class="description">
+					Pour copier : Ctrl+C
+				</div>
+				<input type="text" class="form-control" name="copyToInput" id="copyToInput">
+				</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-outline-secondary bg-gradient" data-bs-dismiss="modal">OK</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<a href="#" class="back-to-top"><span class="fa fa-chevron-up"></span></a>
+
+
+	<!-- migration rapide - éventuellement call ajax JSON -->
+	<input type="hidden" id="alpha" value="S-2.1, r. 31 ">
+	<input type="hidden" id="title"  value='S-2.1, r. 31  - Règlement sur la mise en oeuvre de l’entente relative au travail effectué dans le cadre de mesures de réadaptation arrêtées par la Société de l’assurance automobile du Québec'>
+	<input type="hidden" id="dbType"  value="cr">
+	<input type="hidden" id="langCont"  value="fr">
+	<input type="hidden" id="otherLangCont" value="en">
+
+	<input type="hidden" id="contextMenu_copy" value="Copier"/>
+	<input type="hidden" id="contextMenu_selectElement" value="Sélectionner cet élément"/>
+	<input type="hidden" id="contextMenu_selectParentElement" value="Sélectionner l'élément parent"/>
+	<input type="hidden" id="contextMenu_unselectElement" value="<<SR_contextMenu_unselectElement>>"/>
+	<input type="hidden" id="contextMenu_unselectAll" value="Désélectionner tous les éléments"/>
+
+	<input type="hidden" id="contextMenu_copyToArbortext" value="Copier vers Rédaction"/>
+	<input type="hidden" id="contextMenu_copyToLaw" value="Copier vers LAW"/>
+	<input type="hidden" id="contextMenu_FragmentSelection" value="<<SR_contextMenu_FragmentSelection>>"/>
+	<input type="hidden" id="ctrlC_toCopyToClipboard" value="Pour copier : Ctrl+C"/>
+	<input type="hidden" id="readyToPaste" value="Vos sélections ont été copiées dans le presse-papier."/>
+
+	<input type="hidden" id="readyToPasteInLAW" value="Vous pouvez coller vos sélections dans LAW en utilisant la fonction appropriée."/>
+	<input type="hidden" id="readyToPasteInArbortext" value="Vous pouvez coller vos sélections dans Arbortext en utilisant la fonction appropriée."/>
+	<input type="hidden" id="errorWhileCopyingTo" value="Une erreur est survenue lors de la préparation des données."/>
+	<input type="hidden" id="showSelections" value="false"/>
+	<input type="hidden" id="consolidetedDateLabel" value=""/>
+	<input type="hidden" id="renditions" value='{"Epub":"/fr/epub/cr/S-2.1, R. 31 .epub","Pdf":"/fr/pdf/rc/S-2.1, R. 31 .pdf"}'/>
+	<input type="hidden" id="output" value=""/>
+	
+					
+<div data-bs-toggle="modal" data-bs-target="#myModal" id="printPreviewButton" class="printPreviewButton d-none">
+<button type="button" class="btn btn-primary my-2 rounded-pill" id="goPrintPreview" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">
+<span class="fa fa-check-square-o" aria-hidden="true"></span> <span class="badge rounded-pill bg-secondary badgeWhite">0</span>
+</button>
+</div>
+
+				</div>
+			</div>
+			
+			<!-- Footer -->
+		<div class="row pt-4">
+			<hr/>
+			<div align="center" class="pt-4">
+				<ul class="footer-options">
+					<li><a href="/fr/contenu/joindre/" >Nous joindre</a></li>
+					<li><a href="/fr/contenu/plan/" >Plan du site</a></li>
+					<li><a href="https://www.quebec.ca/" target="_blank">Québec.ca</a></li>
+					<li><a href="/fr/contenu/access/" >Accessibilité</a></li>
+					<li><a href="/fr/contenu/confid/" >Politique de confidentialité</a></li>
+				</ul>
+			</div>
+			<div  align="center"><a href="https://www.quebec.ca/" target="_blank"><img src="/img/quebec.gif" width="105" height="32" border="0"></a></div>
+			<div  align="center" class="copyright pt-2"><a class="footer-options" href="http://www.droitauteur.gouv.qc.ca/copyright.php" target="_blank">&copy; Gouvernement du Qu&eacute;bec</a></div>
+
+		</div>
+			
+		</div>
+			
+		<!-- Fenetre modal pour l'impression -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-impression">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="myModalLabel">Sélections</h4>
+						<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div>
+							<h4 id="myModalSubtitle"><small></small></h4>
+						</div>
+						<div class="list-group">
+							<a href="#" class="list-group-item active disabled bg-primary bg-gradient text-white">Afficher</a>
+							<a href="#" id="showSelectionsInCurrentDocument" class="list-group-item d-none">Les sélections du document courant</a>
+							<a href="#" id="showAllSelectionsInCollection" class="list-group-item">Toutes les sélections de la collection</a>
+							<a href="#" class="list-group-item active disabled bg-primary bg-gradient text-white">Fragments sélectionnés</a>
+							<a href="#" id="printPreviewResetSelections" class="list-group-item">Supprimer toutes les sélections</a>
+							<a href="#" id="printPreviewShowSelections" class="list-group-item d-none">Afficher les sélections</a>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-outline-secondary bg-gradient" data-bs-dismiss="modal">Fermer</button>
+					</div>
+				</div>
+			</div>
+			<form name="printForm" id="printForm" encType="application/x-www-form-urlencoded" method="post">
+				<input type="hidden" name="newQuery" value=""></input>
+				<input type="hidden" name="text" value=""></input>
+				<input type="hidden" name="isPrinting" value="false"></input>
+				<input type="hidden" name="title" value=""></input>
+				<input type="hidden" name="langCont" value="fr"></input>
+				<input type="hidden" name="type" value="cs"></input>
+				<input type="hidden" name="printType" value=""></input>
+				<input type="hidden" name="summary" value=""></input>
+				<input type="hidden" name="instrumentNumber" value=""></input>
+				<input type="hidden" name="selfrag" value=""></input>
+				<input type="hidden" name="anchor" value=""></input>
+				<input type="hidden" name="anchorSS" value=""></input>
+				<input type="hidden" name="recordsWithHits" value="false"></input>
+				<input type="hidden" name="validSearch" value="false"></input>
+				<input type="hidden" name="sortmode" value="false"></input>
+				<input type="hidden" name="output" value="selections"></input>
+			</form>
+		</div>
+		
+		<div class="modal fade bs-example-modal-sm" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+			<div class="modal-dialog modal-sm">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="mySmallModalLabel">Cyberlex</h4>
+						<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+					</div>
+					<div class="modal-body">
+						Version 2.2.5.0
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div>
+
+	
+		
+		<!-- migration rapide - éventuellement call ajax JSON -->
+		<input type="hidden" id="token" name="token" value="<<token>>">
+		<input type="hidden" id="config" name="config" value='{"ConfigurationMenu":{"params":{},"enabled":false},"XSLT":{"params":{"CocoonFullTextUrl":"ace-xslt-web.html","CocoonTOCUrl":"ace-xslt-toc.html"},"enabled":true},"Import":{"params":{"odbc-AnnualStatutes":"","odbc-Regulations":"","odbc-Statutes":"","odbc-AnnualRegulations":""},"enabled":false},"GoogleAnalytic":{"params":{"trackingId":""},"enabled":false},"Export":{"params":{"exportLast":["last","external-last","report"],"formatOptions":["Xml","Html"],"export-Regulations":true,"export-AnnualRegulations":true,"typeFileOptions":["",""],"exportFull":["all","external-all","report","orphans"],"modeOptions":["Last","All","Full"],"exportAll":["all","external-all","report"],"export-DtdClient":"Quebec","export-Statutes":true,"export-AnnualStatutes":true,"exportHtml-CocoonUrl":"ace-xslt-export.html"},"enabled":true},"Conversion":{"params":{"generatePdf-Statutes":"single","generatePdf-Regulations-Overwrite":true,"generatePdf-Statutes-Path":"master\\cs\\pdf","generateEpub-Statutes-Overwrite":true,"generateEpub-Statutes-Storage":"disk","generatePdf-Regulations-SoapEnvelope":"config/conversion/single-regulations.xml","generateEpub-AnnualStatutes-SoapEnvelope":"","generateEpub-Regulations-Storage":"disk","generatePdf-AnnualStatutes-SoapEnvelope":"","generateEpub-AnnualStatutes-Storage":"none","generatePdf-Regulations-Storage":"disk","generatePdf-AnnualRegulations-Storage":"none","generatePdf-AnnualRegulations-Overwrite":false,"generatePdf-Statutes-SoapEnvelope":"config/conversion/single-statutes.xml","generateEpub-AnnualRegulations-Storage":"none","generateEpub-AnnualStatutes":"none","renditionOptions":["Pdf","Epub"],"generateEpub-AnnualRegulations-SoapEnvelope":"","generatePdf-AnnualStatutes-Storage":"none","generateEpub-Statutes-SoapEnvelope":"config/conversion/epub.xml","generateEpub-Statutes-Path":"master\\cs\\epub","generatePdf-Regulations-SoapEnvelope-TwoPhase":"config/conversion/fo-to-pdf.xml","generateEpub-Regulations-Path":"master\\cr\\epub","generateEpub-AnnualStatutes-Overwrite":false,"generateEpub-Regulations-Overwrite":true,"generateEpub-Regulations-SoapEnvelope":"config/conversion/epub.xml","generateEpub-AnnualRegulations-Path":"annuals_master\\ar\\epub","generatePdf-Regulations-Path":"master\\cr\\pdf","generatePdf-AnnualStatutes":"none","generateEpub-Statutes":"single","generatePdf-AnnualRegulations-SoapEnvelope":"","generatePdf-AnnualRegulations":"none","generateEpub-AnnualStatutes-Path":"annuals_master\\as\\epub","generateEpub-AnnualRegulations-Overwrite":false,"generatePdf-Statutes-Overwrite":true,"generateEpub-AnnualRegulations":"none","generatePdf-AnnualStatutes-Path":"annuals_master\\as\\pdf","generatePdf-Statutes-Storage":"disk","generatePdf-AnnualRegulations-Path":"annuals_master\\ar\\pdf","generatePdf-AnnualStatutes-Overwrite":false,"generatePdf-Regulations":"single","generatePdf-Statutes-SoapEnvelope-TwoPhase":"config/conversion/fo-to-pdf.xml","generateEpub-Regulations":"single"},"enabled":true},"Core":{"params":{"CopyToLaw":false,"Browse-cr-Category-Id":"","ShowBarLetter":true,"Browse-cs-Category-Id":"","CopyToArbortext":false,"Template-NotFound":"notfound.html","DoTreatment-ConsoDate":true,"Menu-cs-Category-Id":"","FutureDate":29990101000000,"ShowFutureDate":true,"Search-OptionInForce":true,"Search-OptionStemming":true,"MasterToServerChunkSize":2000,"DefaultCorpus":"statutes","StopWordsFiles":["config/StopWordFr.txt","config/StopWordEn.txt"],"CutOffDate":19990401000000,"ShowTypeFileOptions":false,"Browse-cr-HideRepealed":false,"StrikethroughConsoDateException_selectionPage":false,"FragmentSelection":true,"Browse-DefaultRecentYear":false,"Browse-cs-HideRepealed":false},"enabled":true},"ContentSecurityPolicy":{"params":{},"enabled":true},"Backup":{"params":{"backupDbList":["master","annuals_master"],"backupExternalFolderList":["master=master","annuals_master=annuals_master","loose=loose"]},"enabled":true},"Integrity":{"params":{"Validate-Conversion-Pdf":true,"Exceptions":"","Validate-Exportation":true,"RemoveIntegrityAttributesOnConversion":true,"RemoveIntegrityAttributesOnExportation":true},"enabled":true}}'>
+		<input type="hidden" id="cmdId" name="cmdId" value="">
+		<input type="hidden" id="langInt" name="langInt" value="fr">
+		<input type="hidden" id="filter" name="filter" value="">
+
+		<input type="hidden" id="langCont" name="langCont" value="fr">
+		<input type="hidden" id="hideMenu" name="hideMenu" value="Fermer le menu">				
+		<input type="hidden" id="diplayMenu" name="diplayMenu" value="Afficher le menu">						
+		<input type="hidden" id="printPreview" name="printPreview" value="<<SR_printPreview>>">						
+		<input type="hidden" id="loadingMaskText" name="loadingMaskText" value="Chargement en cours...">					
+			
+		<input type="hidden" id="showSelectionsButtonTooltipSingleFrag" name="showSelectionsButtonTooltipSingleFrag" value="1 fragment a été sélectionné">				
+		<input type="hidden" id="showSelectionsButtonTooltipMultipleFrags" name="showSelectionsButtonTooltipMultipleFrags" value="fragments ont été sélectionnés">				
+		<input type="hidden" id="bootstrapMultiselect_nonSelectedText_limitSearch" name="bootstrapMultiselect_nonSelectedText_limitSearch" value="Aucune limite">				
+		<input type="hidden" id="bootstrapMultiselect_nSelectedText_limitSearch" name="bootstrapMultiselect_nSelectedText_limitSearch" value="limites">																
+		<input type="hidden" id="bootstrapMultiselect_allSelectedText_limitSearch" name="bootstrapMultiselect_allSelectedText_limitSearch" value="Toutes les limites">																			
+		<input type="hidden" id="corpusQuickSearch" name="corpusQuickSearch" value="all">
+
+		<script type="text/javascript" src="/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+		<script type="text/javascript" src="/bootstrap-notify/3.1.5/bootstrap-notify.min.js"></script>
+		<script type="text/javascript" src="/js/Config.js?v=2.1"></script>
+		<script type="text/javascript" src="/js/Object.js?v=2.1"></script>
+		<script type="text/javascript" src="/js/mainMenu.js?v=2.1"></script>
+		<script type='text/javascript' src='/js/jquery.loadmask.js?v=2.1'></script>
+		<script type='text/javascript' src='/js/cyberlex.jquery.loadmask.js?v=2.1'></script>
+		<script type='text/javascript' src='/js/selections.js?v=2.1'></script>
+		<script type='text/javascript' src='/js/UrlHelper.js?v=2.1'></script>
+		
+<script type="text/javascript" src="/js/Config.js?v=2.2"></script>
+
+<script type="text/javascript" src="/js/showdoc.js?v=2.2"></script>
+
+	</body>
+</html>

@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; CHARSET=utf-8"></meta>
+		<meta name="dc.title" content=" - Règlement sur les mécanismes de prévention propres à un chantier de construction">
+		<meta name="dc.creator" content="">
+		<meta name="dc.language" scheme="ISO639-2"	content="fre">
+		<meta name="dc.subject" content="">
+		<meta name="Keywords" content="">
+		<meta name="dc.Publisher" content="">
+		<meta name="dc.Contributor" content="Irosoft, architecture de gestion de l'information législative - legal information management system">
+		<meta name="dc.Description" content="">
+		<meta name="Description" content="">
+		<meta name="Title" content=" - Règlement sur les mécanismes de prévention propres à un chantier de construction">
+		<meta name="dc.date.created" content="2022-09-02">
+		<meta name="dc.date.modified" content="2022-09-02">
+
+		<title>Légis Québec</title>
+		
+		<link rel="shortcut icon" href="/img/favicon.ico">
+		<link rel="stylesheet" href="/bootstrap/5.1.3/css/bootstrap.min.css">
+		<link rel='stylesheet' href='/CSS/jquery.loadmask.css?v=2.1'>
+		<link rel='stylesheet' href='/CSS/cyberlex.jquery.loadmask.css?v=2.1'>
+		
+		
+<link rel="stylesheet" type="text/css" href="/CSS/FragmentView.css?v=2.2"></link>
+
+		<link rel="stylesheet" href="/css/publishing-bootstrap.css?v=2.1">
+		<link rel="stylesheet" href="/css/publishing.css?v=2.1">
+		<link rel="stylesheet" href="/CSS/cyberlex-bootstrap.min.css?v=2.1">
+		<link rel="stylesheet" href="/CSS/cyberlex.css?v=2.1">
+		<link rel="stylesheet" href="/css/font-awesome.min.css?v=2.1">
+		<link rel="stylesheet" href="/CSS/core.css?v=2.1">
+		<link rel="stylesheet" href="/CSS/client.css?v=2.1">
+		<link rel="stylesheet" href="/css/publications-quebec.css?v=2.1">
+		<link rel="stylesheet" href="/css/eoq.css?v=2.1">
+
+		<script type="text/javascript" src="/jquery-ui/1.13.0/external/jquery/jquery.js?v=2.1"></script>
+		<script type="text/javascript" src="/jquery-ui/1.13.0/jquery-ui.min.js?v=2.1"></script>
+		<script type="text/javascript" src="/jquery/3.6.0/jquery.min.js?v=2.1"></script>
+		<script type="text/javascript" src="/DOMPurify/dist/purify.min.js?v=2.1"></script>
+	</head>
+
+	<body>
+		<div id="wrap">
+			<div class="main-header">
+				<div class="float-end">
+					<div class="vague"></div>
+					<ul class="pub-quebec">
+						<li><a href="/fr/">Accueil</a></li>
+						<li><a href="/fr/contenu/joindre" >Nous joindre</a></li>
+						<li><a href="/fr/contenu/plan" >Plan du site</a></li>
+						<li><a href="https://www.quebec.ca/" target="_blank">Québec.ca</a></li>
+						<li><a href="/fr/contenu/FAQ" >FAQ</a></li>
+						<li class='spacer-pub-quebec'></li>
+						<li><a id="langSwitcher" class="" href="/en/document/cr/S-2.1,%20r.%208.2%20">English</a></li>
+
+					</ul>
+					<div class="mtess">
+						<a href="https://www.mtess.gouv.qc.ca/" class="mtessTitle" target="_blank">Ministère de l'Emploi et de la Solidarité sociale</a>
+					</div>
+				</div>
+				<a class="logo-pub-quebec" href="http://www.publicationsduquebec.gouv.qc.ca/" target="_blank"></a>
+			</div>
+			<hr/>
+			
+			<!-- Header -->
+			<nav class="navbar navbar-light">
+				<div class="container-fluid colorTheme">
+					<div class="navbar-header">
+						<div class="row">
+							<div class="col-sm-3">
+								<div class="input-group" class="pt-2">
+									<input type="text" class="form-control" data-bs-placement="top" data-bs-toggle="tooltip" placeholder="Recherche" id="quickSearchText" title="Rechercher dans lois et règlements codifiés">
+									<span class="input-group-btn">
+										<button class="btn btn-primary" type="button" id="goResult" data-bs-placement="top" data-bs-toggle="tooltip" title="Recherche">
+											<span class="fa fa-search" aria-hidden="true"></span>
+										</button>
+									</span>
+								</div>
+								<div class="py-2"><a href="/fr/recherche?t=a">Recherche avancée</a></div>
+							</div><div class="col-sm-9 d-flex justify-content-between">
+									<a class="navbar-brand logo-fr logo" title="Accueil" href="/fr/"></a>
+							</div>
+						</div>
+					</div>
+				</div><!-- /.container-fluid -->
+			</nav>
+			<!-- Content -->			
+			<div class="row">
+				<div class="col-sm-3">
+					<div class="list-group">
+	<a href="#" class="list-group-item active disabled bg-primary bg-gradient text-white">Lois et règlements codifiés</a>
+	<a href="/fr/chapitres?corpus=lois" id="chapterStatutes" class="list-group-item">Lois codifiées</a>
+	<a href="/fr/chapitres?corpus=regs" id="chapterRegulations" class="list-group-item">Règlements codifiés</a>
+	
+	<a href="#" class="list-group-item active disabled bg-primary bg-gradient text-white">Lois et règlements annuels</a>
+	<a href="/fr/annuels?filtre=lois" id="browseannual-statutes" class="list-group-item">Lois annuelles</a>
+	<a href="/fr/annuels?filtre=regs" id="browseannual-regs" class="list-group-item">Règlements annuels</a>
+	
+	<a href="#" class="list-group-item active disabled bg-primary bg-gradient text-white">Information complémentaire</a>
+	<a id="content-editoff" href="/fr/contenu/editeurofficiel" class="list-group-item">L’Éditeur officiel du Québec</a>
+	<a id="content-neuf" href="/fr/contenu/neuf" class="list-group-item">Quoi de neuf?</a>
+	<a id="content-noteinfo" href="/fr/contenu/noteinfo" class="list-group-item">Note d’information</a>
+	<a id="content-mjqpol" href="/fr/contenu/mjqpol" class="list-group-item">Politique du ministre de la Justice</a>
+	<a id="content-modlois" href="/fr/contenu/modlois" class="list-group-item">Lois : Modifications</a>
+	<a id="content-nevlois" href="/fr/contenu/nevlois" class="list-group-item">Lois : Dispositions non en vigueur</a>
+	<a id="content-eevlois" href="/fr/contenu/eevlois" class="list-group-item">Lois : Entrées en vigueur</a>
+	<a id="content-loisann" href="/fr/contenu/loisann" class="list-group-item">Lois annuelles : Versions PDF depuis 1996</a>
+	<a id="content-modreg" href="/fr/contenu/modreg" class="list-group-item">Règlements : Modifications</a>
+	<a id="content-regann" href="/fr/contenu/regann" class="list-group-item">Règlements annuels : Versions PDF depuis 1996</a>
+	<a id="content-decision" href="/fr/contenu/decision" class="list-group-item">Décisions des tribunaux</a>
+</div>
+					
+				</div>
+				<div id="contentDiv" class="col-sm-9">
+					<form id="form" onsubmit="" method="post" action="">
+	<div>
+		<input alt="Champ caché" name="command" type="hidden" value=""></input>
+		<input alt="Champ caché" name="shorttitle" type="hidden" value=""></input>
+		<input alt="Champ caché" name="marginalnotexml" type="hidden" value=""></input>
+		<input alt="Champ caché" name="heading" type="hidden" value=""></input>
+		<input alt="Champ caché" name="fragment" type="hidden" value=""></input>
+		<input alt="Champ caché" name="selfrag" type="hidden" value=""></input>
+		<input alt="Champ caché" name="search_type" type="hidden" value=""></input>
+		<input alt="Champ caché" name="title_search_type" type="hidden" value=""></input>		
+		<input alt="Champ caché" name="anchor" type="hidden" value=""></input>
+		<input alt="Champ caché" name="dateEEV" type="hidden" value=""></input>
+		<input alt="Champ caché" name="statuteyear" type="hidden" value=""></input>
+		<input alt="Champ caché" name="isPrinting" type="hidden" value="false"></input>
+		<input alt="Champ caché" name="from" type="hidden" value=""></input>
+		<input alt="Champ caché" name="output" type="hidden" value="printFull"></input>
+		<input alt="Champ caché" name="page" type="hidden" value="<<page>>"></input>
+		<input alt="Champ caché" name="length" type="hidden" value=""></input>
+		<input alt="Champ caché" name="instrumentnumber" type="hidden" value="S-2.1, r. 8.2 "></input>
+		<input alt="Champ caché" name="instrumentnumbersearch" type="hidden" value=""></input>
+		<input alt="Champ caché" name="stemmed" type="hidden" value=""></input>
+		
+	</div>
+
+	<div class="card">
+		<div class="card-header p-3 bg-gradient docHeader">
+						<h3 class="card-title"><span class="fw-bold">S-2.1, r. 8.2 </span> - Règlement sur les mécanismes de prévention propres à un chantier de construction</h3>
+					</div>
+		
+		<div class="card-body">
+			<div class="d-flex justify-content-between align-items-center">
+				<div class="flex-row d-flex align-items-center">
+					<div class="pr-1">
+						<a href="/fr/tdm/rc/S-2.1,%20r.%208.2%20" class="btn btn-outline-secondary bg-gradient" role="button" title="Afficher la table des matières du document" alt="Afficher la table des matières du document" data-bs-toggle="tooltip" data-bs-placement="top">Table des matières <span class="fa fa-list smallLeftSpacer" aria-hidden="true"></span></a>
+					</div>
+					<div class="px-1">
+						
+				<div class="btn-group">
+					<button id="relatedLegislativeDocument" type="button" class="btn btn-outline-secondary bg-gradient dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="-100, 0">
+						Loi habilitante <span class="badge rounded-pill bg-secondary smallLeftSpacer">1</span> <span class="caret smallLeftSpacer"></span>
+					</button>
+					<table class="table table-responsive table-hover dropdown-menu relatedDoc" role="menu">
+						<thead>
+							<tr>
+								<th width="15%">Alphanumérique</th>
+								<th width="85%">Titre</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+<td>S-2.1 </td>
+<td>
+<a class="hand boldLink" href="/fr/document/lc/S-2.1%20/">Loi sur la santé et la sécurité du travail   
+</a>
+</td>
+</tr>
+						</tbody>
+					</table>
+					</div>
+					</div>
+					<div class="px-1">
+						<span id="occurrenceButton" class="d-none">
+							Occurrences<span class="badge rounded-pill bg-secondary ms-3" id="occurrenceCount">0</span>
+						</span>
+					</div>
+					<div class="px-1">
+						
+					</div>
+				</div>
+
+				<div class="flex-row d-flex align-items-center">
+					<div class="px-1">
+						<a id="renditionPdf" target="_blank" class="btn btn-outline-secondary bg-gradient d-none" 
+							role="button" title="Ouvrir la version PDF" alt="Ouvrir la version PDF"
+							data-bs-toggle="tooltip" data-bs-placement="top">
+							 <span class="fa pdf-icon" aria-hidden="true"></span>
+						</a>
+					</div>
+					<div class="px-1">
+						<a id="renditionEpub" target="_blank" class="btn btn-outline-secondary bg-gradient d-none" 
+							role="button" title="Télécharger la version ePUB" alt="Télécharger la version ePUB"
+							data-bs-toggle="tooltip" data-bs-placement="top">
+							 <span class="fa epub-icon" aria-hidden="true"></span>
+						</a>
+					</div>
+					<div class="px-1">
+						<a id="btnPrintPreview" class="btn btn-outline-secondary bg-gradient last"
+							role="button" title="Préparer le document pour l'impression"
+							alt="Préparer le document pour l'impression" data-bs-toggle="tooltip" data-bs-placement="top"><span id="printBtnIcon"
+								class="fa fa-print" aria-hidden="true"></span>
+						</a>
+					</div>
+				</div>
+				
+			</div>
+			<div class="row pt-2">
+				<div class="col">
+					<div class="card ">
+						
+							<div class="card-header official-heading bg-gradient ">
+								<div class="row">
+									<div class="col">
+										<div class="text-end"></div>
+										Texte complet 
+									</div>
+								
+									<div class="col">
+										<div class="text-end">
+											À jour au 1<sup>er</sup> avril 2025
+										</div>
+										<div class="text-end">
+											Ce document a valeur officielle.
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="card-body history current conso" id="mainContent-document">
+								<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE div
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:exsl="http://exslt.org/common" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:integrity="http://ref.irosoft.com/integrity/" integrity:Digest="24442B276E6BC2D854E4402DCE566627"><meta title="Ministère de la Justice du Québec" author="Ministère de la Justice du Québec" subject="Ministère de la Justice du Québec" keywords="Ministère de la Justice du Québec" description="Ministère de la Justice du Québec" timestamp="n'est pas supporter" application="CYBERLEX" version="2.2.0.2" provider="Irosoft" source="xsl"/><div xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns:law="http://ref.irosoft.com/LIMS/1.0/law" class="DefaultPageSequence BodyPageSequence"><div class="LegislativeDocument Global Style_Extra_Class"><div class="Identification"><div integrity:added="1" class="Identification-Id"><span integrity:added="1">chapitre </span><span integrity:order="1">S-2.1, r. 8.2</span></div><div integrity:order="2" class="titre-reglement-left titre-reglement-left customLongTitleWord">Règlement sur les mécanismes de prévention propres à un chantier de construction</div><span class="Hidden" integrity:order="3">SANTÉ ET SÉCURITÉ — MÉCANISMES DE PRÉVENTION</span><div><div class="enabling-identification"><div integrity:order="5" class="LongTitle-enabling">Loi sur la santé et la sécurité du travail</div></div><div class="HistoricalNote-LongTitle"><span><span integrity:order="6">(chapitre S-2.1, a. 58)</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div><span class="Hidden" integrity:order="4">S-2.1</span></div><span class="Hidden"><span integrity:order="9" class="Hidden">06</span><span integrity:added="1">6 </span><span integrity:order="8" class="Hidden">10</span><span integrity:added="1">octobre </span><span integrity:order="7" class="date-txt-statut">2021</span></span><span class="Hidden"><span integrity:order="12" class="date-txt-statut Hidden">01</span><span integrity:added="1">1</span><span integrity:added="1" class="superscript_7point">er</span><span integrity:added="1"> </span><span integrity:order="11" class="Hidden">01</span><span integrity:added="1">janvier </span><span integrity:order="10" class="date-txt-statut">2023</span></span></div><div id="ga:l_i"><div class="Heading Heading" id="ga:l_i-h1"><div integrity:order="13" class="Label-group4"><span integrity:added="1">CHAPITRE </span>I</div><div integrity:order="14" class="TitleText-group4 group4" id="ga:l_i-h1-t1-nb:1">CHAMP D’APPLICATION</div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span><span class="Hidden" integrity:order="15">L.Q. 2021, c. 27, a. 243</span><span integrity:added="1">L.Q. 2021, c. 27, a. 243</span></span><span integrity:added="1">.</span></span></div></div><div class="section" id="se:1"><div class="Subsection SubsectionFirst" id="se:1-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 8.2 ?code=se:1&historique=20250807#20250807"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:1" data-code="se:1"><span integrity:order="16" class="Label-Section consolidationWhipeTextDecoration consolidationClean">1<span integrity:added="1">.</span></span></a> <span integrity:order="17" class="Subsection">Aux fins de l’application de la Loi sur la santé et la sécurité du travail (<a href="/fr/document/lc/S-2.1?&cible=" target="_blank"><span integrity:order="18">chapitre S-2.1</span></a>), le présent règlement détermine les règles applicables sur un chantier de construction relativement au comité de chantier, au représentant en santé et en sécurité et au coordonnateur en santé et en sécurité.</span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span><span class="Hidden" integrity:order="19">L.Q. 2021, c. 27, a. 243</span><span integrity:added="1">L.Q. 2021, c. 27, a. 243</span></span><span integrity:added="1">.</span></span></div></div></div><div id="ga:l_ii"><div class="Heading Heading" id="ga:l_ii-h1"><div integrity:order="20" class="Label-group4"><span integrity:added="1">CHAPITRE </span>II</div><div integrity:order="21" class="TitleText-group4 group4" id="ga:l_ii-h1-t1-nb:1">COMITÉ DE CHANTIER</div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span><span class="Hidden" integrity:order="22">L.Q. 2021, c. 27, a. 243</span><span integrity:added="1">L.Q. 2021, c. 27, a. 243</span></span><span integrity:added="1">.</span></span></div></div><div id="ga:l_ii-gb:l_i"><div class="Heading Heading" id="ga:l_ii-gb:l_i-h1"><span integrity:order="23" class="Label-group5"><span integrity:added="1">SECTION </span>I</span><div integrity:order="24" class="TitleText-group5 group5" id="ga:l_ii-gb:l_i-h1-t1-nb:2">COMPOSITION DU COMITÉ DE CHANTIER ET DÉSIGNATION DES MEMBRES</div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span><span class="Hidden" integrity:order="25">L.Q. 2021, c. 27, a. 243</span><span integrity:added="1">L.Q. 2021, c. 27, a. 243</span></span><span integrity:added="1">.</span></span></div></div><div class="section" id="se:2"><div class="Subsection SubsectionFirst" id="se:2-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 8.2 ?code=se:2&historique=20250807#20250807"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:2" data-code="se:2"><span integrity:order="26" class="Label-Section consolidationWhipeTextDecoration consolidationClean">2<span integrity:added="1">.</span></span></a> <span integrity:order="27" class="Subsection">Le nombre maximal de représentants des employeurs au sein du comité de chantier est égal au nombre de représentants en santé et en sécurité et de représentants de chacune des associations représentatives membres du comité.</span></div><div class="Subsection" id="se:2-ss:2"><span integrity:order="28" class="Subsection">Si le nombre d’employeurs présents sur le chantier de construction excède le nombre maximal de représentants prévu au premier alinéa, les représentants des employeurs au sein du comité sont respectivement ceux des employeurs qui emploient le plus grand nombre de travailleurs présents sur le chantier de construction.</span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span><span class="Hidden" integrity:order="29">L.Q. 2021, c. 27, a. 243</span><span integrity:added="1">L.Q. 2021, c. 27, a. 243</span></span><span integrity:added="1">.</span></span></div></div><div class="section" id="se:3"><div class="Subsection SubsectionFirst" id="se:3-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 8.2 ?code=se:3&historique=20250807#20250807"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:3" data-code="se:3"><span integrity:order="30" class="Label-Section consolidationWhipeTextDecoration consolidationClean">3<span integrity:added="1">.</span></span></a> <span integrity:order="31" class="Subsection">Lorsque plusieurs représentants en santé et en sécurité ou plusieurs coordonnateurs en santé et en sécurité sont désignés sur un chantier de construction, le nombre de représentants ou de coordonnateurs membres du comité est égal au nombre minimal prévu aux articles 13 et 16 selon la catégorie de chantier de construction.</span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span><span class="Hidden" integrity:order="32">L.Q. 2021, c. 27, a. 243</span><span integrity:added="1">L.Q. 2021, c. 27, a. 243</span></span><span integrity:added="1">.</span></span></div></div><div class="section" id="se:4"><div class="Subsection SubsectionFirst" id="se:4-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 8.2 ?code=se:4&historique=20250807#20250807"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:4" data-code="se:4"><span integrity:order="33" class="Label-Section consolidationWhipeTextDecoration consolidationClean">4<span integrity:added="1">.</span></span></a> <span integrity:order="34" class="Subsection">Les représentants en santé et en sécurité membres du comité de chantier sont désignés par l’ensemble des associations représentatives.</span></div><div class="Subsection" id="se:4-ss:2"><span integrity:order="35" class="Subsection">À défaut, ils sont désignés à la majorité des travailleurs de la construction présents sur le chantier de construction.</span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span><span class="Hidden" integrity:order="36">L.Q. 2021, c. 27, a. 243</span><span integrity:added="1">L.Q. 2021, c. 27, a. 243</span></span><span integrity:added="1">.</span></span></div></div></div><div id="ga:l_ii-gb:l_ii"><div class="Heading Heading" id="ga:l_ii-gb:l_ii-h1"><span integrity:order="37" class="Label-group5"><span integrity:added="1">SECTION </span>II</span><div integrity:order="38" class="TitleText-group5 group5" id="ga:l_ii-gb:l_ii-h1-t1-nb:1">RÈGLES DE FONCTIONNEMENT DU COMITÉ DE CHANTIER</div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span><span class="Hidden" integrity:order="39">L.Q. 2021, c. 27, a. 243</span><span integrity:added="1">L.Q. 2021, c. 27, a. 243</span></span><span integrity:added="1">.</span></span></div></div><div class="section" id="se:5"><div class="Subsection SubsectionFirst" id="se:5-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 8.2 ?code=se:5&historique=20250807#20250807"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:5" data-code="se:5"><span integrity:order="40" class="Label-Section consolidationWhipeTextDecoration consolidationClean">5<span integrity:added="1">.</span></span></a> <span integrity:order="41" class="Subsection">Le comité de chantier tient sa première réunion dans les 14 jours suivant la date du début des travaux.</span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span><span class="Hidden" integrity:order="42">L.Q. 2021, c. 27, a. 243</span><span integrity:added="1">L.Q. 2021, c. 27, a. 243</span></span><span integrity:added="1">.</span></span></div></div><div class="section" id="se:6"><div class="Subsection SubsectionFirst" id="se:6-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 8.2 ?code=se:6&historique=20250807#20250807"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:6" data-code="se:6"><span integrity:order="43" class="Label-Section consolidationWhipeTextDecoration consolidationClean">6<span integrity:added="1">.</span></span></a> <span integrity:order="44" class="Subsection">Malgré la fréquence minimale des réunions prévue au premier alinéa de l’article 207 de la Loi, le comité de chantier d’un chantier de construction groupant 100 travailleurs et plus se réunit au moins une fois par semaine.</span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span><span class="Hidden" integrity:order="45">L.Q. 2021, c. 27, a. 243</span><span integrity:added="1">L.Q. 2021, c. 27, a. 243</span></span><span integrity:added="1">.</span></span></div></div><div class="section" id="se:7"><div class="Subsection SubsectionFirst" id="se:7-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 8.2 ?code=se:7&historique=20250807#20250807"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:7" data-code="se:7"><span integrity:order="46" class="Label-Section consolidationWhipeTextDecoration consolidationClean">7<span integrity:added="1">.</span></span></a> <span integrity:order="47" class="Subsection">L’ordre du jour d’une réunion du comité de chantier est déterminé par le maître d’œuvre.</span></div><div class="Subsection" id="se:7-ss:2"><span integrity:order="48" class="Subsection">Tout membre du comité peut, au début de la réunion et avec l’accord des autres membres, proposer des modifications à l’ordre du jour.</span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span><span class="Hidden" integrity:order="49">L.Q. 2021, c. 27, a. 243</span><span integrity:added="1">L.Q. 2021, c. 27, a. 243</span></span><span integrity:added="1">.</span></span></div></div><div class="section" id="se:8"><div class="Subsection SubsectionFirst" id="se:8-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 8.2 ?code=se:8&historique=20250807#20250807"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:8" data-code="se:8"><span integrity:order="50" class="Label-Section consolidationWhipeTextDecoration consolidationClean">8<span integrity:added="1">.</span></span></a> <span integrity:order="51" class="Subsection">Le quorum d’une réunion est d’au moins un représentant du maître d’œuvre, d’au moins un représentant des employeurs et d’au moins la moitié des membres visés aux paragraphes 3 et 4 de l’article 205 de la Loi qui représentent les travailleurs.</span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span><span class="Hidden" integrity:order="52">L.Q. 2021, c. 27, a. 243</span><span integrity:added="1">L.Q. 2021, c. 27, a. 243</span></span><span integrity:added="1">.</span></span></div></div><div class="section" id="se:9"><div class="Subsection SubsectionFirst" id="se:9-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 8.2 ?code=se:9&historique=20250807#20250807"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:9" data-code="se:9"><span integrity:order="53" class="Label-Section consolidationWhipeTextDecoration consolidationClean">9<span integrity:added="1">.</span></span></a> <span integrity:order="54" class="Subsection">Toute vacance au sein du comité de chantier doit être comblée au plus tard 14 jours après que le comité en a été avisé si le chantier de construction groupe au moins 20 travailleurs ou au plus tard 7 jours si le chantier de construction groupe au moins 100 travailleurs.</span></div><div class="Subsection" id="se:9-ss:2"><span integrity:order="55" class="Subsection">Elle est comblée suivant le mode de désignation prescrit pour la désignation du membre à remplacer, le cas échéant.</span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span><span class="Hidden" integrity:order="56">L.Q. 2021, c. 27, a. 243</span><span integrity:added="1">L.Q. 2021, c. 27, a. 243</span></span><span integrity:added="1">.</span></span></div></div><div class="section" id="se:10"><div class="Subsection SubsectionFirst" id="se:10-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 8.2 ?code=se:10&historique=20250807#20250807"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:10" data-code="se:10"><span integrity:order="57" class="Label-Section consolidationWhipeTextDecoration consolidationClean">10<span integrity:added="1">.</span></span></a> <span integrity:order="58" class="Subsection">Le maître d’œuvre doit rédiger le procès-verbal des réunions du comité de chantier.</span></div><div class="Subsection" id="se:10-ss:2"><span integrity:order="59" class="Subsection">À chacune des réunions, le comité adopte le procès-verbal de sa réunion précédente. Les procès-verbaux ainsi adoptés sont conservés par le maître d’œuvre, dans un registre prévu à cette fin, pendant une période d’au moins un an suivant la date de la fin des travaux.</span></div><div class="Subsection" id="se:10-ss:3"><span integrity:order="60" class="Subsection">Les membres du comité peuvent, sur demande au maître d’œuvre, obtenir copie des procès-verbaux du comité.</span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span><span class="Hidden" integrity:order="61">L.Q. 2021, c. 27, a. 243</span><span integrity:added="1">L.Q. 2021, c. 27, a. 243</span></span><span integrity:added="1">.</span></span></div></div></div><div id="ga:l_ii-gb:l_iii"><div class="Heading Heading" id="ga:l_ii-gb:l_iii-h1"><span integrity:order="62" class="Label-group5"><span integrity:added="1">SECTION </span>III</span><div integrity:order="63" class="TitleText-group5 group5" id="ga:l_ii-gb:l_iii-h1-t1-nb:1">FORMATION DES MEMBRES DU COMITÉ DE CHANTIER</div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span><span class="Hidden" integrity:order="64">L.Q. 2021, c. 27, a. 243</span><span integrity:added="1">L.Q. 2021, c. 27, a. 243</span></span><span integrity:added="1">.</span></span></div></div><div class="section" id="se:11"><div class="Subsection SubsectionFirst" id="se:11-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 8.2 ?code=se:11&historique=20250807#20250807"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:11" data-code="se:11"><span integrity:order="65" class="Label-Section consolidationWhipeTextDecoration consolidationClean">11<span integrity:added="1">.</span></span></a> <span integrity:order="66" class="Subsection">Le membre d’un comité de chantier doit obtenir une attestation de formation théorique d’une durée minimale d’une heure délivrée par la Commission ou par un organisme reconnu par elle.</span></div><div class="Subsection" id="se:11-ss:2"><span integrity:order="67" class="Subsection">La formation doit notamment porter sur les sujets suivants:</span><div class="Paragraph" id="se:11-ss:2-p1:1"><span integrity:order="68" class="Label-Z LabelBase">1<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="69" class="Paragraph">les mécanismes de prévention applicables sur un chantier de construction;</span></div><div class="Paragraph" id="se:11-ss:2-p1:2"><span integrity:order="70" class="Label-Z LabelBase">2<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="71" class="Paragraph">le rôle du comité de chantier et ses règles de fonctionnement;</span></div><div class="Paragraph" id="se:11-ss:2-p1:3"><span integrity:order="72" class="Label-Z LabelBase">3<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="73" class="Paragraph">le suivi du programme de prévention;</span></div><div class="Paragraph" id="se:11-ss:2-p1:4"><span integrity:order="74" class="Label-Z LabelBase">4<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="75" class="Paragraph">l’analyse et le suivi des avis d’accidents;</span></div><div class="Paragraph" id="se:11-ss:2-p1:5"><span integrity:order="76" class="Label-Z LabelBase">5<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="77" class="Paragraph">le suivi des suggestions et des plaintes relatives à la santé et à la sécurité du travail reçues des travailleurs de la construction, des associations représentatives, de l’association sectorielle paritaire de la construction visée à l’article 99 de la Loi, des employeurs et du maître d’œuvre;</span></div><div class="Paragraph" id="se:11-ss:2-p1:6"><span integrity:order="78" class="Label-Z LabelBase">6<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="79" class="Paragraph">le suivi des rapports d’inspections effectuées sur le chantier de construction.</span></div></div><div class="Subsection" id="se:11-ss:3"><span integrity:order="80" class="Subsection">Le membre qui détient une attestation de formation de coordonnateur en santé et en sécurité ou une attestation de formation de représentant en santé et en sécurité conformément à l’article 15 est dispensé de suivre cette formation.</span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span><span class="Hidden" integrity:order="81">L.Q. 2021, c. 27, a. 243</span><span integrity:added="1">L.Q. 2021, c. 27, a. 243</span></span><span integrity:added="1">.</span></span></div></div></div></div><div id="ga:l_iii"><div class="Heading Heading" id="ga:l_iii-h1"><div integrity:order="82" class="Label-group4"><span integrity:added="1">CHAPITRE </span>III</div><div integrity:order="83" class="TitleText-group4 group4" id="ga:l_iii-h1-t1-nb:1">REPRÉSENTANT EN SANTÉ ET EN SÉCURITÉ</div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span><span class="Hidden" integrity:order="84">L.Q. 2021, c. 27, a. 243</span><span integrity:added="1">L.Q. 2021, c. 27, a. 243</span></span><span integrity:added="1">.</span></span></div></div><div class="section" id="se:12"><div class="Subsection SubsectionFirst" id="se:12-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 8.2 ?code=se:12&historique=20250807#20250807"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:12" data-code="se:12"><span integrity:order="85" class="Label-Section consolidationWhipeTextDecoration consolidationClean">12<span integrity:added="1">.</span></span></a> <span integrity:order="86" class="Subsection">Le temps minimal que le représentant en santé et en sécurité peut consacrer, par jour, à l’exercice de ses fonctions, à l’exception de celles visées aux paragraphes 2, 6 et 7 de l’article 210 de la Loi, est, selon le nombre de travailleurs présents sur le chantier de construction, le suivant:</span><div class="Paragraph" id="se:12-ss:1-p1:1"><span integrity:order="87" class="Label-Z LabelBase">1<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="88" class="Paragraph">de 10 à 24 travailleurs: 1 heure;</span></div><div class="Paragraph" id="se:12-ss:1-p1:2"><span integrity:order="89" class="Label-Z LabelBase">2<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="90" class="Paragraph">de 25 à 49 travailleurs: 3 heures;</span></div><div class="Paragraph" id="se:12-ss:1-p1:3"><span integrity:order="91" class="Label-Z LabelBase">3<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="92" class="Paragraph">de 50 à 74 travailleurs: 4 heures;</span></div><div class="Paragraph" id="se:12-ss:1-p1:4"><span integrity:order="93" class="Label-Z LabelBase">4<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="94" class="Paragraph">de 75 à 99 travailleurs: 6 heures;</span></div><div class="Paragraph" id="se:12-ss:1-p1:5"><span integrity:order="95" class="Label-Z LabelBase">5<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="96" class="Paragraph">de 100 travailleurs et plus: 8 heures.</span></div></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span><span class="Hidden" integrity:order="97">L.Q. 2021, c. 27, a. 243</span><span integrity:added="1">L.Q. 2021, c. 27, a. 243</span></span><span integrity:added="1">.</span></span></div></div><div class="section" id="se:13"><div class="Subsection SubsectionFirst" id="se:13-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 8.2 ?code=se:13&historique=20250807#20250807"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:13" data-code="se:13"><span integrity:order="98" class="Label-Section consolidationWhipeTextDecoration consolidationClean">13<span integrity:added="1">.</span></span></a> <span integrity:order="99" class="Subsection">Le nombre minimal de représentants en santé et en sécurité désignés conformément à l’article 212.1 de la Loi est, selon le nombre de travailleurs présents sur le chantier de construction, le suivant:</span><div class="Paragraph" id="se:13-ss:1-p1:1"><span integrity:order="100" class="Label-Z LabelBase">1<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="101" class="Paragraph">de 100 à 199 travailleurs: 1;</span></div><div class="Paragraph" id="se:13-ss:1-p1:2"><span integrity:order="102" class="Label-Z LabelBase">2<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="103" class="Paragraph">de 200 à 599 travailleurs: 2;</span></div><div class="Paragraph" id="se:13-ss:1-p1:3"><span integrity:order="104" class="Label-Z LabelBase">3<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="105" class="Paragraph">de 600 à 899 travailleurs: 3;</span></div><div class="Paragraph" id="se:13-ss:1-p1:4"><span integrity:order="106" class="Label-Z LabelBase">4<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="107" class="Paragraph">de 900 à 1 199 travailleurs: 4;</span></div><div class="Paragraph" id="se:13-ss:1-p1:5"><span integrity:order="108" class="Label-Z LabelBase">5<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="109" class="Paragraph">de 1 200 travailleurs et plus: 5.</span></div></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span><span class="Hidden" integrity:order="110">L.Q. 2021, c. 27, a. 243</span><span integrity:added="1">L.Q. 2021, c. 27, a. 243</span></span><span integrity:added="1">.</span></span></div></div><div class="section" id="se:14"><div class="Subsection SubsectionFirst" id="se:14-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 8.2 ?code=se:14&historique=20250807#20250807"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:14" data-code="se:14"><span integrity:order="111" class="Label-Section consolidationWhipeTextDecoration consolidationClean">14<span integrity:added="1">.</span></span></a> <span integrity:order="112" class="Subsection">Le représentant en santé et en sécurité désigné conformément à l’article 209 de la Loi doit obtenir une attestation de formation théorique d’une durée minimale de trois heures délivrée par la Commission ou par un organisme reconnu par elle.</span></div><div class="Subsection" id="se:14-ss:2"><span integrity:order="113" class="Subsection">La formation doit notamment porter sur les sujets suivants:</span><div class="Paragraph" id="se:14-ss:2-p1:1"><span integrity:order="114" class="Label-Z LabelBase">1<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="115" class="Paragraph">les mécanismes de prévention applicables sur un chantier de construction;</span></div><div class="Paragraph" id="se:14-ss:2-p1:2"><span integrity:order="116" class="Label-Z LabelBase">2<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="117" class="Paragraph">le rôle, les fonctions et les responsabilités du représentant;</span></div><div class="Paragraph" id="se:14-ss:2-p1:3"><span integrity:order="118" class="Label-Z LabelBase">3<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="119" class="Paragraph">l’inspection des lieux de travail;</span></div><div class="Paragraph" id="se:14-ss:2-p1:4"><span integrity:order="120" class="Label-Z LabelBase">4<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="121" class="Paragraph">l’assistance aux travailleurs dans l’exercice des droits qui leur sont reconnus par la Loi et les règlements;</span></div><div class="Paragraph" id="se:14-ss:2-p1:5"><span integrity:order="122" class="Label-Z LabelBase">5<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="123" class="Paragraph">le rôle du représentant lors de la visite d’un inspecteur;</span></div><div class="Paragraph" id="se:14-ss:2-p1:6"><span integrity:order="124" class="Label-Z LabelBase">6<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="125" class="Paragraph">l’enquête d’accident et l’analyse des incidents rapportés.</span></div></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span><span class="Hidden" integrity:order="126">L.Q. 2021, c. 27, a. 243</span><span integrity:added="1">L.Q. 2021, c. 27, a. 243</span></span><span integrity:added="1">.</span></span></div></div><div class="section" id="se:15"><div class="Subsection SubsectionFirst" id="se:15-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 8.2 ?code=se:15&historique=20250807#20250807"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:15" data-code="se:15"><span integrity:order="127" class="Label-Section consolidationWhipeTextDecoration consolidationClean">15<span integrity:added="1">.</span></span></a> <span integrity:order="128" class="Subsection">Le représentant en santé et en sécurité désigné conformément à l’article 212.1 de la Loi doit obtenir une attestation de formation théorique d’une durée minimale de 40 heures délivrée par la Commission ou par un organisme reconnu par elle.</span></div><div class="Subsection" id="se:15-ss:2"><span integrity:order="129" class="Subsection">Outre les éléments visés au deuxième alinéa de l’article 14, la formation doit porter sur le programme de prévention et le fonctionnement d’un comité de chantier.</span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span><span class="Hidden" integrity:order="130">L.Q. 2021, c. 27, a. 243</span><span integrity:added="1">L.Q. 2021, c. 27, a. 243</span></span><span integrity:added="1">.</span></span></div></div></div><div id="ga:l_iv"><div class="Heading Heading" id="ga:l_iv-h1"><div integrity:order="131" class="Label-group4"><span integrity:added="1">CHAPITRE </span>IV</div><div integrity:order="132" class="TitleText-group4 group4" id="ga:l_iv-h1-t1-nb:1">COORDONNATEUR EN SANTÉ ET EN SÉCURITÉ</div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span><span class="Hidden" integrity:order="133">L.Q. 2021, c. 27, a. 243</span><span integrity:added="1">L.Q. 2021, c. 27, a. 243</span></span><span integrity:added="1">.</span></span></div></div><div class="section" id="se:16"><div class="Subsection SubsectionFirst" id="se:16-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 8.2 ?code=se:16&historique=20250807#20250807"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:16" data-code="se:16"><span integrity:order="134" class="Label-Section consolidationWhipeTextDecoration consolidationClean">16<span integrity:added="1">.</span></span></a> <span integrity:order="135" class="Subsection">Le nombre minimal de coordonnateurs en santé et en sécurité désignés conformément à l’article 215.1 de la Loi est, selon le nombre de travailleurs présents sur le chantier de construction, le suivant:</span><div class="Paragraph" id="se:16-ss:1-p1:1"><span integrity:order="136" class="Label-Z LabelBase">1<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="137" class="Paragraph">de 100 à 199 travailleurs: 1;</span></div><div class="Paragraph" id="se:16-ss:1-p1:2"><span integrity:order="138" class="Label-Z LabelBase">2<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="139" class="Paragraph">de 200 à 599 travailleurs: 2;</span></div><div class="Paragraph" id="se:16-ss:1-p1:3"><span integrity:order="140" class="Label-Z LabelBase">3<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="141" class="Paragraph">de 600 à 899 travailleurs: 3;</span></div><div class="Paragraph" id="se:16-ss:1-p1:4"><span integrity:order="142" class="Label-Z LabelBase">4<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="143" class="Paragraph">de 900 à 1 199 travailleurs: 4;</span></div><div class="Paragraph" id="se:16-ss:1-p1:5"><span integrity:order="144" class="Label-Z LabelBase">5<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="145" class="Paragraph">de 1 200 travailleurs et plus: 5.</span></div></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span><span class="Hidden" integrity:order="146">L.Q. 2021, c. 27, a. 243</span><span integrity:added="1">L.Q. 2021, c. 27, a. 243</span></span><span integrity:added="1">.</span></span></div></div><div class="section" id="se:17"><div class="Subsection SubsectionFirst" id="se:17-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 8.2 ?code=se:17&historique=20250807#20250807"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:17" data-code="se:17"><span integrity:order="147" class="Label-Section consolidationWhipeTextDecoration consolidationClean">17<span integrity:added="1">.</span></span></a> <span integrity:order="148" class="Subsection">Le coordonnateur en santé et en sécurité doit obtenir une attestation de formation théorique d’une durée minimale de 240 heures délivrée par la Commission ou par un organisme reconnu par elle.</span></div><div class="Subsection" id="se:17-ss:2"><span integrity:order="149" class="Subsection">La formation doit notamment porter sur les sujets suivants:</span><div class="Paragraph" id="se:17-ss:2-p1:1"><span integrity:order="150" class="Label-Z LabelBase">1<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="151" class="Paragraph">le cadre législatif et réglementaire en santé et en sécurité du travail applicable à un chantier de construction;</span></div><div class="Paragraph" id="se:17-ss:2-p1:2"><span integrity:order="152" class="Label-Z LabelBase">2<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="153" class="Paragraph">les mécanismes de prévention applicables sur un chantier de construction;</span></div><div class="Paragraph" id="se:17-ss:2-p1:3"><span integrity:order="154" class="Label-Z LabelBase">3<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="155" class="Paragraph">le rôle et les fonctions générales du coordonnateur, incluant la coordination d’un comité de chantier;</span></div><div class="Paragraph" id="se:17-ss:2-p1:4"><span integrity:order="156" class="Label-Z LabelBase">4<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="157" class="Paragraph">l’élaboration et la mise à jour d’un programme de prévention propre à un chantier de construction;</span></div><div class="Paragraph" id="se:17-ss:2-p1:5"><span integrity:order="158" class="Label-Z LabelBase">5<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="159" class="Paragraph">le rôle du coordonnateur lors de la visite d’un inspecteur sur un chantier de construction;</span></div><div class="Paragraph" id="se:17-ss:2-p1:6"><span integrity:order="160" class="Label-Z LabelBase">6<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="161" class="Paragraph">les principales mesures de sécurité applicables sur un chantier de construction, en tenant compte des priorités d’action établies par la Commission;</span></div><div class="Paragraph" id="se:17-ss:2-p1:7"><span integrity:order="162" class="Label-Z LabelBase">7<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="163" class="Paragraph">les principales règles en santé du travail applicables sur un chantier de construction;</span></div><div class="Paragraph" id="se:17-ss:2-p1:8"><span integrity:order="164" class="Label-Z LabelBase">8<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="165" class="Paragraph">l’audit de gestion en santé et en sécurité du travail;</span></div><div class="Paragraph" id="se:17-ss:2-p1:9"><span integrity:order="166" class="Label-Z LabelBase">9<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="167" class="Paragraph">l’inspection des lieux de travail;</span></div><div class="Paragraph" id="se:17-ss:2-p1:10"><span integrity:order="168" class="Label-Z LabelBase">10<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="169" class="Paragraph">l’enquête d’accident et l’analyse des incidents rapportés;</span></div><div class="Paragraph" id="se:17-ss:2-p1:11"><span integrity:order="170" class="Label-Z LabelBase">11<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="171" class="Paragraph">l’élaboration de consignes de travail propres à un chantier de construction;</span></div><div class="Paragraph" id="se:17-ss:2-p1:12"><span integrity:order="172" class="Label-Z LabelBase">12<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="173" class="Paragraph">les relations interpersonnelles et les habiletés de communication.</span></div></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span><span class="Hidden" integrity:order="174">L.Q. 2021, c. 27, a. 243</span><span integrity:added="1">L.Q. 2021, c. 27, a. 243</span></span><span integrity:added="1">.</span></span></div></div></div><div id="ga:l_v"><div class="Heading Heading" id="ga:l_v-h1"><div integrity:order="175" class="Label-group4"><span integrity:added="1">CHAPITRE </span>V</div><div integrity:order="176" class="TitleText-group4 group4" id="ga:l_v-h1-t1-nb:1">DISPOSITION TRANSITOIRE</div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span><span class="Hidden" integrity:order="177">L.Q. 2021, c. 27, a. 243</span><span integrity:added="1">L.Q. 2021, c. 27, a. 243</span></span><span integrity:added="1">.</span></span></div></div><div class="section" id="se:18"><div class="Subsection SubsectionFirst" id="se:18-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 8.2 ?code=se:18&historique=20250807#20250807"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:18" data-code="se:18"><span integrity:order="178" class="Label-Section consolidationWhipeTextDecoration consolidationClean">18<span integrity:added="1">.</span></span></a> <span integrity:order="179" class="Subsection">La personne qui, le 31 décembre 2022, est titulaire d’une attestation d’agent de sécurité délivrée par la Commission en application du sous-paragraphe <span integrity:order="180" class="italic">c</span> du paragraphe 2 de l’article 2.5.4 du Code de sécurité pour les travaux de construction (<a href="/fr/document/rc/S-2.1, r. 4?&cible=" target="_blank"><span integrity:order="181">chapitre S-2.1, r. 4</span></a>) et qui est désignée représentant en santé et en sécurité ou coordonnateur en santé et en sécurité est dispensée d’obtenir les attestations de formation requises en vertu des articles 15 et 17.</span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span><span class="Hidden" integrity:order="182">L.Q. 2021, c. 27, a. 243</span><span integrity:added="1">L.Q. 2021, c. 27, a. 243</span></span><span integrity:added="1">.</span></span></div></div></div><div class="AmendedTextTitle"><div class="ligne"><span integrity:added="1">
+                    </span></div><span integrity:added="1">RÉFÉRENCES</span></div><div><span><span integrity:order="183">L.Q. 2021, c. 27, a. 243</span></span></div></div></div></div>
+							</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</form>
+
+<ul id="contextMenu" class="dropdown-menu" role="menu" >
+	<li id="contextMenuCopy" class="disabled dropdown-item"><a tabindex="-1">Copier</a></li>
+	<li class="dropdown-divider"></li>
+	<li class="dropdown-item"><a tabindex="-1"">Sélectionner cet élément</a></li>
+	<li id="contextMenuSelectParent" class="dropdown-item"><a tabindex="-1">Sélectionner l'élément parent</a></li>
+	<li id="contextMenuUnselectAll" class="disabled dropdown-item"><a tabindex="-1">Désélectionner tous les éléments</a></li>
+	<li class="dropdown-divider"></li>
+	<li id="contextMenuCopyToArbortext" class="disabled dropdown-item"><a tabindex="-1">Copier vers Rédaction</a></li>
+	<li id="contextMenuCopyToLaw" class="d-block disable dropdown-item"><a tabindex="-1">Copier vers LAW</a></li>
+</ul>
+<input type="text" class="copyContainer" id="copyToClipboardMenu">
+<div id="copyToClipboard" class="modal fade">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">
+					Copier vers le presse-papier
+				</h4>
+				<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>				
+			</div>
+			<div class="modal-body">
+				<p>
+				<div class="description">
+					Pour copier : Ctrl+C
+				</div>
+				<input type="text" class="form-control" name="copyToInput" id="copyToInput">
+				</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-outline-secondary bg-gradient" data-bs-dismiss="modal">OK</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<a href="#" class="back-to-top"><span class="fa fa-chevron-up"></span></a>
+
+
+	<!-- migration rapide - éventuellement call ajax JSON -->
+	<input type="hidden" id="alpha" value="S-2.1, r. 8.2 ">
+	<input type="hidden" id="title"  value='S-2.1, r. 8.2  - Règlement sur les mécanismes de prévention propres à un chantier de construction'>
+	<input type="hidden" id="dbType"  value="cr">
+	<input type="hidden" id="langCont"  value="fr">
+	<input type="hidden" id="otherLangCont" value="en">
+
+	<input type="hidden" id="contextMenu_copy" value="Copier"/>
+	<input type="hidden" id="contextMenu_selectElement" value="Sélectionner cet élément"/>
+	<input type="hidden" id="contextMenu_selectParentElement" value="Sélectionner l'élément parent"/>
+	<input type="hidden" id="contextMenu_unselectElement" value="<<SR_contextMenu_unselectElement>>"/>
+	<input type="hidden" id="contextMenu_unselectAll" value="Désélectionner tous les éléments"/>
+
+	<input type="hidden" id="contextMenu_copyToArbortext" value="Copier vers Rédaction"/>
+	<input type="hidden" id="contextMenu_copyToLaw" value="Copier vers LAW"/>
+	<input type="hidden" id="contextMenu_FragmentSelection" value="<<SR_contextMenu_FragmentSelection>>"/>
+	<input type="hidden" id="ctrlC_toCopyToClipboard" value="Pour copier : Ctrl+C"/>
+	<input type="hidden" id="readyToPaste" value="Vos sélections ont été copiées dans le presse-papier."/>
+
+	<input type="hidden" id="readyToPasteInLAW" value="Vous pouvez coller vos sélections dans LAW en utilisant la fonction appropriée."/>
+	<input type="hidden" id="readyToPasteInArbortext" value="Vous pouvez coller vos sélections dans Arbortext en utilisant la fonction appropriée."/>
+	<input type="hidden" id="errorWhileCopyingTo" value="Une erreur est survenue lors de la préparation des données."/>
+	<input type="hidden" id="showSelections" value="false"/>
+	<input type="hidden" id="consolidetedDateLabel" value=""/>
+	<input type="hidden" id="renditions" value='{"Epub":"/fr/epub/cr/S-2.1, R. 8.2 .epub","Pdf":"/fr/pdf/rc/S-2.1, R. 8.2 .pdf"}'/>
+	<input type="hidden" id="output" value=""/>
+	
+					
+<div data-bs-toggle="modal" data-bs-target="#myModal" id="printPreviewButton" class="printPreviewButton d-none">
+<button type="button" class="btn btn-primary my-2 rounded-pill" id="goPrintPreview" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">
+<span class="fa fa-check-square-o" aria-hidden="true"></span> <span class="badge rounded-pill bg-secondary badgeWhite">0</span>
+</button>
+</div>
+
+				</div>
+			</div>
+			
+			<!-- Footer -->
+		<div class="row pt-4">
+			<hr/>
+			<div align="center" class="pt-4">
+				<ul class="footer-options">
+					<li><a href="/fr/contenu/joindre/" >Nous joindre</a></li>
+					<li><a href="/fr/contenu/plan/" >Plan du site</a></li>
+					<li><a href="https://www.quebec.ca/" target="_blank">Québec.ca</a></li>
+					<li><a href="/fr/contenu/access/" >Accessibilité</a></li>
+					<li><a href="/fr/contenu/confid/" >Politique de confidentialité</a></li>
+				</ul>
+			</div>
+			<div  align="center"><a href="https://www.quebec.ca/" target="_blank"><img src="/img/quebec.gif" width="105" height="32" border="0"></a></div>
+			<div  align="center" class="copyright pt-2"><a class="footer-options" href="http://www.droitauteur.gouv.qc.ca/copyright.php" target="_blank">&copy; Gouvernement du Qu&eacute;bec</a></div>
+
+		</div>
+			
+		</div>
+			
+		<!-- Fenetre modal pour l'impression -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-impression">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="myModalLabel">Sélections</h4>
+						<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div>
+							<h4 id="myModalSubtitle"><small></small></h4>
+						</div>
+						<div class="list-group">
+							<a href="#" class="list-group-item active disabled bg-primary bg-gradient text-white">Afficher</a>
+							<a href="#" id="showSelectionsInCurrentDocument" class="list-group-item d-none">Les sélections du document courant</a>
+							<a href="#" id="showAllSelectionsInCollection" class="list-group-item">Toutes les sélections de la collection</a>
+							<a href="#" class="list-group-item active disabled bg-primary bg-gradient text-white">Fragments sélectionnés</a>
+							<a href="#" id="printPreviewResetSelections" class="list-group-item">Supprimer toutes les sélections</a>
+							<a href="#" id="printPreviewShowSelections" class="list-group-item d-none">Afficher les sélections</a>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-outline-secondary bg-gradient" data-bs-dismiss="modal">Fermer</button>
+					</div>
+				</div>
+			</div>
+			<form name="printForm" id="printForm" encType="application/x-www-form-urlencoded" method="post">
+				<input type="hidden" name="newQuery" value=""></input>
+				<input type="hidden" name="text" value=""></input>
+				<input type="hidden" name="isPrinting" value="false"></input>
+				<input type="hidden" name="title" value=""></input>
+				<input type="hidden" name="langCont" value="fr"></input>
+				<input type="hidden" name="type" value="cs"></input>
+				<input type="hidden" name="printType" value=""></input>
+				<input type="hidden" name="summary" value=""></input>
+				<input type="hidden" name="instrumentNumber" value=""></input>
+				<input type="hidden" name="selfrag" value=""></input>
+				<input type="hidden" name="anchor" value=""></input>
+				<input type="hidden" name="anchorSS" value=""></input>
+				<input type="hidden" name="recordsWithHits" value="false"></input>
+				<input type="hidden" name="validSearch" value="false"></input>
+				<input type="hidden" name="sortmode" value="false"></input>
+				<input type="hidden" name="output" value="selections"></input>
+			</form>
+		</div>
+		
+		<div class="modal fade bs-example-modal-sm" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+			<div class="modal-dialog modal-sm">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="mySmallModalLabel">Cyberlex</h4>
+						<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+					</div>
+					<div class="modal-body">
+						Version 2.2.5.0
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div>
+
+	
+		
+		<!-- migration rapide - éventuellement call ajax JSON -->
+		<input type="hidden" id="token" name="token" value="<<token>>">
+		<input type="hidden" id="config" name="config" value='{"ConfigurationMenu":{"params":{},"enabled":false},"XSLT":{"params":{"CocoonFullTextUrl":"ace-xslt-web.html","CocoonTOCUrl":"ace-xslt-toc.html"},"enabled":true},"Import":{"params":{"odbc-AnnualStatutes":"","odbc-Regulations":"","odbc-Statutes":"","odbc-AnnualRegulations":""},"enabled":false},"GoogleAnalytic":{"params":{"trackingId":""},"enabled":false},"Export":{"params":{"exportLast":["last","external-last","report"],"formatOptions":["Xml","Html"],"export-Regulations":true,"export-AnnualRegulations":true,"typeFileOptions":["",""],"exportFull":["all","external-all","report","orphans"],"modeOptions":["Last","All","Full"],"exportAll":["all","external-all","report"],"export-DtdClient":"Quebec","export-Statutes":true,"export-AnnualStatutes":true,"exportHtml-CocoonUrl":"ace-xslt-export.html"},"enabled":true},"Conversion":{"params":{"generatePdf-Statutes":"single","generatePdf-Regulations-Overwrite":true,"generatePdf-Statutes-Path":"master\\cs\\pdf","generateEpub-Statutes-Overwrite":true,"generateEpub-Statutes-Storage":"disk","generatePdf-Regulations-SoapEnvelope":"config/conversion/single-regulations.xml","generateEpub-AnnualStatutes-SoapEnvelope":"","generateEpub-Regulations-Storage":"disk","generatePdf-AnnualStatutes-SoapEnvelope":"","generateEpub-AnnualStatutes-Storage":"none","generatePdf-Regulations-Storage":"disk","generatePdf-AnnualRegulations-Storage":"none","generatePdf-AnnualRegulations-Overwrite":false,"generatePdf-Statutes-SoapEnvelope":"config/conversion/single-statutes.xml","generateEpub-AnnualRegulations-Storage":"none","generateEpub-AnnualStatutes":"none","renditionOptions":["Pdf","Epub"],"generateEpub-AnnualRegulations-SoapEnvelope":"","generatePdf-AnnualStatutes-Storage":"none","generateEpub-Statutes-SoapEnvelope":"config/conversion/epub.xml","generateEpub-Statutes-Path":"master\\cs\\epub","generatePdf-Regulations-SoapEnvelope-TwoPhase":"config/conversion/fo-to-pdf.xml","generateEpub-Regulations-Path":"master\\cr\\epub","generateEpub-AnnualStatutes-Overwrite":false,"generateEpub-Regulations-Overwrite":true,"generateEpub-Regulations-SoapEnvelope":"config/conversion/epub.xml","generateEpub-AnnualRegulations-Path":"annuals_master\\ar\\epub","generatePdf-Regulations-Path":"master\\cr\\pdf","generatePdf-AnnualStatutes":"none","generateEpub-Statutes":"single","generatePdf-AnnualRegulations-SoapEnvelope":"","generatePdf-AnnualRegulations":"none","generateEpub-AnnualStatutes-Path":"annuals_master\\as\\epub","generateEpub-AnnualRegulations-Overwrite":false,"generatePdf-Statutes-Overwrite":true,"generateEpub-AnnualRegulations":"none","generatePdf-AnnualStatutes-Path":"annuals_master\\as\\pdf","generatePdf-Statutes-Storage":"disk","generatePdf-AnnualRegulations-Path":"annuals_master\\ar\\pdf","generatePdf-AnnualStatutes-Overwrite":false,"generatePdf-Regulations":"single","generatePdf-Statutes-SoapEnvelope-TwoPhase":"config/conversion/fo-to-pdf.xml","generateEpub-Regulations":"single"},"enabled":true},"Core":{"params":{"CopyToLaw":false,"Browse-cr-Category-Id":"","ShowBarLetter":true,"Browse-cs-Category-Id":"","CopyToArbortext":false,"Template-NotFound":"notfound.html","DoTreatment-ConsoDate":true,"Menu-cs-Category-Id":"","FutureDate":29990101000000,"ShowFutureDate":true,"Search-OptionInForce":true,"Search-OptionStemming":true,"MasterToServerChunkSize":2000,"DefaultCorpus":"statutes","StopWordsFiles":["config/StopWordFr.txt","config/StopWordEn.txt"],"CutOffDate":19990401000000,"ShowTypeFileOptions":false,"Browse-cr-HideRepealed":false,"StrikethroughConsoDateException_selectionPage":false,"FragmentSelection":true,"Browse-DefaultRecentYear":false,"Browse-cs-HideRepealed":false},"enabled":true},"ContentSecurityPolicy":{"params":{},"enabled":true},"Backup":{"params":{"backupDbList":["master","annuals_master"],"backupExternalFolderList":["master=master","annuals_master=annuals_master","loose=loose"]},"enabled":true},"Integrity":{"params":{"Validate-Conversion-Pdf":true,"Exceptions":"","Validate-Exportation":true,"RemoveIntegrityAttributesOnConversion":true,"RemoveIntegrityAttributesOnExportation":true},"enabled":true}}'>
+		<input type="hidden" id="cmdId" name="cmdId" value="">
+		<input type="hidden" id="langInt" name="langInt" value="fr">
+		<input type="hidden" id="filter" name="filter" value="">
+
+		<input type="hidden" id="langCont" name="langCont" value="fr">
+		<input type="hidden" id="hideMenu" name="hideMenu" value="Fermer le menu">				
+		<input type="hidden" id="diplayMenu" name="diplayMenu" value="Afficher le menu">						
+		<input type="hidden" id="printPreview" name="printPreview" value="<<SR_printPreview>>">						
+		<input type="hidden" id="loadingMaskText" name="loadingMaskText" value="Chargement en cours...">					
+			
+		<input type="hidden" id="showSelectionsButtonTooltipSingleFrag" name="showSelectionsButtonTooltipSingleFrag" value="1 fragment a été sélectionné">				
+		<input type="hidden" id="showSelectionsButtonTooltipMultipleFrags" name="showSelectionsButtonTooltipMultipleFrags" value="fragments ont été sélectionnés">				
+		<input type="hidden" id="bootstrapMultiselect_nonSelectedText_limitSearch" name="bootstrapMultiselect_nonSelectedText_limitSearch" value="Aucune limite">				
+		<input type="hidden" id="bootstrapMultiselect_nSelectedText_limitSearch" name="bootstrapMultiselect_nSelectedText_limitSearch" value="limites">																
+		<input type="hidden" id="bootstrapMultiselect_allSelectedText_limitSearch" name="bootstrapMultiselect_allSelectedText_limitSearch" value="Toutes les limites">																			
+		<input type="hidden" id="corpusQuickSearch" name="corpusQuickSearch" value="all">
+
+		<script type="text/javascript" src="/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+		<script type="text/javascript" src="/bootstrap-notify/3.1.5/bootstrap-notify.min.js"></script>
+		<script type="text/javascript" src="/js/Config.js?v=2.1"></script>
+		<script type="text/javascript" src="/js/Object.js?v=2.1"></script>
+		<script type="text/javascript" src="/js/mainMenu.js?v=2.1"></script>
+		<script type='text/javascript' src='/js/jquery.loadmask.js?v=2.1'></script>
+		<script type='text/javascript' src='/js/cyberlex.jquery.loadmask.js?v=2.1'></script>
+		<script type='text/javascript' src='/js/selections.js?v=2.1'></script>
+		<script type='text/javascript' src='/js/UrlHelper.js?v=2.1'></script>
+		
+<script type="text/javascript" src="/js/Config.js?v=2.2"></script>
+
+<script type="text/javascript" src="/js/showdoc.js?v=2.2"></script>
+
+	</body>
+</html>

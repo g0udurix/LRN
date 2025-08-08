@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; CHARSET=utf-8"></meta>
+		<meta name="dc.title" content=" - Règlement sur la mise en œuvre de l’entente relative à la protection des travailleurs domestiques dans le cadre de la modalité chèque emploi-service">
+		<meta name="dc.creator" content="">
+		<meta name="dc.language" scheme="ISO639-2"	content="fre">
+		<meta name="dc.subject" content="">
+		<meta name="Keywords" content="">
+		<meta name="dc.Publisher" content="">
+		<meta name="dc.Contributor" content="Irosoft, architecture de gestion de l'information législative - legal information management system">
+		<meta name="dc.Description" content="">
+		<meta name="Description" content="">
+		<meta name="Title" content=" - Règlement sur la mise en œuvre de l’entente relative à la protection des travailleurs domestiques dans le cadre de la modalité chèque emploi-service">
+		<meta name="dc.date.created" content="2022-09-02">
+		<meta name="dc.date.modified" content="2022-09-02">
+
+		<title>Légis Québec</title>
+		
+		<link rel="shortcut icon" href="/img/favicon.ico">
+		<link rel="stylesheet" href="/bootstrap/5.1.3/css/bootstrap.min.css">
+		<link rel='stylesheet' href='/CSS/jquery.loadmask.css?v=2.1'>
+		<link rel='stylesheet' href='/CSS/cyberlex.jquery.loadmask.css?v=2.1'>
+		
+		
+<link rel="stylesheet" type="text/css" href="/CSS/FragmentView.css?v=2.2"></link>
+
+		<link rel="stylesheet" href="/css/publishing-bootstrap.css?v=2.1">
+		<link rel="stylesheet" href="/css/publishing.css?v=2.1">
+		<link rel="stylesheet" href="/CSS/cyberlex-bootstrap.min.css?v=2.1">
+		<link rel="stylesheet" href="/CSS/cyberlex.css?v=2.1">
+		<link rel="stylesheet" href="/css/font-awesome.min.css?v=2.1">
+		<link rel="stylesheet" href="/CSS/core.css?v=2.1">
+		<link rel="stylesheet" href="/CSS/client.css?v=2.1">
+		<link rel="stylesheet" href="/css/publications-quebec.css?v=2.1">
+		<link rel="stylesheet" href="/css/eoq.css?v=2.1">
+
+		<script type="text/javascript" src="/jquery-ui/1.13.0/external/jquery/jquery.js?v=2.1"></script>
+		<script type="text/javascript" src="/jquery-ui/1.13.0/jquery-ui.min.js?v=2.1"></script>
+		<script type="text/javascript" src="/jquery/3.6.0/jquery.min.js?v=2.1"></script>
+		<script type="text/javascript" src="/DOMPurify/dist/purify.min.js?v=2.1"></script>
+	</head>
+
+	<body>
+		<div id="wrap">
+			<div class="main-header">
+				<div class="float-end">
+					<div class="vague"></div>
+					<ul class="pub-quebec">
+						<li><a href="/fr/">Accueil</a></li>
+						<li><a href="/fr/contenu/joindre" >Nous joindre</a></li>
+						<li><a href="/fr/contenu/plan" >Plan du site</a></li>
+						<li><a href="https://www.quebec.ca/" target="_blank">Québec.ca</a></li>
+						<li><a href="/fr/contenu/FAQ" >FAQ</a></li>
+						<li class='spacer-pub-quebec'></li>
+						<li><a id="langSwitcher" class="" href="/en/document/cr/S-2.1,%20r.%2033.3%20">English</a></li>
+
+					</ul>
+					<div class="mtess">
+						<a href="https://www.mtess.gouv.qc.ca/" class="mtessTitle" target="_blank">Ministère de l'Emploi et de la Solidarité sociale</a>
+					</div>
+				</div>
+				<a class="logo-pub-quebec" href="http://www.publicationsduquebec.gouv.qc.ca/" target="_blank"></a>
+			</div>
+			<hr/>
+			
+			<!-- Header -->
+			<nav class="navbar navbar-light">
+				<div class="container-fluid colorTheme">
+					<div class="navbar-header">
+						<div class="row">
+							<div class="col-sm-3">
+								<div class="input-group" class="pt-2">
+									<input type="text" class="form-control" data-bs-placement="top" data-bs-toggle="tooltip" placeholder="Recherche" id="quickSearchText" title="Rechercher dans lois et règlements codifiés">
+									<span class="input-group-btn">
+										<button class="btn btn-primary" type="button" id="goResult" data-bs-placement="top" data-bs-toggle="tooltip" title="Recherche">
+											<span class="fa fa-search" aria-hidden="true"></span>
+										</button>
+									</span>
+								</div>
+								<div class="py-2"><a href="/fr/recherche?t=a">Recherche avancée</a></div>
+							</div><div class="col-sm-9 d-flex justify-content-between">
+									<a class="navbar-brand logo-fr logo" title="Accueil" href="/fr/"></a>
+							</div>
+						</div>
+					</div>
+				</div><!-- /.container-fluid -->
+			</nav>
+			<!-- Content -->			
+			<div class="row">
+				<div class="col-sm-3">
+					<div class="list-group">
+	<a href="#" class="list-group-item active disabled bg-primary bg-gradient text-white">Lois et règlements codifiés</a>
+	<a href="/fr/chapitres?corpus=lois" id="chapterStatutes" class="list-group-item">Lois codifiées</a>
+	<a href="/fr/chapitres?corpus=regs" id="chapterRegulations" class="list-group-item">Règlements codifiés</a>
+	
+	<a href="#" class="list-group-item active disabled bg-primary bg-gradient text-white">Lois et règlements annuels</a>
+	<a href="/fr/annuels?filtre=lois" id="browseannual-statutes" class="list-group-item">Lois annuelles</a>
+	<a href="/fr/annuels?filtre=regs" id="browseannual-regs" class="list-group-item">Règlements annuels</a>
+	
+	<a href="#" class="list-group-item active disabled bg-primary bg-gradient text-white">Information complémentaire</a>
+	<a id="content-editoff" href="/fr/contenu/editeurofficiel" class="list-group-item">L’Éditeur officiel du Québec</a>
+	<a id="content-neuf" href="/fr/contenu/neuf" class="list-group-item">Quoi de neuf?</a>
+	<a id="content-noteinfo" href="/fr/contenu/noteinfo" class="list-group-item">Note d’information</a>
+	<a id="content-mjqpol" href="/fr/contenu/mjqpol" class="list-group-item">Politique du ministre de la Justice</a>
+	<a id="content-modlois" href="/fr/contenu/modlois" class="list-group-item">Lois : Modifications</a>
+	<a id="content-nevlois" href="/fr/contenu/nevlois" class="list-group-item">Lois : Dispositions non en vigueur</a>
+	<a id="content-eevlois" href="/fr/contenu/eevlois" class="list-group-item">Lois : Entrées en vigueur</a>
+	<a id="content-loisann" href="/fr/contenu/loisann" class="list-group-item">Lois annuelles : Versions PDF depuis 1996</a>
+	<a id="content-modreg" href="/fr/contenu/modreg" class="list-group-item">Règlements : Modifications</a>
+	<a id="content-regann" href="/fr/contenu/regann" class="list-group-item">Règlements annuels : Versions PDF depuis 1996</a>
+	<a id="content-decision" href="/fr/contenu/decision" class="list-group-item">Décisions des tribunaux</a>
+</div>
+					
+				</div>
+				<div id="contentDiv" class="col-sm-9">
+					<form id="form" onsubmit="" method="post" action="">
+	<div>
+		<input alt="Champ caché" name="command" type="hidden" value=""></input>
+		<input alt="Champ caché" name="shorttitle" type="hidden" value=""></input>
+		<input alt="Champ caché" name="marginalnotexml" type="hidden" value=""></input>
+		<input alt="Champ caché" name="heading" type="hidden" value=""></input>
+		<input alt="Champ caché" name="fragment" type="hidden" value=""></input>
+		<input alt="Champ caché" name="selfrag" type="hidden" value=""></input>
+		<input alt="Champ caché" name="search_type" type="hidden" value=""></input>
+		<input alt="Champ caché" name="title_search_type" type="hidden" value=""></input>		
+		<input alt="Champ caché" name="anchor" type="hidden" value=""></input>
+		<input alt="Champ caché" name="dateEEV" type="hidden" value=""></input>
+		<input alt="Champ caché" name="statuteyear" type="hidden" value=""></input>
+		<input alt="Champ caché" name="isPrinting" type="hidden" value="false"></input>
+		<input alt="Champ caché" name="from" type="hidden" value=""></input>
+		<input alt="Champ caché" name="output" type="hidden" value="printFull"></input>
+		<input alt="Champ caché" name="page" type="hidden" value="<<page>>"></input>
+		<input alt="Champ caché" name="length" type="hidden" value=""></input>
+		<input alt="Champ caché" name="instrumentnumber" type="hidden" value="S-2.1, r. 33.3 "></input>
+		<input alt="Champ caché" name="instrumentnumbersearch" type="hidden" value=""></input>
+		<input alt="Champ caché" name="stemmed" type="hidden" value=""></input>
+		
+	</div>
+
+	<div class="card">
+		<div class="card-header p-3 bg-gradient docHeader">
+						<h3 class="card-title"><span class="fw-bold">S-2.1, r. 33.3 </span> - Règlement sur la mise en œuvre de l’entente relative à la protection des travailleurs domestiques dans le cadre de la modalité chèque emploi-service</h3>
+					</div>
+		
+		<div class="card-body">
+			<div class="d-flex justify-content-between align-items-center">
+				<div class="flex-row d-flex align-items-center">
+					<div class="pr-1">
+						<a href="/fr/tdm/rc/S-2.1,%20r.%2033.3%20" class="btn btn-outline-secondary bg-gradient" role="button" title="Afficher la table des matières du document" alt="Afficher la table des matières du document" data-bs-toggle="tooltip" data-bs-placement="top">Table des matières <span class="fa fa-list smallLeftSpacer" aria-hidden="true"></span></a>
+					</div>
+					<div class="px-1">
+						
+				<div class="btn-group">
+					<button id="relatedLegislativeDocument" type="button" class="btn btn-outline-secondary bg-gradient dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="-100, 0">
+						Loi habilitante <span class="badge rounded-pill bg-secondary smallLeftSpacer">1</span> <span class="caret smallLeftSpacer"></span>
+					</button>
+					<table class="table table-responsive table-hover dropdown-menu relatedDoc" role="menu">
+						<thead>
+							<tr>
+								<th width="15%">Alphanumérique</th>
+								<th width="85%">Titre</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+<td>S-2.1 </td>
+<td>
+<a class="hand boldLink" href="/fr/document/lc/S-2.1%20/">Loi sur la santé et la sécurité du travail   
+</a>
+</td>
+</tr>
+						</tbody>
+					</table>
+					</div>
+					</div>
+					<div class="px-1">
+						<span id="occurrenceButton" class="d-none">
+							Occurrences<span class="badge rounded-pill bg-secondary ms-3" id="occurrenceCount">0</span>
+						</span>
+					</div>
+					<div class="px-1">
+						
+					</div>
+				</div>
+
+				<div class="flex-row d-flex align-items-center">
+					<div class="px-1">
+						<a id="renditionPdf" target="_blank" class="btn btn-outline-secondary bg-gradient d-none" 
+							role="button" title="Ouvrir la version PDF" alt="Ouvrir la version PDF"
+							data-bs-toggle="tooltip" data-bs-placement="top">
+							 <span class="fa pdf-icon" aria-hidden="true"></span>
+						</a>
+					</div>
+					<div class="px-1">
+						<a id="renditionEpub" target="_blank" class="btn btn-outline-secondary bg-gradient d-none" 
+							role="button" title="Télécharger la version ePUB" alt="Télécharger la version ePUB"
+							data-bs-toggle="tooltip" data-bs-placement="top">
+							 <span class="fa epub-icon" aria-hidden="true"></span>
+						</a>
+					</div>
+					<div class="px-1">
+						<a id="btnPrintPreview" class="btn btn-outline-secondary bg-gradient last"
+							role="button" title="Préparer le document pour l'impression"
+							alt="Préparer le document pour l'impression" data-bs-toggle="tooltip" data-bs-placement="top"><span id="printBtnIcon"
+								class="fa fa-print" aria-hidden="true"></span>
+						</a>
+					</div>
+				</div>
+				
+			</div>
+			<div class="row pt-2">
+				<div class="col">
+					<div class="card ">
+						
+							<div class="card-header official-heading bg-gradient ">
+								<div class="row">
+									<div class="col">
+										<div class="text-end"></div>
+										Texte complet 
+									</div>
+								
+									<div class="col">
+										<div class="text-end">
+											À jour au 1<sup>er</sup> avril 2025
+										</div>
+										<div class="text-end">
+											Ce document a valeur officielle.
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="card-body history current conso" id="mainContent-document">
+								<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE div
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:exsl="http://exslt.org/common" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:integrity="http://ref.irosoft.com/integrity/" integrity:Digest="04209FC9AC4913E79E5C55470FA05BFD"><meta title="Ministère de la Justice du Québec" author="Ministère de la Justice du Québec" subject="Ministère de la Justice du Québec" keywords="Ministère de la Justice du Québec" description="Ministère de la Justice du Québec" timestamp="n'est pas supporter" application="CYBERLEX" version="2.2.0.2" provider="Irosoft" source="xsl"/><div xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns:law="http://ref.irosoft.com/LIMS/1.0/law" class="DefaultPageSequence BodyPageSequence"><div class="LegislativeDocument Global Style_Extra_Class"><div class="Identification"><div integrity:added="1" class="Identification-Id"><span integrity:added="1">chapitre </span><span integrity:order="1">S-2.1, r. 33.3</span></div><div integrity:order="2" class="titre-reglement-left titre-reglement-left customLongTitleWord">Règlement sur la mise en œuvre de l’entente relative à la protection des travailleurs domestiques dans le cadre de la modalité chèque emploi-service</div><span class="Hidden" integrity:order="3">SANTÉ ET SÉCURITÉ DU TRAVAIL — TRAVAILLEURS DOMESTIQUES — CHÈQUE EMPLOI-SERVICE</span><div><div class="enabling-identification"><div integrity:order="5" class="LongTitle-enabling">Loi sur la santé et la sécurité du travail</div></div><div class="HistoricalNote-LongTitle"><span><span integrity:order="6">(chapitre S-2.1, a. 223, 1<span integrity:order="7" class="superscript">er</span> al., par. 39)</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div><span class="Hidden" integrity:order="4">S-2.1</span></div><span class="Hidden"><span integrity:order="10" class="date-txt-statut Hidden">01</span><span integrity:added="1">1</span><span integrity:added="1" class="superscript_7point">er</span><span integrity:added="1"> </span><span integrity:order="9" class="Hidden">11</span><span integrity:added="1">novembre </span><span integrity:order="8" class="date-txt-statut">2023</span></span><span class="Hidden"><span integrity:order="13" class="date-txt-statut">30<span integrity:added="1"> </span></span><span integrity:order="12" class="Hidden">11</span><span integrity:added="1">novembre </span><span integrity:order="11" class="date-txt-statut">2023</span></span></div><div class="section" id="se:1"><div class="Subsection SubsectionFirst" id="se:1-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 33.3 ?code=se:1&historique=20250807#20250807"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:1" data-code="se:1"><span integrity:order="14" class="Label-Section consolidationWhipeTextDecoration consolidationClean">1<span integrity:added="1">.</span></span></a> <span integrity:order="15" class="Subsection">La Loi sur les accidents du travail et les maladies professionnelles (<a href="/fr/document/lc/A-3.001?&cible=" target="_blank"><span integrity:order="16">chapitre A-3.001</span></a>) s’applique aux travailleurs domestiques dont la rémunération est assurée au moyen de la modalité chèque emploi-service dans la mesure et aux conditions fixées dans l’entente conclue entre le ministre de la Santé et la Commission des normes, de l’équité, de la santé et de la sécurité du travail apparaissant à l’annexe I.</span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span><span class="Hidden" integrity:order="17">1616-2023</span><span integrity:added="1">D. 1616-2023</span><span integrity:added="1">, </span><span integrity:added="1">a. </span><span integrity:order="18">1</span></span><span integrity:added="1">.</span></span></div></div><div class="section" id="se:2"><div class="Subsection SubsectionFirst" id="se:2-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 33.3 ?code=se:2&historique=20250807#20250807"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:2" data-code="se:2"><span integrity:order="19" class="Label-Section consolidationWhipeTextDecoration consolidationClean">2<span integrity:added="1">.</span></span></a> <span integrity:order="20" class="Subsection">Le présent règlement remplace le Règlement sur la mise en œuvre de l’entente relative à tout programme du ministère de la Santé et des Services sociaux (<a href="/fr/document/rc/S-2.1, r. 29?&cible=" target="_blank"><span integrity:order="21">chapitre S-2.1, r. 29</span></a>).</span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span><span class="Hidden" integrity:order="22">1616-2023</span><span integrity:added="1">D. 1616-2023</span><span integrity:added="1">, </span><span integrity:added="1">a. </span><span integrity:order="23">2</span></span><span integrity:added="1">.</span></span></div></div><div class="section" id="se:3"><div class="Subsection SubsectionFirst" id="se:3-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 33.3 ?code=se:3&historique=20250807#20250807"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:3" data-code="se:3"><span integrity:order="24" class="Label-Section consolidationWhipeTextDecoration consolidationClean">3<span integrity:added="1">.</span></span></a> <span class="Subsection"><span integrity:order="25" class="Repealed-Text">(Omis).</span></span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span><span class="Hidden" integrity:order="26">1616-2023</span><span integrity:added="1">D. 1616-2023</span><span integrity:added="1">, </span><span integrity:added="1">a. </span><span integrity:order="27">3</span></span><span integrity:added="1">.</span></span></div></div><div class="Schedule-abrogative PageBreakBefore" id="sc-nb:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 33.3 ?code=sc-nb:1&historique=20250807#20250807"><img xmlns="" src="/img/history.png"/></a></div><div class="ScheduleHeading" id="d-200967091e83"><a class="linkOtherLang" href="#sc-nb:1" data-code="sc-nb:1"><span integrity:order="28" class="Label-ScheduleHeading">ANNEXE I</span></a></div><div class="ScheduleContent"><div><div class="indent-0-0"><span integrity:order="29" class="Provision">ENTENTE RELATIVE À LA PROTECTION DES TRAVAILLEURS DOMESTIQUES DANS LE CADRE DE LA MODALITÉ CHÈQUE EMPLOI-SERVICE</span></div><div class="indent-0-0"><span integrity:order="30" class="Provision">ENTRE</span></div><div class="indent-0-0"><span integrity:order="31" class="Provision">LE MINISTRE DE LA SANTÉ</span></div><div class="indent-0-0"><span integrity:order="32" class="Provision">agissant pour et au nom du gouvernement du Québec représenté par Daniel Paré, sous-ministre,</span></div><div class="indent-0-0"><span integrity:order="33" class="Provision">ci-après appelé, le « Ministre »</span></div><div class="indent-0-0"><span integrity:order="34" class="Provision">ET</span></div><div class="indent-0-0"><span integrity:order="35" class="Provision">LA COMMISSION DES NORMES, DE L’ÉQUITE, DE LA SANTÉ ET DE LA SÉCURITÉ DU TRAVAIL</span></div><div class="indent-0-0"><span integrity:order="36" class="Provision">personne morale de droit public instituée en vertu de la Loi sur la santé et la sécurité du travail, ayant son siège au 1600, avenue D’Estimauville, Québec (Québec) G1J 0B9, représentée par sa présidente-directrice générale, madame Manuelle Oudar,</span></div><div class="indent-0-0"><span integrity:order="37" class="Provision">ci-après appelée la « Commission »</span></div><div class="indent-0-0"><span integrity:order="38" class="Provision">ci-après appelées collectivement les « Parties »</span></div><div class="indent-1-1"><span integrity:order="39" class="Provision">Attendu qu’en vertu de l’article 1 de la Loi sur le ministère de la Santé et des Services sociaux (RLRQ, chapitre M-19.2), le Ministre est chargé de la direction et de l’administration du ministère de la Santé et des Services sociaux et de l’application des lois et des règlements relatifs à la santé et aux services sociaux;</span></div><div class="indent-1-1"><span integrity:order="40" class="Provision">Attendu qu’en vertu du paragraphe <span integrity:order="41" class="italic">h</span> de l’article 3 de cette même loi, le Ministre doit plus particulièrement promouvoir le développement et la mise en œuvre de programmes et de services en fonction des besoins des individus, des familles et des autres groupes;</span></div><div class="indent-1-1"><span integrity:order="42" class="Provision">Attendu qu’en vertu de l’article 138 de la Loi sur la santé et la sécurité du travail (RLRQ, chapitre S-2.1), la Commission est une personne morale au sens du Code civil du Québec et qu’elle est investie de la capacité d’une telle personne morale et des pouvoirs particuliers que cette loi lui confère;</span></div><div class="indent-1-1"><span integrity:order="43" class="Provision">Attendu qu’en vertu du premier alinéa de l’article 170 de cette même loi, la Commission peut conclure des ententes conformément à la loi avec un ministère ou un organisme du gouvernement, un autre gouvernement ou l’un de ses ministères ou organismes en vue de l’application des lois et des règlements qu’elle administre;</span></div><div class="indent-1-1"><span integrity:order="44" class="Provision">Attendu que le premier alinéa de l’article 16 de Loi sur les accidents du travail et les maladies professionnelles (RLRQ, chapitre A-3.001) édicte qu’une personne qui accomplit un travail dans le cadre d’un projet d’un gouvernement, qu’elle soit ou non un travailleur, peut être considérée un travailleur à l’emploi de ce gouvernement, d’un organisme ou d’une personne morale, aux conditions et dans la mesure prévue par une entente conclue entre la Commission et le gouvernement, l’organisme ou la personne morale concernée;</span></div><div class="indent-1-1"><span integrity:order="45" class="Provision">Attendu que le deuxième alinéa de ce même article prévoit que les deuxième et troisième alinéas de l’article 170 de la Loi sur la santé et la sécurité du travail s’appliquent à une telle entente;</span></div><div class="indent-1-1"><span integrity:order="46" class="Provision">Attendu que les deuxième et troisième alinéas de l’article 170 de la Loi sur la santé et la sécurité du travail prévoient que la Commission doit procéder par règlement pour donner effet à une entente qui étend le bénéfice des lois et des règlements qu’elle administre et que ce règlement et cette entente sont immédiatement déposés à l’Assemblée nationale, si elle est en session ou, si elle ne l’est pas, dans les quinze jours de l’ouverture de la session suivante ou de la reprise des travaux, selon le cas;</span></div><div class="indent-1-1"><span integrity:order="47" class="Provision">Attendu que l’article 247 de cette loi prévoit que la Commission perçoit des employeurs les sommes requises pour défrayer tous les coûts qui découlent de l’application de cette loi et des règlements et qu’elle exerce à cette fin tous les pouvoirs et devoirs que lui reconnaît la Loi sur les accidents du travail et les maladies professionnelles;</span></div><div class="indent-1-1"><span integrity:order="48" class="Provision">Attendu que le Ministre demande que la Loi sur les accidents du travail et les maladies professionnelles soit applicable aux travailleurs domestiques visés par la présente entente et qu’il entend assumer les obligations qui y sont prévues pour un employeur;</span></div><div class="indent-1-1"><span integrity:order="49" class="Provision">Considérant que les Parties conviennent que la présente entente remplace l’entente intitulée « Entente entre le ministre de la Santé et des Services sociaux et la Commission de la santé et de la sécurité du travail », entente conclue en application de l’article 16 de la Loi sur les accidents du travail et les maladies professionnelles, entrée en vigueur le 1<span integrity:order="50" class="superscript">er</span> janvier 2011 en vertu du décret numéro 1198-2010 du 15 décembre 2010;</span></div><div class="indent-1-1"><span integrity:order="51" class="Provision">En conséquence, les parties conviennent de ce qui suit :</span></div><div class="indent-0-0"><span integrity:order="52" class="Label-P LabelBase">1<span integrity:added="1">. </span></span><span class="Provision"><span integrity:order="53" class="bold">INTERPRÉTATION</span></span></div><div class="indent-1-1"><span integrity:order="54" class="Provision">Le préambule fait partie intégrante de la présente entente.</span></div><div class="indent-0-0"><span integrity:order="55" class="Label-P LabelBase">2<span integrity:added="1">. </span></span><span class="Provision"><span integrity:order="56" class="bold">OBJET</span></span></div><div class="indent-1-1"><span integrity:order="57" class="Provision">La présente entente a pour objet de prévoir, aux conditions qui y sont prévues, l’application de la Loi sur les accidents du travail et les maladies professionnelles aux travailleurs domestiques dont la rémunération est assurée au moyen de la modalité chèque emploi-service et de déterminer les obligations respectives de la Commission et du Ministre.</span></div><div class="indent-0-0"><span integrity:order="58" class="Label-P LabelBase">3<span integrity:added="1">. </span></span><span class="Provision"><span integrity:order="59" class="bold">DÉFINITIONS</span></span></div><div class="indent-1-1"><span integrity:order="60" class="Provision">Aux fins de la présente entente, on entend par :</span></div><div class="indent-1-1"><span integrity:order="61" class="Label-L LabelBase">a<span integrity:added="1" class="normal LabelBase italic">) </span></span><span integrity:order="62" class="Provision">lésion professionnelle : une blessure ou une maladie qui survient par le fait ou à l’occasion d’un accident du travail, ou une maladie professionnelle, y compris la récidive, la rechute ou l’aggravation;</span></div><div class="indent-1-1"><span integrity:order="63" class="Label-L LabelBase">b<span integrity:added="1" class="normal LabelBase italic">) </span></span><span integrity:order="64" class="Provision">Loi : la Loi sur les accidents du travail et les maladies professionnelles;</span></div><div class="indent-1-1"><span integrity:order="65" class="Label-L LabelBase">c<span integrity:added="1" class="normal LabelBase italic">) </span></span><span integrity:order="66" class="Provision">modalité chèque emploi-service : une modalité de gestion de l’Allocation directe développée notamment pour soutenir les usagers dans leur rôle d’employeur;</span></div><div class="indent-1-1"><span integrity:order="67" class="Label-L LabelBase">d<span integrity:added="1" class="normal LabelBase italic">) </span></span><span integrity:order="68" class="Provision">travailleur domestique : personne qui, en échange d’une rémunération, dispense des services à un particulier et dont la rémunération est assurée au moyen de la modalité chèque emploi-service;</span></div><div class="indent-1-1"><span integrity:order="69" class="Label-L LabelBase">e<span integrity:added="1" class="normal LabelBase italic">) </span></span><span integrity:order="70" class="Provision">usager : l’usager visé par la Loi sur les services de santé et les services sociaux (RLRQ, chapitre S-4.2) qui utilise les services d’un travailleur domestique au sens de la présente entente.</span></div><div class="indent-0-0"><span integrity:order="71" class="Label-P LabelBase">4<span integrity:added="1">. </span></span><span class="Provision"><span integrity:order="72" class="bold">OBLIGATIONS DU MINISTRE</span></span></div><div class="indent-0-0"><span integrity:order="73" class="Label-P LabelBase">4.1<span integrity:added="1">. </span></span><span class="Provision"><span integrity:order="74" class="bold">Employeur</span></span></div><div class="indent-1-1"><span integrity:order="75" class="Provision">Le Ministre est réputé être l’employeur de tout travailleur domestique visé par la présente entente.</span></div><div class="indent-1-1"><span integrity:order="76" class="Provision">Toutefois, cette relation employeur-employé n’est reconnue que pour fins d’indemnisation, de cotisation et d’imputation du coût des prestations payables en vertu de la Loi et ne doit pas être considérée comme une admission d’état de fait pouvant prêter à interprétation dans d’autres champs d’activités.</span></div><div class="indent-1-1"><span integrity:order="77" class="Provision">Les travailleurs domestiques visés par la présente entente ne sont pas des employés, des fonctionnaires ou des préposés du gouvernement du Québec, notamment du ministère de la Santé et des Services sociaux, ni d’un établissement de santé et de services sociaux au sens de la Loi sur les services de santé et les services sociaux ou de la Loi sur les services de santé et les services sociaux pour les autochtones cris (RLRQ, chapitre S-5).</span></div><div class="indent-0-0"><span integrity:order="78" class="Label-P LabelBase">4.2<span integrity:added="1">. </span></span><span class="Provision"><span integrity:order="79" class="bold">Obligations générales</span></span></div><div class="indent-1-1"><span integrity:order="80" class="Provision">À titre d’employeur, le Ministre est, avec les adaptations nécessaires, tenu à toutes les obligations prévues par la Loi, lesquelles comprennent, entre autres, de tenir un registre des accidents du travail survenus au domicile des usagers.</span></div><div class="indent-1-1"><span integrity:order="81" class="Provision">Toutefois, dans le cas du registre des accidents du travail visé par l’alinéa précédent, le Ministre n’est tenu de mettre ce registre qu’à la disposition de la Commission.</span></div><div class="indent-1-1"><span integrity:order="82" class="Provision">Le Ministre a également l’obligation d’aviser la Commission, dans les 15 jours de l’événement, que le travailleur domestique a subi une lésion professionnelle.</span></div><div class="indent-0-0"><span integrity:order="83" class="Label-P LabelBase">4.3<span integrity:added="1">. </span></span><span class="Provision"><span integrity:order="84" class="bold">Versement de l’indemnité</span></span></div><div class="indent-1-1"><span integrity:order="85" class="Provision">L’article 60 de la Loi s’applique au Ministre en ce qui a trait au versement de l’indemnité de remplacement du revenu.</span></div><div class="indent-0-0"><span integrity:order="86" class="Label-P LabelBase">4.4<span integrity:added="1">. </span></span><span class="Provision"><span integrity:order="87" class="bold">Exceptions</span></span></div><div class="indent-1-1"><span integrity:order="88" class="Provision">Malgré l’article 4.2, l’article 32 de la Loi relatif au congédiement, à la suspension ou au déplacement d’un travailleur, à l’exercice de mesures discriminatoires ou de représailles, les articles 179 et 180 concernant l’assignation temporaire de même que le chapitre VII ayant trait au droit de retour au travail ne sont pas applicables au Ministre.</span></div><div class="indent-0-0"><span integrity:order="89" class="Label-P LabelBase">4.5<span integrity:added="1">. </span></span><span class="Provision"><span integrity:order="90" class="bold">Obligation d’information</span></span></div><div class="indent-1-1"><span integrity:order="91" class="Provision">Le Ministre s’engage à informer les usagers des obligations qui leur incombent à l’égard des travailleurs domestiques à l’extérieur du cadre d’application de la présente entente.</span></div><div class="indent-0-0"><span integrity:order="92" class="Label-P LabelBase">4.6<span integrity:added="1">. </span></span><span class="Provision"><span integrity:order="93" class="bold">Informations</span></span></div><div class="indent-1-1"><span integrity:order="94" class="Provision">Sur demande de la Commission, le Ministre transmet une description des tâches ou des activités effectuées par le travailleur domestique au moment où se manifeste la lésion professionnelle.</span></div><div class="indent-0-0"><span integrity:order="95" class="Label-P LabelBase">4.7<span integrity:added="1">. </span></span><span class="Provision"><span integrity:order="96" class="bold">Premiers secours</span></span></div><div class="indent-1-1"><span integrity:order="97" class="Provision">Le Ministre doit veiller à ce que les premiers secours soient dispensés au travailleur domestique victime d’une lésion professionnelle et en assumer les coûts afférents, conformément aux articles 190 et 191 de la Loi.</span></div><div class="indent-0-0"><span integrity:order="98" class="Label-P LabelBase">4.8<span integrity:added="1">. </span></span><span class="Provision"><span integrity:order="99" class="bold">Paiement de la cotisation</span></span></div><div class="indent-1-1"><span integrity:order="100" class="Provision">Le Ministre s’engage à payer la cotisation calculée par la Commission conformément à la Loi et à ses règlements, ainsi que les frais de gestion propres à chaque dossier d’assurance.</span></div><div class="indent-1-1"><span integrity:order="101" class="Provision">Aux fins de la présente entente, le Ministre est en outre tenu de faire des versements périodiques, conformément à l’article 315.1 de la Loi.</span></div><div class="indent-0-0"><span integrity:order="102" class="Label-P LabelBase">4.9<span integrity:added="1">. </span></span><span class="Provision"><span integrity:order="103" class="bold">Cotisation</span></span></div><div class="indent-1-1"><span integrity:order="104" class="Provision">Uniquement aux fins de la cotisation, le Ministre est réputé verser un salaire qui correspond au revenu brut annuel d’emploi versé au travailleur domestique au moyen du chèque emploi-service.</span></div><div class="indent-0-0"><span integrity:order="105" class="Label-P LabelBase">4.10<span integrity:added="1">. </span></span><span class="Provision"><span integrity:order="106" class="bold">État annuel</span></span></div><div class="indent-1-1"><span integrity:order="107" class="Provision">Le Ministre transmet à la Commission, avant le 15 mars de chaque année, un état annuel qui indique, notamment, le montant des salaires bruts réputés versés aux travailleurs domestiques durant l’année civile précédente.</span></div><div class="indent-0-0"><span integrity:order="108" class="Label-P LabelBase">4.11<span integrity:added="1">. </span></span><span class="Provision"><span integrity:order="109" class="bold">Registre</span></span></div><div class="indent-1-1"><span integrity:order="110" class="Provision">Le Ministre tient un registre détaillé des noms et adresses des travailleurs domestiques et, à la demande de la Commission, lui transmet les renseignements et les informations dont elle a besoin pour l’application de la présente entente.</span></div><div class="indent-0-0"><span integrity:order="111" class="Label-P LabelBase">5<span integrity:added="1">. </span></span><span class="Provision"><span integrity:order="112" class="bold">OBLIGATIONS DE LA COMMISSION</span></span></div><div class="indent-0-0"><span integrity:order="113" class="Label-P LabelBase">5.1<span integrity:added="1">. </span></span><span class="Provision"><span integrity:order="114" class="bold">Statut de travailleur</span></span></div><div class="indent-1-1"><span integrity:order="115" class="Provision">La Commission considère le travailleur domestique visé par la présente entente comme un travailleur au sens de la Loi.</span></div><div class="indent-0-0"><span integrity:order="116" class="Label-P LabelBase">5.2<span integrity:added="1">. </span></span><span class="Provision"><span integrity:order="117" class="bold">Indemnités</span></span></div><div class="indent-1-1"><span integrity:order="118" class="Provision">Le travailleur domestique victime d’une lésion professionnelle a droit à une indemnité de remplacement du revenu à compter du premier jour suivant le début de son incapacité à exercer son emploi en raison de cette lésion.</span></div><div class="indent-0-0"><span integrity:order="119" class="Label-P LabelBase">5.3<span integrity:added="1">. </span></span><span class="Provision"><span integrity:order="120" class="bold">Versement de l’indemnité</span></span></div><div class="indent-1-1"><span integrity:order="121" class="Provision">La Commission verse au travailleur domestique l’indemnité de remplacement du revenu à laquelle il a droit à compter du quinzième jour suivant le début de son incapacité à exercer son emploi et pour toute la durée de cette incapacité.</span></div><div class="indent-0-0"><span integrity:order="122" class="Label-P LabelBase">5.4<span integrity:added="1">. </span></span><span class="Provision"><span integrity:order="123" class="bold">Remboursement</span></span></div><div class="indent-1-1"><span integrity:order="124" class="Provision">En cas d’acceptation ou de refus de la réclamation du travailleur domestique, la Commission rembourse au Ministre les 14 premiers jours qu’il a versé à ce travailleur à titre d’indemnité de remplacement du revenu.</span></div><div class="indent-0-0"><span integrity:order="125" class="Label-P LabelBase">5.5<span integrity:added="1">. </span></span><span class="Provision"><span integrity:order="126" class="bold">Calcul de l’indemnité</span></span></div><div class="indent-1-1"><span integrity:order="127" class="Provision">La Commission applique les règles prévues à la Loi en ce qui a trait à la base salariale devant être retenue aux fins du versement de l’indemnité de remplacement du revenu.</span></div><div class="indent-0-0"><span integrity:order="128" class="Label-P LabelBase">5.6<span integrity:added="1">. </span></span><span class="Provision"><span integrity:order="129" class="bold">Dossier d’employeur</span></span></div><div class="indent-1-1"><span integrity:order="130" class="Provision">La Commission accorde, à la demande du Ministre, un dossier d’employeur distinct pour la modalité chèque emploi-service.</span></div><div class="indent-1-1"><span integrity:order="131" class="Provision">La modalité chèque emploi-service est classée dans l’unité de classification 77040 « Services d’aide domestique aux particuliers » ou dans une unité correspondant à ces activités, en cas de modifications à cette unité subséquentes à la signature de la présente entente.</span></div><div class="indent-0-0"><span integrity:order="132" class="Label-P LabelBase">5.7<span integrity:added="1">. </span></span><span class="Provision"><span integrity:order="133" class="bold">Régime applicable</span></span></div><div class="indent-1-1"><span integrity:order="134" class="Provision">La Commission applique, pour la modalité chèque emploi-service, soit le taux général de cotisation de l’unité dans laquelle la modalité chèque emploi-service est classée, soit un taux général personnalisé de cotisation, sous réserve que la modalité chèque emploi-service satisfasse, dans ce dernier cas, aux conditions d’assujettissement déterminées par la Loi et ses règlements, et ce, pour chaque année de cotisation.</span></div><div class="indent-1-1"><span integrity:order="135" class="Provision">La Commission procède également à l’ajustement rétrospectif de la cotisation annuelle applicable au Ministre, sous réserve qu’il satisfasse, pour l’année de cotisation, aux conditions d’assujettissement déterminées par la Loi et ses règlements.</span></div><div class="indent-0-0"><span integrity:order="136" class="Label-P LabelBase">6<span integrity:added="1">. </span></span><span class="Provision"><span integrity:order="137" class="bold">IMMUNITÉ</span></span></div><div class="indent-1-1"><span integrity:order="138" class="Provision">La section II du chapitre XIII de la Loi s’applique à l’usager ou au Ministre, selon le cas.</span></div><div class="indent-0-0"><span integrity:order="139" class="Label-P LabelBase">7<span integrity:added="1">. </span></span><span class="Provision"><span integrity:order="140" class="bold">SUIVI ET AVIS</span></span></div><div class="indent-0-0"><span integrity:order="141" class="Label-P LabelBase">7.1<span integrity:added="1">. </span></span><span class="Provision"><span integrity:order="142" class="bold">Suivi</span></span></div><div class="indent-1-1"><span integrity:order="143" class="Provision">La Commission et le Ministre désignent chacun, dans les 15 jours suivant l’entrée en vigueur de la présente entente, une personne chargée d’en assurer le suivi.</span></div><div class="indent-0-0"><span integrity:order="144" class="Label-P LabelBase">7.2<span integrity:added="1">. </span></span><span class="Provision"><span integrity:order="145" class="bold">Adresses des avis</span></span></div><div class="indent-1-1"><span integrity:order="146" class="Provision">Tout avis devant être transmis en vertu de la présente entente, pour être valide et lier les Parties, doit être donné par écrit et être transmis par un moyen permettant d’en prouver la réception à un moment précis, aux coordonnées suivantes :</span></div><div class="indent-1-1"><span integrity:order="147" class="Provision">— Commission des normes, de l’équité, de la santé et de la sécurité du travail <br/>Secrétariat général <br/>1199, rue de Bleury, 14<span integrity:order="148" class="superscript">e</span> étage<br/>Montréal (Québec) H3B 3J1</span></div><div class="indent-1-1"><span integrity:order="149" class="Provision">— Ministère de la Santé et des Services sociaux<br/>Secrétariat général <br/>1075, chemin Sainte-Foy, 14<span integrity:order="150" class="superscript">e</span> étage <br/>Québec (Québec) G1S 2M1</span></div><div class="indent-0-0"><span integrity:order="151" class="Label-P LabelBase">8<span integrity:added="1">. </span></span><span class="Provision"><span integrity:order="152" class="bold">MISE EN VIGUEUR, DURÉE ET MODIFICATION</span></span></div><div class="indent-0-0"><span integrity:order="153" class="Label-P LabelBase">8.1<span integrity:added="1">. </span></span><span class="Provision"><span integrity:order="154" class="bold">Effet et durée</span></span></div><div class="indent-1-1"><span integrity:order="155" class="Provision">La présente entente prend effet à la date de l’entrée en vigueur du règlement adopté par la Commission en vertu des articles 170 et 223 de la Loi sur la santé et la sécurité du travail et demeure en vigueur jusqu’à sa résiliation.</span></div><div class="indent-0-0"><span integrity:order="156" class="Label-P LabelBase">8.2<span integrity:added="1">. </span></span><span class="Provision"><span integrity:order="157" class="bold">Modification</span></span></div><div class="indent-1-1"><span integrity:order="158" class="Provision">Le Ministre doit aviser la Commission, par écrit, de tout changement à la modalité chèque emploi-service afin que cette dernière évalue s’il s’avère nécessaire de modifier l’entente en conséquence.</span></div><div class="indent-0-0"><span integrity:order="159" class="Label-P LabelBase">9<span integrity:added="1">. </span></span><span class="Provision"><span integrity:order="160" class="bold">RÉSILIATION DE L’ENTENTE</span></span></div><div class="indent-0-0"><span integrity:order="161" class="Label-P LabelBase">9.1<span integrity:added="1">. </span></span><span class="Provision"><span integrity:order="162" class="bold">Défaut</span></span></div><div class="indent-1-1"><span integrity:order="163" class="Provision">Si le Ministre omet de respecter une obligation prévue à la présente entente, la Commission peut lui demander de corriger la situation en défaut dans un délai qu’elle fixe. En l’absence de correction dans le délai imparti, la Commission peut unilatéralement résilier la présente entente, sur avis écrit.</span></div><div class="indent-1-1"><span integrity:order="164" class="Provision">La présente entente est alors résiliée à la date de cet avis.</span></div><div class="indent-0-0"><span integrity:order="165" class="Label-P LabelBase">9.2<span integrity:added="1">. </span></span><span class="Provision"><span integrity:order="166" class="bold">Procédure</span></span></div><div class="indent-1-1"><span integrity:order="167" class="Provision">Les Parties peuvent, en tout temps, d’un commun accord, résilier la présente entente.</span></div><div class="indent-1-1"><span integrity:order="168" class="Provision">Une Partie qui souhaite mettre fin à la présente entente peut également en demander la résiliation. Dans ce cas, elle transmet à l’autre Partie un avis écrit à cet effet. Cet avis doit indiquer les motifs de résiliation et fixer la date à laquelle cette dernière prend effet.</span></div><div class="indent-0-0"><span integrity:order="169" class="Label-P LabelBase">9.3<span integrity:added="1">. </span></span><span class="Provision"><span integrity:order="170" class="bold">Ajustements financiers</span></span></div><div class="indent-1-1"><span integrity:order="171" class="Provision">En cas de résiliation, la Commission procède aux ajustements financiers en tenant compte des montants exigibles en vertu de l’Entente.</span></div><div class="indent-1-1"><span integrity:order="172" class="Provision">Toute somme due à la suite de ces ajustements financiers est payable à la date d’échéance inscrite sur l’avis de cotisation.</span></div><div class="indent-0-0"><span integrity:order="173" class="Label-P LabelBase">9.4<span integrity:added="1">. </span></span><span class="Provision"><span integrity:order="174" class="bold">Dommages</span></span></div><div class="indent-1-1"><span integrity:order="175" class="Provision">En cas de résiliation, une Partie ne peut être tenue de payer des dommages, intérêts ou toute autre forme d’indemnité ou de frais à l’autre Partie.</span></div><div class="indent-1-1"><span integrity:order="176" class="Provision">En foi de quoi, les Parties ont signé</span></div><div class="indent-0-0"><div class="tableau"><table cellspacing="0" cellpadding="8" class="noBorders" width="690.00px"><colgroup><col class="col1"/><col class="col2"/></colgroup><tbody><tr><td integrity:order="177" class="noTableCellBorderBottom ">à _______ ce _____________</td><td integrity:order="178" class="noTableCellBorderBottom ">à _______ ce _____________</td></tr><tr><td integrity:order="179" class="noTableCellBorderBottom ">____ jour de __________ 2023</td><td integrity:order="180" class="noTableCellBorderBottom ">____ jour de __________ 2023</td></tr><tr><td integrity:order="181" class="noTableCellBorderBottom ">Daniel Paré</td><td integrity:order="182" class="noTableCellBorderBottom ">Manuelle Oudar</td></tr><tr><td class="noTableCellBorderBottom " integrity:added="1"> </td><td class="noTableCellBorderBottom " integrity:added="1"> </td></tr><tr><td integrity:order="183" class="noTableCellBorderBottom ">____________________</td><td integrity:order="184" class="noTableCellBorderBottom ">_______________________</td></tr><tr><td class="noTableCellBorderBottom "><span integrity:order="185" class="italic">Sous-ministre</span></td><td class="noTableCellBorderBottom "><span integrity:order="186" class="italic">Présidente-directrice générale</span></td></tr><tr><td class=""><span integrity:order="187" class="italic">Ministère de la Santé et des Services sociaux</span></td><td class=""><span integrity:order="188" class="italic">Commission des normes, de l’équité, de la santé et de la sécurité du travail</span></td></tr></tbody></table></div></div></div></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span><span class="Hidden" integrity:order="189">1616-2023</span><span integrity:added="1">D. 1616-2023</span><span integrity:added="1">, </span><span integrity:order="190">Ann. I</span></span><span integrity:added="1">.</span></span></div></div><div class="AmendedTextTitle"><div class="ligne"><span integrity:added="1">
+                    </span></div><span integrity:added="1">RÉFÉRENCES</span></div><div><span><span integrity:order="191">D. 1616-2023, 2023 G.O. 2, 5135</span></span></div></div></div></div>
+							</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</form>
+
+<ul id="contextMenu" class="dropdown-menu" role="menu" >
+	<li id="contextMenuCopy" class="disabled dropdown-item"><a tabindex="-1">Copier</a></li>
+	<li class="dropdown-divider"></li>
+	<li class="dropdown-item"><a tabindex="-1"">Sélectionner cet élément</a></li>
+	<li id="contextMenuSelectParent" class="dropdown-item"><a tabindex="-1">Sélectionner l'élément parent</a></li>
+	<li id="contextMenuUnselectAll" class="disabled dropdown-item"><a tabindex="-1">Désélectionner tous les éléments</a></li>
+	<li class="dropdown-divider"></li>
+	<li id="contextMenuCopyToArbortext" class="disabled dropdown-item"><a tabindex="-1">Copier vers Rédaction</a></li>
+	<li id="contextMenuCopyToLaw" class="d-block disable dropdown-item"><a tabindex="-1">Copier vers LAW</a></li>
+</ul>
+<input type="text" class="copyContainer" id="copyToClipboardMenu">
+<div id="copyToClipboard" class="modal fade">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">
+					Copier vers le presse-papier
+				</h4>
+				<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>				
+			</div>
+			<div class="modal-body">
+				<p>
+				<div class="description">
+					Pour copier : Ctrl+C
+				</div>
+				<input type="text" class="form-control" name="copyToInput" id="copyToInput">
+				</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-outline-secondary bg-gradient" data-bs-dismiss="modal">OK</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<a href="#" class="back-to-top"><span class="fa fa-chevron-up"></span></a>
+
+
+	<!-- migration rapide - éventuellement call ajax JSON -->
+	<input type="hidden" id="alpha" value="S-2.1, r. 33.3 ">
+	<input type="hidden" id="title"  value='S-2.1, r. 33.3  - Règlement sur la mise en œuvre de l’entente relative à la protection des travailleurs domestiques dans le cadre de la modalité chèque emploi-service'>
+	<input type="hidden" id="dbType"  value="cr">
+	<input type="hidden" id="langCont"  value="fr">
+	<input type="hidden" id="otherLangCont" value="en">
+
+	<input type="hidden" id="contextMenu_copy" value="Copier"/>
+	<input type="hidden" id="contextMenu_selectElement" value="Sélectionner cet élément"/>
+	<input type="hidden" id="contextMenu_selectParentElement" value="Sélectionner l'élément parent"/>
+	<input type="hidden" id="contextMenu_unselectElement" value="<<SR_contextMenu_unselectElement>>"/>
+	<input type="hidden" id="contextMenu_unselectAll" value="Désélectionner tous les éléments"/>
+
+	<input type="hidden" id="contextMenu_copyToArbortext" value="Copier vers Rédaction"/>
+	<input type="hidden" id="contextMenu_copyToLaw" value="Copier vers LAW"/>
+	<input type="hidden" id="contextMenu_FragmentSelection" value="<<SR_contextMenu_FragmentSelection>>"/>
+	<input type="hidden" id="ctrlC_toCopyToClipboard" value="Pour copier : Ctrl+C"/>
+	<input type="hidden" id="readyToPaste" value="Vos sélections ont été copiées dans le presse-papier."/>
+
+	<input type="hidden" id="readyToPasteInLAW" value="Vous pouvez coller vos sélections dans LAW en utilisant la fonction appropriée."/>
+	<input type="hidden" id="readyToPasteInArbortext" value="Vous pouvez coller vos sélections dans Arbortext en utilisant la fonction appropriée."/>
+	<input type="hidden" id="errorWhileCopyingTo" value="Une erreur est survenue lors de la préparation des données."/>
+	<input type="hidden" id="showSelections" value="false"/>
+	<input type="hidden" id="consolidetedDateLabel" value=""/>
+	<input type="hidden" id="renditions" value='{"Epub":"/fr/epub/cr/S-2.1, R. 33.3 .epub","Pdf":"/fr/pdf/rc/S-2.1, R. 33.3 .pdf"}'/>
+	<input type="hidden" id="output" value=""/>
+	
+					
+<div data-bs-toggle="modal" data-bs-target="#myModal" id="printPreviewButton" class="printPreviewButton d-none">
+<button type="button" class="btn btn-primary my-2 rounded-pill" id="goPrintPreview" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">
+<span class="fa fa-check-square-o" aria-hidden="true"></span> <span class="badge rounded-pill bg-secondary badgeWhite">0</span>
+</button>
+</div>
+
+				</div>
+			</div>
+			
+			<!-- Footer -->
+		<div class="row pt-4">
+			<hr/>
+			<div align="center" class="pt-4">
+				<ul class="footer-options">
+					<li><a href="/fr/contenu/joindre/" >Nous joindre</a></li>
+					<li><a href="/fr/contenu/plan/" >Plan du site</a></li>
+					<li><a href="https://www.quebec.ca/" target="_blank">Québec.ca</a></li>
+					<li><a href="/fr/contenu/access/" >Accessibilité</a></li>
+					<li><a href="/fr/contenu/confid/" >Politique de confidentialité</a></li>
+				</ul>
+			</div>
+			<div  align="center"><a href="https://www.quebec.ca/" target="_blank"><img src="/img/quebec.gif" width="105" height="32" border="0"></a></div>
+			<div  align="center" class="copyright pt-2"><a class="footer-options" href="http://www.droitauteur.gouv.qc.ca/copyright.php" target="_blank">&copy; Gouvernement du Qu&eacute;bec</a></div>
+
+		</div>
+			
+		</div>
+			
+		<!-- Fenetre modal pour l'impression -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-impression">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="myModalLabel">Sélections</h4>
+						<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div>
+							<h4 id="myModalSubtitle"><small></small></h4>
+						</div>
+						<div class="list-group">
+							<a href="#" class="list-group-item active disabled bg-primary bg-gradient text-white">Afficher</a>
+							<a href="#" id="showSelectionsInCurrentDocument" class="list-group-item d-none">Les sélections du document courant</a>
+							<a href="#" id="showAllSelectionsInCollection" class="list-group-item">Toutes les sélections de la collection</a>
+							<a href="#" class="list-group-item active disabled bg-primary bg-gradient text-white">Fragments sélectionnés</a>
+							<a href="#" id="printPreviewResetSelections" class="list-group-item">Supprimer toutes les sélections</a>
+							<a href="#" id="printPreviewShowSelections" class="list-group-item d-none">Afficher les sélections</a>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-outline-secondary bg-gradient" data-bs-dismiss="modal">Fermer</button>
+					</div>
+				</div>
+			</div>
+			<form name="printForm" id="printForm" encType="application/x-www-form-urlencoded" method="post">
+				<input type="hidden" name="newQuery" value=""></input>
+				<input type="hidden" name="text" value=""></input>
+				<input type="hidden" name="isPrinting" value="false"></input>
+				<input type="hidden" name="title" value=""></input>
+				<input type="hidden" name="langCont" value="fr"></input>
+				<input type="hidden" name="type" value="cs"></input>
+				<input type="hidden" name="printType" value=""></input>
+				<input type="hidden" name="summary" value=""></input>
+				<input type="hidden" name="instrumentNumber" value=""></input>
+				<input type="hidden" name="selfrag" value=""></input>
+				<input type="hidden" name="anchor" value=""></input>
+				<input type="hidden" name="anchorSS" value=""></input>
+				<input type="hidden" name="recordsWithHits" value="false"></input>
+				<input type="hidden" name="validSearch" value="false"></input>
+				<input type="hidden" name="sortmode" value="false"></input>
+				<input type="hidden" name="output" value="selections"></input>
+			</form>
+		</div>
+		
+		<div class="modal fade bs-example-modal-sm" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+			<div class="modal-dialog modal-sm">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="mySmallModalLabel">Cyberlex</h4>
+						<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+					</div>
+					<div class="modal-body">
+						Version 2.2.5.0
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div>
+
+	
+		
+		<!-- migration rapide - éventuellement call ajax JSON -->
+		<input type="hidden" id="token" name="token" value="<<token>>">
+		<input type="hidden" id="config" name="config" value='{"ConfigurationMenu":{"params":{},"enabled":false},"XSLT":{"params":{"CocoonFullTextUrl":"ace-xslt-web.html","CocoonTOCUrl":"ace-xslt-toc.html"},"enabled":true},"Import":{"params":{"odbc-AnnualStatutes":"","odbc-Regulations":"","odbc-Statutes":"","odbc-AnnualRegulations":""},"enabled":false},"GoogleAnalytic":{"params":{"trackingId":""},"enabled":false},"Export":{"params":{"exportLast":["last","external-last","report"],"formatOptions":["Xml","Html"],"export-Regulations":true,"export-AnnualRegulations":true,"typeFileOptions":["",""],"exportFull":["all","external-all","report","orphans"],"modeOptions":["Last","All","Full"],"exportAll":["all","external-all","report"],"export-DtdClient":"Quebec","export-Statutes":true,"export-AnnualStatutes":true,"exportHtml-CocoonUrl":"ace-xslt-export.html"},"enabled":true},"Conversion":{"params":{"generatePdf-Statutes":"single","generatePdf-Regulations-Overwrite":true,"generatePdf-Statutes-Path":"master\\cs\\pdf","generateEpub-Statutes-Overwrite":true,"generateEpub-Statutes-Storage":"disk","generatePdf-Regulations-SoapEnvelope":"config/conversion/single-regulations.xml","generateEpub-AnnualStatutes-SoapEnvelope":"","generateEpub-Regulations-Storage":"disk","generatePdf-AnnualStatutes-SoapEnvelope":"","generateEpub-AnnualStatutes-Storage":"none","generatePdf-Regulations-Storage":"disk","generatePdf-AnnualRegulations-Storage":"none","generatePdf-AnnualRegulations-Overwrite":false,"generatePdf-Statutes-SoapEnvelope":"config/conversion/single-statutes.xml","generateEpub-AnnualRegulations-Storage":"none","generateEpub-AnnualStatutes":"none","renditionOptions":["Pdf","Epub"],"generateEpub-AnnualRegulations-SoapEnvelope":"","generatePdf-AnnualStatutes-Storage":"none","generateEpub-Statutes-SoapEnvelope":"config/conversion/epub.xml","generateEpub-Statutes-Path":"master\\cs\\epub","generatePdf-Regulations-SoapEnvelope-TwoPhase":"config/conversion/fo-to-pdf.xml","generateEpub-Regulations-Path":"master\\cr\\epub","generateEpub-AnnualStatutes-Overwrite":false,"generateEpub-Regulations-Overwrite":true,"generateEpub-Regulations-SoapEnvelope":"config/conversion/epub.xml","generateEpub-AnnualRegulations-Path":"annuals_master\\ar\\epub","generatePdf-Regulations-Path":"master\\cr\\pdf","generatePdf-AnnualStatutes":"none","generateEpub-Statutes":"single","generatePdf-AnnualRegulations-SoapEnvelope":"","generatePdf-AnnualRegulations":"none","generateEpub-AnnualStatutes-Path":"annuals_master\\as\\epub","generateEpub-AnnualRegulations-Overwrite":false,"generatePdf-Statutes-Overwrite":true,"generateEpub-AnnualRegulations":"none","generatePdf-AnnualStatutes-Path":"annuals_master\\as\\pdf","generatePdf-Statutes-Storage":"disk","generatePdf-AnnualRegulations-Path":"annuals_master\\ar\\pdf","generatePdf-AnnualStatutes-Overwrite":false,"generatePdf-Regulations":"single","generatePdf-Statutes-SoapEnvelope-TwoPhase":"config/conversion/fo-to-pdf.xml","generateEpub-Regulations":"single"},"enabled":true},"Core":{"params":{"CopyToLaw":false,"Browse-cr-Category-Id":"","ShowBarLetter":true,"Browse-cs-Category-Id":"","CopyToArbortext":false,"Template-NotFound":"notfound.html","DoTreatment-ConsoDate":true,"Menu-cs-Category-Id":"","FutureDate":29990101000000,"ShowFutureDate":true,"Search-OptionInForce":true,"Search-OptionStemming":true,"MasterToServerChunkSize":2000,"DefaultCorpus":"statutes","StopWordsFiles":["config/StopWordFr.txt","config/StopWordEn.txt"],"CutOffDate":19990401000000,"ShowTypeFileOptions":false,"Browse-cr-HideRepealed":false,"StrikethroughConsoDateException_selectionPage":false,"FragmentSelection":true,"Browse-DefaultRecentYear":false,"Browse-cs-HideRepealed":false},"enabled":true},"ContentSecurityPolicy":{"params":{},"enabled":true},"Backup":{"params":{"backupDbList":["master","annuals_master"],"backupExternalFolderList":["master=master","annuals_master=annuals_master","loose=loose"]},"enabled":true},"Integrity":{"params":{"Validate-Conversion-Pdf":true,"Exceptions":"","Validate-Exportation":true,"RemoveIntegrityAttributesOnConversion":true,"RemoveIntegrityAttributesOnExportation":true},"enabled":true}}'>
+		<input type="hidden" id="cmdId" name="cmdId" value="">
+		<input type="hidden" id="langInt" name="langInt" value="fr">
+		<input type="hidden" id="filter" name="filter" value="">
+
+		<input type="hidden" id="langCont" name="langCont" value="fr">
+		<input type="hidden" id="hideMenu" name="hideMenu" value="Fermer le menu">				
+		<input type="hidden" id="diplayMenu" name="diplayMenu" value="Afficher le menu">						
+		<input type="hidden" id="printPreview" name="printPreview" value="<<SR_printPreview>>">						
+		<input type="hidden" id="loadingMaskText" name="loadingMaskText" value="Chargement en cours...">					
+			
+		<input type="hidden" id="showSelectionsButtonTooltipSingleFrag" name="showSelectionsButtonTooltipSingleFrag" value="1 fragment a été sélectionné">				
+		<input type="hidden" id="showSelectionsButtonTooltipMultipleFrags" name="showSelectionsButtonTooltipMultipleFrags" value="fragments ont été sélectionnés">				
+		<input type="hidden" id="bootstrapMultiselect_nonSelectedText_limitSearch" name="bootstrapMultiselect_nonSelectedText_limitSearch" value="Aucune limite">				
+		<input type="hidden" id="bootstrapMultiselect_nSelectedText_limitSearch" name="bootstrapMultiselect_nSelectedText_limitSearch" value="limites">																
+		<input type="hidden" id="bootstrapMultiselect_allSelectedText_limitSearch" name="bootstrapMultiselect_allSelectedText_limitSearch" value="Toutes les limites">																			
+		<input type="hidden" id="corpusQuickSearch" name="corpusQuickSearch" value="all">
+
+		<script type="text/javascript" src="/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+		<script type="text/javascript" src="/bootstrap-notify/3.1.5/bootstrap-notify.min.js"></script>
+		<script type="text/javascript" src="/js/Config.js?v=2.1"></script>
+		<script type="text/javascript" src="/js/Object.js?v=2.1"></script>
+		<script type="text/javascript" src="/js/mainMenu.js?v=2.1"></script>
+		<script type='text/javascript' src='/js/jquery.loadmask.js?v=2.1'></script>
+		<script type='text/javascript' src='/js/cyberlex.jquery.loadmask.js?v=2.1'></script>
+		<script type='text/javascript' src='/js/selections.js?v=2.1'></script>
+		<script type='text/javascript' src='/js/UrlHelper.js?v=2.1'></script>
+		
+<script type="text/javascript" src="/js/Config.js?v=2.2"></script>
+
+<script type="text/javascript" src="/js/showdoc.js?v=2.2"></script>
+
+	</body>
+</html>

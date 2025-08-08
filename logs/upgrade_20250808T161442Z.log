@@ -1,0 +1,119 @@
+[APPLIED] header timestamp -> 2025-08-08T16:14:42Z
+$ git fetch --all
+[rc=0]
+
+From https://github.com/g0udurix/LRN
+   d68b2ff..cd014af  master     -> origin/master
+$ git pull --rebase --autostash
+[rc=0]
+Already up to date.
+
+[ROADMAP] updating auto-block
+$ gh label create priority/P0 -R g0udurix/LRN --color b60205 --description Blocker
+[rc=1]
+
+label with name "priority/P0" already exists; use `--force` to update its color and description
+$ gh label create priority/P1 -R g0udurix/LRN --color d73a4a --description High
+[rc=0]
+
+
+$ gh label create priority/P2 -R g0udurix/LRN --color fbca04 --description Normal
+[rc=1]
+
+label with name "priority/P2" already exists; use `--force` to update its color and description
+$ gh label create area/extractor -R g0udurix/LRN --color 1d76db --description Ingestion & crawling
+[rc=1]
+
+label with name "area/extractor" already exists; use `--force` to update its color and description
+$ gh label create area/schema -R g0udurix/LRN --color 1d76db --description Database schema/migrations
+[rc=0]
+
+
+$ gh label create area/standards -R g0udurix/LRN --color 1d76db --description Standards mapping
+[rc=0]
+
+
+$ gh label create area/comparison -R g0udurix/LRN --color 1d76db --description Matrix/ranking engine
+[rc=0]
+
+
+$ gh label create area/annotations -R g0udurix/LRN --color 1d76db --description Notes, issues, orientations
+[rc=0]
+
+
+$ gh label create area/app -R g0udurix/LRN --color 1d76db --description API/UI
+[rc=0]
+
+
+$ gh label create jurisdiction/QC -R g0udurix/LRN --color 0e8a16 --description Québec
+[rc=0]
+
+
+$ gh label create jurisdiction/CA -R g0udurix/LRN --color 0e8a16 --description Canada (Fed)
+[rc=0]
+
+
+$ gh label create jurisdiction/US -R g0udurix/LRN --color 0e8a16 --description United States
+[rc=0]
+
+
+$ gh label create jurisdiction/UK -R g0udurix/LRN --color 0e8a16 --description United Kingdom
+[rc=0]
+
+
+$ gh label create jurisdiction/FR -R g0udurix/LRN --color 0e8a16 --description France
+[rc=0]
+
+
+$ gh label create jurisdiction/DE -R g0udurix/LRN --color 0e8a16 --description Germany
+[rc=0]
+
+
+$ gh label create jurisdiction/JP -R g0udurix/LRN --color 0e8a16 --description Japan
+[rc=0]
+
+
+$ gh label create jurisdiction/AU -R g0udurix/LRN --color 0e8a16 --description Australia
+[rc=0]
+
+
+$ gh label create standard/CSA -R g0udurix/LRN --color 5319e7 --description CSA
+[rc=0]
+
+
+$ gh label create standard/ANSI -R g0udurix/LRN --color 5319e7 --description ANSI
+[rc=0]
+
+
+$ gh label create standard/ISO -R g0udurix/LRN --color 5319e7 --description ISO
+[rc=0]
+
+
+$ gh label create standard/EN -R g0udurix/LRN --color 5319e7 --description EN
+[rc=0]
+
+
+$ gh label create standard/BS -R g0udurix/LRN --color 5319e7 --description BSI
+[rc=0]
+
+
+$ gh label create standard/AS -R g0udurix/LRN --color 5319e7 --description AS/NZS
+[rc=0]
+
+
+$ gh label create standard/JIS -R g0udurix/LRN --color 5319e7 --description JIS
+[rc=0]
+
+
+$ gh label create documentation -R g0udurix/LRN --color c5def5 --description Docs & READMEs
+[rc=1]
+
+label with name "documentation" already exists; use `--force` to update its color and description
+$ gh label create needs-triage -R g0udurix/LRN --color ededed --description New items to triage
+[rc=0]
+
+
+$ /Users/jeremie/miniforge3/envs/legis/bin/python /Users/jeremie/Documents/@2025/scripts/Legislation/bundle_codebase.py
+[rc=0]
+
+Bundled 4476 files from /Users/jeremie/Documents/@2025/scripts/Legislation -> /Users/jeremie/Documents/@2025/scripts/Legislation/codebase.md

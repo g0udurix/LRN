@@ -1,0 +1,17 @@
+
+name: Set Project fields
+on:
+  issues:
+    types: [opened, labeled]
+  pull_request:
+    types: [opened, labeled, ready_for_review]
+jobs:
+  set-fields:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: leonsteinhaeuser/project-fields@v2
+        with:
+          github_token: ${{ secrets.PROJECT_PAT }}
+          project_url: https://github.com/users/g0udurix/projects/3
+          fields: Status,Priority
+          values: Todo,P2

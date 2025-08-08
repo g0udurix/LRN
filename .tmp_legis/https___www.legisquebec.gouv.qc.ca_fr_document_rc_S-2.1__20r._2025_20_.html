@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; CHARSET=utf-8"></meta>
+		<meta name="dc.title" content=" - Règlement sur la mise en application des dispositions relatives aux accidents du travail et aux maladies professionnelles contenues dans l’entente en matière de sécurité sociale entre le gouvernement du Québec et le gouvernement du Grand-Duché du Luxembourg">
+		<meta name="dc.creator" content="">
+		<meta name="dc.language" scheme="ISO639-2"	content="fre">
+		<meta name="dc.subject" content="">
+		<meta name="Keywords" content="">
+		<meta name="dc.Publisher" content="">
+		<meta name="dc.Contributor" content="Irosoft, architecture de gestion de l'information législative - legal information management system">
+		<meta name="dc.Description" content="">
+		<meta name="Description" content="">
+		<meta name="Title" content=" - Règlement sur la mise en application des dispositions relatives aux accidents du travail et aux maladies professionnelles contenues dans l’entente en matière de sécurité sociale entre le gouvernement du Québec et le gouvernement du Grand-Duché du Luxembourg">
+		<meta name="dc.date.created" content="2022-09-02">
+		<meta name="dc.date.modified" content="2022-09-02">
+
+		<title>Légis Québec</title>
+		
+		<link rel="shortcut icon" href="/img/favicon.ico">
+		<link rel="stylesheet" href="/bootstrap/5.1.3/css/bootstrap.min.css">
+		<link rel='stylesheet' href='/CSS/jquery.loadmask.css?v=2.1'>
+		<link rel='stylesheet' href='/CSS/cyberlex.jquery.loadmask.css?v=2.1'>
+		
+		
+<link rel="stylesheet" type="text/css" href="/CSS/FragmentView.css?v=2.2"></link>
+
+		<link rel="stylesheet" href="/css/publishing-bootstrap.css?v=2.1">
+		<link rel="stylesheet" href="/css/publishing.css?v=2.1">
+		<link rel="stylesheet" href="/CSS/cyberlex-bootstrap.min.css?v=2.1">
+		<link rel="stylesheet" href="/CSS/cyberlex.css?v=2.1">
+		<link rel="stylesheet" href="/css/font-awesome.min.css?v=2.1">
+		<link rel="stylesheet" href="/CSS/core.css?v=2.1">
+		<link rel="stylesheet" href="/CSS/client.css?v=2.1">
+		<link rel="stylesheet" href="/css/publications-quebec.css?v=2.1">
+		<link rel="stylesheet" href="/css/eoq.css?v=2.1">
+
+		<script type="text/javascript" src="/jquery-ui/1.13.0/external/jquery/jquery.js?v=2.1"></script>
+		<script type="text/javascript" src="/jquery-ui/1.13.0/jquery-ui.min.js?v=2.1"></script>
+		<script type="text/javascript" src="/jquery/3.6.0/jquery.min.js?v=2.1"></script>
+		<script type="text/javascript" src="/DOMPurify/dist/purify.min.js?v=2.1"></script>
+	</head>
+
+	<body>
+		<div id="wrap">
+			<div class="main-header">
+				<div class="float-end">
+					<div class="vague"></div>
+					<ul class="pub-quebec">
+						<li><a href="/fr/">Accueil</a></li>
+						<li><a href="/fr/contenu/joindre" >Nous joindre</a></li>
+						<li><a href="/fr/contenu/plan" >Plan du site</a></li>
+						<li><a href="https://www.quebec.ca/" target="_blank">Québec.ca</a></li>
+						<li><a href="/fr/contenu/FAQ" >FAQ</a></li>
+						<li class='spacer-pub-quebec'></li>
+						<li><a id="langSwitcher" class="" href="/en/document/cr/S-2.1,%20r.%2025%20">English</a></li>
+
+					</ul>
+					<div class="mtess">
+						<a href="https://www.mtess.gouv.qc.ca/" class="mtessTitle" target="_blank">Ministère de l'Emploi et de la Solidarité sociale</a>
+					</div>
+				</div>
+				<a class="logo-pub-quebec" href="http://www.publicationsduquebec.gouv.qc.ca/" target="_blank"></a>
+			</div>
+			<hr/>
+			
+			<!-- Header -->
+			<nav class="navbar navbar-light">
+				<div class="container-fluid colorTheme">
+					<div class="navbar-header">
+						<div class="row">
+							<div class="col-sm-3">
+								<div class="input-group" class="pt-2">
+									<input type="text" class="form-control" data-bs-placement="top" data-bs-toggle="tooltip" placeholder="Recherche" id="quickSearchText" title="Rechercher dans lois et règlements codifiés">
+									<span class="input-group-btn">
+										<button class="btn btn-primary" type="button" id="goResult" data-bs-placement="top" data-bs-toggle="tooltip" title="Recherche">
+											<span class="fa fa-search" aria-hidden="true"></span>
+										</button>
+									</span>
+								</div>
+								<div class="py-2"><a href="/fr/recherche?t=a">Recherche avancée</a></div>
+							</div><div class="col-sm-9 d-flex justify-content-between">
+									<a class="navbar-brand logo-fr logo" title="Accueil" href="/fr/"></a>
+							</div>
+						</div>
+					</div>
+				</div><!-- /.container-fluid -->
+			</nav>
+			<!-- Content -->			
+			<div class="row">
+				<div class="col-sm-3">
+					<div class="list-group">
+	<a href="#" class="list-group-item active disabled bg-primary bg-gradient text-white">Lois et règlements codifiés</a>
+	<a href="/fr/chapitres?corpus=lois" id="chapterStatutes" class="list-group-item">Lois codifiées</a>
+	<a href="/fr/chapitres?corpus=regs" id="chapterRegulations" class="list-group-item">Règlements codifiés</a>
+	
+	<a href="#" class="list-group-item active disabled bg-primary bg-gradient text-white">Lois et règlements annuels</a>
+	<a href="/fr/annuels?filtre=lois" id="browseannual-statutes" class="list-group-item">Lois annuelles</a>
+	<a href="/fr/annuels?filtre=regs" id="browseannual-regs" class="list-group-item">Règlements annuels</a>
+	
+	<a href="#" class="list-group-item active disabled bg-primary bg-gradient text-white">Information complémentaire</a>
+	<a id="content-editoff" href="/fr/contenu/editeurofficiel" class="list-group-item">L’Éditeur officiel du Québec</a>
+	<a id="content-neuf" href="/fr/contenu/neuf" class="list-group-item">Quoi de neuf?</a>
+	<a id="content-noteinfo" href="/fr/contenu/noteinfo" class="list-group-item">Note d’information</a>
+	<a id="content-mjqpol" href="/fr/contenu/mjqpol" class="list-group-item">Politique du ministre de la Justice</a>
+	<a id="content-modlois" href="/fr/contenu/modlois" class="list-group-item">Lois : Modifications</a>
+	<a id="content-nevlois" href="/fr/contenu/nevlois" class="list-group-item">Lois : Dispositions non en vigueur</a>
+	<a id="content-eevlois" href="/fr/contenu/eevlois" class="list-group-item">Lois : Entrées en vigueur</a>
+	<a id="content-loisann" href="/fr/contenu/loisann" class="list-group-item">Lois annuelles : Versions PDF depuis 1996</a>
+	<a id="content-modreg" href="/fr/contenu/modreg" class="list-group-item">Règlements : Modifications</a>
+	<a id="content-regann" href="/fr/contenu/regann" class="list-group-item">Règlements annuels : Versions PDF depuis 1996</a>
+	<a id="content-decision" href="/fr/contenu/decision" class="list-group-item">Décisions des tribunaux</a>
+</div>
+					
+				</div>
+				<div id="contentDiv" class="col-sm-9">
+					<form id="form" onsubmit="" method="post" action="">
+	<div>
+		<input alt="Champ caché" name="command" type="hidden" value=""></input>
+		<input alt="Champ caché" name="shorttitle" type="hidden" value=""></input>
+		<input alt="Champ caché" name="marginalnotexml" type="hidden" value=""></input>
+		<input alt="Champ caché" name="heading" type="hidden" value=""></input>
+		<input alt="Champ caché" name="fragment" type="hidden" value=""></input>
+		<input alt="Champ caché" name="selfrag" type="hidden" value=""></input>
+		<input alt="Champ caché" name="search_type" type="hidden" value=""></input>
+		<input alt="Champ caché" name="title_search_type" type="hidden" value=""></input>		
+		<input alt="Champ caché" name="anchor" type="hidden" value=""></input>
+		<input alt="Champ caché" name="dateEEV" type="hidden" value=""></input>
+		<input alt="Champ caché" name="statuteyear" type="hidden" value=""></input>
+		<input alt="Champ caché" name="isPrinting" type="hidden" value="false"></input>
+		<input alt="Champ caché" name="from" type="hidden" value=""></input>
+		<input alt="Champ caché" name="output" type="hidden" value="printFull"></input>
+		<input alt="Champ caché" name="page" type="hidden" value="<<page>>"></input>
+		<input alt="Champ caché" name="length" type="hidden" value=""></input>
+		<input alt="Champ caché" name="instrumentnumber" type="hidden" value="S-2.1, r. 25 "></input>
+		<input alt="Champ caché" name="instrumentnumbersearch" type="hidden" value=""></input>
+		<input alt="Champ caché" name="stemmed" type="hidden" value=""></input>
+		
+	</div>
+
+	<div class="card">
+		<div class="card-header p-3 bg-gradient docHeader">
+						<h3 class="card-title"><span class="fw-bold">S-2.1, r. 25 </span> - Règlement sur la mise en application des dispositions relatives aux accidents du travail et aux maladies professionnelles contenues dans l’entente en matière de sécurité sociale entre le gouvernement du Québec et le gouvernement du Grand-Duché du Luxembourg</h3>
+					</div>
+		
+		<div class="card-body">
+			<div class="d-flex justify-content-between align-items-center">
+				<div class="flex-row d-flex align-items-center">
+					<div class="pr-1">
+						<a href="/fr/tdm/rc/S-2.1,%20r.%2025%20" class="btn btn-outline-secondary bg-gradient" role="button" title="Afficher la table des matières du document" alt="Afficher la table des matières du document" data-bs-toggle="tooltip" data-bs-placement="top">Table des matières <span class="fa fa-list smallLeftSpacer" aria-hidden="true"></span></a>
+					</div>
+					<div class="px-1">
+						
+				<div class="btn-group">
+					<button id="relatedLegislativeDocument" type="button" class="btn btn-outline-secondary bg-gradient dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="-100, 0">
+						Loi habilitante <span class="badge rounded-pill bg-secondary smallLeftSpacer">1</span> <span class="caret smallLeftSpacer"></span>
+					</button>
+					<table class="table table-responsive table-hover dropdown-menu relatedDoc" role="menu">
+						<thead>
+							<tr>
+								<th width="15%">Alphanumérique</th>
+								<th width="85%">Titre</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+<td>S-2.1 </td>
+<td>
+<a class="hand boldLink" href="/fr/document/lc/S-2.1%20/">Loi sur la santé et la sécurité du travail   
+</a>
+</td>
+</tr>
+						</tbody>
+					</table>
+					</div>
+					</div>
+					<div class="px-1">
+						<span id="occurrenceButton" class="d-none">
+							Occurrences<span class="badge rounded-pill bg-secondary ms-3" id="occurrenceCount">0</span>
+						</span>
+					</div>
+					<div class="px-1">
+						
+					</div>
+				</div>
+
+				<div class="flex-row d-flex align-items-center">
+					<div class="px-1">
+						<a id="renditionPdf" target="_blank" class="btn btn-outline-secondary bg-gradient d-none" 
+							role="button" title="Ouvrir la version PDF" alt="Ouvrir la version PDF"
+							data-bs-toggle="tooltip" data-bs-placement="top">
+							 <span class="fa pdf-icon" aria-hidden="true"></span>
+						</a>
+					</div>
+					<div class="px-1">
+						<a id="renditionEpub" target="_blank" class="btn btn-outline-secondary bg-gradient d-none" 
+							role="button" title="Télécharger la version ePUB" alt="Télécharger la version ePUB"
+							data-bs-toggle="tooltip" data-bs-placement="top">
+							 <span class="fa epub-icon" aria-hidden="true"></span>
+						</a>
+					</div>
+					<div class="px-1">
+						<a id="btnPrintPreview" class="btn btn-outline-secondary bg-gradient last"
+							role="button" title="Préparer le document pour l'impression"
+							alt="Préparer le document pour l'impression" data-bs-toggle="tooltip" data-bs-placement="top"><span id="printBtnIcon"
+								class="fa fa-print" aria-hidden="true"></span>
+						</a>
+					</div>
+				</div>
+				
+			</div>
+			<div class="row pt-2">
+				<div class="col">
+					<div class="card ">
+						
+							<div class="card-header official-heading bg-gradient ">
+								<div class="row">
+									<div class="col">
+										<div class="text-end"></div>
+										Texte complet 
+									</div>
+								
+									<div class="col">
+										<div class="text-end">
+											À jour au 1<sup>er</sup> avril 2025
+										</div>
+										<div class="text-end">
+											Ce document a valeur officielle.
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="card-body history current conso" id="mainContent-document">
+								<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE div
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:exsl="http://exslt.org/common" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:integrity="http://ref.irosoft.com/integrity/" integrity:Digest="09F73EC16899FC436FF4978717689E76"><meta title="Ministère de la Justice du Québec" author="Ministère de la Justice du Québec" subject="Ministère de la Justice du Québec" keywords="Ministère de la Justice du Québec" description="Ministère de la Justice du Québec" timestamp="n'est pas supporter" application="CYBERLEX" version="2.2.0.2" provider="Irosoft" source="xsl"/><div xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns:law="http://ref.irosoft.com/LIMS/1.0/law" class="DefaultPageSequence BodyPageSequence"><div class="LegislativeDocument Global Style_Extra_Class"><div class="Identification"><div integrity:added="1" class="Identification-Id"><span integrity:added="1">chapitre </span><span integrity:order="1">S-2.1, r. 25</span></div><div integrity:order="2" class="titre-reglement-left titre-reglement-left customLongTitleWord">Règlement sur la mise en application des dispositions relatives aux accidents du travail et aux maladies professionnelles contenues dans l’entente en matière de sécurité sociale entre le gouvernement du Québec et le gouvernement du Grand-Duché du Luxembourg</div><span class="Hidden" integrity:order="3">SANTÉ ET SÉCURITÉ DU TRAVAIL — ENTENTE QUÉBEC-LUXEMBOURG</span><div><div class="enabling-identification"><div integrity:order="5" class="LongTitle-enabling">Loi sur la santé et la sécurité du travail</div></div><div class="HistoricalNote-LongTitle"><span><span integrity:order="6">(chapitre S-2.1, a. 223, 1<span integrity:order="7" class="superscript">er</span> al., par. 39)</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div><span class="Hidden" integrity:order="4">S-2.1</span></div><span class="Hidden"><span integrity:order="10" class="date-txt-statut Hidden">01</span><span integrity:added="1">1</span><span integrity:added="1" class="superscript_7point">er</span><span integrity:added="1"> </span><span integrity:order="9" class="Hidden">09</span><span integrity:added="1">septembre </span><span integrity:order="8" class="date-txt-statut">2012</span></span></div><div class="section" id="se:1"><div class="Subsection SubsectionFirst" id="se:1-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 25 ?code=se:1&historique=20250807#20250807"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:1" data-code="se:1"><span integrity:order="11" class="Label-Section consolidationWhipeTextDecoration consolidationClean">1<span integrity:added="1">.</span></span></a> <span integrity:order="12" class="Subsection">Les bénéfices de la Loi sur les accidents du travail et les maladies professionnelles (chapitre A-3.001) et des règlements adoptés en vertu de cette Loi sont étendus à toute personne visée dans l’Entente en matière de sécurité sociale entre le gouvernement du Québec et le gouvernement du Grand-Duché du Luxembourg, intervenue le 22 septembre 1987, apparaissant à l’annexe I du Règlement sur la mise en oeuvre de l’Entente en matière de sécurité sociale entre le gouvernement du Québec et le gouvernement du Grand-Duché du Luxembourg (chapitre R-9, r. 26).</span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span integrity:order="13">D. 1958-89, a. 1</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div></div><div class="section" id="se:2"><div class="Subsection SubsectionFirst" id="se:2-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 25 ?code=se:2&historique=20250807#20250807"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:2" data-code="se:2"><span integrity:order="14" class="Label-Section consolidationWhipeTextDecoration consolidationClean">2<span integrity:added="1">.</span></span></a> <span integrity:order="15" class="Subsection">Ces bénéfices s’appliquent de la manière prévue à cette Entente et à l’arrangement administratif apparaissant à l’annexe II du Règlement visé à l’article 1.</span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span integrity:order="16">D. 1958-89, a. 2</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div></div><div class="section" id="se:3"><div class="Subsection SubsectionFirst" id="se:3-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 25 ?code=se:3&historique=20250807#20250807"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:3" data-code="se:3"><span integrity:order="17" class="Label-Section consolidationWhipeTextDecoration consolidationClean">3<span integrity:added="1">.</span></span></a> <span class="Subsection"><span integrity:order="18" class="Repealed-Text">(Omis).</span></span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span integrity:order="19">D. 1958-89, a. 3</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div></div><div class="AmendedTextTitle"><div class="ligne"><span integrity:added="1">
+                    </span></div><span integrity:added="1">RÉFÉRENCES</span></div><div><span><span integrity:order="20">D. 1958-89, 1990 G.O. 2, 96</span></span></div></div></div></div>
+							</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</form>
+
+<ul id="contextMenu" class="dropdown-menu" role="menu" >
+	<li id="contextMenuCopy" class="disabled dropdown-item"><a tabindex="-1">Copier</a></li>
+	<li class="dropdown-divider"></li>
+	<li class="dropdown-item"><a tabindex="-1"">Sélectionner cet élément</a></li>
+	<li id="contextMenuSelectParent" class="dropdown-item"><a tabindex="-1">Sélectionner l'élément parent</a></li>
+	<li id="contextMenuUnselectAll" class="disabled dropdown-item"><a tabindex="-1">Désélectionner tous les éléments</a></li>
+	<li class="dropdown-divider"></li>
+	<li id="contextMenuCopyToArbortext" class="disabled dropdown-item"><a tabindex="-1">Copier vers Rédaction</a></li>
+	<li id="contextMenuCopyToLaw" class="d-block disable dropdown-item"><a tabindex="-1">Copier vers LAW</a></li>
+</ul>
+<input type="text" class="copyContainer" id="copyToClipboardMenu">
+<div id="copyToClipboard" class="modal fade">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">
+					Copier vers le presse-papier
+				</h4>
+				<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>				
+			</div>
+			<div class="modal-body">
+				<p>
+				<div class="description">
+					Pour copier : Ctrl+C
+				</div>
+				<input type="text" class="form-control" name="copyToInput" id="copyToInput">
+				</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-outline-secondary bg-gradient" data-bs-dismiss="modal">OK</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<a href="#" class="back-to-top"><span class="fa fa-chevron-up"></span></a>
+
+
+	<!-- migration rapide - éventuellement call ajax JSON -->
+	<input type="hidden" id="alpha" value="S-2.1, r. 25 ">
+	<input type="hidden" id="title"  value='S-2.1, r. 25  - Règlement sur la mise en application des dispositions relatives aux accidents du travail et aux maladies professionnelles contenues dans l’entente en matière de sécurité sociale entre le gouvernement du Québec et le gouvernement du Grand-Duché du Luxembourg'>
+	<input type="hidden" id="dbType"  value="cr">
+	<input type="hidden" id="langCont"  value="fr">
+	<input type="hidden" id="otherLangCont" value="en">
+
+	<input type="hidden" id="contextMenu_copy" value="Copier"/>
+	<input type="hidden" id="contextMenu_selectElement" value="Sélectionner cet élément"/>
+	<input type="hidden" id="contextMenu_selectParentElement" value="Sélectionner l'élément parent"/>
+	<input type="hidden" id="contextMenu_unselectElement" value="<<SR_contextMenu_unselectElement>>"/>
+	<input type="hidden" id="contextMenu_unselectAll" value="Désélectionner tous les éléments"/>
+
+	<input type="hidden" id="contextMenu_copyToArbortext" value="Copier vers Rédaction"/>
+	<input type="hidden" id="contextMenu_copyToLaw" value="Copier vers LAW"/>
+	<input type="hidden" id="contextMenu_FragmentSelection" value="<<SR_contextMenu_FragmentSelection>>"/>
+	<input type="hidden" id="ctrlC_toCopyToClipboard" value="Pour copier : Ctrl+C"/>
+	<input type="hidden" id="readyToPaste" value="Vos sélections ont été copiées dans le presse-papier."/>
+
+	<input type="hidden" id="readyToPasteInLAW" value="Vous pouvez coller vos sélections dans LAW en utilisant la fonction appropriée."/>
+	<input type="hidden" id="readyToPasteInArbortext" value="Vous pouvez coller vos sélections dans Arbortext en utilisant la fonction appropriée."/>
+	<input type="hidden" id="errorWhileCopyingTo" value="Une erreur est survenue lors de la préparation des données."/>
+	<input type="hidden" id="showSelections" value="false"/>
+	<input type="hidden" id="consolidetedDateLabel" value=""/>
+	<input type="hidden" id="renditions" value='{"Epub":"/fr/epub/cr/S-2.1, R. 25 .epub","Pdf":"/fr/pdf/rc/S-2.1, R. 25 .pdf"}'/>
+	<input type="hidden" id="output" value=""/>
+	
+					
+<div data-bs-toggle="modal" data-bs-target="#myModal" id="printPreviewButton" class="printPreviewButton d-none">
+<button type="button" class="btn btn-primary my-2 rounded-pill" id="goPrintPreview" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">
+<span class="fa fa-check-square-o" aria-hidden="true"></span> <span class="badge rounded-pill bg-secondary badgeWhite">0</span>
+</button>
+</div>
+
+				</div>
+			</div>
+			
+			<!-- Footer -->
+		<div class="row pt-4">
+			<hr/>
+			<div align="center" class="pt-4">
+				<ul class="footer-options">
+					<li><a href="/fr/contenu/joindre/" >Nous joindre</a></li>
+					<li><a href="/fr/contenu/plan/" >Plan du site</a></li>
+					<li><a href="https://www.quebec.ca/" target="_blank">Québec.ca</a></li>
+					<li><a href="/fr/contenu/access/" >Accessibilité</a></li>
+					<li><a href="/fr/contenu/confid/" >Politique de confidentialité</a></li>
+				</ul>
+			</div>
+			<div  align="center"><a href="https://www.quebec.ca/" target="_blank"><img src="/img/quebec.gif" width="105" height="32" border="0"></a></div>
+			<div  align="center" class="copyright pt-2"><a class="footer-options" href="http://www.droitauteur.gouv.qc.ca/copyright.php" target="_blank">&copy; Gouvernement du Qu&eacute;bec</a></div>
+
+		</div>
+			
+		</div>
+			
+		<!-- Fenetre modal pour l'impression -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-impression">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="myModalLabel">Sélections</h4>
+						<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div>
+							<h4 id="myModalSubtitle"><small></small></h4>
+						</div>
+						<div class="list-group">
+							<a href="#" class="list-group-item active disabled bg-primary bg-gradient text-white">Afficher</a>
+							<a href="#" id="showSelectionsInCurrentDocument" class="list-group-item d-none">Les sélections du document courant</a>
+							<a href="#" id="showAllSelectionsInCollection" class="list-group-item">Toutes les sélections de la collection</a>
+							<a href="#" class="list-group-item active disabled bg-primary bg-gradient text-white">Fragments sélectionnés</a>
+							<a href="#" id="printPreviewResetSelections" class="list-group-item">Supprimer toutes les sélections</a>
+							<a href="#" id="printPreviewShowSelections" class="list-group-item d-none">Afficher les sélections</a>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-outline-secondary bg-gradient" data-bs-dismiss="modal">Fermer</button>
+					</div>
+				</div>
+			</div>
+			<form name="printForm" id="printForm" encType="application/x-www-form-urlencoded" method="post">
+				<input type="hidden" name="newQuery" value=""></input>
+				<input type="hidden" name="text" value=""></input>
+				<input type="hidden" name="isPrinting" value="false"></input>
+				<input type="hidden" name="title" value=""></input>
+				<input type="hidden" name="langCont" value="fr"></input>
+				<input type="hidden" name="type" value="cs"></input>
+				<input type="hidden" name="printType" value=""></input>
+				<input type="hidden" name="summary" value=""></input>
+				<input type="hidden" name="instrumentNumber" value=""></input>
+				<input type="hidden" name="selfrag" value=""></input>
+				<input type="hidden" name="anchor" value=""></input>
+				<input type="hidden" name="anchorSS" value=""></input>
+				<input type="hidden" name="recordsWithHits" value="false"></input>
+				<input type="hidden" name="validSearch" value="false"></input>
+				<input type="hidden" name="sortmode" value="false"></input>
+				<input type="hidden" name="output" value="selections"></input>
+			</form>
+		</div>
+		
+		<div class="modal fade bs-example-modal-sm" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+			<div class="modal-dialog modal-sm">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="mySmallModalLabel">Cyberlex</h4>
+						<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+					</div>
+					<div class="modal-body">
+						Version 2.2.5.0
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div>
+
+	
+		
+		<!-- migration rapide - éventuellement call ajax JSON -->
+		<input type="hidden" id="token" name="token" value="<<token>>">
+		<input type="hidden" id="config" name="config" value='{"ConfigurationMenu":{"params":{},"enabled":false},"XSLT":{"params":{"CocoonFullTextUrl":"ace-xslt-web.html","CocoonTOCUrl":"ace-xslt-toc.html"},"enabled":true},"Import":{"params":{"odbc-AnnualStatutes":"","odbc-Regulations":"","odbc-Statutes":"","odbc-AnnualRegulations":""},"enabled":false},"GoogleAnalytic":{"params":{"trackingId":""},"enabled":false},"Export":{"params":{"exportLast":["last","external-last","report"],"formatOptions":["Xml","Html"],"export-Regulations":true,"export-AnnualRegulations":true,"typeFileOptions":["",""],"exportFull":["all","external-all","report","orphans"],"modeOptions":["Last","All","Full"],"exportAll":["all","external-all","report"],"export-DtdClient":"Quebec","export-Statutes":true,"export-AnnualStatutes":true,"exportHtml-CocoonUrl":"ace-xslt-export.html"},"enabled":true},"Conversion":{"params":{"generatePdf-Statutes":"single","generatePdf-Regulations-Overwrite":true,"generatePdf-Statutes-Path":"master\\cs\\pdf","generateEpub-Statutes-Overwrite":true,"generateEpub-Statutes-Storage":"disk","generatePdf-Regulations-SoapEnvelope":"config/conversion/single-regulations.xml","generateEpub-AnnualStatutes-SoapEnvelope":"","generateEpub-Regulations-Storage":"disk","generatePdf-AnnualStatutes-SoapEnvelope":"","generateEpub-AnnualStatutes-Storage":"none","generatePdf-Regulations-Storage":"disk","generatePdf-AnnualRegulations-Storage":"none","generatePdf-AnnualRegulations-Overwrite":false,"generatePdf-Statutes-SoapEnvelope":"config/conversion/single-statutes.xml","generateEpub-AnnualRegulations-Storage":"none","generateEpub-AnnualStatutes":"none","renditionOptions":["Pdf","Epub"],"generateEpub-AnnualRegulations-SoapEnvelope":"","generatePdf-AnnualStatutes-Storage":"none","generateEpub-Statutes-SoapEnvelope":"config/conversion/epub.xml","generateEpub-Statutes-Path":"master\\cs\\epub","generatePdf-Regulations-SoapEnvelope-TwoPhase":"config/conversion/fo-to-pdf.xml","generateEpub-Regulations-Path":"master\\cr\\epub","generateEpub-AnnualStatutes-Overwrite":false,"generateEpub-Regulations-Overwrite":true,"generateEpub-Regulations-SoapEnvelope":"config/conversion/epub.xml","generateEpub-AnnualRegulations-Path":"annuals_master\\ar\\epub","generatePdf-Regulations-Path":"master\\cr\\pdf","generatePdf-AnnualStatutes":"none","generateEpub-Statutes":"single","generatePdf-AnnualRegulations-SoapEnvelope":"","generatePdf-AnnualRegulations":"none","generateEpub-AnnualStatutes-Path":"annuals_master\\as\\epub","generateEpub-AnnualRegulations-Overwrite":false,"generatePdf-Statutes-Overwrite":true,"generateEpub-AnnualRegulations":"none","generatePdf-AnnualStatutes-Path":"annuals_master\\as\\pdf","generatePdf-Statutes-Storage":"disk","generatePdf-AnnualRegulations-Path":"annuals_master\\ar\\pdf","generatePdf-AnnualStatutes-Overwrite":false,"generatePdf-Regulations":"single","generatePdf-Statutes-SoapEnvelope-TwoPhase":"config/conversion/fo-to-pdf.xml","generateEpub-Regulations":"single"},"enabled":true},"Core":{"params":{"CopyToLaw":false,"Browse-cr-Category-Id":"","ShowBarLetter":true,"Browse-cs-Category-Id":"","CopyToArbortext":false,"Template-NotFound":"notfound.html","DoTreatment-ConsoDate":true,"Menu-cs-Category-Id":"","FutureDate":29990101000000,"ShowFutureDate":true,"Search-OptionInForce":true,"Search-OptionStemming":true,"MasterToServerChunkSize":2000,"DefaultCorpus":"statutes","StopWordsFiles":["config/StopWordFr.txt","config/StopWordEn.txt"],"CutOffDate":19990401000000,"ShowTypeFileOptions":false,"Browse-cr-HideRepealed":false,"StrikethroughConsoDateException_selectionPage":false,"FragmentSelection":true,"Browse-DefaultRecentYear":false,"Browse-cs-HideRepealed":false},"enabled":true},"ContentSecurityPolicy":{"params":{},"enabled":true},"Backup":{"params":{"backupDbList":["master","annuals_master"],"backupExternalFolderList":["master=master","annuals_master=annuals_master","loose=loose"]},"enabled":true},"Integrity":{"params":{"Validate-Conversion-Pdf":true,"Exceptions":"","Validate-Exportation":true,"RemoveIntegrityAttributesOnConversion":true,"RemoveIntegrityAttributesOnExportation":true},"enabled":true}}'>
+		<input type="hidden" id="cmdId" name="cmdId" value="">
+		<input type="hidden" id="langInt" name="langInt" value="fr">
+		<input type="hidden" id="filter" name="filter" value="">
+
+		<input type="hidden" id="langCont" name="langCont" value="fr">
+		<input type="hidden" id="hideMenu" name="hideMenu" value="Fermer le menu">				
+		<input type="hidden" id="diplayMenu" name="diplayMenu" value="Afficher le menu">						
+		<input type="hidden" id="printPreview" name="printPreview" value="<<SR_printPreview>>">						
+		<input type="hidden" id="loadingMaskText" name="loadingMaskText" value="Chargement en cours...">					
+			
+		<input type="hidden" id="showSelectionsButtonTooltipSingleFrag" name="showSelectionsButtonTooltipSingleFrag" value="1 fragment a été sélectionné">				
+		<input type="hidden" id="showSelectionsButtonTooltipMultipleFrags" name="showSelectionsButtonTooltipMultipleFrags" value="fragments ont été sélectionnés">				
+		<input type="hidden" id="bootstrapMultiselect_nonSelectedText_limitSearch" name="bootstrapMultiselect_nonSelectedText_limitSearch" value="Aucune limite">				
+		<input type="hidden" id="bootstrapMultiselect_nSelectedText_limitSearch" name="bootstrapMultiselect_nSelectedText_limitSearch" value="limites">																
+		<input type="hidden" id="bootstrapMultiselect_allSelectedText_limitSearch" name="bootstrapMultiselect_allSelectedText_limitSearch" value="Toutes les limites">																			
+		<input type="hidden" id="corpusQuickSearch" name="corpusQuickSearch" value="all">
+
+		<script type="text/javascript" src="/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+		<script type="text/javascript" src="/bootstrap-notify/3.1.5/bootstrap-notify.min.js"></script>
+		<script type="text/javascript" src="/js/Config.js?v=2.1"></script>
+		<script type="text/javascript" src="/js/Object.js?v=2.1"></script>
+		<script type="text/javascript" src="/js/mainMenu.js?v=2.1"></script>
+		<script type='text/javascript' src='/js/jquery.loadmask.js?v=2.1'></script>
+		<script type='text/javascript' src='/js/cyberlex.jquery.loadmask.js?v=2.1'></script>
+		<script type='text/javascript' src='/js/selections.js?v=2.1'></script>
+		<script type='text/javascript' src='/js/UrlHelper.js?v=2.1'></script>
+		
+<script type="text/javascript" src="/js/Config.js?v=2.2"></script>
+
+<script type="text/javascript" src="/js/showdoc.js?v=2.2"></script>
+
+	</body>
+</html>

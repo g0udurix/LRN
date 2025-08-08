@@ -1,0 +1,15 @@
+
+name: Add new items to Project 3
+on:
+  issues:
+    types: [opened, reopened, transferred, labeled]
+  pull_request:
+    types: [opened, reopened, labeled, ready_for_review]
+jobs:
+  add:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/add-to-project@v1
+        with:
+          project-url: https://github.com/users/g0udurix/projects/3
+          github-token: ${{ secrets.ADD_TO_PROJECT_PAT }}
