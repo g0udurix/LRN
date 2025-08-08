@@ -1,0 +1,9 @@
+
+blank_issues_enabled: false
+contact_links:
+  - name: Project board (LRN #3)
+    url: https://github.com/users/g0udurix/projects/3
+    about: Track status, priorities and phases here
+  - name: Read the README first
+    url: https://github.com/g0udurix/LRN
+    about: Setup, CLI, and contribution guidelines

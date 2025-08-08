@@ -1,0 +1,4 @@
+$ gh label create standard/JIS -R g0udurix/LRN --color 5319e7 --description JIS --force
+[rc=0]
+
+[APPLIED] labels synchronized via gh

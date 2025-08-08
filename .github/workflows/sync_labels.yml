@@ -7,9 +7,6 @@ on:
 jobs:
   sync:
     runs-on: ubuntu-latest
-    concurrency:
-      group: labels-sync
-      cancel-in-progress: false
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5

@@ -1,0 +1,18 @@
+
+area/extractor:
+  - lrn/**
+area/schema:
+  - upgrade_and_roadmap.py
+  - **/*.sql
+  - **/*.db
+area/standards:
+  - standards/**
+  - **/standards*.md
+area/comparison:
+  - **/matrix*/**
+area/annotations:
+  - **/guides/**
+  - **/qa/**
+area/app:
+  - api/**
+  - app/**

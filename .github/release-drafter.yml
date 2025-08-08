@@ -1,0 +1,13 @@
+
+name-template: 'LRN v$NEXT_PATCH_VERSION'
+tag-template: 'v$NEXT_PATCH_VERSION'
+categories:
+  - title: 🚀 Features
+    labels: [enhancement]
+  - title: 🐛 Fixes
+    labels: [bug]
+  - title: 🧹 Maintenance
+    labels: [chore, documentation]
+change-template: '- $TITLE (#$NUMBER) by @$AUTHOR
+'
+no-changes-template: 'No user-facing changes.'

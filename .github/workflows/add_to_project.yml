@@ -1,5 +1,5 @@
 
-name: Add new items to Project 3
+name: Add new items to Project
 on:
   issues:
     types: [opened, reopened, transferred, labeled]
