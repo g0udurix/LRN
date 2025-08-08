@@ -1,6 +1,0 @@
-$ gh label create needs-triage -R g0udurix/LRN --color ededed --description New items to triage --force
-[rc=0]
-
-$ gh label create status/Backlog -R g0udurix/LRN --color 8b949e --description Backlog --force
-[rc=0]
-

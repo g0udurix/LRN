@@ -1,3 +1,0 @@
-$ gh pr edit 4 --add-label area/extractor,enhancement,status/Review,priority/P1,milestone/phase-0
-[rc=0]
-https://github.com/g0udurix/LRN/pull/4

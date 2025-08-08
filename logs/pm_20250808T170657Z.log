@@ -1,3 +1,0 @@
-$ gh label create standard/CSA -R g0udurix/LRN --color 5319e7 --description CSA --force
-[rc=0]
-

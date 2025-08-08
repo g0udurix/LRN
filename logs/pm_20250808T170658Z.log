@@ -1,6 +1,0 @@
-$ gh label create standard/ANSI -R g0udurix/LRN --color 5319e7 --description ANSI --force
-[rc=0]
-
-$ gh label create standard/ISO -R g0udurix/LRN --color 5319e7 --description ISO --force
-[rc=0]
-

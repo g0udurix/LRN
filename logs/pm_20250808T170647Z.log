@@ -1,3 +1,0 @@
-$ gh label create status/Review -R g0udurix/LRN --color a371f7 --description In review --force
-[rc=0]
-

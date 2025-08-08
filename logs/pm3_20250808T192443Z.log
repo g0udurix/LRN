@@ -1,3 +1,0 @@
-$ gh label create milestone/phase-0 -R g0udurix/LRN --color bfd4f2 --description Phase 0 – Baseline --force
-[rc=0]
-

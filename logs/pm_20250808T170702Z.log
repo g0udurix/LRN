@@ -1,7 +1,0 @@
-$ git push
-[rc=0]
-
-To https://github.com/g0udurix/LRN.git
-   cd503aa..4e6dafd  feat/history-crawl -> feat/history-crawl
-[APPLIED] self-flush bootloader written
-[DONE] changes committed and pushed

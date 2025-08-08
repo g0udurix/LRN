@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
-# LRN PM Finisher — one-shot
-# Does:
-#  - Writes CONTRIBUTING/CODE_OF_CONDUCT for humans + AI
-#  - Enforces semantic PR titles
-#  - Creates/updates milestones and milestone/* labels
-#  - Adds auto-milestone workflow (labels → milestone)
-#  - Expands CODEOWNERS per folder
-#  - Adds issue templates for standards mapping & comparison tasks
-#  - Opens/updates PR: feat/history-crawl → default branch, sets milestone & labels
-# Then self-flushes back to a tiny bootloader.
+"""
+LRN — smart bootloader + embedded finisher
+- On start, tries to refresh from GitHub (HEAD → default_branch → feat/history-crawl → main → master).
+- If refresh succeeds, immediately re-execs itself with the same args.
+- If refresh fails (e.g., 404), runs the embedded one-shot finisher so you're never blocked.
+- After a successful --apply run, writes the enhanced bootloader for next time and re-execs.
+
+Usage:
+  python upgrade_and_roadmap.py --apply [--no-refresh]
+"""
 
 import os, sys, json, subprocess, shutil, urllib.request, urllib.error
 from pathlib import Path
@@ -16,19 +16,70 @@ from datetime import datetime, timezone, timedelta
 
 REPO_SLUG = os.getenv("LRN_REPO", "g0udurix/LRN")
 APPLY = "--apply" in sys.argv
+NO_REFRESH = "--no-refresh" in sys.argv
 
-# ----------------------------------------------------------------------------------
-# Utilities
-# ----------------------------------------------------------------------------------
+# ==================================================================================
+# Smart bootloader
+# ==================================================================================
 
 def ts() -> str:
     return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+def _try_refresh_and_exec() -> bool:
+    if NO_REFRESH or os.environ.get("LRN_BOOTSTRAPPED") == "1":
+        return False
+    candidates = []
+    # 1) current local branch (if git present)
+    try:
+        p = subprocess.run(["git", "rev-parse", "--abbrev-ref", "HEAD"], capture_output=True, text=True)
+        if p.returncode == 0:
+            br = (p.stdout or "").strip()
+            if br and br != "HEAD":
+                candidates.append(br)
+    except Exception:
+        pass
+    # 2) GitHub API default branch
+    try:
+        with urllib.request.urlopen(f"https://api.github.com/repos/{REPO_SLUG}", timeout=15) as r:
+            info = json.loads(r.read().decode("utf-8"))
+            db = info.get("default_branch")
+            if db:
+                candidates.append(db)
+    except Exception:
+        pass
+    # 3) fallbacks
+    candidates += ["feat/history-crawl", "main", "master"]
+
+    tried = []
+    for br in [b for b in candidates if b]:
+        url = f"https://raw.githubusercontent.com/{REPO_SLUG}/{br}/upgrade_and_roadmap.py"
+        try:
+            data = urllib.request.urlopen(url, timeout=30).read()
+            path = Path(__file__)
+            if not path.exists() or path.read_bytes() != data:
+                path.write_bytes(data)
+            env = os.environ.copy(); env["LRN_BOOTSTRAPPED"] = "1"
+            os.execvpe(sys.executable, [sys.executable, __file__] + [a for a in sys.argv[1:] if a != "--no-refresh"], env)
+            return True  # not reached
+        except Exception as e:
+            tried.append((url, str(e)))
+    print("[bootloader] refresh failed; falling back to embedded finisher. Tried:")
+    for url, err in tried:
+        print(" -", url, "->", err)
+    return False
+
+# Try refresh; if it re-execs, we won't return here
+_try_refresh_and_exec()
+
+# ==================================================================================
+# Embedded one-shot finisher (governance + milestones + PR + gitignore)
+# ==================================================================================
 
 def log(msg: str):
     print(msg)
     try:
         Path("logs").mkdir(exist_ok=True)
-        with open(Path("logs")/f"pm3_{datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ')}.log", "a", encoding="utf-8") as f:
+        with open(Path("logs")/f"pm_fix_{datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ')}.log", "a", encoding="utf-8") as f:
             f.write(msg+"\n")
     except Exception:
         pass
@@ -44,15 +95,13 @@ def run(cmd, cwd: Path|None=None, check=False):
         raise RuntimeError(f"Command failed rc={p.returncode}: {cmd_str}\n{err}")
     return p.returncode, out, err
 
-# ----------------------------------------------------------------------------------
-# Git helpers
-# ----------------------------------------------------------------------------------
+# --------------------------- Git helpers -----------------------------------------
 
 def default_branch_from_git() -> str|None:
-    rc, out, _ = run(["git","symbolic-ref","refs/remotes/origin/HEAD"])  # refs/remotes/origin/<branch>
+    rc, out, _ = run(["git","symbolic-ref","refs/remotes/origin/HEAD"])
     if rc == 0 and out:
         return out.strip().split("/")[-1]
-    rc, out, _ = run(["git","rev-parse","--abbrev-ref","origin/HEAD"])  # fallback
+    rc, out, _ = run(["git","rev-parse","--abbrev-ref","origin/HEAD"])
     if rc == 0 and out:
         return out.strip().split("/")[-1]
     return None
@@ -68,13 +117,11 @@ def default_branch_from_api() -> str|None:
 def get_default_branch() -> str:
     return default_branch_from_git() or default_branch_from_api() or "master"
 
-
 def git_pull(repo_dir: Path):
     if not (repo_dir/".git").exists():
         log("[WARN] not a git repo, skipping pull"); return
     run(["git","fetch","--all"], cwd=repo_dir)
     run(["git","pull","--rebase","--autostash"], cwd=repo_dir)
-
 
 def git_commit_push(repo_dir: Path, message: str):
     if not (repo_dir/".git").exists():
@@ -87,9 +134,7 @@ def git_commit_push(repo_dir: Path, message: str):
     run(["git","push"], cwd=repo_dir)
     return True
 
-# ----------------------------------------------------------------------------------
-# Ensure files
-# ----------------------------------------------------------------------------------
+# --------------------------- Ensure files ----------------------------------------
 
 def ensure_file(path: Path, content: str):
     if path.exists() and path.read_text(encoding="utf-8") == content:
@@ -103,9 +148,26 @@ def ensure_file(path: Path, content: str):
         log(f"[DRY] ensure {path} — would write")
         return False
 
-# ----------------------------------------------------------------------------------
-# Content payloads
-# ----------------------------------------------------------------------------------
+def ensure_gitignore_lines(repo_dir: Path, lines: list[str]):
+    gi = repo_dir/".gitignore"
+    existing = gi.read_text(encoding="utf-8").splitlines() if gi.exists() else []
+    need = [ln for ln in lines if ln not in existing]
+    if not need:
+        log("[OK] .gitignore — up-to-date"); return False
+    if APPLY:
+        with open(gi, "a", encoding="utf-8") as f:
+            if existing and existing[-1].strip() != "":
+                f.write("\n")
+            f.write("\n# LRN autogenerated ignores\n")
+            for ln in need:
+                f.write(ln+"\n")
+        log("[APPLIED] .gitignore — appended ignores")
+        return True
+    else:
+        log("[DRY] .gitignore — would append: " + ", ".join(need))
+        return False
+
+# --------------------------- Payloads --------------------------------------------
 
 CONTRIBUTING = """
 # Contributing to LRN (Humans & AI agents)
@@ -186,7 +248,6 @@ jobs:
         uses: actions/github-script@v7
         with:
           script: |
-            const isPR = !!context.payload.pull_request;
             const item = context.payload.issue || context.payload.pull_request;
             const labels = (item.labels || []).map(l => typeof l === 'string' ? l : l.name);
             const mapping = {
@@ -204,7 +265,6 @@ jobs:
             const {data: milestones} = await github.rest.issues.listMilestones({owner, repo, state: 'open'});
             let m = milestones.find(x => x.title === wanted);
             if (!m) {
-              // Fallback: check closed too
               const {data: all} = await github.rest.issues.listMilestones({owner, repo, state: 'all'});
               m = all.find(x => x.title === wanted);
             }
@@ -274,52 +334,64 @@ labels: [area/comparison, status/Todo]
 - [ ] Follow-ups filed (gaps, obsolescence flags)
 """
 
-# ----------------------------------------------------------------------------------
-# Labels (ensure milestone/* exist now)
-# ----------------------------------------------------------------------------------
+# --------------------------- Labels & milestones ---------------------------------
 
 def ensure_milestone_labels():
     if not shutil.which("gh"):
         log("[WARN] gh not installed; skipping label sync for milestones"); return False
-    pairs = [
+    for name, desc, color in [
         ("milestone/phase-0", "Phase 0 – Baseline", "bfd4f2"),
         ("milestone/phase-1", "Phase 1 – Corpus & Standards", "bfd4f2"),
         ("milestone/phase-2", "Phase 2 – Comparison Engine", "bfd4f2"),
         ("milestone/phase-3", "Phase 3 – Annotations & Issues", "bfd4f2"),
         ("milestone/phase-4", "Phase 4 – Guidance UI", "bfd4f2"),
-    ]
-    ok=True
-    for name, desc, color in pairs:
-        rc,_,_ = run(["gh","label","create", name, "-R", REPO_SLUG, "--color", color, "--description", desc, "--force"])
-        ok = ok and (rc==0)
-    return ok
+    ]:
+        run(["gh","label","create", name, "-R", REPO_SLUG, "--color", color, "--description", desc, "--force"]) 
+    return True
 
-# ----------------------------------------------------------------------------------
-# Milestones (create/update via gh api)
-# ----------------------------------------------------------------------------------
+def gh_find_milestone_number(title: str) -> str|None:
+    if not shutil.which("gh"):
+        return None
+    rc, out, _ = run([
+        "gh","api", f"repos/{REPO_SLUG}/milestones", "--paginate",
+        "--jq", f'.[] | select(.title=="{title}") | .number'
+    ])
+    if rc==0 and out.strip():
+        return out.strip().splitlines()[0]
+    return None
 
 def ensure_milestone(title: str, description: str, due_on_iso: str):
     if not shutil.which("gh"):
         log("[WARN] gh not installed; skipping milestones"); return False
-    # try find by title
-    rc, out, _ = run(["gh","api", f"repos/{REPO_SLUG}/milestones", "--paginate", "-q", f".[?title=='{title}']|[0].number"])
-    num = (out or "").strip()
+    num = gh_find_milestone_number(title)
     if num:
-        run(["gh","api", f"repos/{REPO_SLUG}/milestones/{num}", "-X","PATCH", "-f", f"description={description}", "-f", f"due_on={due_on_iso}"])
-        log(f"[OK] milestone '{title}' — updated"); return True
-    rc, out, err = run(["gh","api", f"repos/{REPO_SLUG}/milestones", "-X","POST", "-f", f"title={title}", "-f", f"description={description}", "-f", f"due_on={due_on_iso}"])
+        run(["gh","api", f"repos/{REPO_SLUG}/milestones/{num}", "-X","PATCH",
+             "-f", f"description={description}", "-f", f"due_on={due_on_iso}"])
+        log(f"[OK] milestone '{title}' — updated")
+        return True
+    rc, out, err = run(["gh","api", f"repos/{REPO_SLUG}/milestones", "-X","POST",
+                        "-f", f"title={title}", "-f", f"description={description}", "-f", f"due_on={due_on_iso}"])
     if rc==0:
-        log(f"[APPLIED] milestone '{title}' — created"); return True
-    log(f"[WARN] failed to create milestone '{title}': {err}"); return False
+        log(f"[APPLIED] milestone '{title}' — created")
+        return True
+    if "already_exists" in (out + err) or "Validation Failed" in (out + err) or "422" in (out + err):
+        num = gh_find_milestone_number(title)
+        if num:
+            run(["gh","api", f"repos/{REPO_SLUG}/milestones/{num}", "-X","PATCH",
+                 "-f", f"description={description}", "-f", f"due_on={due_on_iso}"])
+            log(f"[OK] milestone '{title}' — existed; updated")
+            return True
+        log(f"[OK] milestone '{title}' — already existed")
+        return True
+    log(f"[WARN] failed to create/update milestone '{title}': {err or out}")
+    return False
 
-# ----------------------------------------------------------------------------------
-# PR: feat/history-crawl → default branch
-# ----------------------------------------------------------------------------------
+# --------------------------- PR management ---------------------------------------
 
 def open_or_update_pr(head: str, base: str):
     if not shutil.which("gh"):
         log("[WARN] gh not installed; cannot manage PR"); return False
-    rc, out, _ = run(["gh","pr","list","--head", head, "--base", base, "--state","all", "--json","number,isDraft,title,url"])
+    rc, out, _ = run(["gh","pr","list","--head", head, "--base", base, "--state","all", "--json","number,isDraft,title,url"]) 
     try:
         arr = json.loads(out) if out else []
     except Exception:
@@ -327,7 +399,7 @@ def open_or_update_pr(head: str, base: str):
     milestone_title = "Phase 0 – Baseline"
     labels = "area/extractor,enhancement,status/Review,priority/P1,milestone/phase-0"
     if arr:
-        pr_num = str(arr[0]["number"])
+        pr_num = str(arr[0]["number"]) 
         run(["gh","pr","edit", pr_num, "--base", base, "--milestone", milestone_title])
         run(["gh","pr","edit", pr_num, "--add-label", labels])
         if arr[0].get("isDraft"):
@@ -343,36 +415,54 @@ def open_or_update_pr(head: str, base: str):
     rc, out, _ = run(["gh","pr","create", "--base", base, "--head", head, "--title", title, "--body", body, "--milestone", milestone_title])
     if rc==0:
         run(["gh","pr","edit", "--add-label", labels])
-        run(["gh","pr","merge", "--auto", "--squash"])  # ignore failures
+        run(["gh","pr","merge", "--auto", "--squash"])
         log("[APPLIED] PR created & prepped")
         return True
     log("[WARN] failed to create PR"); return False
 
-# ----------------------------------------------------------------------------------
-# Bootloader
-# ----------------------------------------------------------------------------------
+# --------------------------- Bootloader writer -----------------------------------
 
-def write_bootloader(branch: str):
-    raw = f"https://raw.githubusercontent.com/{REPO_SLUG}/{branch}/upgrade_and_roadmap.py"
-    stub = (
-        "#!/usr/bin/env python3\n"
-        f"# upgrade_and_roadmap.py bootloader — last run completed at {ts()} UTC\n"
-        "import sys, urllib.request\n"
-        f"RAW = \"{raw}\"\n"
-        "try:\n"
-        "    data = urllib.request.urlopen(RAW, timeout=30).read()\n"
-        "    open(__file__, \"wb\").write(data)\n"
-        "    print(\"[bootloader] refreshed upgrade_and_roadmap.py from\", RAW)\n"
-        "    print(\"[bootloader] run it again to execute the latest version.\")\n"
-        "except Exception as e:\n"
-        "    print(\"[bootloader] failed to refresh:\", e)\n"
-        "    sys.exit(1)\n"
-    )
+def write_bootloader_and_exec():
+    stub = f"""#!/usr/bin/env python3
+# upgrade_and_roadmap.py bootloader — last run completed at {ts()} UTC
+import sys, os, json, urllib.request, subprocess
+REPO = os.getenv('LRN_REPO', '{REPO_SLUG}')
+if '--no-refresh' in sys.argv:
+    sys.argv.remove('--no-refresh')
+# prefer current branch → default → feat/history-crawl → main → master
+candidates = []
+try:
+    p = subprocess.run(['git','rev-parse','--abbrev-ref','HEAD'], capture_output=True, text=True)
+    if p.returncode==0:
+        br=(p.stdout or '').strip()
+        if br and br!='HEAD': candidates.append(br)
+except Exception: pass
+try:
+    with urllib.request.urlopen(f'https://api.github.com/repos/{{REPO}}', timeout=15) as r:
+        info = json.loads(r.read().decode('utf-8'))
+        db = info.get('default_branch')
+        if db: candidates.append(db)
+except Exception: pass
+candidates += ['feat/history-crawl','main','master']
+tried=[]
+for br in [b for b in candidates if b]:
+    url=f'https://raw.githubusercontent.com/{{REPO}}/{{br}}/upgrade_and_roadmap.py'
+    try:
+        data=urllib.request.urlopen(url, timeout=30).read()
+        open(__file__, 'wb').write(data)
+        env=os.environ.copy(); env['LRN_BOOTSTRAPPED']='1'
+        os.execvpe(sys.executable, [sys.executable, __file__]+sys.argv[1:], env)
+    except Exception as e:
+        tried.append((url,str(e)))
+print('[bootloader] failed to refresh from any candidate branch. Tried:')
+for url,err in tried: print(' -', url, '->', err)
+print('Hint: run with --no-refresh to use the embedded finisher if present.')
+sys.exit(1)
+"""
     Path(__file__).write_text(stub, encoding="utf-8")
+    # leave re-exec for next run
 
-# ----------------------------------------------------------------------------------
-# Main
-# ----------------------------------------------------------------------------------
+# --------------------------- Main -------------------------------------------------
 
 def main():
     repo_dir = Path.cwd()
@@ -390,28 +480,32 @@ def main():
     wrote |= ensure_file(repo_dir/".github"/"ISSUE_TEMPLATE"/"standards_mapping.md", ISSUE_TEMPLATE_STANDARDS)
     wrote |= ensure_file(repo_dir/".github"/"ISSUE_TEMPLATE"/"comparison_task.md", ISSUE_TEMPLATE_COMPARISON)
 
-    # Ensure labels for milestones
+    # .gitignore and untrack already-committed blobs
+    wrote |= ensure_gitignore_lines(repo_dir, [
+        'logs/', 'qdrant_storage/', '*.sqlite', '*.db', '*.db-journal', '__pycache__/', '*.pyc'
+    ])
+    if APPLY and shutil.which('git'):
+        run(["git","rm","-r","--cached","--ignore-unmatch","logs","qdrant_storage"], cwd=repo_dir)
+
+    # Labels & milestones
     ensure_milestone_labels()
 
-    # Create/update milestones with a rolling schedule
     base = datetime.now(timezone.utc)
-    phases = [
+    for title, desc, due in [
         ("Phase 0 – Baseline", "Minimal viable schema, ingestion & search", base + timedelta(days=7)),
         ("Phase 1 – Corpus & Standards", "Import corpora, map CSA/ANSI/ISO", base + timedelta(days=45)),
         ("Phase 2 – Comparison Engine", "Matrix/ranking across jurisdictions", base + timedelta(days=75)),
         ("Phase 3 – Annotations & Issues", "Notes, flags, reviews, orientations", base + timedelta(days=105)),
         ("Phase 4 – Guidance UI", "Advices, cheat sheets, Q&A", base + timedelta(days=135)),
-    ]
-    for title, desc, due in phases:
+    ]:
         ensure_milestone(title, desc, due.strftime("%Y-%m-%dT%H:%M:%SZ"))
 
-    # PR for feat/history-crawl
     open_or_update_pr(head="feat/history-crawl", base=branch)
 
     if APPLY:
-        did_push = git_commit_push(repo_dir, f"chore(governance): AI contributing, CoC, milestone automation, templates ({ts()})")
-        write_bootloader(branch)
-        log("[APPLIED] self-flush bootloader written")
+        did_push = git_commit_push(repo_dir, f"chore(governance): AI contributing, CoC, milestone fixes, templates, gitignore ({ts()})")
+        write_bootloader_and_exec()
+        print("[APPLIED] enhanced bootloader written (multi-branch). Re-run will fetch latest.")
         if did_push:
             log("[DONE] changes committed and pushed")
         else:
