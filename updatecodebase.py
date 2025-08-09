@@ -445,7 +445,7 @@ def build_files(owner: str, repo: str) -> dict[str, str]:
     """
 
     PROJECTS_SYNC = f"""
-    name: Projects sync (add & fields)
+    name: Projects sync
     on:
       issues:
         types: [opened, labeled]

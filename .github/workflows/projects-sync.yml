@@ -1,5 +1,5 @@
 
-    name: Projects sync (add & fields)
+    name: Projects sync
     on:
       issues:
         types: [opened, labeled]
@@ -24,4 +24,4 @@
             env:
               GH_TOKEN: ${ '{' } secrets.PROJECTS_PAT { '}' }
             run: |
-              echo "Field sync placeholder at 2025-08-09T13:12:16Z"
+              echo "Field sync placeholder at 2025-08-09T13:21:11Z"
