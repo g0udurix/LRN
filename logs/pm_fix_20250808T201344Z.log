@@ -1,0 +1,6 @@
+$ gh label create milestone/phase-4 -R g0udurix/LRN --color bfd4f2 --description Phase 4 – Guidance UI --force
+[rc=0]
+
+$ gh api repos/g0udurix/LRN/milestones --paginate --jq .[] | select(.title=="Phase 0 – Baseline") | .number
+[rc=0]
+1

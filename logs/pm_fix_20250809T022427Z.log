@@ -1,0 +1,7 @@
+$ git push
+[rc=0]
+
+To https://github.com/g0udurix/LRN.git
+   f3b2ee4..6bfe820  feat/history-crawl -> feat/history-crawl
+[APPLIED] enhanced bootloader written (multi-branch). Re-run will fetch latest.
+[DONE] changes committed and pushed

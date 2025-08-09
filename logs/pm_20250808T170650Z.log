@@ -1,0 +1,6 @@
+$ gh label create area/standards -R g0udurix/LRN --color 1d76db --description Standards mapping --force
+[rc=0]
+
+$ gh label create area/comparison -R g0udurix/LRN --color 1d76db --description Matrix/ranking engine --force
+[rc=0]
+

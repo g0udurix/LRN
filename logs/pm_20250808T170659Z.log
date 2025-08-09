@@ -1,0 +1,6 @@
+$ gh label create standard/EN -R g0udurix/LRN --color 5319e7 --description EN --force
+[rc=0]
+
+$ gh label create standard/BS -R g0udurix/LRN --color 5319e7 --description BSI --force
+[rc=0]
+

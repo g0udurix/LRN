@@ -1,0 +1,8 @@
+$ git switch -c chore/bootstrap-workflows origin/master
+[rc=0]
+branch 'chore/bootstrap-workflows' set up to track 'origin/master'.
+Switched to a new branch 'chore/bootstrap-workflows'
+$ git checkout feat/history-crawl -- .github/workflows/semantic-pr.yml .github/workflows/auto-milestone.yml .github/labels.yml .github/workflows/labels-sync.yml .github/workflows/projects-sync.yml .github/release-drafter.yml .github/workflows/release-drafter.yml .github/dependabot.yml .github/workflows/ci.yml .github/pull_request_template.md CODEOWNERS CONTRIBUTING.md CODE_OF_CONDUCT.md scripts/labels_sync.py
+[rc=1]
+
+error: pathspec '.github/pull_request_template.md' did not match any file(s) known to git

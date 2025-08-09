@@ -1,0 +1,26 @@
+$ git pull --rebase --autostash
+[rc=0]
+Already up to date.
+[APPLIED] ensure /Users/jeremie/Documents/@2025/scripts/Legislation/CONTRIBUTING.md — written
+[APPLIED] ensure /Users/jeremie/Documents/@2025/scripts/Legislation/CODE_OF_CONDUCT.md — written
+[APPLIED] ensure /Users/jeremie/Documents/@2025/scripts/Legislation/CODEOWNERS — written
+[APPLIED] ensure /Users/jeremie/Documents/@2025/scripts/Legislation/.github/ISSUE_TEMPLATE/standards_mapping.md — written
+[APPLIED] ensure /Users/jeremie/Documents/@2025/scripts/Legislation/.github/ISSUE_TEMPLATE/comparison_task.md — written
+[APPLIED] ensure /Users/jeremie/Documents/@2025/scripts/Legislation/.github/pull_request_template.md — written
+[APPLIED] ensure /Users/jeremie/Documents/@2025/scripts/Legislation/.github/workflows/semantic-pr.yml — written
+[APPLIED] ensure /Users/jeremie/Documents/@2025/scripts/Legislation/.github/workflows/auto-milestone.yml — written
+[APPLIED] ensure /Users/jeremie/Documents/@2025/scripts/Legislation/.github/labels.yml — written
+[APPLIED] ensure /Users/jeremie/Documents/@2025/scripts/Legislation/.github/workflows/labels-sync.yml — written
+[APPLIED] ensure /Users/jeremie/Documents/@2025/scripts/Legislation/.github/workflows/projects-sync.yml — written
+[APPLIED] ensure /Users/jeremie/Documents/@2025/scripts/Legislation/.github/release-drafter.yml — written
+[APPLIED] ensure /Users/jeremie/Documents/@2025/scripts/Legislation/.github/workflows/release-drafter.yml — written
+[APPLIED] ensure /Users/jeremie/Documents/@2025/scripts/Legislation/.github/dependabot.yml — written
+[APPLIED] ensure /Users/jeremie/Documents/@2025/scripts/Legislation/.github/workflows/ci.yml — written
+[APPLIED] ensure /Users/jeremie/Documents/@2025/scripts/Legislation/scripts/labels_sync.py — written
+[OK] .gitignore — up-to-date
+$ git rm -r --cached --ignore-unmatch logs qdrant_storage
+[rc=0]
+
+$ gh api repos/g0udurix/LRN/milestones --paginate --jq .[] | select(.title=="Phase 0 – Baseline") | .number
+[rc=0]
+1

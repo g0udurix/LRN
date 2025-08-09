@@ -1,0 +1,3 @@
+$ gh issue create -R g0udurix/LRN -t smoke: projects mapping (2025-08-09T02:24:27Z) -b automated projects mapping smoke -l status/Todo,priority/P1
+[rc=0]
+https://github.com/g0udurix/LRN/issues/5

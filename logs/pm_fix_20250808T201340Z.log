@@ -1,0 +1,21 @@
+$ git symbolic-ref refs/remotes/origin/HEAD
+[rc=0]
+refs/remotes/origin/master
+[info] repo=g0udurix/LRN default_branch=master apply=True
+$ git fetch --all
+[rc=0]
+
+$ git pull --rebase --autostash
+[rc=0]
+Already up to date.
+[OK] ensure /Users/jeremie/Documents/@2025/scripts/Legislation/CONTRIBUTING.md — up-to-date
+[OK] ensure /Users/jeremie/Documents/@2025/scripts/Legislation/CODE_OF_CONDUCT.md — up-to-date
+[OK] ensure /Users/jeremie/Documents/@2025/scripts/Legislation/.github/workflows/semantic-pr.yml — up-to-date
+[OK] ensure /Users/jeremie/Documents/@2025/scripts/Legislation/.github/workflows/auto-milestone.yml — up-to-date
+[OK] ensure /Users/jeremie/Documents/@2025/scripts/Legislation/CODEOWNERS — up-to-date
+[OK] ensure /Users/jeremie/Documents/@2025/scripts/Legislation/.github/ISSUE_TEMPLATE/standards_mapping.md — up-to-date
+[OK] ensure /Users/jeremie/Documents/@2025/scripts/Legislation/.github/ISSUE_TEMPLATE/comparison_task.md — up-to-date
+[OK] .gitignore — up-to-date
+$ git rm -r --cached --ignore-unmatch logs qdrant_storage
+[rc=0]
+

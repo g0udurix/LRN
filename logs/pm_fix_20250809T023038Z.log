@@ -1,0 +1,7 @@
+$ gh workflow list --json path --jq .[].path
+[rc=0]
+.github/workflows/ci.yml
+.github/workflows/labels-sync.yml
+$ git fetch origin
+[rc=0]
+

@@ -1,0 +1,4 @@
+$ git symbolic-ref refs/remotes/origin/HEAD
+[rc=0]
+refs/remotes/origin/master
+[info] repo=g0udurix/LRN default_branch=master apply=True

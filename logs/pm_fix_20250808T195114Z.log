@@ -1,0 +1,10 @@
+$ gh label create milestone/phase-4 -R g0udurix/LRN --color bfd4f2 --description Phase 4 – Guidance UI --force
+[rc=0]
+
+$ gh api repos/g0udurix/LRN/milestones --paginate --jq .[] | select(.title=="Phase 0 – Baseline") | .number
+[rc=0]
+1
+$ gh api repos/g0udurix/LRN/milestones/1 -X PATCH -f description=Minimal viable schema, ingestion & search -f due_on=2025-08-15T19:51:14Z
+[rc=0]
+{"url":"https://api.github.com/repos/g0udurix/LRN/milestones/1","html_url":"https://github.com/g0udurix/LRN/milestone/1","labels_url":"https://api.github.com/repos/g0udurix/LRN/milestones/1/labels","id":13453843,"node_id":"MI_kwDOPYS1Ms4AzUoT","number":1,"title":"Phase 0 – Baseline","description":"Minimal viable schema, ingestion & search","creator":{"login":"g0udurix","id":135032797,"node_id":"U_kgDOCAxv3Q","avatar_url":"https://avatars.githubusercontent.com/u/135032797?v=4","gravatar_id":"","url":"https://api.github.com/users/g0udurix","html_url":"https://github.com/g0udurix","followers_url":"https://api.github.com/users/g0udurix/followers","following_url":"https://api.github.com/users/g0udurix/following{/other_user}","gists_url":"https://api.github.com/users/g0udurix/gists{/gist_id}","starred_url":"https://api.github.com/users/g0udurix/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/g0udurix/subscriptions","organizations_url":"https://api.github.com/users/g0udurix/orgs","repos_url":"https://api.github.com/users/g0udurix/repos","events_url":"https://api.github.com/users/g0udurix/events{/privacy}","received_events_url":"https://api.github.com/users/g0udurix/received_events","type":"User","user_view_type":"public","site_admin":false},"open_issues":1,"closed_issues":0,"state":"open","created_at":"2025-08-08T18:54:37Z","updated_at":"2025-08-08T18:54:42Z","due_on":"2025-08-15T07:00:00Z","closed_at":null}
+[OK] milestone 'Phase 0 – Baseline' — updated

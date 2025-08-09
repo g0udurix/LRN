@@ -1,0 +1,6 @@
+$ gh label create jurisdiction/UK -R g0udurix/LRN --color 0e8a16 --description United Kingdom --force
+[rc=0]
+
+$ gh label create jurisdiction/FR -R g0udurix/LRN --color 0e8a16 --description France --force
+[rc=0]
+
