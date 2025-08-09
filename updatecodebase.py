@@ -396,7 +396,27 @@ def build_files(owner: str, repo: str) -> dict[str, str]:
         runs-on: ubuntu-latest
         steps:
           - uses: actions/checkout@v4
+            with:
+              fetch-depth: 1
+          - name: Determine default branch
+            id: def
+            run: |
+              branch=$(git remote show origin | awk '/HEAD branch/ {print $NF}')
+              echo "branch=${branch:-master}" >> $GITHUB_OUTPUT
+          - name: Fetch default branch
+            run: |
+              git fetch --no-tags --depth=1 origin "${{ steps.def.outputs.branch }}":refs/remotes/origin/"${{ steps.def.outputs.branch }}"
+          - name: Check release-drafter config on default branch
+            id: check
+            run: |
+              if git show "origin/${{ steps.def.outputs.branch }}:.github/release-drafter.yml" >/dev/null 2>&1; then
+                echo "skip=false" >> $GITHUB_OUTPUT
+              else
+                echo "Config not on default branch (${{ steps.def.outputs.branch }}); skipping."
+                echo "skip=true" >> $GITHUB_OUTPUT
+              fi
           - uses: release-drafter/release-drafter@v5
+            if: steps.check.outputs.skip != 'true'
             env:
               GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
             with:
@@ -495,7 +515,7 @@ def main() -> int:
       3) git push
       4) Open/refresh a PR → check Actions:
          - CI (should pass)
-         - Release Drafter (will update the draft)
+         - Release Drafter (skips on branches; runs after merge to default branch)
          - Labels sync (after push to master)
          - Projects sync (needs secret PROJECTS_PAT; project #{'{'}3{'}'}: https://github.com/users/{owner}/projects/3)
       5) Create a test issue labeled `status/Todo, priority/P1` → it should be auto-added to the board.
