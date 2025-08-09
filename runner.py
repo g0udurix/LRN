@@ -1,4 +1,3 @@
-
 #!/usr/bin/env python3
 """
 LRN launcher — restores `upgrade_and_roadmap.py` then delegates to it.
