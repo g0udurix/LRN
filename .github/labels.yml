@@ -1,0 +1,39 @@
+
+    - name: status/Todo
+      color: 0366d6
+      description: Not started
+    - name: status/Doing
+      color: fbca04
+      description: In progress
+    - name: status/Review
+      color: 0e8a16
+      description: In review
+    - name: status/Blocked
+      color: d73a4a
+      description: Blocked by something else
+
+    - name: priority/P0
+      color: b60205
+      description: Must do now
+    - name: priority/P1
+      color: d93f0b
+      description: Important
+    - name: priority/P2
+      color: fbca04
+      description: Useful
+    - name: priority/P3
+      color: cccccc
+      description: Nice to have
+
+    - name: area/extractor
+      color: 1d76db
+    - name: area/parser
+      color: 1d76db
+    - name: area/engine
+      color: 1d76db
+    - name: area/ui
+      color: 1d76db
+    - name: area/infra
+      color: 1d76db
+    - name: area/data
+      color: 1d76db

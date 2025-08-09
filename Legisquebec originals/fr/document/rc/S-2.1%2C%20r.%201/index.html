@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; CHARSET=utf-8"></meta>
+		<meta name="dc.title" content=" - Règlement sur l’Association paritaire pour la santé et la sécurité du travail du secteur de la construction">
+		<meta name="dc.creator" content="">
+		<meta name="dc.language" scheme="ISO639-2"	content="fre">
+		<meta name="dc.subject" content="">
+		<meta name="Keywords" content="">
+		<meta name="dc.Publisher" content="">
+		<meta name="dc.Contributor" content="Irosoft, architecture de gestion de l'information législative - legal information management system">
+		<meta name="dc.Description" content="">
+		<meta name="Description" content="">
+		<meta name="Title" content=" - Règlement sur l’Association paritaire pour la santé et la sécurité du travail du secteur de la construction">
+		<meta name="dc.date.created" content="2022-09-02">
+		<meta name="dc.date.modified" content="2022-09-02">
+
+		<title>Légis Québec</title>
+		
+		<link rel="shortcut icon" href="/img/favicon.ico">
+		<link rel="stylesheet" href="/bootstrap/5.1.3/css/bootstrap.min.css">
+		<link rel='stylesheet' href='/CSS/jquery.loadmask.css?v=2.1'>
+		<link rel='stylesheet' href='/CSS/cyberlex.jquery.loadmask.css?v=2.1'>
+		
+		
+<link rel="stylesheet" type="text/css" href="/CSS/FragmentView.css?v=2.2"></link>
+
+		<link rel="stylesheet" href="/css/publishing-bootstrap.css?v=2.1">
+		<link rel="stylesheet" href="/css/publishing.css?v=2.1">
+		<link rel="stylesheet" href="/CSS/cyberlex-bootstrap.min.css?v=2.1">
+		<link rel="stylesheet" href="/CSS/cyberlex.css?v=2.1">
+		<link rel="stylesheet" href="/css/font-awesome.min.css?v=2.1">
+		<link rel="stylesheet" href="/CSS/core.css?v=2.1">
+		<link rel="stylesheet" href="/CSS/client.css?v=2.1">
+		<link rel="stylesheet" href="/css/publications-quebec.css?v=2.1">
+		<link rel="stylesheet" href="/css/eoq.css?v=2.1">
+
+		<script type="text/javascript" src="/jquery-ui/1.13.0/external/jquery/jquery.js?v=2.1"></script>
+		<script type="text/javascript" src="/jquery-ui/1.13.0/jquery-ui.min.js?v=2.1"></script>
+		<script type="text/javascript" src="/jquery/3.6.0/jquery.min.js?v=2.1"></script>
+		<script type="text/javascript" src="/DOMPurify/dist/purify.min.js?v=2.1"></script>
+	</head>
+
+	<body>
+		<div id="wrap">
+			<div class="main-header">
+				<div class="float-end">
+					<div class="vague"></div>
+					<ul class="pub-quebec">
+						<li><a href="/fr/">Accueil</a></li>
+						<li><a href="/fr/contenu/joindre" >Nous joindre</a></li>
+						<li><a href="/fr/contenu/plan" >Plan du site</a></li>
+						<li><a href="https://www.quebec.ca/" target="_blank">Québec.ca</a></li>
+						<li><a href="/fr/contenu/FAQ" >FAQ</a></li>
+						<li class='spacer-pub-quebec'></li>
+						<li><a id="langSwitcher" class="" href="/en/document/cr/S-2.1,%20r.%201%20">English</a></li>
+
+					</ul>
+					<div class="mtess">
+						<a href="https://www.mtess.gouv.qc.ca/" class="mtessTitle" target="_blank">Ministère de l'Emploi et de la Solidarité sociale</a>
+					</div>
+				</div>
+				<a class="logo-pub-quebec" href="http://www.publicationsduquebec.gouv.qc.ca/" target="_blank"></a>
+			</div>
+			<hr/>
+			
+			<!-- Header -->
+			<nav class="navbar navbar-light">
+				<div class="container-fluid colorTheme">
+					<div class="navbar-header">
+						<div class="row">
+							<div class="col-sm-3">
+								<div class="input-group" class="pt-2">
+									<input type="text" class="form-control" data-bs-placement="top" data-bs-toggle="tooltip" placeholder="Recherche" id="quickSearchText" title="Rechercher dans lois et règlements codifiés">
+									<span class="input-group-btn">
+										<button class="btn btn-primary" type="button" id="goResult" data-bs-placement="top" data-bs-toggle="tooltip" title="Recherche">
+											<span class="fa fa-search" aria-hidden="true"></span>
+										</button>
+									</span>
+								</div>
+								<div class="py-2"><a href="/fr/recherche?t=a">Recherche avancée</a></div>
+							</div><div class="col-sm-9 d-flex justify-content-between">
+									<a class="navbar-brand logo-fr logo" title="Accueil" href="/fr/"></a>
+							</div>
+						</div>
+					</div>
+				</div><!-- /.container-fluid -->
+			</nav>
+			<!-- Content -->			
+			<div class="row">
+				<div class="col-sm-3">
+					<div class="list-group">
+	<a href="#" class="list-group-item active disabled bg-primary bg-gradient text-white">Lois et règlements codifiés</a>
+	<a href="/fr/chapitres?corpus=lois" id="chapterStatutes" class="list-group-item">Lois codifiées</a>
+	<a href="/fr/chapitres?corpus=regs" id="chapterRegulations" class="list-group-item">Règlements codifiés</a>
+	
+	<a href="#" class="list-group-item active disabled bg-primary bg-gradient text-white">Lois et règlements annuels</a>
+	<a href="/fr/annuels?filtre=lois" id="browseannual-statutes" class="list-group-item">Lois annuelles</a>
+	<a href="/fr/annuels?filtre=regs" id="browseannual-regs" class="list-group-item">Règlements annuels</a>
+	
+	<a href="#" class="list-group-item active disabled bg-primary bg-gradient text-white">Information complémentaire</a>
+	<a id="content-editoff" href="/fr/contenu/editeurofficiel" class="list-group-item">L’Éditeur officiel du Québec</a>
+	<a id="content-neuf" href="/fr/contenu/neuf" class="list-group-item">Quoi de neuf?</a>
+	<a id="content-noteinfo" href="/fr/contenu/noteinfo" class="list-group-item">Note d’information</a>
+	<a id="content-mjqpol" href="/fr/contenu/mjqpol" class="list-group-item">Politique du ministre de la Justice</a>
+	<a id="content-modlois" href="/fr/contenu/modlois" class="list-group-item">Lois : Modifications</a>
+	<a id="content-nevlois" href="/fr/contenu/nevlois" class="list-group-item">Lois : Dispositions non en vigueur</a>
+	<a id="content-eevlois" href="/fr/contenu/eevlois" class="list-group-item">Lois : Entrées en vigueur</a>
+	<a id="content-loisann" href="/fr/contenu/loisann" class="list-group-item">Lois annuelles : Versions PDF depuis 1996</a>
+	<a id="content-modreg" href="/fr/contenu/modreg" class="list-group-item">Règlements : Modifications</a>
+	<a id="content-regann" href="/fr/contenu/regann" class="list-group-item">Règlements annuels : Versions PDF depuis 1996</a>
+	<a id="content-decision" href="/fr/contenu/decision" class="list-group-item">Décisions des tribunaux</a>
+</div>
+					
+				</div>
+				<div id="contentDiv" class="col-sm-9">
+					<form id="form" onsubmit="" method="post" action="">
+	<div>
+		<input alt="Champ caché" name="command" type="hidden" value=""></input>
+		<input alt="Champ caché" name="shorttitle" type="hidden" value=""></input>
+		<input alt="Champ caché" name="marginalnotexml" type="hidden" value=""></input>
+		<input alt="Champ caché" name="heading" type="hidden" value=""></input>
+		<input alt="Champ caché" name="fragment" type="hidden" value=""></input>
+		<input alt="Champ caché" name="selfrag" type="hidden" value=""></input>
+		<input alt="Champ caché" name="search_type" type="hidden" value=""></input>
+		<input alt="Champ caché" name="title_search_type" type="hidden" value=""></input>		
+		<input alt="Champ caché" name="anchor" type="hidden" value=""></input>
+		<input alt="Champ caché" name="dateEEV" type="hidden" value=""></input>
+		<input alt="Champ caché" name="statuteyear" type="hidden" value=""></input>
+		<input alt="Champ caché" name="isPrinting" type="hidden" value="false"></input>
+		<input alt="Champ caché" name="from" type="hidden" value=""></input>
+		<input alt="Champ caché" name="output" type="hidden" value="printFull"></input>
+		<input alt="Champ caché" name="page" type="hidden" value="<<page>>"></input>
+		<input alt="Champ caché" name="length" type="hidden" value=""></input>
+		<input alt="Champ caché" name="instrumentnumber" type="hidden" value="S-2.1, r. 1 "></input>
+		<input alt="Champ caché" name="instrumentnumbersearch" type="hidden" value=""></input>
+		<input alt="Champ caché" name="stemmed" type="hidden" value=""></input>
+		
+	</div>
+
+	<div class="card">
+		<div class="card-header p-3 bg-gradient docHeader">
+						<h3 class="card-title"><span class="fw-bold">S-2.1, r. 1 </span> - Règlement sur l’Association paritaire pour la santé et la sécurité du travail du secteur de la construction</h3>
+					</div>
+		
+		<div class="card-body">
+			<div class="d-flex justify-content-between align-items-center">
+				<div class="flex-row d-flex align-items-center">
+					<div class="pr-1">
+						<a href="/fr/tdm/rc/S-2.1,%20r.%201%20" class="btn btn-outline-secondary bg-gradient" role="button" title="Afficher la table des matières du document" alt="Afficher la table des matières du document" data-bs-toggle="tooltip" data-bs-placement="top">Table des matières <span class="fa fa-list smallLeftSpacer" aria-hidden="true"></span></a>
+					</div>
+					<div class="px-1">
+						
+				<div class="btn-group">
+					<button id="relatedLegislativeDocument" type="button" class="btn btn-outline-secondary bg-gradient dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="-100, 0">
+						Loi habilitante <span class="badge rounded-pill bg-secondary smallLeftSpacer">1</span> <span class="caret smallLeftSpacer"></span>
+					</button>
+					<table class="table table-responsive table-hover dropdown-menu relatedDoc" role="menu">
+						<thead>
+							<tr>
+								<th width="15%">Alphanumérique</th>
+								<th width="85%">Titre</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+<td>S-2.1 </td>
+<td>
+<a class="hand boldLink" href="/fr/document/lc/S-2.1%20/">Loi sur la santé et la sécurité du travail   
+</a>
+</td>
+</tr>
+						</tbody>
+					</table>
+					</div>
+					</div>
+					<div class="px-1">
+						<span id="occurrenceButton" class="d-none">
+							Occurrences<span class="badge rounded-pill bg-secondary ms-3" id="occurrenceCount">0</span>
+						</span>
+					</div>
+					<div class="px-1">
+						
+					</div>
+				</div>
+
+				<div class="flex-row d-flex align-items-center">
+					<div class="px-1">
+						<a id="renditionPdf" target="_blank" class="btn btn-outline-secondary bg-gradient d-none" 
+							role="button" title="Ouvrir la version PDF" alt="Ouvrir la version PDF"
+							data-bs-toggle="tooltip" data-bs-placement="top">
+							 <span class="fa pdf-icon" aria-hidden="true"></span>
+						</a>
+					</div>
+					<div class="px-1">
+						<a id="renditionEpub" target="_blank" class="btn btn-outline-secondary bg-gradient d-none" 
+							role="button" title="Télécharger la version ePUB" alt="Télécharger la version ePUB"
+							data-bs-toggle="tooltip" data-bs-placement="top">
+							 <span class="fa epub-icon" aria-hidden="true"></span>
+						</a>
+					</div>
+					<div class="px-1">
+						<a id="btnPrintPreview" class="btn btn-outline-secondary bg-gradient last"
+							role="button" title="Préparer le document pour l'impression"
+							alt="Préparer le document pour l'impression" data-bs-toggle="tooltip" data-bs-placement="top"><span id="printBtnIcon"
+								class="fa fa-print" aria-hidden="true"></span>
+						</a>
+					</div>
+				</div>
+				
+			</div>
+			<div class="row pt-2">
+				<div class="col">
+					<div class="card ">
+						
+							<div class="card-header official-heading bg-gradient ">
+								<div class="row">
+									<div class="col">
+										<div class="text-end"></div>
+										Texte complet 
+									</div>
+								
+									<div class="col">
+										<div class="text-end">
+											À jour au 1<sup>er</sup> avril 2025
+										</div>
+										<div class="text-end">
+											Ce document a valeur officielle.
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="card-body history current conso" id="mainContent-document">
+								<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE div
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:exsl="http://exslt.org/common" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:integrity="http://ref.irosoft.com/integrity/" integrity:Digest="D5D7337CFA3F842DA9755988515721F4"><meta title="Ministère de la Justice du Québec" author="Ministère de la Justice du Québec" subject="Ministère de la Justice du Québec" keywords="Ministère de la Justice du Québec" description="Ministère de la Justice du Québec" timestamp="n'est pas supporter" application="CYBERLEX" version="2.2.0.2" provider="Irosoft" source="xsl"/><div xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns:law="http://ref.irosoft.com/LIMS/1.0/law" class="DefaultPageSequence BodyPageSequence"><div class="LegislativeDocument Global Style_Extra_Class"><div class="Identification"><div integrity:added="1" class="Identification-Id"><span integrity:added="1">chapitre </span><span integrity:order="1">S-2.1, r. 1</span></div><div integrity:order="2" class="titre-reglement-left titre-reglement-left customLongTitleWord">Règlement sur l’Association paritaire pour la santé et la sécurité du travail du secteur de la construction</div><span class="Hidden" integrity:order="3">SANTÉ ET SÉCURITÉ DU TRAVAIL — ASSOCIATION PARITAIRE — CONSTRUCTION</span><div><div class="enabling-identification"><div integrity:order="5" class="LongTitle-enabling">Loi sur la santé et la sécurité du travail</div></div><div class="HistoricalNote-LongTitle"><span><span integrity:order="6">(chapitre S-2.1, a. 223)</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div><span class="Hidden" integrity:order="4">S-2.1</span></div><span class="Hidden"><span integrity:order="9" class="date-txt-statut Hidden">01</span><span integrity:added="1">1</span><span integrity:added="1" class="superscript_7point">er</span><span integrity:added="1"> </span><span integrity:order="8" class="Hidden">09</span><span integrity:added="1">septembre </span><span integrity:order="7" class="date-txt-statut">2012</span></span></div><div id="ga:l_i"><div class="Heading Heading" id="ga:l_i-h1"><span integrity:order="10" class="Label-group5"><span integrity:added="1">SECTION </span>I</span><div integrity:order="11" class="TitleText-group5 group5" id="ga:l_i-h1-t1-nb:1">DÉFINITIONS</div></div><div class="section" id="se:1"><div class="Subsection SubsectionFirst" id="se:1-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 1 ?code=se:1&historique=20250806#20250806"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:1" data-code="se:1"><span integrity:order="12" class="Label-Section consolidationWhipeTextDecoration consolidationClean">1<span integrity:added="1">.</span></span></a> <span integrity:order="13" class="Subsection">Dans le présent règlement, à moins que le contexte n’indique un sens différent, on entend par:</span><div class="Continued-SectionSubsection"><span integrity:order="14" class="ContinuedSectionSubsection">«entente»: l’entente visée à l’article 99 de la Loi sur la santé et la sécurité du travail (chapitre S-2.1);</span></div><div class="Continued-SectionSubsection"><span integrity:order="15" class="ContinuedSectionSubsection">«exercice financier»: la période s’étendant du 1<span integrity:order="16" class="superscript">er</span> janvier au 31 décembre;</span></div><div class="Continued-SectionSubsection"><span integrity:order="17" class="ContinuedSectionSubsection">«programme d’activités»: l’ensemble des projets élaborés par l’association sectorielle ou dont celle-ci fait la promotion afin d’atteindre les objectifs définis à l’article 101 de la Loi.</span></div></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span integrity:order="18">D. 209-84, a. 1</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div></div></div><div id="ga:l_ii"><div class="Heading Heading" id="ga:l_ii-h1"><span integrity:order="19" class="Label-group5"><span integrity:added="1">SECTION </span>II</span><div integrity:order="20" class="TitleText-group5 group5" id="ga:l_ii-h1-t1-nb:1">LES ÉLÉMENTS DE L’ENTENTE</div></div><div class="section" id="se:2"><div class="Subsection SubsectionFirst" id="se:2-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 1 ?code=se:2&historique=20250806#20250806"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:2" data-code="se:2"><span integrity:order="21" class="Label-Section consolidationWhipeTextDecoration consolidationClean">2<span integrity:added="1">.</span></span></a> <span integrity:order="22" class="Subsection">L’entente conclue entre les associations représentatives au sens de la Loi sur les relations du travail, la formation professionnelle et la gestion de la main-d’oeuvre dans l’industrie de la construction (chapitre R-20) et l’Association des entrepreneurs en construction du Québec, ou, en l’absence d’une telle entente, celle établie par la Commission des normes, de l’équité, de la santé et de la sécurité du travail (Commission) comprend au minimum les éléments prescrits dans la présente section.</span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span integrity:order="23">D. 209-84, a. 2</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div></div><div class="section" id="se:3"><div class="Subsection SubsectionFirst" id="se:3-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 1 ?code=se:3&historique=20250806#20250806"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:3" data-code="se:3"><span integrity:order="24" class="Label-Section consolidationWhipeTextDecoration consolidationClean">3<span integrity:added="1">.</span></span></a> <span integrity:order="25" class="Subsection">Une association sectorielle est constituée sous le nom de «Association paritaire pour la santé et la sécurité du travail du secteur de la construction».</span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span integrity:order="26">D. 209-84, a. 3</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div></div><div class="section" id="se:4"><div class="Subsection SubsectionFirst" id="se:4-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 1 ?code=se:4&historique=20250806#20250806"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:4" data-code="se:4"><span integrity:order="27" class="Label-Section consolidationWhipeTextDecoration consolidationClean">4<span integrity:added="1">.</span></span></a> <span integrity:order="28" class="Subsection">Le siège de l’association sectorielle est situé dans une localité du Québec.</span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span integrity:order="29">D. 209-84, a. 4</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div></div><div class="section" id="se:5"><div class="Subsection SubsectionFirst" id="se:5-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 1 ?code=se:5&historique=20250806#20250806"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:5" data-code="se:5"><span integrity:order="30" class="Label-Section consolidationWhipeTextDecoration consolidationClean">5<span integrity:added="1">.</span></span></a> <span integrity:order="31" class="Subsection">Les associations représentatives au sens de la Loi sur les relations du travail, la formation professionnelle et la gestion de la main-d’oeuvre dans l’industrie de la construction (chapitre R-20) et l’Association des entrepreneurs en construction du Québec sont membres de l’association sectorielle.</span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span integrity:order="32">D. 209-84, a. 5</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div></div><div class="section" id="se:6"><div class="Subsection SubsectionFirst" id="se:6-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 1 ?code=se:6&historique=20250806#20250806"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:6" data-code="se:6"><span integrity:order="33" class="Label-Section consolidationWhipeTextDecoration consolidationClean">6<span integrity:added="1">.</span></span></a> <span integrity:order="34" class="Subsection">Les membres se réunissent une première fois dans les 5 mois qui suivent l’approbation ou l’établissement de l’entente par la Commission et par la suite, annuellement, dans les 5 mois qui suivent la fin de l’exercice financier.</span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span integrity:order="35">D. 209-84, a. 6</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div></div><div class="section" id="se:7"><div class="Subsection SubsectionFirst" id="se:7-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 1 ?code=se:7&historique=20250806#20250806"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:7" data-code="se:7"><span integrity:order="36" class="Label-Section consolidationWhipeTextDecoration consolidationClean">7<span integrity:added="1">.</span></span></a> <span integrity:order="37" class="Subsection">Le conseil d’administration de l’association sectorielle se compose d’au moins 10 membres dont la moitié est élue ou nommée par l’Association des entrepreneurs en construction du Québec et l’autre moitié par les associations représentatives au sens de la Loi sur les relations du travail, la formation professionnelle et la gestion de la main-d’oeuvre dans l’industrie de la construction (chapitre R-20).</span></div><div class="Subsection" id="se:7-ss:2"><span integrity:order="38" class="Subsection">La Commission peut désigner les membres du conseil d’administration qui n’ont pas, ainsi, été élus ou nommés.</span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span integrity:order="39">D. 209-84, a. 7</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div></div><div class="section" id="se:8"><div class="Subsection SubsectionFirst" id="se:8-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 1 ?code=se:8&historique=20250806#20250806"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:8" data-code="se:8"><span integrity:order="40" class="Label-Section consolidationWhipeTextDecoration consolidationClean">8<span integrity:added="1">.</span></span></a> <span integrity:order="41" class="Subsection">Sont éligibles au poste d’administrateur élu ou nommé par les membres de l’association sectorielle, les personnes possédant l’une des qualités suivantes:</span><div class="Paragraph" id="se:8-ss:1-p1:1"><span integrity:order="42" class="Label-Z LabelBase">1<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="43" class="Paragraph">soit employeur, dirigeant d’un employeur ou membre du personnel d’un employeur, membre de l’Association des entrepreneurs en construction du Québec, et représentant de cette association auprès de l’association sectorielle;</span></div><div class="Paragraph" id="se:8-ss:1-p1:2"><div class="Subparagraph" id="se:8-ss:1-p1:2-p2:a"><span integrity:order="44" class="Label-Z LabelBase">2<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="45" class="Label-L LabelBase">a<span integrity:added="1" class="normal LabelBase italic">) </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="46" class="Subparagraph">soit travailleur membre d’une association représentative au sens de la Loi sur les relations du travail, la formation professionnelle et la gestion de la main-d’oeuvre dans l’industrie de la construction (chapitre R-20) et représentant de cette association auprès de l’association sectorielle;</span></div><div class="Subparagraph" id="se:8-ss:1-p1:2-p2:b"><span integrity:order="47" class="Label-L LabelBase">b<span integrity:added="1" class="normal LabelBase italic">) </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="48" class="Subparagraph">soit travailleur membre d’une association telle que définie dans la Loi sur les relations du travail, la formation professionnelle et la gestion de la main-d’oeuvre dans l’industrie de la construction, elle-même membre d’une association représentative au sens de cette Loi, et représentant de cette dernière association auprès de l’association sectorielle.</span></div></div></div><div class="Subsection" id="se:8-ss:2"><span integrity:order="49" class="Subsection">Les présents critères d’éligibilité ne s’appliquent pas aux administrateurs désignés par la Commission.</span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span integrity:order="50">D. 209-84, a. 8</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div></div><div class="section" id="se:9"><div class="Subsection SubsectionFirst" id="se:9-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 1 ?code=se:9&historique=20250806#20250806"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:9" data-code="se:9"><span integrity:order="51" class="Label-Section consolidationWhipeTextDecoration consolidationClean">9<span integrity:added="1">.</span></span></a> <span integrity:order="52" class="Subsection">Les administrateurs sont élus lors de la réunion annuelle, nommés ou désignés, pour un mandat d’un an ou de 2 ans.</span></div><div class="Subsection" id="se:9-ss:2"><span integrity:order="53" class="Subsection">Lorsque le mandat est de 2 ans, la moitié des administrateurs, élus ou nommés par les membres lors de la première réunion, ou désignés par la Commission, ont un mandat d’un an. Le sort détermine ceux des administrateurs dont le mandat est d’un an.</span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span integrity:order="54">D. 209-84, a. 9</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div></div><div class="section" id="se:10"><div class="Subsection SubsectionFirst" id="se:10-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 1 ?code=se:10&historique=20250806#20250806"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:10" data-code="se:10"><span integrity:order="55" class="Label-Section consolidationWhipeTextDecoration consolidationClean">10<span integrity:added="1">.</span></span></a> <span integrity:order="56" class="Subsection">Si une élection ou une nomination d’administrateurs n’est pas faite, ou si elle n’est pas faite au temps fixé, l’association sectorielle est en défaut.</span></div><div class="Subsection" id="se:10-ss:2"><span integrity:order="57" class="Subsection">Il y est remédié en tenant une élection à une réunion des membres de l’association sectorielle convoquée à cette fin ou en procédant à cette nomination. La Commission peut, aussi, remédier au défaut en désignant, elle-même, les administrateurs qui n’ont pas été élus ou nommés par les membres.</span></div><div class="Subsection" id="se:10-ss:3"><span integrity:order="58" class="Subsection">Les administrateurs sortant de charge restent en fonction jusqu’à ce que leurs successeurs soient ainsi élus, nommés ou désignés. Le mandat des successeurs expire au moment où il aurait expiré s’ils avaient été élus, nommés ou désignés selon les règles.</span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span integrity:order="59">D. 209-84, a. 10</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div></div><div class="section" id="se:11"><div class="Subsection SubsectionFirst" id="se:11-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 1 ?code=se:11&historique=20250806#20250806"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:11" data-code="se:11"><span integrity:order="60" class="Label-Section consolidationWhipeTextDecoration consolidationClean">11<span integrity:added="1">.</span></span></a> <span integrity:order="61" class="Subsection">Tout poste vacant au sein du conseil d’administration est comblé conformément aux règles régissant l’élection, la nomination ou la désignation au poste vacant.</span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span integrity:order="62">D. 209-84, a. 11</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div></div><div class="section" id="se:12"><div class="Subsection SubsectionFirst" id="se:12-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 1 ?code=se:12&historique=20250806#20250806"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:12" data-code="se:12"><span integrity:order="63" class="Label-Section consolidationWhipeTextDecoration consolidationClean">12<span integrity:added="1">.</span></span></a> <span integrity:order="64" class="Subsection">Le conseil d’administration se réunit au moins 4 fois par année.</span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span integrity:order="65">D. 209-84, a. 12</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div></div><div class="section" id="se:13"><div class="Subsection SubsectionFirst" id="se:13-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 1 ?code=se:13&historique=20250806#20250806"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:13" data-code="se:13"><span integrity:order="66" class="Label-Section consolidationWhipeTextDecoration consolidationClean">13<span integrity:added="1">.</span></span></a> <span integrity:order="67" class="Subsection">Pour être valable, une décision du conseil d’administration doit avoir obtenu l’assentiment de la majorité des membres du conseil d’administration, présents à la réunion, qui représentent l’Association des entrepreneurs en construction du Québec, de même que celui de la majorité des voix que possèdent les membres du conseil d’administration qui représentent les associations représentatives au sens de la Loi sur les relations de travail, la formation professionnelle et la gestion de la main-d’oeuvre dans l’industrie de la construction (chapitre R-20).</span></div><div class="Subsection" id="se:13-ss:2"><span integrity:order="68" class="Subsection">Aux fins d’établir cette dernière majorité, chacun des représentants des associations représentatives dispose, lors d’un vote, d’un nombre de voix proportionnel au degré de représentativité, au sens de cette Loi, de l’association qu’il représente.</span></div><div class="Subsection" id="se:13-ss:3"><span integrity:order="69" class="Subsection">Lorsqu’une même association représentative compte plus d’un représentant à la réunion, ceux-ci se répartissent également le nombre de voix afférentes à cette association.</span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span integrity:order="70">D. 209-84, a. 13</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div></div><div class="section" id="se:14"><div class="Subsection SubsectionFirst" id="se:14-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 1 ?code=se:14&historique=20250806#20250806"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:14" data-code="se:14"><span integrity:order="71" class="Label-Section consolidationWhipeTextDecoration consolidationClean">14<span integrity:added="1">.</span></span></a> <span integrity:order="72" class="Subsection">Dans le cas d’égalité des votes à une réunion du comité administratif, s’il y en a un, nul n’a droit à un second vote ou vote prépondérant.</span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span integrity:order="73">D. 209-84, a. 14</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div></div><div class="section" id="se:15"><div class="Subsection SubsectionFirst" id="se:15-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 1 ?code=se:15&historique=20250806#20250806"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:15" data-code="se:15"><span integrity:order="74" class="Label-Section consolidationWhipeTextDecoration consolidationClean">15<span integrity:added="1">.</span></span></a> <span integrity:order="75" class="Subsection">Sous réserve des éléments de l’entente prescrits par le présent règlement, les membres de l’association sectorielle peuvent convenir de modifier ou de remplacer l’entente, en tout ou en partie.</span></div><div class="Subsection" id="se:15-ss:2"><span integrity:order="76" class="Subsection">La modification ou le remplacement entre en vigueur sur approbation de la Commission.</span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span integrity:order="77">D. 209-84, a. 15</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div></div><div class="section" id="se:16"><div class="Subsection SubsectionFirst" id="se:16-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 1 ?code=se:16&historique=20250806#20250806"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:16" data-code="se:16"><span integrity:order="78" class="Label-Section consolidationWhipeTextDecoration consolidationClean">16<span integrity:added="1">.</span></span></a> <span integrity:order="79" class="Subsection">Dans le cas de cessation des activités de l’association sectorielle, les biens de celle-ci restant après paiement de ses dettes, sont dévolus à la Commission.</span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span integrity:order="80">D. 209-84, a. 16</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div></div><div class="section" id="se:17"><div class="Subsection SubsectionFirst" id="se:17-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 1 ?code=se:17&historique=20250806#20250806"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:17" data-code="se:17"><span integrity:order="81" class="Label-Section consolidationWhipeTextDecoration consolidationClean">17<span integrity:added="1">.</span></span></a> <span integrity:order="82" class="Subsection">La procédure de résolution des désaccords comprend la résolution de ceux existant entre les membres de l’association sectorielle.</span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span integrity:order="83">D. 209-84, a. 17</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div></div><div class="section" id="se:18"><div class="Subsection SubsectionFirst" id="se:18-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 1 ?code=se:18&historique=20250806#20250806"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:18" data-code="se:18"><span integrity:order="84" class="Label-Section consolidationWhipeTextDecoration consolidationClean">18<span integrity:added="1">.</span></span></a> <span integrity:order="85" class="Subsection">Les membres de l’association sectorielle s’engagent à poursuivre les objets de l’association sectorielle et à en exercer les pouvoirs et les droits civils au moyen d’une personne morale constituée sous l’autorité de la partie III de la Loi sur les compagnies (chapitre C-38) dont:</span><div class="Paragraph" id="se:18-ss:1-p1:1"><span integrity:order="86" class="Label-Z LabelBase">1<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="87" class="Paragraph">le nom est celui de l’association sectorielle;</span></div><div class="Paragraph" id="se:18-ss:1-p1:2"><span integrity:order="88" class="Label-Z LabelBase">2<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="89" class="Paragraph">les objets sont ceux de l’association sectorielle;</span></div><div class="Paragraph" id="se:18-ss:1-p1:3"><span integrity:order="90" class="Label-Z LabelBase">3<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="91" class="Paragraph">le siège est celui de l’association sectorielle;</span></div><div class="Paragraph" id="se:18-ss:1-p1:4"><span integrity:order="92" class="Label-Z LabelBase">4<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="93" class="Paragraph">les membres sont ceux de l’association sectorielle;</span></div><div class="Paragraph" id="se:18-ss:1-p1:5"><span integrity:order="94" class="Label-Z LabelBase">5<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="95" class="Paragraph">les pouvoirs comprennent ceux de l’association sectorielle;</span></div><div class="Paragraph" id="se:18-ss:1-p1:6"><span integrity:order="96" class="Label-Z LabelBase">6<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="97" class="Paragraph">les limitations sont celles de l’association sectorielle;</span></div><div class="Paragraph" id="se:18-ss:1-p1:7"><span integrity:order="98" class="Label-Z LabelBase">7<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="99" class="Paragraph">l’assemblée générale est la réunion des membres de l’association sectorielle;</span></div><div class="Paragraph" id="se:18-ss:1-p1:8"><span integrity:order="100" class="Label-Z LabelBase">8<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="101" class="Paragraph">le conseil d’administration est celui de l’association sectorielle;</span></div><div class="Paragraph" id="se:18-ss:1-p1:9"><span integrity:order="102" class="Label-Z LabelBase">9<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="103" class="Paragraph">le comité administratif, s’il y en a un, est celui de l’association sectorielle;</span></div><div class="Paragraph" id="se:18-ss:1-p1:10"><span integrity:order="104" class="Label-Z LabelBase">10<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="105" class="Paragraph">les biens restant après paiement de ses dettes sont dévolus à la Commission lors de son extinction, quel qu’en soit le mode;</span></div><div class="Paragraph" id="se:18-ss:1-p1:11"><span integrity:order="106" class="Label-Z LabelBase">11<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="107" class="Paragraph">le contenu des lettres patentes ou lettres patentes supplémentaires énonce ce que ci-dessus prescrit ainsi que les dispositions de la Loi régissant une association sectorielle et coïncide en tout temps et fidèlement avec celui de l’entente, en y insérant les dispositions réglementaires nécessaires qui ne pourront être révoquées, ni modifiées par règlement.</span></div></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span integrity:order="108">D. 209-84, a. 18</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div></div><div class="section" id="se:19"><div class="Subsection SubsectionFirst" id="se:19-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 1 ?code=se:19&historique=20250806#20250806"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:19" data-code="se:19"><span integrity:order="109" class="Label-Section consolidationWhipeTextDecoration consolidationClean">19<span integrity:added="1">.</span></span></a> <span integrity:order="110" class="Subsection">Les membres de l’association sectorielle peuvent convenir d’un renvoi aux dispositions de la présente section. Dans ce cas, l’entente est réputée contenir, comme si elles y étaient récitées au long, les règles prévues dans la présente section.</span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span integrity:order="111">D. 209-84, a. 19</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div></div></div><div id="ga:l_iii"><div class="Heading Heading" id="ga:l_iii-h1"><span integrity:order="112" class="Label-group5"><span integrity:added="1">SECTION </span>III</span><div integrity:order="113" class="TitleText-group5 group5" id="ga:l_iii-h1-t1-nb:1">CONDITIONS ET CRITÈRES DE SUBVENTION</div></div><div class="section" id="se:20"><div class="Subsection SubsectionFirst" id="se:20-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 1 ?code=se:20&historique=20250806#20250806"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:20" data-code="se:20"><span integrity:order="114" class="Label-Section consolidationWhipeTextDecoration consolidationClean">20<span integrity:added="1">.</span></span></a> <span integrity:order="115" class="Subsection">La Commission accorde à l’association sectorielle, qui lui en fait la demande, une subvention annuelle selon les conditions et critères déterminés dans la présente section.</span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span integrity:order="116">D. 209-84, a. 20</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div></div><div class="section" id="se:21"><div class="Subsection SubsectionFirst" id="se:21-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 1 ?code=se:21&historique=20250806#20250806"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:21" data-code="se:21"><span integrity:order="117" class="Label-Section consolidationWhipeTextDecoration consolidationClean">21<span integrity:added="1">.</span></span></a> <span integrity:order="118" class="Subsection">Les membres de l’association sectorielle et l’association sectorielle doivent s’être conformés aux termes de l’entente et en avoir exécuté les obligations.</span></div><div class="Subsection" id="se:21-ss:2"><span integrity:order="119" class="Subsection">Les versements périodiques de la subvention sont aussi conditionnels à cette absence de défaut. La Commission ne peut, toutefois, suspendre le versement d’une subvention qu’après avoir donné un préavis de 3 mois à l’association en défaut.</span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span integrity:order="120">D. 209-84, a. 21</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div></div><div class="section" id="se:22"><div class="Subsection SubsectionFirst" id="se:22-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 1 ?code=se:22&historique=20250806#20250806"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:22" data-code="se:22"><span integrity:order="121" class="Label-Section consolidationWhipeTextDecoration consolidationClean">22<span integrity:added="1">.</span></span></a> <span integrity:order="122" class="Subsection">L’association sectorielle s’engage envers la Commission:</span><div class="Paragraph" id="se:22-ss:1-p1:1"><span integrity:order="123" class="Label-Z LabelBase">1<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="124" class="Paragraph">à poursuivre ses objectifs et à réaliser, dans la mesure de ses possibilités, son programme d’activités;</span></div><div class="Paragraph" id="se:22-ss:1-p1:2"><span integrity:order="125" class="Label-Z LabelBase">2<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="126" class="Paragraph">sous réserve du deuxième alinéa de l’article 25, à n’utiliser le montant de la subvention qu’aux fins pour lesquelles celle-ci a été accordée.</span></div></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span integrity:order="127">D. 209-84, a. 22</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div></div><div class="section" id="se:23"><div class="Subsection SubsectionFirst" id="se:23-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 1 ?code=se:23&historique=20250806#20250806"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:23" data-code="se:23"><span integrity:order="128" class="Label-Section consolidationWhipeTextDecoration consolidationClean">23<span integrity:added="1">.</span></span></a> <span integrity:order="129" class="Subsection">La demande de subvention est envoyée à la Commission, par poste recommandée, au plus tard le 30 septembre de chaque année. Elle fait état, notamment:</span><div class="Paragraph" id="se:23-ss:1-p1:1"><span integrity:order="130" class="Label-Z LabelBase">1<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="131" class="Paragraph">des objectifs généraux que l’association sectorielle entend poursuivre au cours du prochain exercice financier;</span></div><div class="Paragraph" id="se:23-ss:1-p1:2"><span integrity:order="132" class="Label-Z LabelBase">2<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="133" class="Paragraph">du programme d’activités qu’elle se propose de réaliser au cours du prochain exercice financier;</span></div><div class="Paragraph" id="se:23-ss:1-p1:3"><span integrity:order="134" class="Label-Z LabelBase">3<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="135" class="Paragraph">de ses prévisions budgétaires pour le prochain exercice financier;</span></div><div class="Paragraph" id="se:23-ss:1-p1:4"><span integrity:order="136" class="Label-Z LabelBase">4<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="137" class="Paragraph">de son plan d’organisation qui comprend les renseignements suivants:</span><div class="Subparagraph" id="se:23-ss:1-p1:4-p2:a"><span integrity:order="138" class="Label-L LabelBase">a<span integrity:added="1" class="normal LabelBase italic">) </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="139" class="Subparagraph">une représentation schématique des divers services de l’association et leurs rapports mutuels;</span></div><div class="Subparagraph" id="se:23-ss:1-p1:4-p2:b"><span integrity:order="140" class="Label-L LabelBase">b<span integrity:added="1" class="normal LabelBase italic">) </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="141" class="Subparagraph">le nombre d’employés et leur occupation;</span></div><div class="Subparagraph" id="se:23-ss:1-p1:4-p2:c"><span integrity:order="142" class="Label-L LabelBase">c<span integrity:added="1" class="normal LabelBase italic">) </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="143" class="Subparagraph">une description sommaire des tâches et responsabilités assignées à chacun des employés.</span></div></div></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span integrity:order="144">D. 209-84, a. 23</span><span><span integrity:added="1">; </span></span></span><span><span integrity:order="145">N.I. 2016-01-01 (NCPC)</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div></div><div class="section" id="se:24"><div class="Subsection SubsectionFirst" id="se:24-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 1 ?code=se:24&historique=20250806#20250806"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:24" data-code="se:24"><span integrity:order="146" class="Label-Section consolidationWhipeTextDecoration consolidationClean">24<span integrity:added="1">.</span></span></a> <span integrity:order="147" class="Subsection">Pour obtenir une subvention, l’association sectorielle s’engage:</span><div class="Paragraph" id="se:24-ss:1-p1:1"><span integrity:order="148" class="Label-Z LabelBase">1<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="149" class="Paragraph">à payer ses employés selon les politiques salariales établies par la Commission pour l’association sectorielle;</span></div><div class="Paragraph" id="se:24-ss:1-p1:2"><span integrity:order="150" class="Label-Z LabelBase">2<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="151" class="Paragraph">à indemniser les frais de voyage engagés par ses employés selon les politiques établies par la Commission pour l’association sectorielle.</span></div></div><div class="Subsection" id="se:24-ss:2"><span integrity:order="152" class="Subsection">On entend par «voyage»: tout déplacement autorisé, effectué par un employé dans l’exercice de ses fonctions, et au cours duquel celui-ci engage des frais de transport, de logement ou de subsistance.</span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span integrity:order="153">D. 209-84, a. 24</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div></div><div class="section" id="se:25"><div class="Subsection SubsectionFirst" id="se:25-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 1 ?code=se:25&historique=20250806#20250806"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:25" data-code="se:25"><span integrity:order="154" class="Label-Section consolidationWhipeTextDecoration consolidationClean">25<span integrity:added="1">.</span></span></a> <span integrity:order="155" class="Subsection">Le budget est établi en fonction des programmes suivants: formation et information, recherche, conseil et soutien administratif.</span></div><div class="Subsection" id="se:25-ss:2"><span integrity:order="156" class="Subsection">L’association sectorielle ne peut procéder, au cours d’un exercice financier, au transfert de ressources financières d’un programme à un autre que si elle a préalablement obtenu, pour ce faire, l’autorisation écrite de la Commission.</span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span integrity:order="157">D. 209-84, a. 25</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div></div><div class="section" id="se:26"><div class="Subsection SubsectionFirst" id="se:26-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 1 ?code=se:26&historique=20250806#20250806"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:26" data-code="se:26"><span integrity:order="158" class="Label-Section consolidationWhipeTextDecoration consolidationClean">26<span integrity:added="1">.</span></span></a> <span integrity:order="159" class="Subsection">Un déficit budgétaire encouru sans la permission de la Commission demeure la responsabilité de l’association sectorielle et en aucun temps tel déficit n’est comblé par la Commission.</span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span integrity:order="160">D. 209-84, a. 26</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div></div></div><div id="ga:l_iv"><div class="Heading Heading" id="ga:l_iv-h1"><span integrity:order="161" class="Label-group5"><span integrity:added="1">SECTION </span>IV</span><div integrity:order="162" class="TitleText-group5 group5" id="ga:l_iv-h1-t1-nb:1">INFORMATION ET RAPPORT ANNUEL D’ACTIVITÉS</div></div><div class="section" id="se:27"><div class="Subsection SubsectionFirst" id="se:27-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 1 ?code=se:27&historique=20250806#20250806"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:27" data-code="se:27"><span integrity:order="163" class="Label-Section consolidationWhipeTextDecoration consolidationClean">27<span integrity:added="1">.</span></span></a> <span integrity:order="164" class="Subsection">La Commission procède à l’évaluation de la demande de subvention qui lui est soumise conformément à la présente section, eu égard aux critères suivants:</span><div class="Paragraph" id="se:27-ss:1-p1:1"><span integrity:order="165" class="Label-Z LabelBase">1<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="166" class="Paragraph">le nombre d’établissements et de chantiers de construction ainsi que le nombre de travailleurs appartenant au secteur de la construction;</span></div><div class="Paragraph" id="se:27-ss:1-p1:2"><span integrity:order="167" class="Label-Z LabelBase">2<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="168" class="Paragraph">la nature des risques inhérents au secteur de la construction et le nombre de travailleurs qui y sont directement exposés;</span></div><div class="Paragraph" id="se:27-ss:1-p1:3"><span integrity:order="169" class="Label-Z LabelBase">3<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="170" class="Paragraph">la pertinence des objectifs poursuivis par l’association eu égard à ceux définis à l’article 101 de la Loi;</span></div><div class="Paragraph" id="se:27-ss:1-p1:4"><span integrity:order="171" class="Label-Z LabelBase">4<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="172" class="Paragraph">l’adéquation entre le programme d’activités de l’association et les objectifs prioritaires qu’entend poursuivre la Commission au cours du prochain exercice financier;</span></div><div class="Paragraph" id="se:27-ss:1-p1:5"><span integrity:order="173" class="Label-Z LabelBase">5<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="174" class="Paragraph">l’étude des informations et des rapports annuels d’activités transmis à la Commission conformément au présent règlement.</span></div></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span integrity:order="175">D. 209-84, a. 27</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div></div><div class="section" id="se:28"><div class="Subsection SubsectionFirst" id="se:28-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 1 ?code=se:28&historique=20250806#20250806"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:28" data-code="se:28"><span integrity:order="176" class="Label-Section consolidationWhipeTextDecoration consolidationClean">28<span integrity:added="1">.</span></span></a> <span integrity:order="177" class="Subsection">L’association sectorielle transmet à la Commission avant le 1<span integrity:order="178" class="superscript">er</span> juin de chaque année une description de son programme d’activités en cours et une évaluation des résultats obtenus au 30 avril eu égard aux objectifs fixés.</span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span integrity:order="179">D. 209-84, a. 28</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div></div><div class="section" id="se:29"><div class="Subsection SubsectionFirst" id="se:29-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 1 ?code=se:29&historique=20250806#20250806"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:29" data-code="se:29"><span integrity:order="180" class="Label-Section consolidationWhipeTextDecoration consolidationClean">29<span integrity:added="1">.</span></span></a> <span integrity:order="181" class="Subsection">L’association sectorielle fait parvenir à la Commission, avant le 31 mars de chaque année, un rapport annuel d’activités contenant les informations suivantes:</span><div class="Paragraph" id="se:29-ss:1-p1:1"><span integrity:order="182" class="Label-Z LabelBase">1<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="183" class="Paragraph">le nom des membres de l’association sectorielle;</span></div><div class="Paragraph" id="se:29-ss:1-p1:2"><span integrity:order="184" class="Label-Z LabelBase">2<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="185" class="Paragraph">le nom des membres du conseil d’administration;</span></div><div class="Paragraph" id="se:29-ss:1-p1:3"><span integrity:order="186" class="Label-Z LabelBase">3<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="187" class="Paragraph">le nom des membres du comité administratif, s’il y en a un;</span></div><div class="Paragraph" id="se:29-ss:1-p1:4"><span integrity:order="188" class="Label-Z LabelBase">4<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="189" class="Paragraph">le nombre de représentants que chacun des membres est autorisé à déléguer à une réunion de l’association sectorielle;</span></div><div class="Paragraph" id="se:29-ss:1-p1:5"><span integrity:order="190" class="Label-Z LabelBase">5<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="191" class="Paragraph">le nombre de réunions tenues par le conseil d’administration au cours de la dernière année;</span></div><div class="Paragraph" id="se:29-ss:1-p1:6"><span integrity:order="192" class="Label-Z LabelBase">6<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="193" class="Paragraph">s’il y a lieu, le nombre de réunions tenues par le comité administratif au cours de la dernière année;</span></div><div class="Paragraph" id="se:29-ss:1-p1:7"><span integrity:order="194" class="Label-Z LabelBase">7<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="195" class="Paragraph">la description sommaire des objectifs généraux qu’elle s’était fixés pour le dernier exercice financier;</span></div><div class="Paragraph" id="se:29-ss:1-p1:8"><span integrity:order="196" class="Label-Z LabelBase">8<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="197" class="Paragraph">le programme d’activités réalisé au cours du dernier exercice financier de même que les facteurs positifs ou négatifs ayant eu un impact sur sa réalisation;</span></div><div class="Paragraph" id="se:29-ss:1-p1:9"><span integrity:order="198" class="Label-Z LabelBase">9<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="199" class="Paragraph">l’évaluation du programme d’activités réalisé eu égard aux objectifs généraux poursuivis au cours du dernier exercice financier;</span></div><div class="Paragraph" id="se:29-ss:1-p1:10"><span integrity:order="200" class="Label-Z LabelBase">10<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="201" class="Paragraph">la liste des comités de santé et de sécurité existants ou en voie de formation dans les établissements compris dans le secteur de la construction;</span></div><div class="Paragraph" id="se:29-ss:1-p1:11"><span integrity:order="202" class="Label-Z LabelBase">11<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="203" class="Paragraph">la liste des comités de chantier existants ou qui ont existé au cours de l’année.</span></div></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span integrity:order="204">D. 209-84, a. 29</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div></div><div class="section" id="se:30"><div class="Subsection SubsectionFirst" id="se:30-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 1 ?code=se:30&historique=20250806#20250806"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:30" data-code="se:30"><span integrity:order="205" class="Label-Section consolidationWhipeTextDecoration consolidationClean">30<span integrity:added="1">.</span></span></a> <span class="Subsection"><span integrity:order="206" class="Repealed-Text">(Omis).</span></span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span integrity:order="207">D. 209-84, a. 30</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div></div></div><div class="AmendedTextTitle"><div class="ligne"><span integrity:added="1">
+                    </span></div><span integrity:added="1">RÉFÉRENCES</span></div><div><span><span integrity:order="208">D. 209-84, 1984 G.O. 2, 911</span></span></div><div><span><span integrity:order="209">L.Q. 1986, c. 89, a. 50</span></span></div><div><span><span integrity:order="210">L.Q. 2015, c. 15, a. 237</span></span></div></div></div></div>
+							</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</form>
+
+<ul id="contextMenu" class="dropdown-menu" role="menu" >
+	<li id="contextMenuCopy" class="disabled dropdown-item"><a tabindex="-1">Copier</a></li>
+	<li class="dropdown-divider"></li>
+	<li class="dropdown-item"><a tabindex="-1"">Sélectionner cet élément</a></li>
+	<li id="contextMenuSelectParent" class="dropdown-item"><a tabindex="-1">Sélectionner l'élément parent</a></li>
+	<li id="contextMenuUnselectAll" class="disabled dropdown-item"><a tabindex="-1">Désélectionner tous les éléments</a></li>
+	<li class="dropdown-divider"></li>
+	<li id="contextMenuCopyToArbortext" class="disabled dropdown-item"><a tabindex="-1">Copier vers Rédaction</a></li>
+	<li id="contextMenuCopyToLaw" class="d-block disable dropdown-item"><a tabindex="-1">Copier vers LAW</a></li>
+</ul>
+<input type="text" class="copyContainer" id="copyToClipboardMenu">
+<div id="copyToClipboard" class="modal fade">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">
+					Copier vers le presse-papier
+				</h4>
+				<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>				
+			</div>
+			<div class="modal-body">
+				<p>
+				<div class="description">
+					Pour copier : Ctrl+C
+				</div>
+				<input type="text" class="form-control" name="copyToInput" id="copyToInput">
+				</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-outline-secondary bg-gradient" data-bs-dismiss="modal">OK</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<a href="#" class="back-to-top"><span class="fa fa-chevron-up"></span></a>
+
+
+	<!-- migration rapide - éventuellement call ajax JSON -->
+	<input type="hidden" id="alpha" value="S-2.1, r. 1 ">
+	<input type="hidden" id="title"  value='S-2.1, r. 1  - Règlement sur l’Association paritaire pour la santé et la sécurité du travail du secteur de la construction'>
+	<input type="hidden" id="dbType"  value="cr">
+	<input type="hidden" id="langCont"  value="fr">
+	<input type="hidden" id="otherLangCont" value="en">
+
+	<input type="hidden" id="contextMenu_copy" value="Copier"/>
+	<input type="hidden" id="contextMenu_selectElement" value="Sélectionner cet élément"/>
+	<input type="hidden" id="contextMenu_selectParentElement" value="Sélectionner l'élément parent"/>
+	<input type="hidden" id="contextMenu_unselectElement" value="<<SR_contextMenu_unselectElement>>"/>
+	<input type="hidden" id="contextMenu_unselectAll" value="Désélectionner tous les éléments"/>
+
+	<input type="hidden" id="contextMenu_copyToArbortext" value="Copier vers Rédaction"/>
+	<input type="hidden" id="contextMenu_copyToLaw" value="Copier vers LAW"/>
+	<input type="hidden" id="contextMenu_FragmentSelection" value="<<SR_contextMenu_FragmentSelection>>"/>
+	<input type="hidden" id="ctrlC_toCopyToClipboard" value="Pour copier : Ctrl+C"/>
+	<input type="hidden" id="readyToPaste" value="Vos sélections ont été copiées dans le presse-papier."/>
+
+	<input type="hidden" id="readyToPasteInLAW" value="Vous pouvez coller vos sélections dans LAW en utilisant la fonction appropriée."/>
+	<input type="hidden" id="readyToPasteInArbortext" value="Vous pouvez coller vos sélections dans Arbortext en utilisant la fonction appropriée."/>
+	<input type="hidden" id="errorWhileCopyingTo" value="Une erreur est survenue lors de la préparation des données."/>
+	<input type="hidden" id="showSelections" value="false"/>
+	<input type="hidden" id="consolidetedDateLabel" value=""/>
+	<input type="hidden" id="renditions" value='{"Epub":"/fr/epub/cr/S-2.1, R. 1 .epub","Pdf":"/fr/pdf/rc/S-2.1, R. 1 .pdf"}'/>
+	<input type="hidden" id="output" value=""/>
+	
+					
+<div data-bs-toggle="modal" data-bs-target="#myModal" id="printPreviewButton" class="printPreviewButton d-none">
+<button type="button" class="btn btn-primary my-2 rounded-pill" id="goPrintPreview" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">
+<span class="fa fa-check-square-o" aria-hidden="true"></span> <span class="badge rounded-pill bg-secondary badgeWhite">0</span>
+</button>
+</div>
+
+				</div>
+			</div>
+			
+			<!-- Footer -->
+		<div class="row pt-4">
+			<hr/>
+			<div align="center" class="pt-4">
+				<ul class="footer-options">
+					<li><a href="/fr/contenu/joindre/" >Nous joindre</a></li>
+					<li><a href="/fr/contenu/plan/" >Plan du site</a></li>
+					<li><a href="https://www.quebec.ca/" target="_blank">Québec.ca</a></li>
+					<li><a href="/fr/contenu/access/" >Accessibilité</a></li>
+					<li><a href="/fr/contenu/confid/" >Politique de confidentialité</a></li>
+				</ul>
+			</div>
+			<div  align="center"><a href="https://www.quebec.ca/" target="_blank"><img src="/img/quebec.gif" width="105" height="32" border="0"></a></div>
+			<div  align="center" class="copyright pt-2"><a class="footer-options" href="http://www.droitauteur.gouv.qc.ca/copyright.php" target="_blank">&copy; Gouvernement du Qu&eacute;bec</a></div>
+
+		</div>
+			
+		</div>
+			
+		<!-- Fenetre modal pour l'impression -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-impression">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="myModalLabel">Sélections</h4>
+						<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div>
+							<h4 id="myModalSubtitle"><small></small></h4>
+						</div>
+						<div class="list-group">
+							<a href="#" class="list-group-item active disabled bg-primary bg-gradient text-white">Afficher</a>
+							<a href="#" id="showSelectionsInCurrentDocument" class="list-group-item d-none">Les sélections du document courant</a>
+							<a href="#" id="showAllSelectionsInCollection" class="list-group-item">Toutes les sélections de la collection</a>
+							<a href="#" class="list-group-item active disabled bg-primary bg-gradient text-white">Fragments sélectionnés</a>
+							<a href="#" id="printPreviewResetSelections" class="list-group-item">Supprimer toutes les sélections</a>
+							<a href="#" id="printPreviewShowSelections" class="list-group-item d-none">Afficher les sélections</a>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-outline-secondary bg-gradient" data-bs-dismiss="modal">Fermer</button>
+					</div>
+				</div>
+			</div>
+			<form name="printForm" id="printForm" encType="application/x-www-form-urlencoded" method="post">
+				<input type="hidden" name="newQuery" value=""></input>
+				<input type="hidden" name="text" value=""></input>
+				<input type="hidden" name="isPrinting" value="false"></input>
+				<input type="hidden" name="title" value=""></input>
+				<input type="hidden" name="langCont" value="fr"></input>
+				<input type="hidden" name="type" value="cs"></input>
+				<input type="hidden" name="printType" value=""></input>
+				<input type="hidden" name="summary" value=""></input>
+				<input type="hidden" name="instrumentNumber" value=""></input>
+				<input type="hidden" name="selfrag" value=""></input>
+				<input type="hidden" name="anchor" value=""></input>
+				<input type="hidden" name="anchorSS" value=""></input>
+				<input type="hidden" name="recordsWithHits" value="false"></input>
+				<input type="hidden" name="validSearch" value="false"></input>
+				<input type="hidden" name="sortmode" value="false"></input>
+				<input type="hidden" name="output" value="selections"></input>
+			</form>
+		</div>
+		
+		<div class="modal fade bs-example-modal-sm" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+			<div class="modal-dialog modal-sm">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="mySmallModalLabel">Cyberlex</h4>
+						<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+					</div>
+					<div class="modal-body">
+						Version 2.2.5.0
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div>
+
+	
+		
+		<!-- migration rapide - éventuellement call ajax JSON -->
+		<input type="hidden" id="token" name="token" value="<<token>>">
+		<input type="hidden" id="config" name="config" value='{"ConfigurationMenu":{"params":{},"enabled":false},"XSLT":{"params":{"CocoonFullTextUrl":"ace-xslt-web.html","CocoonTOCUrl":"ace-xslt-toc.html"},"enabled":true},"Import":{"params":{"odbc-AnnualStatutes":"","odbc-Regulations":"","odbc-Statutes":"","odbc-AnnualRegulations":""},"enabled":false},"GoogleAnalytic":{"params":{"trackingId":""},"enabled":false},"Export":{"params":{"exportLast":["last","external-last","report"],"formatOptions":["Xml","Html"],"export-Regulations":true,"export-AnnualRegulations":true,"typeFileOptions":["",""],"exportFull":["all","external-all","report","orphans"],"modeOptions":["Last","All","Full"],"exportAll":["all","external-all","report"],"export-DtdClient":"Quebec","export-Statutes":true,"export-AnnualStatutes":true,"exportHtml-CocoonUrl":"ace-xslt-export.html"},"enabled":true},"Conversion":{"params":{"generatePdf-Statutes":"single","generatePdf-Regulations-Overwrite":true,"generatePdf-Statutes-Path":"master\\cs\\pdf","generateEpub-Statutes-Overwrite":true,"generateEpub-Statutes-Storage":"disk","generatePdf-Regulations-SoapEnvelope":"config/conversion/single-regulations.xml","generateEpub-AnnualStatutes-SoapEnvelope":"","generateEpub-Regulations-Storage":"disk","generatePdf-AnnualStatutes-SoapEnvelope":"","generateEpub-AnnualStatutes-Storage":"none","generatePdf-Regulations-Storage":"disk","generatePdf-AnnualRegulations-Storage":"none","generatePdf-AnnualRegulations-Overwrite":false,"generatePdf-Statutes-SoapEnvelope":"config/conversion/single-statutes.xml","generateEpub-AnnualRegulations-Storage":"none","generateEpub-AnnualStatutes":"none","renditionOptions":["Pdf","Epub"],"generateEpub-AnnualRegulations-SoapEnvelope":"","generatePdf-AnnualStatutes-Storage":"none","generateEpub-Statutes-SoapEnvelope":"config/conversion/epub.xml","generateEpub-Statutes-Path":"master\\cs\\epub","generatePdf-Regulations-SoapEnvelope-TwoPhase":"config/conversion/fo-to-pdf.xml","generateEpub-Regulations-Path":"master\\cr\\epub","generateEpub-AnnualStatutes-Overwrite":false,"generateEpub-Regulations-Overwrite":true,"generateEpub-Regulations-SoapEnvelope":"config/conversion/epub.xml","generateEpub-AnnualRegulations-Path":"annuals_master\\ar\\epub","generatePdf-Regulations-Path":"master\\cr\\pdf","generatePdf-AnnualStatutes":"none","generateEpub-Statutes":"single","generatePdf-AnnualRegulations-SoapEnvelope":"","generatePdf-AnnualRegulations":"none","generateEpub-AnnualStatutes-Path":"annuals_master\\as\\epub","generateEpub-AnnualRegulations-Overwrite":false,"generatePdf-Statutes-Overwrite":true,"generateEpub-AnnualRegulations":"none","generatePdf-AnnualStatutes-Path":"annuals_master\\as\\pdf","generatePdf-Statutes-Storage":"disk","generatePdf-AnnualRegulations-Path":"annuals_master\\ar\\pdf","generatePdf-AnnualStatutes-Overwrite":false,"generatePdf-Regulations":"single","generatePdf-Statutes-SoapEnvelope-TwoPhase":"config/conversion/fo-to-pdf.xml","generateEpub-Regulations":"single"},"enabled":true},"Core":{"params":{"CopyToLaw":false,"Browse-cr-Category-Id":"","ShowBarLetter":true,"Browse-cs-Category-Id":"","CopyToArbortext":false,"Template-NotFound":"notfound.html","DoTreatment-ConsoDate":true,"Menu-cs-Category-Id":"","FutureDate":29990101000000,"ShowFutureDate":true,"Search-OptionInForce":true,"Search-OptionStemming":true,"MasterToServerChunkSize":2000,"DefaultCorpus":"statutes","StopWordsFiles":["config/StopWordFr.txt","config/StopWordEn.txt"],"CutOffDate":19990401000000,"ShowTypeFileOptions":false,"Browse-cr-HideRepealed":false,"StrikethroughConsoDateException_selectionPage":false,"FragmentSelection":true,"Browse-DefaultRecentYear":false,"Browse-cs-HideRepealed":false},"enabled":true},"ContentSecurityPolicy":{"params":{},"enabled":true},"Backup":{"params":{"backupDbList":["master","annuals_master"],"backupExternalFolderList":["master=master","annuals_master=annuals_master","loose=loose"]},"enabled":true},"Integrity":{"params":{"Validate-Conversion-Pdf":true,"Exceptions":"","Validate-Exportation":true,"RemoveIntegrityAttributesOnConversion":true,"RemoveIntegrityAttributesOnExportation":true},"enabled":true}}'>
+		<input type="hidden" id="cmdId" name="cmdId" value="">
+		<input type="hidden" id="langInt" name="langInt" value="fr">
+		<input type="hidden" id="filter" name="filter" value="">
+
+		<input type="hidden" id="langCont" name="langCont" value="fr">
+		<input type="hidden" id="hideMenu" name="hideMenu" value="Fermer le menu">				
+		<input type="hidden" id="diplayMenu" name="diplayMenu" value="Afficher le menu">						
+		<input type="hidden" id="printPreview" name="printPreview" value="<<SR_printPreview>>">						
+		<input type="hidden" id="loadingMaskText" name="loadingMaskText" value="Chargement en cours...">					
+			
+		<input type="hidden" id="showSelectionsButtonTooltipSingleFrag" name="showSelectionsButtonTooltipSingleFrag" value="1 fragment a été sélectionné">				
+		<input type="hidden" id="showSelectionsButtonTooltipMultipleFrags" name="showSelectionsButtonTooltipMultipleFrags" value="fragments ont été sélectionnés">				
+		<input type="hidden" id="bootstrapMultiselect_nonSelectedText_limitSearch" name="bootstrapMultiselect_nonSelectedText_limitSearch" value="Aucune limite">				
+		<input type="hidden" id="bootstrapMultiselect_nSelectedText_limitSearch" name="bootstrapMultiselect_nSelectedText_limitSearch" value="limites">																
+		<input type="hidden" id="bootstrapMultiselect_allSelectedText_limitSearch" name="bootstrapMultiselect_allSelectedText_limitSearch" value="Toutes les limites">																			
+		<input type="hidden" id="corpusQuickSearch" name="corpusQuickSearch" value="all">
+
+		<script type="text/javascript" src="/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+		<script type="text/javascript" src="/bootstrap-notify/3.1.5/bootstrap-notify.min.js"></script>
+		<script type="text/javascript" src="/js/Config.js?v=2.1"></script>
+		<script type="text/javascript" src="/js/Object.js?v=2.1"></script>
+		<script type="text/javascript" src="/js/mainMenu.js?v=2.1"></script>
+		<script type='text/javascript' src='/js/jquery.loadmask.js?v=2.1'></script>
+		<script type='text/javascript' src='/js/cyberlex.jquery.loadmask.js?v=2.1'></script>
+		<script type='text/javascript' src='/js/selections.js?v=2.1'></script>
+		<script type='text/javascript' src='/js/UrlHelper.js?v=2.1'></script>
+		
+<script type="text/javascript" src="/js/Config.js?v=2.2"></script>
+
+<script type="text/javascript" src="/js/showdoc.js?v=2.2"></script>
+
+	</body>
+</html>

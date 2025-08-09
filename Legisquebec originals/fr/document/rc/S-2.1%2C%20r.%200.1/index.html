@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; CHARSET=utf-8"></meta>
+		<meta name="dc.title" content=" - Règlement sur l’application d’un Code du bâtiment — 1985">
+		<meta name="dc.creator" content="">
+		<meta name="dc.language" scheme="ISO639-2"	content="fre">
+		<meta name="dc.subject" content="">
+		<meta name="Keywords" content="">
+		<meta name="dc.Publisher" content="">
+		<meta name="dc.Contributor" content="Irosoft, architecture de gestion de l'information législative - legal information management system">
+		<meta name="dc.Description" content="">
+		<meta name="Description" content="">
+		<meta name="Title" content=" - Règlement sur l’application d’un Code du bâtiment — 1985">
+		<meta name="dc.date.created" content="2022-09-02">
+		<meta name="dc.date.modified" content="2022-09-02">
+
+		<title>Légis Québec</title>
+		
+		<link rel="shortcut icon" href="/img/favicon.ico">
+		<link rel="stylesheet" href="/bootstrap/5.1.3/css/bootstrap.min.css">
+		<link rel='stylesheet' href='/CSS/jquery.loadmask.css?v=2.1'>
+		<link rel='stylesheet' href='/CSS/cyberlex.jquery.loadmask.css?v=2.1'>
+		
+		
+<link rel="stylesheet" type="text/css" href="/CSS/FragmentView.css?v=2.2"></link>
+
+		<link rel="stylesheet" href="/css/publishing-bootstrap.css?v=2.1">
+		<link rel="stylesheet" href="/css/publishing.css?v=2.1">
+		<link rel="stylesheet" href="/CSS/cyberlex-bootstrap.min.css?v=2.1">
+		<link rel="stylesheet" href="/CSS/cyberlex.css?v=2.1">
+		<link rel="stylesheet" href="/css/font-awesome.min.css?v=2.1">
+		<link rel="stylesheet" href="/CSS/core.css?v=2.1">
+		<link rel="stylesheet" href="/CSS/client.css?v=2.1">
+		<link rel="stylesheet" href="/css/publications-quebec.css?v=2.1">
+		<link rel="stylesheet" href="/css/eoq.css?v=2.1">
+
+		<script type="text/javascript" src="/jquery-ui/1.13.0/external/jquery/jquery.js?v=2.1"></script>
+		<script type="text/javascript" src="/jquery-ui/1.13.0/jquery-ui.min.js?v=2.1"></script>
+		<script type="text/javascript" src="/jquery/3.6.0/jquery.min.js?v=2.1"></script>
+		<script type="text/javascript" src="/DOMPurify/dist/purify.min.js?v=2.1"></script>
+	</head>
+
+	<body>
+		<div id="wrap">
+			<div class="main-header">
+				<div class="float-end">
+					<div class="vague"></div>
+					<ul class="pub-quebec">
+						<li><a href="/fr/">Accueil</a></li>
+						<li><a href="/fr/contenu/joindre" >Nous joindre</a></li>
+						<li><a href="/fr/contenu/plan" >Plan du site</a></li>
+						<li><a href="https://www.quebec.ca/" target="_blank">Québec.ca</a></li>
+						<li><a href="/fr/contenu/FAQ" >FAQ</a></li>
+						<li class='spacer-pub-quebec'></li>
+						<li><a id="langSwitcher" class="" href="/en/document/cr/S-2.1,%20r.%200.1%20">English</a></li>
+
+					</ul>
+					<div class="mtess">
+						<a href="https://www.mtess.gouv.qc.ca/" class="mtessTitle" target="_blank">Ministère de l'Emploi et de la Solidarité sociale</a>
+					</div>
+				</div>
+				<a class="logo-pub-quebec" href="http://www.publicationsduquebec.gouv.qc.ca/" target="_blank"></a>
+			</div>
+			<hr/>
+			
+			<!-- Header -->
+			<nav class="navbar navbar-light">
+				<div class="container-fluid colorTheme">
+					<div class="navbar-header">
+						<div class="row">
+							<div class="col-sm-3">
+								<div class="input-group" class="pt-2">
+									<input type="text" class="form-control" data-bs-placement="top" data-bs-toggle="tooltip" placeholder="Recherche" id="quickSearchText" title="Rechercher dans lois et règlements codifiés">
+									<span class="input-group-btn">
+										<button class="btn btn-primary" type="button" id="goResult" data-bs-placement="top" data-bs-toggle="tooltip" title="Recherche">
+											<span class="fa fa-search" aria-hidden="true"></span>
+										</button>
+									</span>
+								</div>
+								<div class="py-2"><a href="/fr/recherche?t=a">Recherche avancée</a></div>
+							</div><div class="col-sm-9 d-flex justify-content-between">
+									<a class="navbar-brand logo-fr logo" title="Accueil" href="/fr/"></a>
+							</div>
+						</div>
+					</div>
+				</div><!-- /.container-fluid -->
+			</nav>
+			<!-- Content -->			
+			<div class="row">
+				<div class="col-sm-3">
+					<div class="list-group">
+	<a href="#" class="list-group-item active disabled bg-primary bg-gradient text-white">Lois et règlements codifiés</a>
+	<a href="/fr/chapitres?corpus=lois" id="chapterStatutes" class="list-group-item">Lois codifiées</a>
+	<a href="/fr/chapitres?corpus=regs" id="chapterRegulations" class="list-group-item">Règlements codifiés</a>
+	
+	<a href="#" class="list-group-item active disabled bg-primary bg-gradient text-white">Lois et règlements annuels</a>
+	<a href="/fr/annuels?filtre=lois" id="browseannual-statutes" class="list-group-item">Lois annuelles</a>
+	<a href="/fr/annuels?filtre=regs" id="browseannual-regs" class="list-group-item">Règlements annuels</a>
+	
+	<a href="#" class="list-group-item active disabled bg-primary bg-gradient text-white">Information complémentaire</a>
+	<a id="content-editoff" href="/fr/contenu/editeurofficiel" class="list-group-item">L’Éditeur officiel du Québec</a>
+	<a id="content-neuf" href="/fr/contenu/neuf" class="list-group-item">Quoi de neuf?</a>
+	<a id="content-noteinfo" href="/fr/contenu/noteinfo" class="list-group-item">Note d’information</a>
+	<a id="content-mjqpol" href="/fr/contenu/mjqpol" class="list-group-item">Politique du ministre de la Justice</a>
+	<a id="content-modlois" href="/fr/contenu/modlois" class="list-group-item">Lois : Modifications</a>
+	<a id="content-nevlois" href="/fr/contenu/nevlois" class="list-group-item">Lois : Dispositions non en vigueur</a>
+	<a id="content-eevlois" href="/fr/contenu/eevlois" class="list-group-item">Lois : Entrées en vigueur</a>
+	<a id="content-loisann" href="/fr/contenu/loisann" class="list-group-item">Lois annuelles : Versions PDF depuis 1996</a>
+	<a id="content-modreg" href="/fr/contenu/modreg" class="list-group-item">Règlements : Modifications</a>
+	<a id="content-regann" href="/fr/contenu/regann" class="list-group-item">Règlements annuels : Versions PDF depuis 1996</a>
+	<a id="content-decision" href="/fr/contenu/decision" class="list-group-item">Décisions des tribunaux</a>
+</div>
+					
+				</div>
+				<div id="contentDiv" class="col-sm-9">
+					<form id="form" onsubmit="" method="post" action="">
+	<div>
+		<input alt="Champ caché" name="command" type="hidden" value=""></input>
+		<input alt="Champ caché" name="shorttitle" type="hidden" value=""></input>
+		<input alt="Champ caché" name="marginalnotexml" type="hidden" value=""></input>
+		<input alt="Champ caché" name="heading" type="hidden" value=""></input>
+		<input alt="Champ caché" name="fragment" type="hidden" value=""></input>
+		<input alt="Champ caché" name="selfrag" type="hidden" value=""></input>
+		<input alt="Champ caché" name="search_type" type="hidden" value=""></input>
+		<input alt="Champ caché" name="title_search_type" type="hidden" value=""></input>		
+		<input alt="Champ caché" name="anchor" type="hidden" value=""></input>
+		<input alt="Champ caché" name="dateEEV" type="hidden" value=""></input>
+		<input alt="Champ caché" name="statuteyear" type="hidden" value=""></input>
+		<input alt="Champ caché" name="isPrinting" type="hidden" value="false"></input>
+		<input alt="Champ caché" name="from" type="hidden" value=""></input>
+		<input alt="Champ caché" name="output" type="hidden" value="printFull"></input>
+		<input alt="Champ caché" name="page" type="hidden" value="<<page>>"></input>
+		<input alt="Champ caché" name="length" type="hidden" value=""></input>
+		<input alt="Champ caché" name="instrumentnumber" type="hidden" value="S-2.1, r. 0.1 "></input>
+		<input alt="Champ caché" name="instrumentnumbersearch" type="hidden" value=""></input>
+		<input alt="Champ caché" name="stemmed" type="hidden" value=""></input>
+		
+	</div>
+
+	<div class="card">
+		<div class="card-header p-3 bg-gradient docHeader">
+						<h3 class="card-title"><span class="fw-bold">S-2.1, r. 0.1 </span> - Règlement sur l’application d’un Code du bâtiment — 1985</h3>
+					</div>
+		
+		<div class="card-body">
+			<div class="d-flex justify-content-between align-items-center">
+				<div class="flex-row d-flex align-items-center">
+					<div class="pr-1">
+						<a href="/fr/tdm/rc/S-2.1,%20r.%200.1%20" class="btn btn-outline-secondary bg-gradient" role="button" title="Afficher la table des matières du document" alt="Afficher la table des matières du document" data-bs-toggle="tooltip" data-bs-placement="top">Table des matières <span class="fa fa-list smallLeftSpacer" aria-hidden="true"></span></a>
+					</div>
+					<div class="px-1">
+						
+				<div class="btn-group">
+					<button id="relatedLegislativeDocument" type="button" class="btn btn-outline-secondary bg-gradient dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="-100, 0">
+						Loi habilitante <span class="badge rounded-pill bg-secondary smallLeftSpacer">1</span> <span class="caret smallLeftSpacer"></span>
+					</button>
+					<table class="table table-responsive table-hover dropdown-menu relatedDoc" role="menu">
+						<thead>
+							<tr>
+								<th width="15%">Alphanumérique</th>
+								<th width="85%">Titre</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+<td>S-2.1 </td>
+<td>
+<a class="hand boldLink" href="/fr/document/lc/S-2.1%20/">Loi sur la santé et la sécurité du travail   
+</a>
+</td>
+</tr>
+						</tbody>
+					</table>
+					</div>
+					</div>
+					<div class="px-1">
+						<span id="occurrenceButton" class="d-none">
+							Occurrences<span class="badge rounded-pill bg-secondary ms-3" id="occurrenceCount">0</span>
+						</span>
+					</div>
+					<div class="px-1">
+						
+					</div>
+				</div>
+
+				<div class="flex-row d-flex align-items-center">
+					<div class="px-1">
+						<a id="renditionPdf" target="_blank" class="btn btn-outline-secondary bg-gradient d-none" 
+							role="button" title="Ouvrir la version PDF" alt="Ouvrir la version PDF"
+							data-bs-toggle="tooltip" data-bs-placement="top">
+							 <span class="fa pdf-icon" aria-hidden="true"></span>
+						</a>
+					</div>
+					<div class="px-1">
+						<a id="renditionEpub" target="_blank" class="btn btn-outline-secondary bg-gradient d-none" 
+							role="button" title="Télécharger la version ePUB" alt="Télécharger la version ePUB"
+							data-bs-toggle="tooltip" data-bs-placement="top">
+							 <span class="fa epub-icon" aria-hidden="true"></span>
+						</a>
+					</div>
+					<div class="px-1">
+						<a id="btnPrintPreview" class="btn btn-outline-secondary bg-gradient last"
+							role="button" title="Préparer le document pour l'impression"
+							alt="Préparer le document pour l'impression" data-bs-toggle="tooltip" data-bs-placement="top"><span id="printBtnIcon"
+								class="fa fa-print" aria-hidden="true"></span>
+						</a>
+					</div>
+				</div>
+				
+			</div>
+			<div class="row pt-2">
+				<div class="col">
+					<div class="card ">
+						
+							<div class="card-header official-heading bg-gradient ">
+								<div class="row">
+									<div class="col">
+										<div class="text-end"></div>
+										Texte complet 
+									</div>
+								
+									<div class="col">
+										<div class="text-end">
+											À jour au 1<sup>er</sup> avril 2025
+										</div>
+										<div class="text-end">
+											Ce document a valeur officielle.
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="card-body history current conso" id="mainContent-document">
+								<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE div
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:exsl="http://exslt.org/common" xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:integrity="http://ref.irosoft.com/integrity/" integrity:Digest="F2CEC8990D53C780AFDCF6915A8CBCC4"><meta title="Ministère de la Justice du Québec" author="Ministère de la Justice du Québec" subject="Ministère de la Justice du Québec" keywords="Ministère de la Justice du Québec" description="Ministère de la Justice du Québec" timestamp="n'est pas supporter" application="CYBERLEX" version="2.2.0.2" provider="Irosoft" source="xsl"/><div xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns:law="http://ref.irosoft.com/LIMS/1.0/law" class="DefaultPageSequence BodyPageSequence"><div class="LegislativeDocument Global Style_Extra_Class"><div class="Identification"><div integrity:added="1" class="Identification-Id"><span integrity:added="1">chapitre </span><span integrity:order="1">S-2.1, r. 0.1</span></div><div integrity:order="2" class="titre-reglement-left titre-reglement-left customLongTitleWord">Règlement sur l’application d’un Code du bâtiment — 1985</div><span class="Hidden" integrity:order="3">SANTÉ ET SÉCURITÉ DU TRAVAIL — CODE DU BÂTIMENT</span><div><div class="enabling-identification"><div integrity:order="5" class="LongTitle-enabling">Loi sur la santé et la sécurité du travail</div></div><div class="HistoricalNote-LongTitle"><span><span integrity:order="6">(chapitre S-2.1, a. 223)</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div><span class="Hidden" integrity:order="4">S-2.1</span></div><span class="Hidden"><span integrity:order="9" class="date-txt-statut Hidden">01</span><span integrity:added="1">1</span><span integrity:added="1" class="superscript_7point">er</span><span integrity:added="1"> </span><span integrity:order="8" class="Hidden">01</span><span integrity:added="1">janvier </span><span integrity:order="7" class="date-txt-statut">2016</span></span><div integrity:added="1" class="Note italic"><div integrity:added="1" class="Note italic NoteDisplayDiv NoteImageWidthSpaceDiv" id="Note"><img integrity:added="1" src="/img/Note.png"/></div><div class="Note italic NoteDisplayDiv NoteContentWidthSpaceDiv" id="d-1951333406e27"><div class="indent-0-0"><span integrity:order="10" class="Provision">Le règlement est appliqué par la Commission des normes, de l’équité, de la santé et de la sécurité du travail et vise des constructions commencées après le 24 janvier 1987 et des transformations ou additions faites après cette date. N’étant ni abrogé ni remplacé, ce règlement est donc toujours appliqué par la CNESST.</span></div></div></div></div><div id="ga:l_i"><div class="Heading Heading" id="ga:l_i-h1"><span integrity:order="11" class="Label-group5"><span integrity:added="1">SECTION </span>I</span><div integrity:order="12" class="TitleText-group5 group5" id="ga:l_i-h1-t1-nb:1">INTERPRÉTATION</div></div><div class="section" id="se:1"><div class="Subsection SubsectionFirst" id="se:1-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 0.1 ?code=se:1&historique=20250806#20250806"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:1" data-code="se:1"><span integrity:order="13" class="Label-Section consolidationWhipeTextDecoration consolidationClean">1<span integrity:added="1">.</span></span></a> <span integrity:order="14" class="Subsection">Dans le présent règlement, à moins que le contexte n’indique un sens différent, on entend par:</span><div class="Continued-SectionSubsection"><span integrity:order="15" class="ContinuedSectionSubsection">«bâtiment»: toute construction utilisée ou destinée à être utilisée pour abriter ou recevoir des personnes, des animaux ou des choses;</span></div><div class="Continued-SectionSubsection"><span integrity:order="16" class="ContinuedSectionSubsection">«code»: le Code national du bâtiment du Canada 1985, y compris les errata d’octobre 1985 et de janvier 1986, les modifications de janvier 1986, à l’exception de celle relative au paragraphe 9 de l’article 3.1.4.5, les modifications de juillet et de novembre 1986, de janvier 1987 ainsi que celles de janvier 1988, publiés par le Conseil national de recherches du Canada.</span></div></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span integrity:order="17">D. 1958-86, a. 1</span><span><span integrity:added="1">; </span></span></span><span><span integrity:order="18">D. 996-91, a. 1</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div></div></div><div id="ga:l_ii"><div class="Heading Heading" id="ga:l_ii-h1"><span integrity:order="19" class="Label-group5"><span integrity:added="1">SECTION </span>II</span><div integrity:order="20" class="TitleText-group5 group5" id="ga:l_ii-h1-t1-nb:1">APPLICATION</div></div><div class="section" id="se:2"><div class="Subsection SubsectionFirst" id="se:2-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 0.1 ?code=se:2&historique=20250806#20250806"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:2" data-code="se:2"><span integrity:order="21" class="Label-Section consolidationWhipeTextDecoration consolidationClean">2<span integrity:added="1">.</span></span></a> <span integrity:order="22" class="Subsection">Un bâtiment dont la construction a commencé après le 24 janvier 1987 doit être conforme au code tel que modifié par le présent règlement.</span></div><div class="Subsection" id="se:2-ss:2"><span integrity:order="23" class="Subsection">Il en est de même de toute transformation au sens du code ou addition faite après le 24 janvier 1987 à un bâtiment construit avant cette date.</span></div><div class="Subsection" id="se:2-ss:3"><span integrity:order="24" class="Subsection">Cependant, le Règlement sur l’application d’un Code du bâtiment (D. 912-84, 84-04-11) peut s’appliquer à un tel bâtiment, à sa transformation ou addition lorsque les travaux débutent avant le 24 janvier 1988.</span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span integrity:order="25">D. 1958-86, a. 2</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div></div><div class="section" id="se:3"><div class="Subsection SubsectionFirst" id="se:3-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 0.1 ?code=se:3&historique=20250806#20250806"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:3" data-code="se:3"><span integrity:order="26" class="Label-Section consolidationWhipeTextDecoration consolidationClean">3<span integrity:added="1">.</span></span></a> <span integrity:order="27" class="Subsection">Dans le cas de transformation au sens du code ou addition à un bâtiment déjà construit, le propriétaire peut, si certaines dispositions du code sont difficilement applicables compte tenu de leur impact, proposer à une personne désignée par le ministre du Travail des mesures compensatoires, qui pourraient être acceptées par celle-ci, pour assurer la sécurité dans son bâtiment.</span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span integrity:order="28">D. 1958-86, a. 3</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div></div><div class="section" id="se:4"><div class="Subsection SubsectionFirst" id="se:4-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 0.1 ?code=se:4&historique=20250806#20250806"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:4" data-code="se:4"><span integrity:order="29" class="Label-Section consolidationWhipeTextDecoration consolidationClean">4<span integrity:added="1">.</span></span></a> <span integrity:order="30" class="Subsection">Un bâtiment ou une partie de bâtiment de construction combustible visé au deuxième alinéa de l’article 2 est réputé conforme aux dispositions du code qui exigent une construction incombustible s’il est pourvu d’un réseau détecteur et avertisseur d’incendie conforme aux dispositions de la sous-section 3.2.4 du code et d’un réseau d’extincteurs automatiques à eau conforme aux dispositions des articles 3.2.5.5 et 3.2.5.7 du code.</span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span integrity:order="31">D. 1958-86, a. 4</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div></div></div><div id="ga:l_iii"><div class="Heading Heading" id="ga:l_iii-h1"><span integrity:order="32" class="Label-group5"><span integrity:added="1">SECTION </span>III</span><div integrity:order="33" class="TitleText-group5 group5" id="ga:l_iii-h1-t1-nb:1">MODIFICATION AU CODE</div></div><div class="section" id="se:5"><div class="Subsection SubsectionFirst" id="se:5-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 0.1 ?code=se:5&historique=20250806#20250806"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:5" data-code="se:5"><span integrity:order="34" class="Label-Section consolidationWhipeTextDecoration consolidationClean">5<span integrity:added="1">.</span></span></a> <span integrity:order="35" class="Subsection">Une référence dans le code, à la norme Code canadien de l’électricité, première partie, ACNOR C22.1-1986 est, aux fins du présent règlement, une référence au Code canadien de l’électricité, première partie (15<span integrity:order="36" class="superscript">ème</span> édition), adopté par le décret 141-87 du 28 janvier 1987 et à toutes dispositions ultérieures le modifiant.</span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span integrity:order="37">D. 1958-86, a. 5</span><span><span integrity:added="1">; </span></span></span><span><span integrity:order="38">D. 996-91, a. 2</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div></div><div class="section" id="se:6"><div class="Subsection SubsectionFirst" id="se:6-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 0.1 ?code=se:6&historique=20250806#20250806"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:6" data-code="se:6"><span integrity:order="39" class="Label-Section consolidationWhipeTextDecoration consolidationClean">6<span integrity:added="1">.</span></span></a> <span integrity:order="40" class="Subsection">Aux fins du présent règlement, le code est modifié:</span><div class="Paragraph" id="se:6-ss:1-p1:1"><span integrity:order="41" class="Label-Z LabelBase">1<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="42" class="Paragraph">par le remplacement de la définition d’«<span integrity:order="43" class="italic">Accès sans obstacle</span>» apparaissant à la sous-section 1.3.2, par la suivante:</span><div class="AmendedText"><div class="Subsection" id="se:6-ss:1-p1:1-am-ss:2"><span integrity:added="1" class="normal">« </span><span integrity:order="44" class="Subsection">«<span integrity:order="45" class="italic">Accès sans obstacle</span>»: parcours qui peut être emprunté facilement par une personne ayant une incapacité résultant d’une déficience physique ou sensorielle, y compris une personne utilisant un fauteuil roulant, grâce notamment à l’emploi de rampes, d’ascenseurs ou autres appareils de levage lorsqu’il existe une dénivellation entre les planchers le long du parcours.»;</span></div></div></div><div class="Paragraph" id="se:6-ss:1-p1:2"><span integrity:order="46" class="Label-Z LabelBase">2<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="47" class="Paragraph">par le remplacement de la définition d’«<span integrity:order="48" class="italic">Autorité compétente</span>», apparaissant à la sous-section 1.3.2, par la suivante:</span><div class="AmendedText"><div class="Subsection" id="se:6-ss:1-p1:2-am-ss:3"><span integrity:added="1" class="normal">« </span><span integrity:order="49" class="Subsection">«<span integrity:order="50" class="italic">Autorité compétente</span>»: la Commission des normes, de l’équité, de la santé et de la sécurité du travail, instituée par l’article 137 de la Loi sur la santé et la sécurité du travail (chapitre S-2.1).»;</span></div></div></div><div class="Paragraph" id="se:6-ss:1-p1:3"><span integrity:order="51" class="Label-Z LabelBase">3<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="52" class="Paragraph">par l’addition, dans le tableau 3.1.14.A:</span><div class="Subparagraph" id="se:6-ss:1-p1:3-p2:a"><span integrity:order="53" class="Label-L LabelBase">a<span integrity:added="1" class="normal LabelBase italic">) </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="54" class="Subparagraph">dans la colonne intitulée «Utilisation de l’<span integrity:order="55" class="italic">aire de plancher</span> ou d’une partie d’<span integrity:order="56" class="italic">aire de plancher</span>» à la fin de l’énumération des <span integrity:order="57" class="italic">établissements de réunion</span>, des établissements suivants: bibliothèques, musées, patinoires;</span></div><div class="Subparagraph" id="se:6-ss:1-p1:3-p2:b"><span integrity:order="58" class="Label-L LabelBase">b<span integrity:added="1" class="normal LabelBase italic">) </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="59" class="Subparagraph">dans la colonne intitulée «Surface par personne en m<span integrity:order="60" class="superscript">2</span>» vis-à-vis les mots bibliothèques, musées et patinoires, du chiffre «3.0»;</span></div></div><div class="Paragraph" id="se:6-ss:1-p1:3_1"><span integrity:order="61" class="Label-Z LabelBase">3.1<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="62" class="Paragraph">par le remplacement du paragraphe 9 de l’article 3.1.4.5 par le suivant:</span><div class="AmendedText"><div class="Paragraph" id="se:6-ss:1-p1:3_1-am-p1:9"><span integrity:added="1" class="normal">« </span><span integrity:order="63" class="Label-P LabelBase">9<span integrity:added="1">. </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="64" class="Paragraph">En plus de l’exception prévue au paragraphe 8, des fils et câbles électriques avec des gaines ou des enveloppes <span integrity:order="65" class="italic">combustibles</span> peuvent être utilisés lorsqu’une des conditions suivantes est respectée:</span><div class="Subparagraph" id="se:6-ss:1-p1:3_1-am-p1:9-p2:a"><span integrity:order="66" class="Label-L LabelBase">a<span integrity:added="1" class="normal LabelBase italic">) </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="67" class="Subparagraph">ces fils et câbles ne se carbonisent pas sur plus de 1,5 m lorsqu’ils sont soumis à l’essai à la flamme verticale de l’article 4.11.4 de la norme CSA C22.2 Nº 0.3, «Test Methods for Electrical Wires and Cables»;</span></div><div class="Subparagraph" id="se:6-ss:1-p1:3_1-am-p1:9-p2:b"><span integrity:order="68" class="Label-L LabelBase">b<span integrity:added="1" class="normal LabelBase italic">) </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="69" class="Subparagraph">ces fils et câbles sont situés dans:</span><div class="clause"><span integrity:order="70" class="Label-R LabelBase">i<span integrity:added="1">. </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="71" class="Clause">des canalisations <span integrity:order="72" class="italic">incombustibles</span>,</span></div><div class="clause"><span integrity:order="73" class="Label-R LabelBase">ii<span integrity:added="1">. </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="74" class="Clause">des dalles de béton,</span></div><div class="clause"><span integrity:order="75" class="Label-R LabelBase">iii<span integrity:added="1">. </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="76" class="Clause">un vide dissimulé à l’intérieur d’un mur,</span></div><div class="clause"><span integrity:order="77" class="Label-R LabelBase">iv<span integrity:added="1">. </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="78" class="Clause">des murs de maçonnerie,</span></div><div class="clause"><span integrity:order="79" class="Label-R LabelBase">v<span integrity:added="1">. </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="80" class="Clause">un <span integrity:order="81" class="italic">local technique</span> isolé du reste du <span integrity:order="82" class="italic">bâtiment</span> par des <span integrity:order="83" class="italic">séparations coupe-feu</span> ayant un <span integrity:order="84" class="italic">degré de résistance au feu</span> d’au moins 1 heure.</span></div></div><div class="ContinuedParagraph"><span integrity:order="85" class="ContinuedParagraph">Toutefois si les fils et câbles visés par l’alinéa <span integrity:order="86" class="italic">b</span> sont situés dans les gaines verticales des <span integrity:order="87" class="italic">bâtiments</span> visés par la sous-section 3.2.6, ils doivent être protégés par des canalisations <span integrity:order="88" class="italic">incombustibles.</span>»;</span></div></div></div></div><div class="Paragraph" id="se:6-ss:1-p1:3_2"><span integrity:order="89" class="Label-Z LabelBase">3.2<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="90" class="Paragraph">par le remplacement du paragraphe 3 de l’article 3.1.7.2 par le suivant:</span><div class="AmendedText"><div class="Paragraph" id="se:6-ss:1-p1:3_2-am-p1:3"><span integrity:added="1" class="normal">« </span><span integrity:order="91" class="Label-P LabelBase">3<span integrity:added="1">. </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="92" class="Paragraph">Le câblage, qu’il s’agisse d’un fil unique ou d’un groupe de fils, dont la gaine ou l’enveloppe est <span integrity:order="93" class="italic">combustible</span>, dont le diamètre hors-tout ne dépasse pas 30 mm et qui n’est pas protégé par une canalisation <span integrity:order="94" class="italic">incombustible</span> peut:</span><div class="Subparagraph" id="se:6-ss:1-p1:3_2-am-p1:3-p2:a"><span integrity:order="95" class="Label-L LabelBase">a<span integrity:added="1" class="normal LabelBase italic">) </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="96" class="Subparagraph">s’il est conforme à l’alinéa 3.1.4.5.9 <span integrity:order="97" class="italic">a</span>, pénétrer ou traverser un ensemble pour lequel un <span integrity:order="98" class="italic">degré de résistance au feu</span> est exigé sans avoir été incorporé à cet ensemble au moment des essais comme l’exige le paragraphe 1;</span></div><div class="Subparagraph" id="se:6-ss:1-p1:3_2-am-p1:3-p2:b"><span integrity:order="99" class="Label-L LabelBase">b<span integrity:added="1" class="normal LabelBase italic">) </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="100" class="Subparagraph">pénétrer et traverser un ensemble vertical pour lequel un <span integrity:order="101" class="italic">degré de résistance au feu</span> est exigé sans avoir été incorporé à cet ensemble au moment des essais comme l’exige le paragraphe 1;</span></div><div class="Subparagraph" id="se:6-ss:1-p1:3_2-am-p1:3-p2:c"><span integrity:order="102" class="Label-L LabelBase">c<span integrity:added="1" class="normal LabelBase italic">) </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="103" class="Subparagraph">pénétrer sans traverser un ensemble horizontal pour lequel un <span integrity:order="104" class="italic">degré de résistance au feu</span> est exigé sans avoir été incorporé à cet ensemble au moment des essais comme l’exige le paragraphe 1.»;</span></div></div></div></div><div class="Paragraph" id="se:6-ss:1-p1:4"><span integrity:order="105" class="Label-Z LabelBase">4<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="106" class="Paragraph">par l’addition, à l’article 3.2.2.8, du paragraphe suivant:</span><div class="AmendedText"><div class="Paragraph" id="se:6-ss:1-p1:4-am-p1:3"><span integrity:added="1" class="normal">« </span><span integrity:order="107" class="Label-P LabelBase">3<span integrity:added="1">. </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="108" class="Paragraph">Il est permis de déroger aux exigences des articles 3.2.2.12 à 3.2.2.20 exigeant un <span integrity:order="109" class="italic">degré de résistance au feu</span> pour le toit à condition que:</span><div class="Subparagraph" id="se:6-ss:1-p1:4-am-p1:3-p2:a"><span integrity:order="110" class="Label-L LabelBase">a<span integrity:added="1" class="normal LabelBase italic">) </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="111" class="Subparagraph">le <span integrity:order="112" class="italic">bâtiment</span> ou la partie de <span integrity:order="113" class="italic">bâtiment</span> soit utilisé uniquement pour des activités sportives, sans spectateur et où la <span integrity:order="114" class="italic">charge combustible</span> est faible telles les piscines intérieures, les tennis et les patinoires;</span></div><div class="Subparagraph" id="se:6-ss:1-p1:4-am-p1:3-p2:b"><span integrity:order="115" class="Label-L LabelBase">b<span integrity:added="1" class="normal LabelBase italic">) </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="116" class="Subparagraph">le toit soit de <span integrity:order="117" class="italic">construction incombustible</span>; et</span></div><div class="Subparagraph" id="se:6-ss:1-p1:4-am-p1:3-p2:c"><span integrity:order="118" class="Label-L LabelBase">c<span integrity:added="1" class="normal LabelBase italic">) </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="119" class="Subparagraph">la structure du toit soit située à 6 m ou plus du plancher.»;</span></div></div></div></div><div class="Paragraph" id="se:6-ss:1-p1:5"><span integrity:order="120" class="Label-Z LabelBase">5<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="121" class="Paragraph">par le remplacement du sous-paragraphe <span integrity:order="122" class="italic">c</span> du paragraphe 1 de l’article 3.3.1.4, par le suivant:</span><div class="AmendedText"><div class="Paragraph" id="se:6-ss:1-p1:5-am-p1:c"><span integrity:added="1" class="normal">« </span><span integrity:order="123" class="Label-L LabelBase">c<span integrity:added="1" class="normal LabelBase italic">) </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="124" class="Paragraph">Sauf pour une salle de tir où le <span integrity:order="125" class="italic">nombre de personnes</span> admissibles est inférieur à 10 ou un <span integrity:order="126" class="italic">logement</span>, lorsque la surface de la pièce ou de la <span integrity:order="127" class="italic">suite</span>, ou la distance entre un point quelconque de la pièce ou de la <span integrity:order="128" class="italic">suite</span> et la porte la plus proche quelconque de la pièce ou de la <span integrity:order="129" class="italic">suite</span> et la porte la plus proche donnant sur un <span integrity:order="130" class="italic">corridor commun</span>, un corridor à l’usage du public, un corridor desservant des salles de classe ou des chambres de patients ou un corridor donnant directement sur une <span integrity:order="131" class="italic">issue</span> est supérieure aux valeurs indiquées au tableau 3.3.1.A;»;</span></div></div></div><div class="Paragraph" id="se:6-ss:1-p1:6"><span integrity:order="132" class="Label-Z LabelBase">6<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="133" class="Paragraph">par l’addition, après l’article 3.3.7.9 de l’article suivant:</span><div class="AmendedText"><div class="Subsection" id="se:6-ss:1-p1:6-am-ss:4"><span integrity:added="1" class="normal">« </span><span integrity:order="134" class="Subsection">Une toiture-terrasse prévue pour l’atterrissage d’un hélicoptère doit être conforme aux dispositions de la section 2.13 du Code national de prévention des incendies du Canada 1985, édition française nº 23175 F publiée par le Conseil national de recherches du Canada.»;</span></div></div></div><div class="Paragraph" id="se:6-ss:1-p1:7"><span integrity:order="135" class="Label-Z LabelBase">7<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="136" class="Paragraph">par le remplacement de la sous-section 3.5.5 par la suivante:</span><div class="AmendedText"><div class="subheading"><span integrity:order="137" class="Provision">3.5.5. ASCENSEURS, PLATE-FORMES ÉLÉVATRICES POUR FAUTEUILS ROULANTS, MONTE-CHARGE, PETITS MONTE-CHARGE, ESCALIERS ROULANTS ET TAPIS ROULANTS</span></div><div class="Paragraph" id="se:6-ss:1-p1:7-am-p1:1"><span integrity:added="1" class="normal">« </span><span integrity:order="138" class="Label-P LabelBase">1<span integrity:added="1">. </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="139" class="Paragraph">Un ascenseur, plate-forme élévatrice pour fauteuils roulants, monte-charge, petit monte-charge, escalier roulant et tapis roulant doivent être conformes au Règlement sur les ascenseurs, monte-charge, petits monte-charge, escaliers roulants et tapis roulants (R.R.Q., 1981 c. S-3, r. 1) et à toute disposition ultérieure le modifiant.</span></div><div class="Paragraph" id="se:6-ss:1-p1:7-am-p1:2"><span integrity:added="1" class="normal">« </span><span integrity:order="140" class="Label-P LabelBase">2<span integrity:added="1">. </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="141" class="Paragraph">Un ascenseur situé dans un <span integrity:order="142" class="italic">bâtiment</span> visé par la sous-section 3.2.6 doit être conforme aux dispositions des articles 3.2.6.3 et 3.2.6.4.</span></div><div class="Paragraph" id="se:6-ss:1-p1:7-am-p1:3"><span integrity:added="1" class="normal">« </span><span integrity:order="143" class="Label-P LabelBase">3<span integrity:added="1">. </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="144" class="Paragraph">Des chiffres arabes indiquant le numéro de l’<span integrity:order="145" class="italic">étage</span> doivent être installés de façon permanente sur les deux chambranles des entrées d’ascenseur conformément à l’annexe E du supplément nº 3-1982 de la norme CSAB44 «Safety Code for Elevators, Dumbwaiters, Escalator and Moving Walks» publiée par l’ACNOR.»;</span></div></div></div><div class="Paragraph" id="se:6-ss:1-p1:8"><span integrity:order="146" class="Label-Z LabelBase">8<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="147" class="Paragraph">par le remplacement du paragraphe 2 de l’article 3.7.2.1 par le suivant:</span><div class="AmendedText"><div class="Paragraph" id="se:6-ss:1-p1:8-am-p1:2"><span integrity:added="1" class="normal">« </span><span integrity:order="148" class="Label-P LabelBase">2<span integrity:added="1">. </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="149" class="Paragraph">Le nombre d’espaces requis pour les fauteuils roulants dans les <span integrity:order="150" class="italic">établissements de réunion</span> doit être conforme aux exigences du tableau 3.7.2.A suivant:</span><div class="section"><span class="Provision"><span integrity:order="151" class="bold">Tableau 3.7.2.A</span></span><div class="indent-0-0"><div xml:space="preserve" integrity:order="152" class="verbatim">
+<span integrity:order="153" class="Provision">__________________________________________________________________________________<br/><br/><span integrity:order="154" class="bold">Nombre total de       Nombre minimal d’espaces         Nombre minimal<br/>sièges de l’aire      requis pour les fauteuils        d’espaces requis<br/>ou du local           roulants dans les bâtiments      pour les fauteuils<br/>                      autre que les institutions       roulants dans les<br/>                      d’enseignement                   institutions<br/>                                                       d’enseignement</span><br/>___________________________________________________________________________________<br/><br/>  0 - 50              1                                2<br/>  <br/> 51 - 100             2                                4<br/><br/>101 - 500             2 + 1 par 100 ou fraction de     4 + 2 par 100 ou<br/>                      100 sièges additionnels          fraction de 100<br/>                                                       sièges additionnels<br/><br/>501 et plus           6 + 1 par 400 ou fraction        12 + 2 par 400 ou fraction<br/>                      de 400 sièges additionnels       de 400 sièges additionnels<br/>                      jusqu’à concurrence de 21        jusqu’à concurrence de 21<br/>                      espaces                          espaces<br/>___________________________________________________________________________________;        </span>
+</div></div></div></div></div></div><div class="Paragraph" id="se:6-ss:1-p1:9"><span integrity:order="155" class="Label-Z LabelBase">9<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="156" class="Paragraph">par le remplacement de l’article 3.7.2.3 par le suivant:</span><div class="AmendedText"><div class="Paragraph" id="se:6-ss:1-p1:9-am-p1:1"><span integrity:added="1" class="normal">« </span><span integrity:order="157" class="Label-P LabelBase">1<span integrity:added="1">. </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="158" class="Paragraph">Dans un <span integrity:order="159" class="italic">bâtiment</span> comportant un <span integrity:order="160" class="italic">accès sans obstacle</span> au moins une toilette doit être rendue accessible et conçue pour être utilisée par les personnes handicapées conformément aux exigences des articles 3.7.3.6 à 3.7.3.9.</span></div><div class="Paragraph" id="se:6-ss:1-p1:9-am-p1:2"><span integrity:added="1" class="normal">« </span><span integrity:order="161" class="Label-P LabelBase">2<span integrity:added="1">. </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="162" class="Paragraph">En plus de la toilette exigée au paragraphe 1, lorsque des toilettes sont prévues sur d’autres <span integrity:order="163" class="italic">aires de plancher</span> comportant un <span integrity:order="164" class="italic">accès sans obstacle</span>, au moins une toilette sur chacune de ces <span integrity:order="165" class="italic">aires de plancher</span> doit être conçue pour être utilisée par les personnes handicapées conformément aux exigences des articles 3.7.3.6 à 3.7.3.9 sauf si:</span><div class="Subparagraph" id="se:6-ss:1-p1:9-am-p1:2-p2:a"><span integrity:order="166" class="Label-L LabelBase">a<span integrity:added="1" class="normal LabelBase italic">) </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="167" class="Subparagraph">elles sont situées dans les <span integrity:order="168" class="italic">suites</span> à l’intérieur d’une habitation; ou</span></div><div class="Subparagraph" id="se:6-ss:1-p1:9-am-p1:2-p2:b"><span integrity:order="169" class="Label-L LabelBase">b<span integrity:added="1" class="normal LabelBase italic">) </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="170" class="Subparagraph">elles offrent des commodités équivalentes.»;</span></div></div></div></div><div class="Paragraph" id="se:6-ss:1-p1:10"><span integrity:order="171" class="Label-Z LabelBase">10<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="172" class="Paragraph">par le remplacement du paragraphe 2 de l’article 3.7.3.5 par le suivant:</span><div class="AmendedText"><div class="Paragraph" id="se:6-ss:1-p1:10-am-p1:2"><span integrity:added="1" class="normal">« </span><span integrity:order="173" class="Label-P LabelBase">2<span integrity:added="1">. </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="174" class="Paragraph">Les appareils élévateurs mentionnés à l’article 3.7.2.1 doivent être conformes au Règlement sur les ascenseurs, monte-charge, petits monte-charge, escaliers roulants et tapis roulants (R.R.Q., 1981, c. S-3, r. 1) et à toute disposition ultérieure le modifiant.»;</span></div></div></div><div class="Paragraph" id="se:6-ss:1-p1:11"><span integrity:order="175" class="Label-Z LabelBase">11<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="176" class="Paragraph">par le remplacement du paragraphe 2 de l’article 4.1.1.2 par le suivant:</span><div class="AmendedText"><div class="Paragraph" id="se:6-ss:1-p1:11-am-p1:2"><span integrity:added="1" class="normal">« </span><span integrity:order="177" class="Label-P LabelBase">2<span integrity:added="1">. </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="178" class="Paragraph">Le <span integrity:order="179" class="italic">concepteur</span> doit, dans les cas prévus à la Loi sur les architectes (chapitre A-21), être architecte, et dans les cas prévus à la Loi sur les ingénieurs (chapitre I-9), être ingénieur.»;</span></div></div></div><div class="Paragraph" id="se:6-ss:1-p1:12"><span integrity:order="180" class="Label-Z LabelBase">12<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="181" class="Paragraph">par le remplacement de l’article 4.1.6.6 par le suivant:</span><div class="AmendedText"><div class="Subsection" id="se:6-ss:1-p1:12-am-ss:5"><span integrity:added="1" class="normal">« </span><span integrity:order="182" class="Subsection">Une toiture-terrasse prévue pour l’atterrissage d’un hélicoptère doit être construite conformément aux dispositions du document intitulé: «Hélistation et héliplate-forme, critères de conception» nº TP2586 F publié en avril 1980 par Transport Canada.»;</span></div></div></div><div class="Paragraph" id="se:6-ss:1-p1:13"><span integrity:order="183" class="Label-Z LabelBase">13<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="184" class="Paragraph">par le remplacement de l’article 7.1.2.1 par le suivant:</span><div class="AmendedText"><div class="Subsection" id="se:6-ss:1-p1:13-am-ss:6"><span integrity:added="1" class="normal">« </span><span integrity:order="185" class="Subsection">Une <span integrity:order="186" class="italic">installation de plomberie</span> doit être effectuée conformément au Code de plomberie (R.R.Q., 1981, c. I-12.1, r. 1) et à toute disposition ultérieure le modifiant.»;</span></div></div></div><div class="Paragraph" id="se:6-ss:1-p1:14"><span integrity:order="187" class="Label-Z LabelBase">14<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="188" class="Paragraph">par le fait que la partie 8, intitulée «Mesures de sécurité sur les chantiers», ne s’applique pas;</span></div><div class="Paragraph" id="se:6-ss:1-p1:15"><span integrity:order="189" class="Label-Z LabelBase">15<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="190" class="Paragraph">par l’addition, au groupe C, de l’alinéa A-3.1.2.A de l’annexe A, après les mots «Pensions de tous genres», des mots «Résidences pour les personnes âgées»;</span></div><div class="Paragraph" id="se:6-ss:1-p1:16"><span integrity:order="191" class="Label-Z LabelBase">16<span integrity:added="1">° </span><span integrity:added="1" class="WidthFixForLabel"> </span></span><span integrity:order="192" class="Paragraph">par le remplacement dans l’article 9.10.9.10 des nombres «25» par les nombres «30».</span></div></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span integrity:order="193">D. 1958-86, a. 6</span><span><span integrity:added="1">; </span></span></span><span><span integrity:order="194">D. 996-91, a. 3</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div></div></div><div id="ga:l_iv"><div class="Heading Heading" id="ga:l_iv-h1"><span integrity:order="195" class="Label-group5"><span integrity:added="1">SECTION </span>IV</span><div integrity:order="196" class="TitleText-group5 group5" id="ga:l_iv-h1-t1-nb:1">DISPOSITIONS TRANSITOIRES ET FINALES</div></div><div class="section" id="se:7"><div class="Subsection SubsectionFirst" id="se:7-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 0.1 ?code=se:7&historique=20250806#20250806"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:7" data-code="se:7"><span integrity:order="197" class="Label-Section consolidationWhipeTextDecoration consolidationClean">7<span integrity:added="1">.</span></span></a> <span integrity:order="198" class="Subsection">Sous réserve du troisième alinéa de l’article 2, le présent règlement remplace, pour les bâtiments visés à cet article, le Règlement sur l’application d’un Code du bâtiment (D. 912-84, 84-04-11).</span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span integrity:order="199">D. 1958-86, a. 72</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div></div><div class="section" id="se:8"><div class="Subsection SubsectionFirst" id="se:8-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 0.1 ?code=se:8&historique=20250806#20250806"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:8" data-code="se:8"><span integrity:order="200" class="Label-Section consolidationWhipeTextDecoration consolidationClean">8<span integrity:added="1">.</span></span></a> <span class="Subsection"><span integrity:order="201" class="Repealed-Text">(Omis).</span></span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span integrity:order="202">D. 1958-86, a. 8</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div></div><div class="section" id="se:9"><div class="Subsection SubsectionFirst" id="se:9-ss:1"><div integrity:added="1" class="HistoryLink"><a href="/fr/version/rc/S-2.1, r. 0.1 ?code=se:9&historique=20250806#20250806"><img xmlns="" src="/img/history.png"/></a></div><a class="linkOtherLang" href="#se:9" data-code="se:9"><span integrity:order="203" class="Label-Section consolidationWhipeTextDecoration consolidationClean">9<span integrity:added="1">.</span></span></a> <span class="Subsection"><span integrity:order="204" class="Repealed-Text">(Omis).</span></span></div><div class="HistoricalNote"><div class="ligne"><span integrity:added="1">
+                    </span></div><span><span integrity:order="205">D. 1958-86, a. 9</span><span integrity:added="1">.</span><span integrity:added="1"/></span></div></div></div><div class="AmendedTextTitle"><div class="ligne"><span integrity:added="1">
+                    </span></div><span integrity:added="1">RÉFÉRENCES</span></div><div><span><span integrity:order="206">D. 1958-86, 1987 G.O. 2, 243</span></span></div><div><span><span integrity:order="207">D. 996-91, 1991 G.O. 2, 4176</span></span></div><div><span><span integrity:order="208">L.Q. 2015, c. 15, a. 237</span></span></div></div></div></div>
+							</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</form>
+
+<ul id="contextMenu" class="dropdown-menu" role="menu" >
+	<li id="contextMenuCopy" class="disabled dropdown-item"><a tabindex="-1">Copier</a></li>
+	<li class="dropdown-divider"></li>
+	<li class="dropdown-item"><a tabindex="-1"">Sélectionner cet élément</a></li>
+	<li id="contextMenuSelectParent" class="dropdown-item"><a tabindex="-1">Sélectionner l'élément parent</a></li>
+	<li id="contextMenuUnselectAll" class="disabled dropdown-item"><a tabindex="-1">Désélectionner tous les éléments</a></li>
+	<li class="dropdown-divider"></li>
+	<li id="contextMenuCopyToArbortext" class="disabled dropdown-item"><a tabindex="-1">Copier vers Rédaction</a></li>
+	<li id="contextMenuCopyToLaw" class="d-block disable dropdown-item"><a tabindex="-1">Copier vers LAW</a></li>
+</ul>
+<input type="text" class="copyContainer" id="copyToClipboardMenu">
+<div id="copyToClipboard" class="modal fade">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">
+					Copier vers le presse-papier
+				</h4>
+				<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>				
+			</div>
+			<div class="modal-body">
+				<p>
+				<div class="description">
+					Pour copier : Ctrl+C
+				</div>
+				<input type="text" class="form-control" name="copyToInput" id="copyToInput">
+				</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-outline-secondary bg-gradient" data-bs-dismiss="modal">OK</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<a href="#" class="back-to-top"><span class="fa fa-chevron-up"></span></a>
+
+
+	<!-- migration rapide - éventuellement call ajax JSON -->
+	<input type="hidden" id="alpha" value="S-2.1, r. 0.1 ">
+	<input type="hidden" id="title"  value='S-2.1, r. 0.1  - Règlement sur l’application d’un Code du bâtiment — 1985'>
+	<input type="hidden" id="dbType"  value="cr">
+	<input type="hidden" id="langCont"  value="fr">
+	<input type="hidden" id="otherLangCont" value="en">
+
+	<input type="hidden" id="contextMenu_copy" value="Copier"/>
+	<input type="hidden" id="contextMenu_selectElement" value="Sélectionner cet élément"/>
+	<input type="hidden" id="contextMenu_selectParentElement" value="Sélectionner l'élément parent"/>
+	<input type="hidden" id="contextMenu_unselectElement" value="<<SR_contextMenu_unselectElement>>"/>
+	<input type="hidden" id="contextMenu_unselectAll" value="Désélectionner tous les éléments"/>
+
+	<input type="hidden" id="contextMenu_copyToArbortext" value="Copier vers Rédaction"/>
+	<input type="hidden" id="contextMenu_copyToLaw" value="Copier vers LAW"/>
+	<input type="hidden" id="contextMenu_FragmentSelection" value="<<SR_contextMenu_FragmentSelection>>"/>
+	<input type="hidden" id="ctrlC_toCopyToClipboard" value="Pour copier : Ctrl+C"/>
+	<input type="hidden" id="readyToPaste" value="Vos sélections ont été copiées dans le presse-papier."/>
+
+	<input type="hidden" id="readyToPasteInLAW" value="Vous pouvez coller vos sélections dans LAW en utilisant la fonction appropriée."/>
+	<input type="hidden" id="readyToPasteInArbortext" value="Vous pouvez coller vos sélections dans Arbortext en utilisant la fonction appropriée."/>
+	<input type="hidden" id="errorWhileCopyingTo" value="Une erreur est survenue lors de la préparation des données."/>
+	<input type="hidden" id="showSelections" value="false"/>
+	<input type="hidden" id="consolidetedDateLabel" value=""/>
+	<input type="hidden" id="renditions" value='{"Epub":"/fr/epub/cr/S-2.1, R. 0.1 .epub","Pdf":"/fr/pdf/rc/S-2.1, R. 0.1 .pdf"}'/>
+	<input type="hidden" id="output" value=""/>
+	
+					
+<div data-bs-toggle="modal" data-bs-target="#myModal" id="printPreviewButton" class="printPreviewButton d-none">
+<button type="button" class="btn btn-primary my-2 rounded-pill" id="goPrintPreview" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">
+<span class="fa fa-check-square-o" aria-hidden="true"></span> <span class="badge rounded-pill bg-secondary badgeWhite">0</span>
+</button>
+</div>
+
+				</div>
+			</div>
+			
+			<!-- Footer -->
+		<div class="row pt-4">
+			<hr/>
+			<div align="center" class="pt-4">
+				<ul class="footer-options">
+					<li><a href="/fr/contenu/joindre/" >Nous joindre</a></li>
+					<li><a href="/fr/contenu/plan/" >Plan du site</a></li>
+					<li><a href="https://www.quebec.ca/" target="_blank">Québec.ca</a></li>
+					<li><a href="/fr/contenu/access/" >Accessibilité</a></li>
+					<li><a href="/fr/contenu/confid/" >Politique de confidentialité</a></li>
+				</ul>
+			</div>
+			<div  align="center"><a href="https://www.quebec.ca/" target="_blank"><img src="/img/quebec.gif" width="105" height="32" border="0"></a></div>
+			<div  align="center" class="copyright pt-2"><a class="footer-options" href="http://www.droitauteur.gouv.qc.ca/copyright.php" target="_blank">&copy; Gouvernement du Qu&eacute;bec</a></div>
+
+		</div>
+			
+		</div>
+			
+		<!-- Fenetre modal pour l'impression -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-impression">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="myModalLabel">Sélections</h4>
+						<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div>
+							<h4 id="myModalSubtitle"><small></small></h4>
+						</div>
+						<div class="list-group">
+							<a href="#" class="list-group-item active disabled bg-primary bg-gradient text-white">Afficher</a>
+							<a href="#" id="showSelectionsInCurrentDocument" class="list-group-item d-none">Les sélections du document courant</a>
+							<a href="#" id="showAllSelectionsInCollection" class="list-group-item">Toutes les sélections de la collection</a>
+							<a href="#" class="list-group-item active disabled bg-primary bg-gradient text-white">Fragments sélectionnés</a>
+							<a href="#" id="printPreviewResetSelections" class="list-group-item">Supprimer toutes les sélections</a>
+							<a href="#" id="printPreviewShowSelections" class="list-group-item d-none">Afficher les sélections</a>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-outline-secondary bg-gradient" data-bs-dismiss="modal">Fermer</button>
+					</div>
+				</div>
+			</div>
+			<form name="printForm" id="printForm" encType="application/x-www-form-urlencoded" method="post">
+				<input type="hidden" name="newQuery" value=""></input>
+				<input type="hidden" name="text" value=""></input>
+				<input type="hidden" name="isPrinting" value="false"></input>
+				<input type="hidden" name="title" value=""></input>
+				<input type="hidden" name="langCont" value="fr"></input>
+				<input type="hidden" name="type" value="cs"></input>
+				<input type="hidden" name="printType" value=""></input>
+				<input type="hidden" name="summary" value=""></input>
+				<input type="hidden" name="instrumentNumber" value=""></input>
+				<input type="hidden" name="selfrag" value=""></input>
+				<input type="hidden" name="anchor" value=""></input>
+				<input type="hidden" name="anchorSS" value=""></input>
+				<input type="hidden" name="recordsWithHits" value="false"></input>
+				<input type="hidden" name="validSearch" value="false"></input>
+				<input type="hidden" name="sortmode" value="false"></input>
+				<input type="hidden" name="output" value="selections"></input>
+			</form>
+		</div>
+		
+		<div class="modal fade bs-example-modal-sm" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+			<div class="modal-dialog modal-sm">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="mySmallModalLabel">Cyberlex</h4>
+						<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+					</div>
+					<div class="modal-body">
+						Version 2.2.5.0
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div>
+
+	
+		
+		<!-- migration rapide - éventuellement call ajax JSON -->
+		<input type="hidden" id="token" name="token" value="<<token>>">
+		<input type="hidden" id="config" name="config" value='{"ConfigurationMenu":{"params":{},"enabled":false},"XSLT":{"params":{"CocoonFullTextUrl":"ace-xslt-web.html","CocoonTOCUrl":"ace-xslt-toc.html"},"enabled":true},"Import":{"params":{"odbc-AnnualStatutes":"","odbc-Regulations":"","odbc-Statutes":"","odbc-AnnualRegulations":""},"enabled":false},"GoogleAnalytic":{"params":{"trackingId":""},"enabled":false},"Export":{"params":{"exportLast":["last","external-last","report"],"formatOptions":["Xml","Html"],"export-Regulations":true,"export-AnnualRegulations":true,"typeFileOptions":["",""],"exportFull":["all","external-all","report","orphans"],"modeOptions":["Last","All","Full"],"exportAll":["all","external-all","report"],"export-DtdClient":"Quebec","export-Statutes":true,"export-AnnualStatutes":true,"exportHtml-CocoonUrl":"ace-xslt-export.html"},"enabled":true},"Conversion":{"params":{"generatePdf-Statutes":"single","generatePdf-Regulations-Overwrite":true,"generatePdf-Statutes-Path":"master\\cs\\pdf","generateEpub-Statutes-Overwrite":true,"generateEpub-Statutes-Storage":"disk","generatePdf-Regulations-SoapEnvelope":"config/conversion/single-regulations.xml","generateEpub-AnnualStatutes-SoapEnvelope":"","generateEpub-Regulations-Storage":"disk","generatePdf-AnnualStatutes-SoapEnvelope":"","generateEpub-AnnualStatutes-Storage":"none","generatePdf-Regulations-Storage":"disk","generatePdf-AnnualRegulations-Storage":"none","generatePdf-AnnualRegulations-Overwrite":false,"generatePdf-Statutes-SoapEnvelope":"config/conversion/single-statutes.xml","generateEpub-AnnualRegulations-Storage":"none","generateEpub-AnnualStatutes":"none","renditionOptions":["Pdf","Epub"],"generateEpub-AnnualRegulations-SoapEnvelope":"","generatePdf-AnnualStatutes-Storage":"none","generateEpub-Statutes-SoapEnvelope":"config/conversion/epub.xml","generateEpub-Statutes-Path":"master\\cs\\epub","generatePdf-Regulations-SoapEnvelope-TwoPhase":"config/conversion/fo-to-pdf.xml","generateEpub-Regulations-Path":"master\\cr\\epub","generateEpub-AnnualStatutes-Overwrite":false,"generateEpub-Regulations-Overwrite":true,"generateEpub-Regulations-SoapEnvelope":"config/conversion/epub.xml","generateEpub-AnnualRegulations-Path":"annuals_master\\ar\\epub","generatePdf-Regulations-Path":"master\\cr\\pdf","generatePdf-AnnualStatutes":"none","generateEpub-Statutes":"single","generatePdf-AnnualRegulations-SoapEnvelope":"","generatePdf-AnnualRegulations":"none","generateEpub-AnnualStatutes-Path":"annuals_master\\as\\epub","generateEpub-AnnualRegulations-Overwrite":false,"generatePdf-Statutes-Overwrite":true,"generateEpub-AnnualRegulations":"none","generatePdf-AnnualStatutes-Path":"annuals_master\\as\\pdf","generatePdf-Statutes-Storage":"disk","generatePdf-AnnualRegulations-Path":"annuals_master\\ar\\pdf","generatePdf-AnnualStatutes-Overwrite":false,"generatePdf-Regulations":"single","generatePdf-Statutes-SoapEnvelope-TwoPhase":"config/conversion/fo-to-pdf.xml","generateEpub-Regulations":"single"},"enabled":true},"Core":{"params":{"CopyToLaw":false,"Browse-cr-Category-Id":"","ShowBarLetter":true,"Browse-cs-Category-Id":"","CopyToArbortext":false,"Template-NotFound":"notfound.html","DoTreatment-ConsoDate":true,"Menu-cs-Category-Id":"","FutureDate":29990101000000,"ShowFutureDate":true,"Search-OptionInForce":true,"Search-OptionStemming":true,"MasterToServerChunkSize":2000,"DefaultCorpus":"statutes","StopWordsFiles":["config/StopWordFr.txt","config/StopWordEn.txt"],"CutOffDate":19990401000000,"ShowTypeFileOptions":false,"Browse-cr-HideRepealed":false,"StrikethroughConsoDateException_selectionPage":false,"FragmentSelection":true,"Browse-DefaultRecentYear":false,"Browse-cs-HideRepealed":false},"enabled":true},"ContentSecurityPolicy":{"params":{},"enabled":true},"Backup":{"params":{"backupDbList":["master","annuals_master"],"backupExternalFolderList":["master=master","annuals_master=annuals_master","loose=loose"]},"enabled":true},"Integrity":{"params":{"Validate-Conversion-Pdf":true,"Exceptions":"","Validate-Exportation":true,"RemoveIntegrityAttributesOnConversion":true,"RemoveIntegrityAttributesOnExportation":true},"enabled":true}}'>
+		<input type="hidden" id="cmdId" name="cmdId" value="">
+		<input type="hidden" id="langInt" name="langInt" value="fr">
+		<input type="hidden" id="filter" name="filter" value="">
+
+		<input type="hidden" id="langCont" name="langCont" value="fr">
+		<input type="hidden" id="hideMenu" name="hideMenu" value="Fermer le menu">				
+		<input type="hidden" id="diplayMenu" name="diplayMenu" value="Afficher le menu">						
+		<input type="hidden" id="printPreview" name="printPreview" value="<<SR_printPreview>>">						
+		<input type="hidden" id="loadingMaskText" name="loadingMaskText" value="Chargement en cours...">					
+			
+		<input type="hidden" id="showSelectionsButtonTooltipSingleFrag" name="showSelectionsButtonTooltipSingleFrag" value="1 fragment a été sélectionné">				
+		<input type="hidden" id="showSelectionsButtonTooltipMultipleFrags" name="showSelectionsButtonTooltipMultipleFrags" value="fragments ont été sélectionnés">				
+		<input type="hidden" id="bootstrapMultiselect_nonSelectedText_limitSearch" name="bootstrapMultiselect_nonSelectedText_limitSearch" value="Aucune limite">				
+		<input type="hidden" id="bootstrapMultiselect_nSelectedText_limitSearch" name="bootstrapMultiselect_nSelectedText_limitSearch" value="limites">																
+		<input type="hidden" id="bootstrapMultiselect_allSelectedText_limitSearch" name="bootstrapMultiselect_allSelectedText_limitSearch" value="Toutes les limites">																			
+		<input type="hidden" id="corpusQuickSearch" name="corpusQuickSearch" value="all">
+
+		<script type="text/javascript" src="/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+		<script type="text/javascript" src="/bootstrap-notify/3.1.5/bootstrap-notify.min.js"></script>
+		<script type="text/javascript" src="/js/Config.js?v=2.1"></script>
+		<script type="text/javascript" src="/js/Object.js?v=2.1"></script>
+		<script type="text/javascript" src="/js/mainMenu.js?v=2.1"></script>
+		<script type='text/javascript' src='/js/jquery.loadmask.js?v=2.1'></script>
+		<script type='text/javascript' src='/js/cyberlex.jquery.loadmask.js?v=2.1'></script>
+		<script type='text/javascript' src='/js/selections.js?v=2.1'></script>
+		<script type='text/javascript' src='/js/UrlHelper.js?v=2.1'></script>
+		
+<script type="text/javascript" src="/js/Config.js?v=2.2"></script>
+
+<script type="text/javascript" src="/js/showdoc.js?v=2.2"></script>
+
+	</body>
+</html>
