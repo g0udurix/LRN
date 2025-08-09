@@ -1,13 +1,19 @@
-name: Labels sync
-on:
-  schedule: [ { cron: '11 3 * * *' } ]
-  push: { paths: [ '.github/labels.yml' ] }
-  workflow_dispatch:
-jobs:
-  sync:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: lannonbr/issue-label-manager-action@v3
-        env: { GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} }
-        with: { delete: true, config-path: .github/labels.yml }
+
+    name: Labels sync
+    on:
+      push:
+        branches: [ master ]
+        paths:
+          - .github/labels.yml
+      workflow_dispatch:
+    jobs:
+      sync:
+        runs-on: ubuntu-latest
+        steps:
+          - uses: actions/checkout@v4
+          - name: Sync labels
+            uses: crazy-max/ghaction-github-labeler@v5
+            with:
+              github-token: ${{ secrets.GITHUB_TOKEN }}
+              yaml-file: .github/labels.yml
+              skip-delete: false

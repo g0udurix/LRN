@@ -1,44 +1,27 @@
-name: Projects sync (add & fields)
-on:
-  issues:
-    types: [opened, edited, labeled, unlabeled, reopened]
-  pull_request:
-    types: [opened, edited, labeled, unlabeled, reopened, ready_for_review]
-  workflow_dispatch:
-jobs:
-  add-and-map:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/add-to-project@v1.0.2
-        with:
-          project-url: https://github.com/users/g0udurix/projects/3
-          github-token: ${{ secrets.PROJECTS_PAT }}
-      - name: Map labels to fields
-        uses: actions/github-script@v7
-        env: { PROJECTS_PAT: ${{ secrets.PROJECTS_PAT }} }
-        with:
-          script: |
-            const token = process.env.PROJECTS_PAT; if(!token){ core.warning('PROJECTS_PAT not set'); return }
-            const isPR = !!context.payload.pull_request;
-            const item = context.payload.issue || context.payload.pull_request;
-            const labels = (item.labels || []).map(l => typeof l === 'string' ? l : l.name);
-            const priority = (labels.find(l => /^priority\//i.test(l))||'').split('/')?.[1] || null;
-            const status   = (labels.find(l => /^status\//i.test(l))||'').split('/')?.[1] || null;
-            const { graphql } = require('@octokit/graphql');
-            const ghgql = graphql.defaults({ headers: { authorization: `token ${token}` }});
-            const login = context.repo.owner; const number = 3;
-            const proj = await ghgql(`query($login:String!,$number:Int!){ user(login:$login){ projectV2(number:$number){ id fields(first:50){ nodes{ id name __typename ... on ProjectV2SingleSelectField { options{ id name } } } } } } }`, {login, number});
-            const project = proj.user?.projectV2; if(!project){ core.warning('project not found'); return }
-            const fields = project.fields.nodes;
-            const F = (name)=>fields.find(f=>f.name===name);
-            const O = (f,val)=> f && f.options && f.options.find(o=>o.name.toLowerCase()===(val||'').toLowerCase());
-            const statusField = F('Status'); const priorityField = F('Priority');
-            const statusOpt = O(statusField, status); const priorityOpt = O(priorityField, priority);
-            const contentNodeId = (isPR
-              ? (await github.rest.pulls.get({owner: context.repo.owner, repo: context.repo.repo, pull_number: item.number})).data.node_id
-              : (await github.rest.issues.get({owner: context.repo.owner, repo: context.repo.repo, issue_number: item.number})).data.node_id);
-            const addRes = await ghgql(`mutation($p:ID!,$c:ID!){ addProjectV2ItemById(input:{projectId:$p, contentId:$c}){ item{ id } } }`, {p: project.id, c: contentNodeId}).catch(()=>({}));
-            const itemId = addRes?.addProjectV2ItemById?.item?.id; if(!itemId){ core.info('item exists or added already'); }
-            async function setSelect(field,opt){ if(!field||!opt)return; await ghgql(`mutation($p:ID!,$i:ID!,$f:ID!,$o:String!){ updateProjectV2ItemFieldValue(input:{projectId:$p,itemId:$i,fieldId:$f,value:{singleSelectOptionId:$o}}){ clientMutationId } }`, {p: project.id, i: itemId, f: field.id, o: opt.id}); }
-            await setSelect(statusField, statusOpt); await setSelect(priorityField, priorityOpt);
-            core.info('mapped fields');
+
+    name: Projects sync (add & fields)
+    on:
+      issues:
+        types: [opened, labeled]
+      pull_request:
+        types: [opened]
+      workflow_dispatch:
+    jobs:
+      add_to_project:
+        runs-on: ubuntu-latest
+        permissions:
+          contents: read
+          issues: write
+          pull-requests: write
+          projects: write
+        steps:
+          - name: Add to project #{3}
+            uses: actions/add-to-project@v0.5.0
+            with:
+              project-url: https://github.com/users/${ '{' } github.repository_owner { '}' }/projects/3
+              github-token: ${ '{' } secrets.PROJECTS_PAT { '}' }
+          - name: Set default fields via GraphQL (best-effort)
+            env:
+              GH_TOKEN: ${ '{' } secrets.PROJECTS_PAT { '}' }
+            run: |
+              echo "Field sync placeholder at 2025-08-09T13:01:52Z"

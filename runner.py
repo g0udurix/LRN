@@ -1,117 +1,125 @@
-#!/usr/bin/env python3
-"""
-LRN launcher — restores `upgrade_and_roadmap.py` then delegates to it.
-Usage: python runner.py [--apply] [--self-test] [--no-refresh]
-"""
-import os, sys, json, urllib.request, subprocess, shutil, re
-from pathlib import Path
+# Contributing to LRN (for Humans **and** AI Agents)
 
-REPO = os.getenv('LRN_REPO', 'g0udurix/LRN')
-CANDIDATE_BRANCHES = []
+Welcome! This guide explains how to contribute productively and respectfully — whether you’re a human developer, a researcher, or an autonomous AI agent acting on someone’s behalf.
 
-# detect current and default branch
-try:
-    p = subprocess.run(['git','rev-parse','--abbrev-ref','HEAD'],capture_output=True,text=True)
-    if p.returncode==0:
-        br=(p.stdout or '').strip()
-        if br and br!='HEAD': CANDIDATE_BRANCHES.append(br)
-except Exception: pass
-try:
-    with urllib.request.urlopen(f'https://api.github.com/repos/{REPO}', timeout=15) as r:
-        info=json.loads(r.read().decode('utf-8'))
-        db=info.get('default_branch')
-        if db: CANDIDATE_BRANCHES.append(db)
-except Exception: pass
-CANDIDATE_BRANCHES += ['feat/history-crawl','main','master']
+**Shortlinks**
+- Code of Conduct: `CODE_OF_CONDUCT.md` (contact: seemly-peer.0k@icloud.com)
+- PR template: `.github/pull_request_template.md`
+- Changelog: `CHANGELOG.md`
+- Governance/ownership: `CODEOWNERS`
 
-HERE = Path.cwd()
-UP = HERE/ 'upgrade_and_roadmap.py'
+## What contributions we want
 
+We value **useful, minimal, well‑reviewed** changes. Favor small, incremental PRs that:
+- Improve docs, tests, or developer experience.
+- Fix bugs with clear, reproducible steps.
+- Add focused features tied to an accepted issue/milestone.
+- Keep diffs clean and reversible.
 
-def fetch_and_write(branch: str) -> bool:
-    url = f'https://raw.githubusercontent.com/{REPO}/{branch}/upgrade_and_roadmap.py'
-    try:
-        data = urllib.request.urlopen(url, timeout=30).read()
-        UP.write_bytes(data)
-        print(f"[runner] restored upgrade_and_roadmap.py from {branch}")
-        return True
-    except Exception as e:
-        print(f"[runner] fetch failed from {branch}: {e}")
-        return False
+If you’re unsure, **open an issue** first using the templates in `.github/ISSUE_TEMPLATE/`.
 
+## Project expectations
 
-def tiny_finisher():
-    """Emergency: add workflow_dispatch to workflows on default branch via a micro-PR."""
-    # find default branch
-    db='master'
-    try:
-        with urllib.request.urlopen(f'https://api.github.com/repos/{REPO}', timeout=15) as r:
-            info=json.loads(r.read().decode('utf-8'))
-            db=info.get('default_branch') or db
-    except Exception:
-        pass
-    # create PR branch from default
-    subprocess.run(['git','fetch','origin'])
-    subprocess.run(['git','switch','-c','chore/add-dispatch-triggers', f'origin/{db}'])
-    targets=[
-        '.github/workflows/projects-sync.yml',
-        '.github/workflows/ci.yml',
-        '.github/workflows/release-drafter.yml',
-    ]
-    changed=False
-    for rel in targets:
-        p=HERE/rel
-        if not p.exists():
-            print(f"[runner] missing {rel} on default branch; skipping")
-            continue
-        txt=p.read_text(encoding='utf-8')
-        if 'workflow_dispatch:' in txt:
-            continue
-        # naive but effective insertion after top-level `on:`
-        new=txt
-        m=re.search(r"^on:\s*$", txt, flags=re.M)
-        if m:
-            idx=m.end()
-            new=txt[:idx]+"\n  workflow_dispatch:\n"+txt[idx:]
-        else:
-            # no `on:`? prepend minimal header
-            new='on:\n  workflow_dispatch:\n\n'+txt
-        if new!=txt:
-            p.parent.mkdir(parents=True, exist_ok=True)
-            p.write_text(new, encoding='utf-8')
-            print(f"[runner] added workflow_dispatch to {rel}")
-            changed=True
-    if changed:
-        subprocess.run(['git','add','-A'])
-        subprocess.run(['git','commit','-m','chore(ci): add workflow_dispatch to workflows'])
-        subprocess.run(['git','push','-u','origin','chore/add-dispatch-triggers'])
-        # open PR and enable auto-merge
-        out = subprocess.run(['gh','pr','create','--base',db,'--title','chore(ci): add workflow_dispatch to workflows','--body','Enable manual dispatch for CI/Projects/Release'], capture_output=True, text=True).stdout
-        m=re.search(r"/pull/(\d+)", out or '')
-        if m:
-            pr=m.group(1)
-            subprocess.run(['gh','pr','review',pr,'--approve'])
-            subprocess.run(['gh','pr','merge',pr,'--squash','--auto'])
-            print(f"[runner] opened PR #{pr} to {db}; auto-merge when checks pass")
-        else:
-            print('[runner] opened PR (number unknown)')
-    else:
-        print('[runner] no workflow changes needed')
+- We follow **Conventional Commits** and enforce **Semantic Pull Request** titles.
+- The default branch is **`master`** and is **protected** (status checks + reviews).
+- Releases are prepared via **Release Drafter**; changelog is maintained in `CHANGELOG.md`.
+- Issues/PRs are tracked with labels and milestones (Phase 0–4 roadmap).
 
+## Getting started
 
-def main():
-    # Try to restore upgrade script from repo
-    for br in CANDIDATE_BRANCHES:
-        if fetch_and_write(br):
-            # delegate
-            argv=[sys.executable, str(UP)] + sys.argv[1:]
-            os.execvpe(sys.executable, argv, os.environ)
-            return
-    # Fallback: patch workflows and exit with guidance
-    print('[runner] could not restore upgrade_and_roadmap.py from remote; running tiny finisher instead')
-    tiny_finisher()
-    print('\nNext: try again — once workflows are merged on the default branch, re-run:')
-    print('  python runner.py --apply --self-test')
+1. Fork and clone the repo.
+2. Create a branch from `master`:
+   ```
+   git switch -c feat/<scope>--<short-description>
+   # or chore/, fix/, docs/, refactor/, ci/, perf/, test/
+   ```
+3. Make small, reviewable commits using Conventional Commits, e.g.:
+   - `feat(extractor): add version enumerator`
+   - `fix(parser): handle empty fragment`
+   - `docs(readme): clarify setup`
+4. Keep PRs small (200–400 LOC changed is a good upper bound).
 
-if __name__ == '__main__':
-    main()
+## Local workflow
+
+- Run the bootstrap/maintenance helper as needed:
+  ```
+  python runner.py --apply --self-test
+  ```
+  This updates governance/workflows and runs basic sanity checks.
+- Before pushing:
+  - Ensure docs/templates are updated if behavior changed.
+  - Re-run the self-test if workflows or labels changed.
+  - Update `CHANGELOG.md` under **[Unreleased]**.
+
+## Pull Requests
+
+- Use a **semantic title** (Conventional Commits).
+- Fill the PR template completely.
+- Link to an issue (or open one) unless it’s a tiny docs fix.
+- Add the right labels: `type/*`, `area/*`, `status/*`, `priority/*`.
+- If the PR is risky or cross-cutting, mark `status/Review` early and request feedback.
+
+### Definition of Done
+
+- ✅ CI passes (lint/tests where applicable)
+- ✅ PR checklist completed (including the AI checklist if applicable)
+- ✅ Changelog entry added
+- ✅ Docs updated and examples included
+- ✅ Labels + milestone set
+
+## AI Agent Playbook (IMPORTANT)
+
+Contributions authored by AI agents must follow these guardrails:
+
+1. **Work only from repo truth.** Do not invent files/paths/APIs. If uncertain, propose changes as comments in the PR description.
+2. **Make minimal, reversible diffs.** Avoid bulk reformatting or mass renames unless explicitly requested and justified in an issue.
+3. **Explain the change.** In the PR body, include a brief “Why/What/How/Impact” section.
+4. **Self-checks before commit:**
+   - No secrets, tokens, or credentials in code or logs.
+   - No large binary files added.
+   - No licensing conflicts; include attributions/citations for external standards or texts summarized.
+   - Run `python runner.py --self-test` if workflows/templates might be affected.
+5. **Conventional Commits + template.** Use the PR template’s AI checklist and mark the PR as AI-authored if applicable.
+6. **Don’t bypass review.** Always request review from maintainers; do not merge your own PRs.
+
+## Labels (quick guide)
+
+- `type/*` — feature, fix, docs, refactor, chore, ci, perf, test
+- `area/*` — extractor, parser, api, infra, docs, etc.
+- `status/*` — Todo, Doing, Review, Blocked, Done
+- `priority/*` — P0, P1, P2
+- `milestone/*` — phase-0 … phase-4 (aligned to our roadmap)
+
+## Milestones & Releases
+
+- Phase 0: Baseline (schema, ingestion, search)
+- Phase 1: Corpus & Standards
+- Phase 2: Comparison Engine
+- Phase 3: Annotations & Issues
+- Phase 4: Guidance UI
+
+Releases are drafted automatically from merged PRs and labels. Keep PR titles clean so Release Drafter can do its job.
+
+## Automation & Secrets
+
+Some workflows (labels sync, projects sync, release drafter) may require a Personal Access Token (PAT).
+
+- **Projects token (`PROJECTS_PAT`)** — create a **classic** PAT with scopes:
+  - `repo`
+  - `workflow`
+  - `project` (classic Projects).  
+    If contributing under an organization, also add `read:org`.
+- Store it in GitHub:  
+  **Settings → Secrets and variables → Actions → New repository secret**  
+  Name: `PROJECTS_PAT`.
+
+Never commit tokens or credentials.
+
+## Governance & Conduct
+
+- See `CODE_OF_CONDUCT.md`. Enforcement contact: **seemly-peer.0k@icloud.com**.
+- Ownership & review routing are in `CODEOWNERS`.
+
+## Questions?
+
+Open a discussion/issue or email **seemly-peer.0k@icloud.com**.

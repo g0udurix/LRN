@@ -1,11 +1,22 @@
-## Summary
-Explain the change.
 
-## Checklist
-- [ ] Semantic title
-- [ ] Labels set (area/*, status/*, priority/*)
-- [ ] Linked issue & milestone
-- [ ] Tests/docs updated
+    ### Summary
 
-## AI notes (if applicable)
-Prompts, assumptions, citations.
+    _What does this change and why?_
+
+    ### Issue / Milestone
+    - Closes #
+    - Milestone:
+
+    ### Type
+    - [ ] feat
+    - [ ] fix
+    - [ ] docs
+    - [ ] chore
+    - [ ] refactor
+
+    ### Checklist
+    - [ ] PR title follows conventional commits
+    - [ ] Labels added (status/*, priority/*, area/*)
+    - [ ] Updated docs
+    - [ ] Updated CHANGELOG (if user-facing)
+    - [ ] Test plan included
