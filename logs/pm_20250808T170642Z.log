@@ -1,6 +1,0 @@
-$ gh label create priority/P1 -R g0udurix/LRN --color d73a4a --description High --force
-[rc=0]
-
-$ gh label create priority/P2 -R g0udurix/LRN --color fbca04 --description Normal --force
-[rc=0]
-

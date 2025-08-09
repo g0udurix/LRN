@@ -1,6 +1,0 @@
-$ gh label create status/Done -R g0udurix/LRN --color 0e8a16 --description Done --force
-[rc=0]
-
-$ gh label create area/extractor -R g0udurix/LRN --color 1d76db --description Ingestion & crawling --force
-[rc=0]
-

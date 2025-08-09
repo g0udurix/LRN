@@ -1,6 +1,0 @@
-$ git add -A
-[rc=0]
-
-$ git diff --cached --quiet
-[rc=1]
-

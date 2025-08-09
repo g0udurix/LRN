@@ -1,6 +1,0 @@
-$ gh label create jurisdiction/CA -R g0udurix/LRN --color 0e8a16 --description Canada (Fed) --force
-[rc=0]
-
-$ gh label create jurisdiction/US -R g0udurix/LRN --color 0e8a16 --description United States --force
-[rc=0]
-

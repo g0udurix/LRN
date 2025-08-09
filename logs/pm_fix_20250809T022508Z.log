@@ -1,4 +1,0 @@
-$ gh run list -w Projects sync (add & fields) -L 1 --json databaseId,headSha,status,conclusion,createdAt,displayTitle
-[rc=1]
-
-could not find any workflows named Projects sync (add & fields)

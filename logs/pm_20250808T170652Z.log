@@ -1,6 +1,0 @@
-$ gh label create area/app -R g0udurix/LRN --color 1d76db --description API/UI --force
-[rc=0]
-
-$ gh label create jurisdiction/QC -R g0udurix/LRN --color 0e8a16 --description Québec --force
-[rc=0]
-

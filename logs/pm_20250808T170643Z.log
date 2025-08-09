@@ -1,3 +1,0 @@
-$ gh label create documentation -R g0udurix/LRN --color c5def5 --description Docs & READMEs --force
-[rc=0]
-

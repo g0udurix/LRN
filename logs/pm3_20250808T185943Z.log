@@ -1,5 +1,0 @@
-$ gh api repos/g0udurix/LRN/milestones -X POST -f title=Phase 4 – Guidance UI -f description=Advices, cheat sheets, Q&A -f due_on=2025-12-21T18:59:38Z
-[rc=1]
-{"message":"Validation Failed","errors":[{"resource":"Milestone","code":"already_exists","field":"title"}],"documentation_url":"https://docs.github.com/rest/issues/milestones#create-a-milestone","status":"422"}
-gh: Validation Failed (HTTP 422)
-[WARN] failed to create milestone 'Phase 4 – Guidance UI': gh: Validation Failed (HTTP 422)

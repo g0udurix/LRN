@@ -1,6 +1,0 @@
-$ gh label create status/Doing -R g0udurix/LRN --color 8b949e --description In progress --force
-[rc=0]
-
-$ gh label create status/Blocked -R g0udurix/LRN --color d93f0b --description Blocked --force
-[rc=0]
-

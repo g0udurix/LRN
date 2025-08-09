@@ -1,3 +1,0 @@
-$ gh label create status/Todo -R g0udurix/LRN --color 8b949e --description To-do --force
-[rc=0]
-

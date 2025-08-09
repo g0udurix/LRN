@@ -1,6 +1,0 @@
-$ gh label create jurisdiction/JP -R g0udurix/LRN --color 0e8a16 --description Japan --force
-[rc=0]
-
-$ gh label create jurisdiction/AU -R g0udurix/LRN --color 0e8a16 --description Australia --force
-[rc=0]
-

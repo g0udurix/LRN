@@ -1,2 +1,0 @@
-
-Bundled 4479 files from /Users/jeremie/Documents/@2025/scripts/Legislation -> /Users/jeremie/Documents/@2025/scripts/Legislation/codebase.md
