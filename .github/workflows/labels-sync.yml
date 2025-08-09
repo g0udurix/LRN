@@ -1,0 +1,16 @@
+
+name: Labels sync
+on:
+  schedule:
+    - cron: '11 3 * * *'
+  push:
+    paths: [ .github/labels.yml ]
+  workflow_dispatch:
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: lannonbr/issue-label-manager-action@v3
+        env: { GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} }
+        with: { delete: true, config-path: .github/labels.yml }

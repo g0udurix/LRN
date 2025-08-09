@@ -1,9 +1,9 @@
-
 ---
 name: Comparison/ranking task
 about: Compare jurisdictions or standards on a specific subject
 labels: [area/comparison, status/Todo]
 ---
+
 ## Subject
 - (e.g., guardrail height, harness inspection frequency)
 

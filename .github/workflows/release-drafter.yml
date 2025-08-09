@@ -5,6 +5,7 @@ on:
     branches: [ $default-branch ]
   pull_request:
     types: [closed]
+  workflow_dispatch:
 permissions:
   contents: write
 jobs:
@@ -12,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: release-drafter/release-drafter@v6
-        with:
-          config-name: release-drafter.yml
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          config-name: release-drafter.yml

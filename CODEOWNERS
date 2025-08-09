@@ -1,9 +1,4 @@
-
-# Default owner
 * @g0udurix
-
-# Ownership by area
-standards/* @g0udurix
 standards/** @g0udurix
 lrn/** @g0udurix
 scripts/** @g0udurix

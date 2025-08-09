@@ -29,14 +29,9 @@ jobs:
             const key = labels.find(n => (n||'').toLowerCase().startsWith('milestone/'));
             if (!key) { core.info('no milestone/* label'); return; }
             const wanted = mapping[key];
-            if (!wanted) { core.info('label not mapped: ' + key); return; }
             const owner = context.repo.owner; const repo = context.repo.repo;
-            const {data: milestones} = await github.rest.issues.listMilestones({owner, repo, state: 'open'});
-            let m = milestones.find(x => x.title === wanted);
-            if (!m) {
-              const {data: all} = await github.rest.issues.listMilestones({owner, repo, state: 'all'});
-              m = all.find(x => x.title === wanted);
-            }
+            const {data: milestones} = await github.rest.issues.listMilestones({owner, repo, state: 'all'});
+            const m = milestones.find(x => x.title === wanted);
             if (!m) { core.warning('milestone not found: ' + wanted); return; }
             await github.rest.issues.update({owner, repo, issue_number: item.number, milestone: m.number});
             core.info(`set milestone '${wanted}' on #${item.number}`);
