@@ -1,20 +1,3 @@
-
 name-template: 'v$NEXT_PATCH_VERSION'
 tag-template: 'v$NEXT_PATCH_VERSION'
 change-template: '- $TITLE (#$NUMBER) by @$AUTHOR'
-categories:
-  - title: '🚀 Features'
-    labels: ['feat', 'feature']
-  - title: '🐛 Fixes'
-    labels: ['fix']
-  - title: '🧹 Chores & Refactors'
-    labels: ['chore', 'refactor']
-  - title: '📝 Docs'
-    labels: ['docs']
-
-template: |
-  ## What changed
-  $CHANGES
-
-  ## Contributors
-  $CONTRIBUTORS

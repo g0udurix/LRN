@@ -1,18 +1,11 @@
-
 ## Summary
-Explain the change in one or two sentences.
-
-## Type
-- [ ] feat
-- [ ] fix
-- [ ] docs
-- [ ] chore/refactor
+Explain the change.
 
 ## Checklist
-- [ ] Semantic title (e.g., `feat(extractor): ...`)
-- [ ] Linked issue and milestone
-- [ ] Labels set: area/*, status/*, priority/*
-- [ ] Tests and docs updated
+- [ ] Semantic title
+- [ ] Labels set (area/*, status/*, priority/*)
+- [ ] Linked issue & milestone
+- [ ] Tests/docs updated
 
 ## AI notes (if applicable)
-Prompt(s) used, constraints, citations, and how you validated outputs.
+Prompts, assumptions, citations.

@@ -10,13 +10,8 @@ labels: [area/standards, status/Backlog]
 - Clause numbers:
 
 ## Linkage
-- Relevant topics:
-- Fragments (if any):
+- Topics:
+- Fragments:
 
-## Notes / rationale
+## Notes
 - 
-
-## Done when
-- [ ] Clauses captured in `standard_clauses`
-- [ ] Topics linked in `standard_clause_topics`
-- [ ] Cross-refs to fragments (if applicable)

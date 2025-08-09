@@ -1,19 +1,13 @@
-
 name: Release Drafter
 on:
-  push:
-    branches: [ $default-branch ]
-  pull_request:
-    types: [closed]
+  push: { branches: [ $default-branch ] }
+  pull_request: { types: [closed] }
   workflow_dispatch:
-permissions:
-  contents: write
+permissions: { contents: write }
 jobs:
   update_release_draft:
     runs-on: ubuntu-latest
     steps:
       - uses: release-drafter/release-drafter@v6
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          config-name: release-drafter.yml
+        env: { GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} }
+        with: { config-name: release-drafter.yml }
