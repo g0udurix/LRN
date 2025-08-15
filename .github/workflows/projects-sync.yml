@@ -1,0 +1,27 @@
+
+    name: Projects sync
+    on:
+      issues:
+        types: [opened, labeled]
+      pull_request:
+        types: [opened]
+      workflow_dispatch:
+    jobs:
+      add_to_project:
+        runs-on: ubuntu-latest
+        permissions:
+          contents: read
+          issues: write
+          pull-requests: write
+          projects: write
+        steps:
+          - name: Add to project #{3}
+            uses: actions/add-to-project@v0.5.0
+            with:
+              project-url: https://github.com/users/${ '{' } github.repository_owner { '}' }/projects/3
+              github-token: ${ '{' } secrets.PROJECTS_PAT { '}' }
+          - name: Set default fields via GraphQL (best-effort)
+            env:
+              GH_TOKEN: ${ '{' } secrets.PROJECTS_PAT { '}' }
+            run: |
+              echo "Field sync placeholder at 2025-08-09T13:21:11Z"
