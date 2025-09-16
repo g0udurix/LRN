@@ -1,0 +1,13 @@
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = [
+  "tests"
+]
+# Ensure project root is added to sys.path so `import lrn` works without installation
+pythonpath = [
+  "."
+]
+# Exclude unused folder from discovery to avoid noise and broken examples
+norecursedirs = [
+  "unused"
+]

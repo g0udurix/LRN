@@ -1,0 +1,16 @@
+# Generated artifacts
+output/
+Legisquebec originals/
+logs/
+qdrant_storage/
+
+# Python cache files
+__pycache__/
+*.pyc
+
+# macOS noise
+.DS_Store
+
+# Tooling state
+.lr
+
