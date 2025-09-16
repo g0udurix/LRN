@@ -13,14 +13,14 @@ Deliver a dependable Python extractor that:
 - GitHub project board (Project 3) tracks Phase 0 work; issues #11–#19 form the execution backlog.
 
 ## Phase 0 (Baseline)
-1. **Unify default branch** (#19) – done locally, awaiting push/protection updates.
-2. **Modularize extractor core** (#11) – split CLI from pure extraction helpers so history/annex logic can be unit-tested in isolation.
-3. **Harden annex pipeline** (#12) – retries, metadata, and conversion-adapter structure with regression fixtures.
-4. **Ship history sidecars** (#13) – structured JSON plus optional snapshot limits/throttling.
-5. **Fix CLI toggles** (#14) – introduce explicit `--no-*` counterparts and update docs/tests.
-6. **Expand regression coverage** (#15) – fixtures for bilingual annex/history cases and tempdir assertions.
-7. **Add pytest CI workflow** (#16) – Python 3.10/3.11 matrix running offline tests only.
-8. **Sync documentation** (#17) – README, AGENTS.md, CHANGELOG updates once the above land.
+1. **Unify default branch** (#19) – ✅ merged & pushed; master is canonical.
+2. **Modularize extractor core** (#11) – ✅ modules landed (`lrn/extract.py`, `lrn/annex.py`, `lrn/history.py`).
+3. **Harden annex pipeline** (#12) – ✅ retries/size caps + typed records.
+4. **Ship history sidecars** (#13) – ✅ structured snapshots & injection warnings.
+5. **Fix CLI toggles** (#14) – ✅ `--no-annex-pdf-to-md` / `--no-history-sidecars` supported.
+6. **Expand regression coverage** (#15) – ✅ annex/history/RC-path fixtures in pytest.
+7. **Add pytest CI workflow** (#16) – ✅ GitHub Actions matrix (3.10/3.11) in place.
+8. **Sync documentation** (#17) – 🚧 updating README/AGENTS to reflect new architecture.
 
 ## Principles & Constraints
 - Never commit fetched HTML, snapshots, or SQLite artifacts; all outputs must be reproducible locally.

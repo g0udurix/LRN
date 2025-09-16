@@ -8,6 +8,12 @@ Command-line tools for turning LegisQuébec HTML into clean XHTML fragments, ann
 - crawls fragment history links and saves dated snapshots under `output/<instrument>/history/` with an accompanying `index.json`.
 - operates fully offline with recorded fixtures so development and CI runs never touch production systems.
 
+### Module Map
+- `lrn/extract.py` — pure fragment loader (`load_fragment`) and instrument detection heuristics.
+- `lrn/annex.py` — annex download + conversion pipeline with retries, size caps, and YAML provenance.
+- `lrn/history.py` — history discovery, optional snapshotting, and HTML injection helpers.
+- `lrn/cli.py` — orchestrates the modules and exposes the `extract` subcommand / fetch-all entrypoint.
+
 ## Quick Start
 ```bash
 python -m lrn.cli extract --out-dir output path/to/local.html
@@ -22,8 +28,10 @@ The default invocation (`python -m lrn.cli`) runs the “fetch all” workflow: 
 
 ## Development
 - Keep regenerated artifacts out of git. The `.gitignore` already excludes `Legisquebec originals/`, `output/`, and logs.
-- Run tests with `python -m pytest`. Offline fixtures cover bilingual extraction, annex conversion stubs, and history crawling.
-- `pyproject.toml` configures pytest to find the `lrn` package without installation; `sitecustomize.py` injects the repo root into `sys.path`.
+- Install test deps with `pip install beautifulsoup4 lxml requests pytest`.
+- Run tests with `python -m pytest`. Fixtures cover bilingual extraction, annex conversion stubs, and history crawling (success/failure).
+- CI (`.github/workflows/ci.yml`) runs pytest on Python 3.10 and 3.11 with pip caching.
+- `pyproject.toml` configures pytest discovery; `sitecustomize.py` injects the repo root into `sys.path` for local runs.
 
 ## Troubleshooting
 - If annex conversion fails, the CLI logs a warning and leaves the PDF in place.
