@@ -305,9 +305,10 @@ def main():
     p_ext.add_argument('inputs', nargs='+', help='Input HTML files')
     p_ext.add_argument('--out-dir', default='output', help='Output directory')
     p_ext.add_argument('--base-url', default='', help='Base URL to resolve relative links')
-    p_ext.add_argument('--annex-pdf-to-md', action='store_true', default=True, help='Convert annex PDFs to Markdown using marker')
-    p_ext.add_argument('--history-sidecars', action='store_true', default=True, help='Crawl history snapshots and index')
-    p_ext.add_argument('--history-markdown', action='store_true', default=True, help='Also emit Markdown for history snapshots (future)')
+    boolean_action = argparse.BooleanOptionalAction
+    p_ext.add_argument('--annex-pdf-to-md', action=boolean_action, default=True, help='Convert annex PDFs to Markdown using marker')
+    p_ext.add_argument('--history-sidecars', action=boolean_action, default=True, help='Crawl history snapshots and index')
+    p_ext.add_argument('--history-markdown', action=boolean_action, default=True, help='Also emit Markdown for history snapshots (future)')
     p_ext.add_argument('--metadata-exclusion', default='', help='Metadata exclusion profile (kept empty to keep-all)')
     p_ext.add_argument('--pdf-to-md-engine', default='marker', help='Engine for PDF→MD (marker)')
     p_ext.add_argument('--ocr', action='store_true', default=False, help='Enable OCR fallback (future)')
