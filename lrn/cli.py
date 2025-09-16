@@ -12,7 +12,7 @@ from bs4 import BeautifulSoup
 from urllib.parse import urljoin, urlparse, urlunparse, quote
 import requests
 
-from lrn.annex import process_annexes
+from lrn.annex import AnnexOptions, process_annexes
 from lrn.extract import load_fragment
 from lrn.history import DEFAULT_TIMEOUT, HistoryOptions, build_history_sidecars
 
@@ -40,11 +40,14 @@ def extract(history_sidecars: bool, history_markdown: bool, annex_pdf_to_md: boo
         write_text(current_path, fragment.xhtml)
 
         if annex_pdf_to_md:
+            annex_options = AnnexOptions(
+                engine=pdf_to_md_engine,
+                base_url=base_url,
+            )
             conversions = process_annexes(
                 fragment,
-                base_url=base_url,
                 instrument_dir=inst_dir,
-                engine=pdf_to_md_engine,
+                options=annex_options,
             )
             for conversion in conversions:
                 if conversion.warning:
