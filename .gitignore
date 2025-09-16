@@ -13,4 +13,4 @@ __pycache__/
 
 # Tooling state
 .lr
-
+.env

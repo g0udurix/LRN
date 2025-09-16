@@ -1,11 +1,20 @@
 #!/usr/bin/env python3
-import argparse, os, sys, re, json, subprocess, shutil
+import argparse
+import os
+import sys
+import re
+import json
+import subprocess
+import shutil
+from pathlib import Path
 from typing import List, Tuple
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin, urlparse, urlunparse, quote
 import requests
 
-from lrn.history import HistoryCrawler
+from lrn.annex import process_annexes
+from lrn.extract import load_fragment
+from lrn.history import DEFAULT_TIMEOUT, HistoryOptions, build_history_sidecars
 
 def _log(msg: str):
     print(f"[INFO] {msg}", flush=True)
@@ -13,203 +22,51 @@ def _log(msg: str):
 def _warn(msg: str):
     print(f"[WARN] {msg}", file=sys.stderr, flush=True)
 
-def sha256_bytes(data: bytes) -> str:
-    import hashlib
-    h = hashlib.sha256(); h.update(data); return h.hexdigest()
-
 def write_text(path, text):
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, 'w', encoding='utf-8') as f: f.write(text)
 
-def write_bin(path, data: bytes):
-    os.makedirs(os.path.dirname(path), exist_ok=True)
-    with open(path, 'wb') as f: f.write(data)
-
-def find_inner_xhtml(html: str) -> str:
-    """
-    Extract inner XHTML fragment from mirrored rc page or raw XHTML.
-    Order of strategies:
-      1) div#mainContent-document containing an XHTML div (with or without DOCTYPE/xmlns)
-      2) Global XHTML DOCTYPE + div
-      3) Fallback: construct minimal XHTML from the first section-like node (id="se:*") to support fixtures
-    """
-    # 1) Preferred: inner block under mainContent-document (handles mirrored rc pages)
-    m2 = re.search(
-        r'id="mainContent-document"[\s\S]*?(<\?xml[^>]*\?>\s*<!DOCTYPE\s+div[^>]*>\s*<div\b[\s\S]*?</div>\s*)',
-        html, re.IGNORECASE)
-    if m2:
-        return m2.group(1)
-    m2b = re.search(
-        r'id="mainContent-document"[\s\S]*?(<div\b[^>]*xmlns="http://www.w3.org/1999/xhtml"[\s\S]*?</div>\s*)',
-        html, re.IGNORECASE)
-    if m2b:
-        return m2b.group(1)
-    # 2) Heuristic: global XHTML DOCTYPE + div
-    m = re.search(r'(?:<\?xml[^>]*\?>\s*)?<!DOCTYPE\s+div[^>]*>\s*<div\b[\s\S]*?</div>\s*', html, re.IGNORECASE)
-    if m:
-        return m.group(0)
-    # 3) Fallback: create a minimal XHTML wrapper around first section node for minimal fixtures
-    # This enables extract() for simple HTML used in offline tests.
-    soup = BeautifulSoup(html, 'lxml')
-    # Accept section-only snapshot fixtures: look for the first id that starts with 'se:' anywhere
-    sec = soup.find(id=re.compile(r'^se:'))
-    if sec is None:
-        # Fallback: any div with an id attribute
-        sec = soup.find('div', id=True)
-    if sec:
-        # If sec is nested, extract the exact section node only (section-only snapshot)
-        inner = str(sec)
-        return (
-            '<?xml version="1.0" encoding="UTF-8"?>\n'
-            '<!DOCTYPE div PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">\n'
-            f'<div xmlns="http://www.w3.org/1999/xhtml">{inner}</div>'
-        )
-    # 4) Final guard: return a minimal empty XHTML to allow downstream placeholder creation
-    return (
-        '<?xml version="1.0" encoding="UTF-8"?>\n'
-        '<!DOCTYPE div PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">\n'
-        '<div xmlns="http://www.w3.org/1999/xhtml"><div id="se:empty"/></div>'
-    )
-
-def detect_instrument(html_path: str, frag: BeautifulSoup) -> str:
-    """
-    Derive instrument id. Prefer explicit Identification-Id; otherwise derive from page heading or file path.
-    Fixtures/minimal pages may lack Identification-Id, so fall back to rc path leaf.
-    """
-    # 1) Identification-Id text, when present
-    ident = frag.find(class_=re.compile(r'Identification-Id'))
-    if ident:
-        txt = ident.get_text(' ', strip=True)
-        m = re.search(r'[A-Z]-[0-9]+(?:\.[0-9]+)?,\s*r\.\s*[^\s]+', txt)
-        if m:
-            return (m.group(0)
-                    .replace(' ', '')
-                    .replace(',', '_')
-                    .replace('.', '_')
-                    .replace('/', '-'))
-    # 2) Try heading text inside fragment
-    heading = frag.find(['h1', 'h2', 'h3'])
-    if heading:
-        t = heading.get_text(' ', strip=True)
-        if t:
-            return (t.replace(' ', '_')
-                     .replace(',', '_')
-                     .replace('.', '_')
-                     .replace('/', '-'))[:80]
-    # 3) Fallback to rc path leaf from saved mirror path (stable for tests)
-    # html_path like ".../document/rc/S-2.1,%20r.%208.2/index.html" or encoded variant
-    path_norm = html_path.replace('\\', '/')
-    if '/document/rc/' in path_norm:
-        leaf = os.path.basename(os.path.dirname(html_path))
-        if leaf:
-            # normalize encoded/space variants by replacing spaces with %20 when needed
-            leaf_norm = leaf.strip().replace(' ', '%20')
-            # tests expect S-2.1%2C%20r.%208.2 -> convert %2C (comma) as well
-            leaf_norm = leaf_norm.replace(',', '%2C')
-            return leaf_norm
-    # 4) Fallback to filename stem (covers ad-hoc HTML fixtures such as tmp_path/law.html)
-    base = os.path.basename(html_path)
-    return os.path.splitext(base)[0]
-
 def extract(history_sidecars: bool, history_markdown: bool, annex_pdf_to_md: bool, metadata_exclusion: str, out_dir: str, inputs: List[str], base_url: str|None, pdf_to_md_engine: str, ocr: bool,
            history_max_dates: int|None = None, history_cache_dir: str|None = None, history_timeout: int|None = None, history_user_agent: str|None = None):
+    output_root = Path(out_dir)
+    output_root.mkdir(parents=True, exist_ok=True)
+
     for src in inputs:
-        with open(src, 'r', encoding='utf-8', errors='ignore') as f:
-            html = f.read()
-        frag_html = find_inner_xhtml(html)
-        frag_soup = BeautifulSoup(frag_html, 'lxml')
-        instrument = detect_instrument(src, frag_soup)
-        # Ensure out_dir exists for tests/offline runs
-        os.makedirs(out_dir, exist_ok=True)
-        inst_dir = os.path.join(out_dir, instrument)
-        # Save intact fragment (may be re-written later after injections)
-        current_path = os.path.join(inst_dir, 'current.xhtml')
-        write_text(current_path, frag_html)
-        # Ensure a minimal history/index.json exists so tests expecting it don't fail early
-        hist_dir_boot = os.path.join(inst_dir, 'history')
-        os.makedirs(hist_dir_boot, exist_ok=True)
-        if not os.path.exists(os.path.join(hist_dir_boot, 'index.json')):
-            write_text(os.path.join(hist_dir_boot, 'index.json'), "{}")
-        # Ensure a minimal history/index.json exists so tests expecting it don't fail early
-        hist_dir_boot = os.path.join(inst_dir, 'history')
-        os.makedirs(hist_dir_boot, exist_ok=True)
-        if not os.path.exists(os.path.join(hist_dir_boot, 'index.json')):
-            write_text(os.path.join(hist_dir_boot, 'index.json'), "{}")
+        fragment = load_fragment(Path(src))
+        inst_dir = output_root / fragment.instrument_id
+        inst_dir.mkdir(parents=True, exist_ok=True)
 
-        # Annex handling (PDF -> Markdown sidecar via marker)
+        current_path = inst_dir / "current.xhtml"
+        write_text(current_path, fragment.xhtml)
+
         if annex_pdf_to_md:
-            for a in frag_soup.find_all('a', href=True):
-                href = a['href']
-                if href.lower().endswith('.pdf'):
-                    abs_url = urljoin(base_url or '', href) if not bool(urlparse(href).scheme) else href
-                    try:
-                        import requests
-                        r = requests.get(abs_url, timeout=60)
-                        r.raise_for_status()
-                        pdf_bytes = r.content
-                    except Exception as e:
-                        print(f'[WARN] PDF fetch failed {abs_url}: {e}', file=sys.stderr)
-                        continue
-                    pdf_sha = sha256_bytes(pdf_bytes)
-                    pdf_name = os.path.basename(urlparse(abs_url).path) or 'annex.pdf'
-                    pdf_dir = os.path.join(inst_dir, 'annexes')
-                    pdf_path = os.path.join(pdf_dir, pdf_name)
-                    write_bin(pdf_path, pdf_bytes)
-                    md_path = os.path.splitext(pdf_path)[0] + '.md'
-                    try:
-                        subprocess.run(['marker', '--input', pdf_path, '--output', md_path, '--format', 'gfm'], check=True)
-                        fm = f"---\nsource_url: {abs_url}\nsha256: {pdf_sha}\n---\n\n"
-                        with open(md_path, 'r+', encoding='utf-8') as md:
-                            content = md.read(); md.seek(0); md.write(fm + content); md.truncate()
-                        # Inject sidecar link next to original anchor
-                        rel_md = os.path.relpath(md_path, inst_dir).replace(os.sep, '/')
-                        a.insert_after(f' [Version Markdown]({rel_md})')
-                    except Exception as e:
-                        print(f'[WARN] marker conversion failed for {pdf_path}: {e}', file=sys.stderr)
-                        # Leave PDF only
-            # After modifying soup, write enriched XHTML as current.xhtml
-            write_text(current_path, str(frag_soup))
+            conversions = process_annexes(
+                fragment,
+                base_url=base_url,
+                instrument_dir=inst_dir,
+                engine=pdf_to_md_engine,
+            )
+            for conversion in conversions:
+                if conversion.warning:
+                    _warn(f"Annex conversion issue for {conversion.pdf_url}: {conversion.warning}")
+            if conversions:
+                write_text(current_path, fragment.xhtml)
 
-        # History sidecars integration
         if history_sidecars:
-            hc = HistoryCrawler(base_url=base_url or '', out_dir=inst_dir,
-                                timeout=history_timeout or 20,
-                                user_agent=history_user_agent or "LRN/HistoryCrawler",
-                                cache_dir=history_cache_dir, max_dates=history_max_dates)
-            index = hc.crawl_from_fragment(inst_dir, str(frag_soup))
-            # Inject a compact Versions list per fragment into the XHTML
-            soup2 = BeautifulSoup(str(frag_soup), 'lxml')
-            # If no discovered history links (e.g., offline mirror placeholders), still inject an empty Versions container
-            if not index:
-                # Heuristic: attach to first section or root
-                target = soup2.find(id=re.compile(r'^se:')) or soup2
-                container = soup2.new_tag('div')
-                container['class'] = ['LRN-Versions']
-                container['data-fragment'] = 'se:placeholder'
-                ul = soup2.new_tag('ul')
-                container.append(ul)
-                if target:
-                    target.append(container)
-            else:
-                for frag_code, versions in index.items():
-                    # find the section by id if available (e.g., id="se:1")
-                    target = soup2.find(id=frag_code) or soup2.find(attrs={'data-fragment': frag_code})
-                    container = soup2.new_tag('div')
-                    container['class'] = ['LRN-Versions']
-                    container['data-fragment'] = frag_code
-                    ul = soup2.new_tag('ul')
-                    for it in versions:
-                        li = soup2.new_tag('li')
-                        a = soup2.new_tag('a', href=f"history/{frag_code}/{it['date']}.html")
-                        a.string = it['date']
-                        li.append(a)
-                        ul.append(li)
-                    container.append(ul)
-                    if target:
-                        target.append(container)
-                    else:
-                        soup2.append(container)
-            write_text(current_path, str(soup2))
+            options = HistoryOptions(
+                base_url=base_url or "",
+                timeout=history_timeout or DEFAULT_TIMEOUT,
+                user_agent=history_user_agent or "LRN/HistoryCrawler",
+                cache_dir=history_cache_dir,
+                max_dates=history_max_dates,
+            )
+            history_result = build_history_sidecars(
+                fragment.xhtml,
+                instrument_dir=inst_dir,
+                options=options,
+            )
+            fragment.xhtml = history_result.html
+            write_text(current_path, fragment.xhtml)
 
 ############################
 # Discovery (FR + EN)      #

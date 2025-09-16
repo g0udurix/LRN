@@ -1,16 +1,45 @@
 #!/usr/bin/env python3
-import os, re, json, time
-from typing import List, Dict, Optional, Tuple
+import os
+import re
+import json
+import time
+from dataclasses import dataclass
+from pathlib import Path
+from typing import Dict, List, Optional
 from urllib.parse import urljoin, urlparse, parse_qs
+
 import requests
 from bs4 import BeautifulSoup
 
 DEFAULT_TIMEOUT = 20
 
+
+@dataclass
+class HistoryOptions:
+    base_url: str = ""
+    timeout: int = DEFAULT_TIMEOUT
+    user_agent: str = "LRN/HistoryCrawler"
+    cache_dir: Optional[str] = None
+    max_dates: Optional[int] = None
+
+
+@dataclass
+class HistoryResult:
+    index: Dict[str, List[Dict[str, str]]]
+    html: str
+
 class HistoryCrawler:
-    def __init__(self, base_url: str, out_dir: str, session: Optional[requests.Session]=None, *,
-                 timeout: int = DEFAULT_TIMEOUT, user_agent: str = "LRN/HistoryCrawler",
-                 cache_dir: Optional[str] = None, max_dates: Optional[int] = None):
+    def __init__(
+        self,
+        base_url: str,
+        out_dir: str,
+        session: Optional[requests.Session] = None,
+        *,
+        timeout: int = DEFAULT_TIMEOUT,
+        user_agent: str = "LRN/HistoryCrawler",
+        cache_dir: Optional[str] = None,
+        max_dates: Optional[int] = None,
+    ):
         self.base_url = base_url.rstrip('/') if base_url else ''
         self.out_dir = out_dir
         self.session = session or requests.Session()
@@ -180,3 +209,63 @@ class HistoryCrawler:
         self.build_index(instrument_dir, index)
         print(f"[INFO] Wrote history index with {len(index)} fragment(s)", flush=True)
         return index
+
+
+def build_history_sidecars(
+    fragment_html: str,
+    *,
+    instrument_dir: Path,
+    options: HistoryOptions,
+) -> HistoryResult:
+    crawler = HistoryCrawler(
+        base_url=options.base_url,
+        out_dir=str(instrument_dir),
+        timeout=options.timeout,
+        user_agent=options.user_agent,
+        cache_dir=options.cache_dir,
+        max_dates=options.max_dates,
+    )
+    index = crawler.crawl_from_fragment(str(instrument_dir), fragment_html)
+    updated_html = _inject_versions(fragment_html, index)
+    return HistoryResult(index=index, html=updated_html)
+
+
+def _inject_versions(fragment_html: str, index: Dict[str, List[Dict[str, str]]]) -> str:
+    soup = BeautifulSoup(fragment_html, 'lxml')
+    if not index:
+        target = soup.find(id=re.compile(r'^se:')) or soup
+        container = soup.new_tag('div')
+        container['class'] = ['LRN-Versions']
+        container['data-fragment'] = 'se:placeholder'
+        ul = soup.new_tag('ul')
+        container.append(ul)
+        if target:
+            target.append(container)
+        return str(soup)
+
+    for frag_code, versions in index.items():
+        target = soup.find(id=frag_code) or soup.find(attrs={'data-fragment': frag_code})
+        container = soup.new_tag('div')
+        container['class'] = ['LRN-Versions']
+        container['data-fragment'] = frag_code
+        ul = soup.new_tag('ul')
+        for item in versions:
+            li = soup.new_tag('li')
+            a = soup.new_tag('a', href=f"history/{frag_code}/{item['date']}.html")
+            a.string = item['date']
+            li.append(a)
+            ul.append(li)
+        container.append(ul)
+        if target:
+            target.append(container)
+        else:
+            soup.append(container)
+    return str(soup)
+
+
+__all__ = [
+    'HistoryCrawler',
+    'HistoryOptions',
+    'HistoryResult',
+    'build_history_sidecars',
+]

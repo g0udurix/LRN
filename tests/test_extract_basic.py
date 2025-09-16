@@ -1,5 +1,5 @@
 import os
-from lrn.cli import find_inner_xhtml
+from lrn.extract import find_inner_xhtml
 
 def test_find_inner_xhtml_extracts_div():
     sample = '''<html><body><div id="content"><!-- noise --></div>
