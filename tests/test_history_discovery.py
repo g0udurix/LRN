@@ -1,4 +1,6 @@
-from lrn.history import HistoryCrawler
+from pathlib import Path
+
+from lrn.history import HistoryCrawler, HistoryOptions
 
 SAMPLE_XHTML = """
 <?xml version="1.0" encoding="UTF-8"?>
@@ -11,6 +13,6 @@ SAMPLE_XHTML = """
 """
 
 def test_discover_fragment_history_links_basic():
-    hc = HistoryCrawler(base_url="https://www.legisquebec.gouv.qc.ca", out_dir="/tmp/out")
-    links = hc.discover_fragment_history_links(SAMPLE_XHTML)
+    hc = HistoryCrawler(Path("/tmp/out"), HistoryOptions(base_url="https://www.legisquebec.gouv.qc.ca"))
+    links = hc.discover_fragment_links(SAMPLE_XHTML)
     assert links and any('historique=' in x for x in links)

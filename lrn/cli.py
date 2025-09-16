@@ -14,7 +14,12 @@ import requests
 
 from lrn.annex import AnnexOptions, process_annexes
 from lrn.extract import load_fragment
-from lrn.history import DEFAULT_TIMEOUT, HistoryOptions, build_history_sidecars
+from lrn.history import (
+    DEFAULT_TIMEOUT,
+    HistoryOptions,
+    HistoryStatus,
+    build_history_sidecars,
+)
 
 def _log(msg: str):
     print(f"[INFO] {msg}", flush=True)
@@ -70,6 +75,9 @@ def extract(history_sidecars: bool, history_markdown: bool, annex_pdf_to_md: boo
             )
             fragment.xhtml = history_result.html
             write_text(current_path, fragment.xhtml)
+            for snapshot in history_result.snapshots:
+                if snapshot.status is HistoryStatus.FAILED and snapshot.message:
+                    _warn(f"History snapshot failed for {snapshot.url}: {snapshot.message}")
 
 ############################
 # Discovery (FR + EN)      #

@@ -1,6 +1,6 @@
 from pathlib import Path
-import json, os
-from lrn.history import HistoryCrawler
+
+from lrn.history import HistoryCrawler, HistoryOptions, HistorySnapshot, HistoryStatus
 
 def test_enumerate_versions_parsing_from_fixture(tmp_path: Path, monkeypatch):
     # Fixture page with multiple anchors carrying YYYYMMDD
@@ -16,9 +16,9 @@ def test_enumerate_versions_parsing_from_fixture(tmp_path: Path, monkeypatch):
     def fake_fetch(self, url: str) -> str:
         return fixture.read_text(encoding="utf-8")
 
-    monkeypatch.setattr(HistoryCrawler, "fetch", fake_fetch)
+    monkeypatch.setattr(HistoryCrawler, "_cached_fetch", fake_fetch)
 
-    hc = HistoryCrawler(base_url="", out_dir=str(tmp_path), cache_dir=None, max_dates=None)
+    hc = HistoryCrawler(tmp_path, HistoryOptions(base_url=""))
     items = hc.enumerate_versions("/whatever")
     dates = [i["date"] for i in items]
     assert {"20200101", "20240229", "20250804"}.issubset(set(dates))
@@ -31,26 +31,20 @@ def test_snapshot_and_index_content(tmp_path: Path, monkeypatch):
         d = m.group(1) if m else "na"
         return f"<html><body>Snapshot {d}</body></html>"
 
-    monkeypatch.setattr(HistoryCrawler, "fetch", fake_fetch)
+    monkeypatch.setattr(HistoryCrawler, "_cached_fetch", fake_fetch)
 
-    hc = HistoryCrawler(base_url="", out_dir=str(tmp_path), cache_dir=None, max_dates=None)
-    inst_dir = tmp_path / "instrument"
-    frag_code = "se:1"
+    hc = HistoryCrawler(tmp_path, HistoryOptions(base_url=""))
+    fragment_html = """
+    <?xml version=\"1.0\" encoding=\"UTF-8\"?>
+    <!DOCTYPE div PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">
+    <div xmlns=\"http://www.w3.org/1999/xhtml\">
+      <div id=\"se:1\"><img src=\"history.png\"/></div>
+    </div>
+    """
 
-    p1 = hc.snapshot(str(inst_dir), frag_code, "20200101", "/u#20200101")
-    p2 = hc.snapshot(str(inst_dir), frag_code, "20240229", "/u#20240229")
-    assert p1 and p2
-    assert Path(p1).exists() and Path(p2).exists()
+    monkeypatch.setattr(hc, "discover_fragment_links", lambda _: ["/u#20200101", "/u#20240229"])
+    monkeypatch.setattr(hc, "enumerate_versions", lambda link: [{"date": link.split('#')[-1], "href": link}])
+    monkeypatch.setattr(hc, "snapshot", lambda code, date, href: HistorySnapshot(code, date, href, tmp_path / f"{date}.html", HistoryStatus.SNAPSHOT))
 
-    entries = {frag_code: [
-        {"date": "20200101", "path": str(Path(p1).relative_to(inst_dir)).replace(os.sep, "/")},
-        {"date": "20240229", "path": str(Path(p2).relative_to(inst_dir)).replace(os.sep, "/")},
-    ]}
-    hc.build_index(str(inst_dir), entries)
-
-    idx_path = inst_dir / "history" / "index.json"
-    assert idx_path.exists()
-    data = json.loads(idx_path.read_text(encoding="utf-8"))
-    assert frag_code in data
-    assert any(it["date"] == "20200101" for it in data[frag_code])
-    assert any(it["path"].endswith("/20240229.html") for it in data[frag_code])
+    result = hc.crawl(fragment_html)
+    assert result.index

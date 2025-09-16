@@ -32,7 +32,7 @@ def test_cli_history_end_to_end_no_network(tmp_path: Path, monkeypatch):
             return snapshots["#20240229"]
         return version_page
     from lrn.history import HistoryCrawler
-    monkeypatch.setattr(HistoryCrawler, "fetch", fake_fetch)
+    monkeypatch.setattr(HistoryCrawler, "_cached_fetch", fake_fetch)
 
     # Build minimal outer HTML that contains the inner fragment
     outer = f"""<html><body>
