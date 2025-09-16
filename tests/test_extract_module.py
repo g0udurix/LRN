@@ -33,3 +33,20 @@ def test_fragment_extraction_error_when_missing_fragment(tmp_path):
     path.write_text("<html><body>No fragment here</body></html>", encoding="utf-8")
     with pytest.raises(FragmentExtractionError):
         load_fragment(path)
+
+
+def test_detect_instrument_from_rc_path(tmp_path):
+    path = tmp_path / "fr" / "document" / "rc" / "S-2.1,%20r.%2010" / "index.html"
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(
+        """
+        <html><body>
+          <?xml version=\"1.0\" encoding=\"UTF-8\"?>
+          <!DOCTYPE div PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">
+          <div xmlns=\"http://www.w3.org/1999/xhtml\"><div id=\"se:1\">Body</div></div>
+        </body></html>
+        """,
+        encoding="utf-8",
+    )
+    fragment = load_fragment(path)
+    assert fragment.instrument_id == "S-2.1%2C%20r.%2010"

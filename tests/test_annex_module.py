@@ -100,3 +100,32 @@ def test_process_annexes_skips_existing(monkeypatch, tmp_path):
     conversions = process_annexes(fragment, instrument_dir=inst_dir, options=options)
 
     assert conversions[0].status == AnnexStatus.SKIPPED
+
+
+def test_process_annexes_conversion_warning(monkeypatch, tmp_path):
+    fragment = load_fragment(_fixture_fragment(tmp_path))
+
+    pdf_bytes = b"fake"
+
+    class _Resp(DummyResponse):
+        def __enter__(self_inner):
+            return self_inner
+
+        def __exit__(self_inner, exc_type, exc, tb):
+            return False
+
+        def iter_content(self_inner, chunk_size):
+            yield pdf_bytes
+
+    session = requests.Session()
+    monkeypatch.setattr(session, "get", lambda url, timeout, stream=True: _Resp(pdf_bytes))
+
+    monkeypatch.setattr("lrn.annex._convert_pdf", lambda *args, **kwargs: "conversion failed")
+
+    options = AnnexOptions(engine="marker", base_url="https://example.test", session=session)
+    inst_dir = tmp_path / "instrument"
+    conversions = process_annexes(fragment, instrument_dir=inst_dir, options=options)
+
+    record = conversions[0]
+    assert record.status == AnnexStatus.DOWNLOADED
+    assert record.message and "conversion failed" in record.message
