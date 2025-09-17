@@ -48,6 +48,8 @@ Deliver a dependable Python extractor that:
 - #22 Standards mapping schema + types.
 - #23 Regression tests for ingestion + standards validation.
 - #24 Docs update & onboarding for Phase 1 workflows.
+- #25 Map Canadian federal/provincial portals for future ingestion.
+- #26 Survey international legislative portals (US, UK, FR, AU, JP, CN, DE).
 
 ## Principles & Constraints
 - Never commit fetched HTML, snapshots, or SQLite artifacts; all outputs must be reproducible locally.
