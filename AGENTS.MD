@@ -26,6 +26,8 @@ CI (`.github/workflows/ci.yml`) runs `python -m pytest -q` on Python 3.10 and 3.
 ## GitHub Workflow Integration
 Track work through GitHub issues and milestones—use `gh issue list` to confirm ownership before starting. Synchronize labeling with repository defaults via `python runner.py --apply --self-test` or `gh label list`. Draft feature branches with `gh repo clone` and open reviews using `gh pr create --title "feat: …" --fill`. Monitor CI in the GitHub Actions tab or run `gh run watch` after pushing.
 
+Phase 1 focus (corpus & standards): issues #20–#24 coordinate scope, ingestion, schema, tests, and docs.
+
 ## Commit & Pull Request Guidelines
 Commits and PR titles must follow Conventional Commits (`feat`, `fix`, `docs`, etc.). Reference the linked issue in both the commit body (when helpful) and the PR description, and state when the change was prepared by an AI agent. Complete the PR template, add `status/*`, `priority/*`, and `area/*` labels, and document a concise test plan (commands or data inspected). Run local checks before requesting review and update `CHANGELOG.md` for user-visible changes.
 

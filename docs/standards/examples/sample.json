@@ -1,0 +1,16 @@
+[
+  {
+    "jurisdiction": "QC",
+    "instrument": "S-2.1",
+    "clause_id": "section-51",
+    "languages": ["fr", "en"],
+    "references": [
+      {
+        "body": "CSA",
+        "designation": "Z462-21",
+        "clause": "4.1"
+      }
+    ],
+    "notes": "Align PPE requirements"
+  }
+]

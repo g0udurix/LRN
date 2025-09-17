@@ -17,6 +17,8 @@ Command-line tools for turning LegisQuébec HTML into clean XHTML fragments, ann
 ## Quick Start
 ```bash
 python -m lrn.cli extract --out-dir output path/to/local.html
+# Prepare a manifest for batch ingestion (Phase 1 scaffold)
+python scripts/corpus_ingest.py --manifest docs/corpus/example_phase1.json --out-dir logs/ingestion/demo
 ```
 Common flags:
 - `--base-url`: resolve relative URLs when you are running against downloaded mirrors.
@@ -39,4 +41,10 @@ The default invocation (`python -m lrn.cli`) runs the “fetch all” workflow: 
 - For noisy BeautifulSoup XML warnings during tests, installing `lxml` or filtering the warning will silence them.
 
 ## Roadmap & Issues
-Active work and triage live on [Project 3](https://github.com/users/g0udurix/projects/3). Phase 0 tasks (#11–#19) track modularization, annex hardening, bilingual coverage, CI, and documentation refresh.
+Active work and triage live on [Project 3](https://github.com/users/g0udurix/projects/3). Phase 1 (Corpus & Standards) issues include:
+
+- #20 Corpus scope & licensing notes
+- #21 Batch ingestion command + metadata manifests
+- #22 Standards mapping schema & types
+- #23 Regression tests for ingestion and standards validation
+- #24 Documentation refresh for corpus/standards workflows
