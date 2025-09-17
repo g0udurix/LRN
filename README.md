@@ -34,6 +34,7 @@ The default invocation (`python -m lrn.cli`) runs the “fetch all” workflow: 
 - Run tests with `python -m pytest`. Fixtures cover bilingual extraction, annex conversion stubs, and history crawling (success/failure).
 - CI (`.github/workflows/ci.yml`) runs pytest on Python 3.10 and 3.11 with pip caching.
 - `pyproject.toml` configures pytest discovery; `sitecustomize.py` injects the repo root into `sys.path` for local runs.
+- Standards helpers (`lrn/standards`) provide `validate_mapping_file`; run via `python -m lrn.standards validate docs/standards/examples/sample.json`.
 
 ## Troubleshooting
 - If annex conversion fails, the CLI logs a warning and leaves the PDF in place.

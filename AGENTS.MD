@@ -12,6 +12,7 @@ Use Python 3.10+ from the repo root. Primary commands:
 python -m lrn.cli --out-dir output sample.html  # run the extractor against saved HTML
 python -m pytest tests                          # execute unit tests
 python runner.py --apply --self-test            # refresh governance defaults and run sanity checks
+python scripts/corpus_ingest.py --manifest docs/corpus/example_phase1.json --out-dir output --log-dir logs/ingestion --resume
 ```
 Flags allow opt-outs: `--no-annex-pdf-to-md`, `--no-history-sidecars`, etc. Prefer virtual environments and log new tooling in the issue before committing.
 
