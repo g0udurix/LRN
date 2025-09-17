@@ -19,6 +19,9 @@ Command-line tools for turning LegisQuébec HTML into clean XHTML fragments, ann
 python -m lrn.cli extract --out-dir output path/to/local.html
 # Prepare a manifest for batch ingestion (Phase 1 scaffold)
 python scripts/corpus_ingest.py --manifest docs/corpus/example_phase1.json --out-dir logs/ingestion/demo
+# Target provincial manifests (examples)
+python scripts/corpus_ingest.py --manifest docs/corpus/manifests/nb.json --out-dir output_nb --log-dir logs/ingestion
+python scripts/corpus_ingest.py --manifest docs/corpus/manifests/on.json --out-dir output_on --log-dir logs/ingestion --retries 2
 ```
 Common flags:
 - `--base-url`: resolve relative URLs when you are running against downloaded mirrors.
@@ -42,13 +45,7 @@ The default invocation (`python -m lrn.cli`) runs the “fetch all” workflow: 
 - For noisy BeautifulSoup XML warnings during tests, installing `lxml` or filtering the warning will silence them.
 
 ## Roadmap & Issues
-Active work and triage live on [Project 3](https://github.com/users/g0udurix/projects/3). Phase 1 (Corpus & Standards) issues include:
+Active work and triage live on [Project 3](https://github.com/users/g0udurix/projects/3). Current focus includes Phase 1 (Corpus & Standards) deliverables and new ingestion pilots:
 
-- #20 Corpus scope & licensing notes
-- #21 Batch ingestion command + metadata manifests
-- #22 Standards mapping schema & types
-- #23 Regression tests for ingestion and standards validation
-- #24 Documentation refresh for corpus/standards workflows
-- #27–#30 Provincial ingestion pilots (NB, ON, AB, BC)
-- #31 OSHA 1910/1926 prototype
-- #32–#33 UK & France ingestion planning
+- #20–#24 LegisQuébec corpus scope, ingestion CLI, standards schema/tests, docs.
+- #25–#33 Expansion research & manifests for other jurisdictions (NB, ON, AB, BC, OSHA 1910/1926, UK, France).
