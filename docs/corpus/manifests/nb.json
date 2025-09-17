@@ -1,5 +1,6 @@
 [
-  {"url": "https://laws.gnb.ca/en/document/cs/O-0.5", "language": "en", "instrument": "NB_OHS_Act"},
-  {"url": "https://laws.gnb.ca/fr/document/cs/O-0.5", "language": "fr", "instrument": "NB_OHS_Act"},
-  {"url": "https://laws.gnb.ca/en/ShowPdf/cs/O-0.5", "language": "en", "instrument": "NB_OHS_Act_pdf"}
+  {"url": "https://laws.gnb.ca/en/document/cs/O-0.5", "language": "en", "instrument": "NB_OccupationalHealthSafetyAct"},
+  {"url": "https://laws.gnb.ca/fr/document/cs/O-0.5", "language": "fr", "instrument": "NB_LoiSecuriteSanteTravail"},
+  {"url": "https://laws.gnb.ca/en/document/cr/91-191", "language": "en", "instrument": "NB_GeneralRegulation_91-191"},
+  {"url": "https://laws.gnb.ca/fr/document/cr/91-191", "language": "fr", "instrument": "NB_ReglementGeneral_91-191"}
 ]

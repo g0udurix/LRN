@@ -1,5 +1,7 @@
 [
-  {"url": "https://www.ontario.ca/laws/statute/90o01", "language": "en", "instrument": "ON_OHS_Act"},
-  {"url": "https://www.ontario.ca/fr/lois/loi/90o01", "language": "fr", "instrument": "ON_OHS_Act"},
-  {"url": "https://www.ontario.ca/laws/regulation/901213", "language": "en", "instrument": "ON_OHS_Reg"}
+  {"url": "https://www.ontario.ca/laws/statute/90o01", "language": "en", "instrument": "ON_OccupationalHealthSafetyAct"},
+  {"url": "https://www.ontario.ca/fr/lois/loi/90o01", "language": "fr", "instrument": "ON_LoiSecuriteSanteTravail"},
+  {"url": "https://www.ontario.ca/laws/regulation/901213", "language": "en", "instrument": "ON_Reg213_ConstructionProjects"},
+  {"url": "https://www.ontario.ca/fr/lois/reglement/901213", "language": "fr", "instrument": "ON_Reg213_ProjetsConstruction"},
+  {"url": "https://www.ontario.ca/laws/regulation/901851", "language": "en", "instrument": "ON_Reg851_IndustrialEstablishments"}
 ]

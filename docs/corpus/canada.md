@@ -20,3 +20,10 @@ This document tracks official legal information sources across Canadian jurisdic
 | Yukon | https://laws.yukon.ca/ | HTML/PDF | Licensing TBD | Simple HTML index | P3 |
 
 **Next Steps:** Confirm licensing for TBD entries and prioritize jurisdictions for Phase 2 ingestion.
+
+## Targeted OHS Instruments
+- **New Brunswick:** Occupational Health and Safety Act (O-0.5); General Regulation 91-191.
+- **Ontario:** Occupational Health and Safety Act (R.S.O. 1990, c. O.1); Regulation 213/91 (Construction Projects); Regulation 851/90 (Industrial Establishments).
+- **Alberta:** Occupational Health and Safety Act (SA 2017, c. O-2.1); Occupational Health and Safety Code (AR 87/2009).
+- **British Columbia:** Workers Compensation Act (Part 2 & 3); Occupational Health and Safety Regulation (BC Reg 296/97).
+

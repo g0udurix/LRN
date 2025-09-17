@@ -13,3 +13,9 @@ The following jurisdictions are candidates for future corpus expansions beyond C
 | Germany | https://www.gesetze-im-internet.de/ | HTML/PDF | Licensed by juris GmbH; reuse conditions apply | Bilingual coverage limited |
 
 **Notes:** Prioritize UK and Australia (clear APIs/licensing) before jurisdictions with stricter access controls (France, Japan, China, Germany).
+
+## Targeted OHS Instruments
+- **United States:** 29 CFR Part 1910 (General Industry); 29 CFR Part 1926 (Construction).
+- **United Kingdom:** Health and Safety at Work etc. Act 1974; Management of Health and Safety at Work Regulations 1999.
+- **France:** Code du travail (notably Livre IV – Santé et sécurité au travail).
+
