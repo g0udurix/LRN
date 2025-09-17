@@ -38,8 +38,8 @@ def test_ingest_success_and_resume(monkeypatch, tmp_path: Path):
         def __init__(self):
             self.calls = []
 
-        def get(self, url, timeout):
-            self.calls.append(url)
+        def get(self, url, timeout, headers=None):
+            self.calls.append((url, headers))
             return FakeResponse(f"content-{url}".encode())
 
     fake_session = FakeSession()
@@ -72,7 +72,7 @@ def test_ingest_failure(monkeypatch, tmp_path: Path):
     manifest.write_text('[{"url": "https://example.test/fr/document", "language": "fr", "instrument": "S-2.1"}]', encoding='utf-8')
 
     class FailingSession:
-        def get(self, url, timeout):
+        def get(self, url, timeout, headers=None):
             raise RuntimeError("boom")
 
     monkeypatch.setattr('scripts.corpus_ingest.requests.Session', lambda: FailingSession())

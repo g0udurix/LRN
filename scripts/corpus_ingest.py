@@ -9,9 +9,10 @@ import time
 from dataclasses import dataclass, asdict
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import List, Optional
+from typing import Dict, List, Optional
 
 import requests
+from requests.utils import requote_uri
 
 
 @dataclass
@@ -86,7 +87,9 @@ def fetch_entry(entry: CorpusEntry, session: requests.Session, options: IngestOp
     last_error: Optional[str] = None
     while attempt <= options.retries:
         try:
-            response = session.get(entry.url, timeout=options.timeout)
+            url = requote_uri(entry.url)
+            headers: Dict[str, str] = {'Accept-Language': 'fr-CA,fr;q=0.9'} if entry.language.lower().startswith('fr') else {'Accept-Language': 'en-CA,en;q=0.9'}
+            response = session.get(url, timeout=options.timeout, headers=headers)
             response.raise_for_status()
             data = response.content
             target_path.write_bytes(data)

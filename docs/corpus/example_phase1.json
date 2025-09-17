@@ -1,8 +1,8 @@
 [
   {"url": "https://www.legisquebec.gouv.qc.ca/fr/document/lc/S-2.1", "language": "fr", "instrument": "S-2.1"},
-  {"url": "https://www.legisquebec.gouv.qc.ca/en/document/lc/S-2.1", "language": "en", "instrument": "S-2.1"},
+  {"url": "https://www.legisquebec.gouv.qc.ca/en/document/cs/S-2.1", "language": "en", "instrument": "S-2.1"},
   {"url": "https://www.legisquebec.gouv.qc.ca/fr/document/rc/S-2.1,%20r.%208.2", "language": "fr", "instrument": "S-2.1_r_8.2"},
-  {"url": "https://www.legisquebec.gouv.qc.ca/en/document/rc/S-2.1,%20r.%208.2", "language": "en", "instrument": "S-2.1_r_8.2"},
+  {"url": "https://www.legisquebec.gouv.qc.ca/fr/document/rc/S-2.1,%20r.%208.2?lang=en", "language": "en", "instrument": "S-2.1_r_8.2"},
   {"url": "https://www.legisquebec.gouv.qc.ca/fr/document/rc/S-2.1,%20r.%209", "language": "fr", "instrument": "S-2.1_r_9"},
-  {"url": "https://www.legisquebec.gouv.qc.ca/en/document/rc/S-2.1,%20r.%209", "language": "en", "instrument": "S-2.1_r_9"}
+  {"url": "https://www.legisquebec.gouv.qc.ca/fr/document/rc/S-2.1,%20r.%209?lang=en", "language": "en", "instrument": "S-2.1_r_9"}
 ]
