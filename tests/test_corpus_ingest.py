@@ -30,6 +30,7 @@ def test_ingest_success_and_resume(monkeypatch, tmp_path: Path):
     class FakeResponse:
         def __init__(self, content: bytes):
             self.content = content
+            self.headers = {'Content-Type': 'text/html'}
 
         def raise_for_status(self):
             return None
@@ -57,6 +58,8 @@ def test_ingest_success_and_resume(monkeypatch, tmp_path: Path):
     assert all(r.status == 'fetched' for r in results)
     for r in results:
         assert r.path and r.path.exists()
+        if r.entry.url.endswith('.json'):
+            assert r.path.suffix == '.json'
     log_files = list((options.log_dir).glob('*/manifest.json'))
     assert log_files
 

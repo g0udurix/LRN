@@ -69,7 +69,14 @@ def _sha256(data: bytes) -> str:
 def fetch_entry(entry: CorpusEntry, session: requests.Session, options: IngestOptions) -> FetchResult:
     target_dir = options.out_dir / entry.instrument
     target_dir.mkdir(parents=True, exist_ok=True)
-    target_path = target_dir / f"{entry.language}.html"
+
+    suffix = '.html'
+    lowered_url = entry.url.lower()
+    if lowered_url.endswith('.pdf'):
+        suffix = '.pdf'
+    elif lowered_url.endswith('.json') or 'format=json' in lowered_url:
+        suffix = '.json'
+    target_path = target_dir / f"{entry.language}{suffix}"
 
     if options.resume and target_path.exists():
         data = target_path.read_bytes()
@@ -92,6 +99,9 @@ def fetch_entry(entry: CorpusEntry, session: requests.Session, options: IngestOp
             response = session.get(url, timeout=options.timeout, headers=headers)
             response.raise_for_status()
             data = response.content
+            if suffix == '.html' and response.headers.get('Content-Type', '').startswith('application/json'):
+                suffix = '.json'
+                target_path = target_path.with_suffix('.json')
             target_path.write_bytes(data)
             return FetchResult(
                 entry=entry,
