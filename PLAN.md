@@ -42,6 +42,11 @@ Deliver a dependable Python extractor that:
    - Update README/AGENTS with corpus ingestion instructions and standards schema overview.
    - Record ingestion runs (date, scope) under `logs/` with a standardized template.
 
+### Priority Jurisdictions (current focus)
+- New Brunswick, Ontario, Alberta, British Columbia (Canada)
+- OSHA 29 CFR 1910 & 1926 (USA)
+- United Kingdom & France (Europe)
+
 ### Deliverables (issues to file)
 - #20 Corpus scope & licensing notes.
 - #21 Batch ingestion command with manifests + retries.

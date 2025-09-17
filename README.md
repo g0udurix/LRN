@@ -49,3 +49,6 @@ Active work and triage live on [Project 3](https://github.com/users/g0udurix/pro
 - #22 Standards mapping schema & types
 - #23 Regression tests for ingestion and standards validation
 - #24 Documentation refresh for corpus/standards workflows
+- #27–#30 Provincial ingestion pilots (NB, ON, AB, BC)
+- #31 OSHA 1910/1926 prototype
+- #32–#33 UK & France ingestion planning
