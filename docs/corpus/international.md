@@ -46,6 +46,11 @@ checksums.
 - **United Arab Emirates:** Federal Decree-Law 33/2021 (docs/corpus/manifests/uae.json).
 - **Qatar:** Labour Law No. 14 of 2004 (docs/corpus/manifests/qatar.json).
 - **Dubai:** Code of Construction Safety Practice (docs/corpus/manifests/dubai.json).
+- **Italy:** Decreto Legislativo 81/2008 (docs/corpus/manifests/italy.json).
+- **Greece:** Law 3850/2010 (docs/corpus/manifests/greece.json).
+- **Romania:** Law 319/2006 (docs/corpus/manifests/romania.json).
+- **Turkey:** Occupational Health and Safety Law 6331 (docs/corpus/manifests/turkey.json).
+- **Israel:** Safety at Work Regulations (docs/corpus/manifests/israel.json).
 
 ### Fall Protection & Window Cleaning Focus
 - **United States:** 29 CFR 1910 Subpart D (Walking-Working Surfaces) — §§1910.27 & 1910.28 cover rope descent systems and duty to provide fall protection for window cleaners; 29 CFR 1926 Subpart M (Fall Protection) for construction-led exterior maintenance. Federal corpus manifest: `docs/corpus/manifests/osha.json`.

@@ -1,0 +1,11 @@
+[
+  {
+    "url": "https://www.nevo.co.il/law_html/Law01/999_001.htm",
+    "language": "he",
+    "instrument": "IL_SafetyAtWorkRegulations",
+    "category": "national",
+    "requires_headless": true,
+    "content_type": "html",
+    "issue_ref": "docs/issues/israel-nevo-spa.md"
+  }
+]

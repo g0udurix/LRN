@@ -1,0 +1,11 @@
+[
+  {
+    "url": "https://www.e-nomothesia.gr/kat-ergasia/nomos-3850-2010.html",
+    "language": "el",
+    "instrument": "GR_Law3850_2010",
+    "category": "national",
+    "requires_headless": true,
+    "content_type": "html",
+    "issue_ref": "docs/issues/greece-nomothesia-headless.md"
+  }
+]

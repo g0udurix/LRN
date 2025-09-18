@@ -1,0 +1,11 @@
+[
+  {
+    "url": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=6331&MevzuatTur=1&MevzuatTertip=5",
+    "language": "tr",
+    "instrument": "TR_OccupationalHealthSafetyLaw_6331",
+    "category": "national",
+    "requires_headless": true,
+    "content_type": "html",
+    "issue_ref": "docs/issues/turkey-mevzuat-headless.md"
+  }
+]

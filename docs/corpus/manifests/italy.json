@@ -1,0 +1,11 @@
+[
+  {
+    "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2008-04-09;81!vig=",
+    "language": "it",
+    "instrument": "IT_Dlgs81_2008",
+    "category": "national",
+    "requires_headless": true,
+    "content_type": "html",
+    "issue_ref": "docs/issues/italy-normattiva-scrape.md"
+  }
+]
