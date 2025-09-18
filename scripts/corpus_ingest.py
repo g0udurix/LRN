@@ -23,6 +23,12 @@ class CorpusEntry:
     url: str
     language: str
     instrument: str
+    category: str = 'unknown'
+    requires_headless: bool = False
+    content_type: str = 'html'
+    issue_ref: Optional[str] = None
+    notes: Optional[str] = None
+    status: str = 'active'
 
 
 @dataclass
@@ -56,6 +62,12 @@ def load_manifest(path: Path) -> List[CorpusEntry]:
                 url=item['url'],
                 language=item['language'],
                 instrument=item.get('instrument', ''),
+                category=item.get('category', 'unknown'),
+                requires_headless=bool(item.get('requires_headless', False)),
+                content_type=item.get('content_type', 'html'),
+                issue_ref=item.get('issue_ref'),
+                notes=item.get('notes'),
+                status=item.get('status', 'active'),
             )
         )
     return entries

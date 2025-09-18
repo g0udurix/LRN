@@ -1,0 +1,4 @@
+slug,url,language,instrument,category,requires_headless,content_type,issue_ref,notes,status
+france,https://www.legifrance.gouv.fr/codes/id/LEGITEXT000006072050/,fr,FR_CodeTravail,national,true,html,docs/issues/france-legifrance-block.md,,active
+brazil,https://www.gov.br/trabalho-e-previdencia/pt-br/assuntos/inspecao/seguranca-e-saude-no-trabalho/normas-regulamentadoras/nr-35.pdf,pt,BR_NR35_TrabalhoEmAltura,national,false,pdf,,,active
+who,https://apps.who.int/iris/bitstream/handle/10665/339923/9789240028494-eng.pdf,en,WHO_GlobalStrategy_OSH_2021_2025,international,false,pdf,,,active

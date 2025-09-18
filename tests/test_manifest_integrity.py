@@ -5,6 +5,18 @@ from scripts.corpus_ingest import load_manifest
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST_DIR = ROOT / 'docs/corpus/manifests'
 
+ALLOWED_FIELDS = {
+    'url',
+    'language',
+    'instrument',
+    'category',
+    'requires_headless',
+    'content_type',
+    'issue_ref',
+    'notes',
+    'status'
+}
+
 def test_all_manifests_load():
     for manifest_path in MANIFEST_DIR.glob('*.json'):
         entries = load_manifest(manifest_path)
@@ -66,3 +78,21 @@ def test_priority_manifests_present():
     present = {path.name for path in MANIFEST_DIR.glob('*.json')}
     missing = expected - present
     assert not missing, f"Missing priority manifests: {sorted(missing)}"
+
+
+def test_manifest_fields():
+    import json
+    for manifest_path in MANIFEST_DIR.glob('*.json'):
+        items = json.loads(manifest_path.read_text(encoding='utf-8'))
+        for item in items:
+            unexpected = set(item.keys()) - ALLOWED_FIELDS
+            assert not unexpected, f"Unexpected keys in {manifest_path}: {sorted(unexpected)}"
+            assert isinstance(item['url'], str) and item['url'], f"Missing url in {manifest_path}"
+            assert isinstance(item['language'], str) and item['language'], f"Missing language in {manifest_path}"
+            assert isinstance(item.get('instrument', ''), str), f"Instrument must be string in {manifest_path}"
+            assert isinstance(item.get('category', 'unknown'), str)
+            assert isinstance(item.get('requires_headless', False), bool)
+            if 'content_type' in item:
+                assert item['content_type'] in {'html', 'pdf', 'json'}, f"Unknown content_type in {manifest_path}: {item['content_type']}"
+            if 'status' in item:
+                assert isinstance(item['status'], str)
