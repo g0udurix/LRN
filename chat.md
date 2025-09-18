@@ -37,3 +37,4 @@
 - Added fifth placeholder batch (Cape Verde, Caribbean Netherlands, Cayman Islands, Central African Republic, Chad, Christmas Island, Cocos (Keeling) Islands, Comoros, Cook Islands, Costa Rica); roster/progress updated.
 - Added sixth placeholder batch (Croatia, Curaçao, Cyprus, Czechia, DR Congo, Denmark, Djibouti, Dominica, Ecuador, El Salvador); roster/progress updated.
 - Added seventh placeholder batch (Equatorial Guinea, Eritrea, Estonia, Eswatini, Ethiopia, Falkland Islands, Faroe Islands, Fiji, French Guiana, French Polynesia); roster/progress updated.
+- Added eighth placeholder batch (French Southern and Antarctic Lands, Gabon, Gambia, Georgia, Ghana, Gibraltar, Greenland, Grenada, Guadeloupe, Guam); roster/progress updated.

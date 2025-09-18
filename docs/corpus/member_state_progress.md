@@ -4,6 +4,16 @@
 | --- | --- | --- | --- | --- |
 | FRA | France | docs/corpus/manifests/france.json | done | DataDome headless required |
 | BRA | Brazil | docs/corpus/manifests/brazil.json | done | PDF NR-35 |
+| ATF | French Southern and Antarctic Lands | docs/corpus/manifests/french_southern_and_antarctic_lands.json | pending | Placeholder – research official OSH legislation |
+| GAB | Gabon | docs/corpus/manifests/gabon.json | pending | Placeholder – research official OSH legislation |
+| GMB | Gambia | docs/corpus/manifests/gambia.json | pending | Placeholder – research official OSH legislation |
+| GEO | Georgia | docs/corpus/manifests/georgia.json | pending | Placeholder – research official OSH legislation |
+| GHA | Ghana | docs/corpus/manifests/ghana.json | pending | Placeholder – research official OSH legislation |
+| GIB | Gibraltar | docs/corpus/manifests/gibraltar.json | pending | Placeholder – research official OSH legislation |
+| GRL | Greenland | docs/corpus/manifests/greenland.json | pending | Placeholder – research official OSH legislation |
+| GRD | Grenada | docs/corpus/manifests/grenada.json | pending | Placeholder – research official OSH legislation |
+| GLP | Guadeloupe | docs/corpus/manifests/guadeloupe.json | pending | Placeholder – research official OSH legislation |
+| GUM | Guam | docs/corpus/manifests/guam.json | pending | Placeholder – research official OSH legislation |
 | GNQ | Equatorial Guinea | docs/corpus/manifests/equatorial_guinea.json | pending | Placeholder – research official OSH legislation |
 | ERI | Eritrea | docs/corpus/manifests/eritrea.json | pending | Placeholder – research official OSH legislation |
 | EST | Estonia | docs/corpus/manifests/estonia.json | pending | Placeholder – research official OSH legislation |
