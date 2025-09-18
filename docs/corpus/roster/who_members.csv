@@ -1,9 +1,9 @@
 slug,country,iso,url,language,instrument,category,requires_headless,content_type,issue_ref,notes,status
-afghanistan,Afghanistan,AFG,,,,unknown,false,html,,WHO member placeholder,todo
-albania,Albania,ALB,,,,unknown,false,html,,WHO member placeholder,todo
-algeria,Algeria,DZA,,,,unknown,false,html,,WHO member placeholder,todo
-american_samoa,American Samoa,ASM,,,,unknown,false,html,,WHO member placeholder,todo
-andorra,Andorra,AND,,,,unknown,false,html,,WHO member placeholder,todo
+afghanistan,Afghanistan,AFG,,,,unknown,false,html,,WHO member placeholder,pending
+albania,Albania,ALB,,,,unknown,false,html,,WHO member placeholder,pending
+algeria,Algeria,DZA,,,,unknown,false,html,,WHO member placeholder,pending
+american_samoa,American Samoa,ASM,,,,unknown,false,html,,WHO member placeholder,pending
+andorra,Andorra,AND,,,,unknown,false,html,,WHO member placeholder,pending
 angola,Angola,AGO,,,,unknown,false,html,,WHO member placeholder,todo
 anguilla,Anguilla,AIA,,,,unknown,false,html,,WHO member placeholder,todo
 antarctica,Antarctica,ATA,,,,unknown,false,html,,WHO member placeholder,todo
