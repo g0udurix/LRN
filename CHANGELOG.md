@@ -3,6 +3,7 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
+- Added placeholder manifests for Kosovo, Kuwait, Kyrgyzstan, Laos, Latvia, Lesotho, Liberia, Libya, Liechtenstein, and Lithuania (status pending).
 - Added placeholder manifests for Iceland, Iraq, Ireland, Isle of Man, Ivory Coast, Jersey, Jordan, Kazakhstan, Kenya, and Kiribati (status pending).
 - Added placeholder manifests for Guatemala, Guernsey, Guinea, Guinea-Bissau, Guyana, Haiti, Heard Island and McDonald Islands, Honduras, Hong Kong, and Hungary (status pending).
 - Added placeholder manifests for French Southern and Antarctic Lands, Gabon, Gambia, Georgia, Ghana, Gibraltar, Greenland, Grenada, Guadeloupe, and Guam (status pending).

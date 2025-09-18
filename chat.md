@@ -40,3 +40,4 @@
 - Added eighth placeholder batch (French Southern and Antarctic Lands, Gabon, Gambia, Georgia, Ghana, Gibraltar, Greenland, Grenada, Guadeloupe, Guam); roster/progress updated.
 - Added ninth placeholder batch (Guatemala, Guernsey, Guinea, Guinea-Bissau, Guyana, Haiti, Heard Island and McDonald Islands, Honduras, Hong Kong, Hungary); roster/progress updated.
 - Added tenth placeholder batch (Iceland, Iraq, Ireland, Isle of Man, Ivory Coast, Jersey, Jordan, Kazakhstan, Kenya, Kiribati); roster/progress updated.
+- Added eleventh placeholder batch (Kosovo, Kuwait, Kyrgyzstan, Laos, Latvia, Lesotho, Liberia, Libya, Liechtenstein, Lithuania); roster/progress updated.

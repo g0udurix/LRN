@@ -4,6 +4,16 @@
 | --- | --- | --- | --- | --- |
 | FRA | France | docs/corpus/manifests/france.json | done | DataDome headless required |
 | BRA | Brazil | docs/corpus/manifests/brazil.json | done | PDF NR-35 |
+| XKX | Kosovo | docs/corpus/manifests/kosovo.json | pending | Placeholder – research official OSH legislation |
+| KWT | Kuwait | docs/corpus/manifests/kuwait.json | pending | Placeholder – research official OSH legislation |
+| KGZ | Kyrgyzstan | docs/corpus/manifests/kyrgyzstan.json | pending | Placeholder – research official OSH legislation |
+| LAO | Laos | docs/corpus/manifests/laos.json | pending | Placeholder – research official OSH legislation |
+| LVA | Latvia | docs/corpus/manifests/latvia.json | pending | Placeholder – research official OSH legislation |
+| LSO | Lesotho | docs/corpus/manifests/lesotho.json | pending | Placeholder – research official OSH legislation |
+| LBR | Liberia | docs/corpus/manifests/liberia.json | pending | Placeholder – research official OSH legislation |
+| LBY | Libya | docs/corpus/manifests/libya.json | pending | Placeholder – research official OSH legislation |
+| LIE | Liechtenstein | docs/corpus/manifests/liechtenstein.json | pending | Placeholder – research official OSH legislation |
+| LTU | Lithuania | docs/corpus/manifests/lithuania.json | pending | Placeholder – research official OSH legislation |
 | ISL | Iceland | docs/corpus/manifests/iceland.json | pending | Placeholder – research official OSH legislation |
 | IRQ | Iraq | docs/corpus/manifests/iraq.json | pending | Placeholder – research official OSH legislation |
 | IRL | Ireland | docs/corpus/manifests/ireland.json | pending | Placeholder – research official OSH legislation |
