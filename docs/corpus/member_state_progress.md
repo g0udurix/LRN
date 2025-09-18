@@ -4,6 +4,16 @@
 | --- | --- | --- | --- | --- |
 | FRA | France | docs/corpus/manifests/france.json | done | DataDome headless required |
 | BRA | Brazil | docs/corpus/manifests/brazil.json | done | PDF NR-35 |
+| LUX | Luxembourg | docs/corpus/manifests/luxembourg.json | pending | Placeholder – research official OSH legislation |
+| MAC | Macau | docs/corpus/manifests/macau.json | pending | Placeholder – research official OSH legislation |
+| MDG | Madagascar | docs/corpus/manifests/madagascar.json | pending | Placeholder – research official OSH legislation |
+| MWI | Malawi | docs/corpus/manifests/malawi.json | pending | Placeholder – research official OSH legislation |
+| MYS | Malaysia | docs/corpus/manifests/malaysia.json | pending | Placeholder – research official OSH legislation |
+| MDV | Maldives | docs/corpus/manifests/maldives.json | pending | Placeholder – research official OSH legislation |
+| MLI | Mali | docs/corpus/manifests/mali.json | pending | Placeholder – research official OSH legislation |
+| MLT | Malta | docs/corpus/manifests/malta.json | pending | Placeholder – research official OSH legislation |
+| MHL | Marshall Islands | docs/corpus/manifests/marshall_islands.json | pending | Placeholder – research official OSH legislation |
+| MTQ | Martinique | docs/corpus/manifests/martinique.json | pending | Placeholder – research official OSH legislation |
 | XKX | Kosovo | docs/corpus/manifests/kosovo.json | pending | Placeholder – research official OSH legislation |
 | KWT | Kuwait | docs/corpus/manifests/kuwait.json | pending | Placeholder – research official OSH legislation |
 | KGZ | Kyrgyzstan | docs/corpus/manifests/kyrgyzstan.json | pending | Placeholder – research official OSH legislation |
