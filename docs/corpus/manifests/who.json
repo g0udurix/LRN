@@ -1,0 +1,18 @@
+[
+  {
+    "url": "https://apps.who.int/iris/bitstream/handle/10665/339923/9789240028494-eng.pdf",
+    "language": "en",
+    "instrument": "WHO_GlobalStrategy_OSH_2021_2025",
+    "category": "international",
+    "requires_headless": false,
+    "content_type": "pdf"
+  },
+  {
+    "url": "https://apps.who.int/iris/bitstream/handle/10665/43925/9789241596824_eng.pdf",
+    "language": "en",
+    "instrument": "WHO_Guide_OccupationalHealthServices",
+    "category": "international",
+    "requires_headless": false,
+    "content_type": "pdf"
+  }
+]

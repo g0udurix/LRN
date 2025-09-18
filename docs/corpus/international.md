@@ -20,6 +20,7 @@ checksums.
 
 ## Targeted OHS Instruments
 - **United States:** 29 CFR Part 1910 (General Industry); 29 CFR Part 1926 (Construction). Manifest: `docs/corpus/manifests/osha.json` (govinfo XML).
+- **World Health Organization:** Global Strategy on Occupational Safety and Health 2021–2025 and Occupational Health Services guidance (docs/corpus/manifests/who.json).
 - **United Kingdom:** Health and Safety at Work etc. Act 1974; Management of Health and Safety at Work Regulations 1999.
 - **France:** Code du travail (notably Livre IV – Santé et sécurité au travail).
 - **Germany:** Arbeitsschutzgesetz (ArbSchG) and Betriebssicherheitsverordnung (BetrSichV). Manifest: `docs/corpus/manifests/germany.json`.

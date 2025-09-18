@@ -3,6 +3,7 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
+- Added WHO occupational safety strategy manifests (`docs/corpus/manifests/who.json`).
 - Added manifests for Indonesia and Russia with headless capture guidance.
 - Added manifests for Saudi Arabia, Iran, Lebanon, Argentina, Chile, Colombia, Peru, Jamaica, Dominican Republic, Cuba, Trinidad and Tobago, and Barbados with headless capture guidance where needed.
 - Added manifests for Italy, Greece, Romania, Turkey, and Israel with headless guidance and issue dossiers.
