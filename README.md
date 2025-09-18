@@ -12,6 +12,7 @@ Command-line tools for turning LegisQuébec HTML into clean XHTML fragments, ann
 - `lrn/extract.py` — pure fragment loader (`load_fragment`) and instrument detection heuristics.
 - `lrn/annex.py` — annex download + conversion pipeline with retries, size caps, and YAML provenance.
 - `lrn/history.py` — history discovery, optional snapshotting, and HTML injection helpers.
+- `lrn/persist.py` — SQLite-backed helpers for storing history snapshots and metadata.
 - `lrn/cli.py` — orchestrates the modules and exposes the `extract` subcommand / fetch-all entrypoint.
 
 ## Quick Start

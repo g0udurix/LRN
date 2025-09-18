@@ -23,3 +23,4 @@
   python scripts/corpus_ingest.py --manifest <manifest> --out-dir output_x --log-dir logs/ingestion --resume
   ```
 - Reference updated manifests under `docs/corpus/manifests/` for ingestion targets.
+- Persistence scaffolding added (`lrn/persist.py`, `tests/test_history_persist.py`, `docs/history/persistence_refactor_plan.md`); tests: `python -m pytest tests/test_history_persist.py -q`, `python -m pytest -q`.

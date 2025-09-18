@@ -71,3 +71,9 @@ Deliver a dependable Python extractor that:
 - Structured persistence (`lrn/persist.py` or external DB) for corpus snapshots.
 - OCR/scan support to handle non-text PDFs.
 - Integration with comparison/annotation features planned for Phase 2+.
+
+## Persistence Refactor
+- Provide SQLite-backed helpers in `lrn/persist.py` with snapshot storage APIs.
+- Maintain regression coverage (`tests/test_history_persist.py`) and planning notes in `docs/history/persistence_refactor_plan.md`.
+- Future work: integrate with history pipeline and log captures under `logs/history-persist/`.
+
