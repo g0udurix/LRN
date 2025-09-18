@@ -4,6 +4,16 @@
 | --- | --- | --- | --- | --- |
 | FRA | France | docs/corpus/manifests/france.json | done | DataDome headless required |
 | BRA | Brazil | docs/corpus/manifests/brazil.json | done | PDF NR-35 |
+| CHE | Switzerland | docs/corpus/manifests/switzerland.json | pending | Placeholder – research official OSH legislation |
+| SYR | Syria | docs/corpus/manifests/syria.json | pending | Placeholder – research official OSH legislation |
+| STP | São Tomé and Príncipe | docs/corpus/manifests/são_tomé_and_príncipe.json | pending | Placeholder – research official OSH legislation |
+| TWN | Taiwan | docs/corpus/manifests/taiwan.json | pending | Placeholder – research official OSH legislation |
+| TJK | Tajikistan | docs/corpus/manifests/tajikistan.json | pending | Placeholder – research official OSH legislation |
+| TZA | Tanzania | docs/corpus/manifests/tanzania.json | pending | Placeholder – research official OSH legislation |
+| TLS | Timor-Leste | docs/corpus/manifests/timor-leste.json | pending | Placeholder – research official OSH legislation |
+| TGO | Togo | docs/corpus/manifests/togo.json | pending | Placeholder – research official OSH legislation |
+| TKL | Tokelau | docs/corpus/manifests/tokelau.json | pending | Placeholder – research official OSH legislation |
+| TON | Tonga | docs/corpus/manifests/tonga.json | pending | Placeholder – research official OSH legislation |
 | SVK | Slovakia | docs/corpus/manifests/slovakia.json | pending | Placeholder – research official OSH legislation |
 | SVN | Slovenia | docs/corpus/manifests/slovenia.json | pending | Placeholder – research official OSH legislation |
 | SLB | Solomon Islands | docs/corpus/manifests/solomon_islands.json | pending | Placeholder – research official OSH legislation |
