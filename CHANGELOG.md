@@ -3,6 +3,7 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
+- Added placeholder manifests for Bouvet Island, British Indian Ocean Territory, British Virgin Islands, Brunei, Bulgaria, Burkina Faso, Burundi, Cambodia, Cameroon, and Canada (status pending).
 - Added placeholder manifests for Bangladesh, Belarus, Belgium, Belize, Benin, Bermuda, Bhutan, Bolivia, Bosnia and Herzegovina, and Botswana (status pending).
 - Added placeholder manifests for Angola, Anguilla, Antarctica, Antigua and Barbuda, Armenia, Aruba, Austria, Azerbaijan, Bahamas, and Bahrain (status pending).
 - Added placeholder manifests for Afghanistan, Albania, Algeria, American Samoa, and Andorra (status pending).

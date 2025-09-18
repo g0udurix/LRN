@@ -33,3 +33,4 @@
 - Created placeholder manifests for initial WHO batch (Afghanistan, Albania, Algeria, American Samoa, Andorra) marked `status=pending`; roster updated.
 - Added second placeholder batch (Angola, Anguilla, Antarctica, Antigua and Barbuda, Armenia, Aruba, Austria, Azerbaijan, Bahamas, Bahrain); roster and progress table updated.
 - Added third placeholder batch (Bangladesh, Belarus, Belgium, Belize, Benin, Bermuda, Bhutan, Bolivia, Bosnia and Herzegovina, Botswana); progress table updated.
+- Added fourth placeholder batch (Bouvet Island, British Indian Ocean Territory, British Virgin Islands, Brunei, Bulgaria, Burkina Faso, Burundi, Cambodia, Cameroon, Canada); roster/progress updated.

@@ -4,6 +4,16 @@
 | --- | --- | --- | --- | --- |
 | FRA | France | docs/corpus/manifests/france.json | done | DataDome headless required |
 | BRA | Brazil | docs/corpus/manifests/brazil.json | done | PDF NR-35 |
+| BVT | Bouvet Island | docs/corpus/manifests/bouvet_island.json | pending | Placeholder – research official OSH law |
+| IOT | British Indian Ocean Territory | docs/corpus/manifests/british_indian_ocean_territory.json | pending | Placeholder – research official OSH law |
+| VGB | British Virgin Islands | docs/corpus/manifests/british_virgin_islands.json | pending | Placeholder – research official OSH law |
+| BRN | Brunei | docs/corpus/manifests/brunei.json | pending | Placeholder – research official OSH law |
+| BGR | Bulgaria | docs/corpus/manifests/bulgaria.json | pending | Placeholder – research official OSH law |
+| BFA | Burkina Faso | docs/corpus/manifests/burkina_faso.json | pending | Placeholder – research official OSH law |
+| BDI | Burundi | docs/corpus/manifests/burundi.json | pending | Placeholder – research official OSH law |
+| KHM | Cambodia | docs/corpus/manifests/cambodia.json | pending | Placeholder – research official OSH law |
+| CMR | Cameroon | docs/corpus/manifests/cameroon.json | pending | Placeholder – research official OSH law |
+| CAN | Canada | docs/corpus/manifests/canada.json | pending | Placeholder – research official OSH law |
 | BGD | Bangladesh | docs/corpus/manifests/bangladesh.json | pending | Placeholder – research official OSH law |
 | BLR | Belarus | docs/corpus/manifests/belarus.json | pending | Placeholder – research official OSH law |
 | BEL | Belgium | docs/corpus/manifests/belgium.json | pending | Placeholder – research official OSH law |
