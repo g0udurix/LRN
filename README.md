@@ -48,6 +48,13 @@ python scripts/corpus_ingest.py --manifest docs/corpus/manifests/germany.json --
 python scripts/corpus_ingest.py --manifest docs/corpus/manifests/japan.json --out-dir output_jp --log-dir logs/ingestion --resume
 python scripts/corpus_ingest.py --manifest docs/corpus/manifests/china.json --out-dir output_cn --log-dir logs/ingestion --resume
 ```
+
+Governance helper commands:
+```bash
+python runner.py --self-test              # verify governance templates match
+python runner.py --apply --dry-run        # preview template updates
+python runner.py --apply                  # sync governance templates
+```
 CanLII-guarded portals (AB, NL, NS, NT, NU, YK) and Quebec City’s façade bylaw
 employ DataDome/anti-bot filters. Prime the download with
 `scripts/headless_fetch.py` when a 403 appears, then rerun the ingestion command
@@ -110,3 +117,175 @@ Active work and triage live on [Project 3](https://github.com/users/g0udurix/pro
 
 - #20–#24 LegisQuébec corpus scope, ingestion CLI, standards schema/tests, docs.
 - #25–#33 Expansion research & manifests for other jurisdictions (NB, ON, AB, BC, OSHA 1910/1926, UK, France, Germany, Japan, China) with explicit fall-protection/window-cleaning coverage (e.g., ON Reg 859/90, BC Elevating Devices Safety Reg, UK Work at Height 2005, ArbSchG/BetrSichV, Japan Industrial Safety & Health) plus city/state pilots (Toronto, Vancouver, Montréal, Ville de Québec, NYC, Chicago, California Title 8).
+
+## Branch Workflow
+- Create feature branches only (e.g., `feat/history-sidecars-cache`); never commit directly to `master`.
+- Keep scope focused: one feature or fix per branch with a linked issue and updated documentation/tests.
+- Rebase or merge `master` before opening a PR, run `python -m pytest`, and document the exact commands executed in the PR template.
+- After merge, delete the remote branch (`git push origin --delete <branch>`) and confirm the task is closed on Project 3.
+- If a branch stalls, file or update an issue immediately so the work is visible on the board.
+
+
+## Documentation Map
+- Contributor playbooks: `AGENTS.MD`
+- Agent briefs: `docs/agents/`
+- Multitasking diagrams: `docs/diagrams/multitasking.md`
+- Corpus manifests: `docs/corpus/`
+- Issue dossiers: `docs/issues/`
+- Standards schema: `docs/standards/`
+
+## Project Management Checklist
+- Update the [Project 3 Gantt view](https://github.com/users/g0udurix/projects/3/views/2) whenever scope changes or a task moves status.
+- Use the helper (coming back via `runner.py`) to sync labels, workflows, and milestones after planning sessions.
+- Pin a single owner per active branch to prevent parallel drift.
+- Log test runs and ingestion outputs in `logs/` (git-ignored) and attach summaries to issues for traceability.
+- Maintain `CHANGELOG.md` with user-visible updates for every merged branch.
+
+## Visual Cheat Sheet
+
+See `docs/diagrams/multitasking.md` for multi-agent parallel planning diagrams.
+
+### Extraction Flow
+```mermaid
+flowchart TD
+    A[Saved LegisQuébec HTML] --> B{python -m lrn.cli}
+    B -->|load_fragment| C[Fragment]
+    C -->|process_annexes| D[Annex Markdown]
+    C -->|build_history_sidecars| E[History Snapshots]
+    B --> F[output/<instrument>/current.xhtml]
+    D --> G[annexes/*.md]
+    E --> H[history/index.json]
+```
+
+### Sequence Overview
+```mermaid
+sequenceDiagram
+    participant User
+    participant CLI as lrn.cli
+    participant Extract as extract.py
+    participant Annex as annex.py
+    participant History as history.py
+    participant Disk
+    User->>CLI: run extract --out-dir output sample.html
+    CLI->>Extract: load_fragment(sample.html)
+    Extract-->>CLI: Fragment
+    CLI->>Annex: process_annexes(Fragment)
+    Annex-->>CLI: Annex records + updated XHTML
+    CLI->>History: build_history_sidecars(Fragment.xhtml)
+    History-->>CLI: Indexed snapshots
+    CLI->>Disk: write current.xhtml / annexes / history
+    Disk-->>User: artifacts ready for analysis
+```
+
+### Core Classes
+```mermaid
+classDiagram
+    class Fragment {
+        Path source_path
+        str instrument_id
+        str xhtml
+        BeautifulSoup soup
+    }
+    class AnnexOptions {
+        str engine
+        str base_url
+        int timeout
+    }
+    class HistoryOptions {
+        str base_url
+        int timeout
+        str user_agent
+    }
+    Fragment <|-- AnnexOptions : enriches
+    Fragment <|-- HistoryOptions : snapshots
+```
+
+### Entity Relationships
+```mermaid
+erDiagram
+    INSTRUMENT ||--o{ FRAGMENT : contains
+    FRAGMENT ||--o{ ANNEX : links
+    FRAGMENT ||--o{ SNAPSHOT : history
+    SNAPSHOT }o--|| SOURCE : fetched_from
+```
+
+### Delivery Gantt
+```mermaid
+gantt
+    title Phase 1 Delivery Plan
+    dateFormat  YYYY-MM-DD
+    section Corpus
+    Manifest Audit           :a1, 2025-09-18, 3d
+    Headless Capture SOP     :a2, after a1, 2d
+    section Standards
+    Mapping Schema           :b1, 2025-09-21, 3d
+    Sample Crosswalk         :b2, after b1, 2d
+    section Persistence
+    SQLite Layer Cleanup     :c1, 2025-09-24, 4d
+    Integration Tests        :c2, after c1, 3d
+```
+
+### User Journey
+```mermaid
+journey
+    title Maintainer Workflow
+    section Plan
+      Review issues & board: 3
+      Carve new branch: 4
+    section Build
+      Implement feature with tests: 5
+      Run pytest + ingestion smoke: 4
+    section Wrap
+      Update docs & diagrams: 4
+      Submit PR & clean branch: 5
+```
+
+### Requirement Snapshot
+```mermaid
+requirementDiagram
+    requirement R1 {
+      id: R1
+      text: Extract LegisQuébec XHTML deterministically
+      risk: medium
+      status: satisfied
+    }
+    requirement R2 {
+      id: R2
+      text: Convert annex PDFs to Markdown with provenance
+      risk: medium
+      status: satisfied
+    }
+    requirement R3 {
+      id: R3
+      text: Persist history snapshots with metadata
+      risk: high
+      status: in_progress
+    }
+    requirement R4 {
+      id: R4
+      text: Provide reproducible corpus ingestion via manifests
+      risk: medium
+      status: satisfied
+    }
+    R3 - component -> R1
+    R3 - component -> R2
+    R4 - satisfies -> R1
+```
+
+### Git History at a Glance
+```mermaid
+gitGraph TD
+    commit id: "master@init"
+    commit id: "feat/extractor-core"
+    branch feat/history-crawl
+    commit id: "feat/history-crawl WIP"
+    checkout master
+    commit id: "feat/annex-pipeline"
+    branch chore/bootstrap-workflows
+    commit id: "workflow bootstrap"
+    checkout master
+    merge chore/bootstrap-workflows
+    merge feat/history-crawl
+    commit id: "phase1 manifests"
+    commit id: "headless fallback"
+```

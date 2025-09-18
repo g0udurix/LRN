@@ -62,6 +62,30 @@ Deliver a dependable Python extractor that:
 - Treat annex/history network failures as warnings—report but continue extraction.
 - Maintain bilingual parity (FR + EN) for discovery, extraction, and tests.
 
+## Branch Audit — 2025-09-18
+| Branch | Status vs `master` | Next Action |
+| --- | --- | --- |
+| `chore/rules-and-plan-update` | Fully merged | Local branch deleted. Delete remote with `git push origin --delete chore/rules-and-plan-update` (requires auth). |
+| `feat/extractor-core` | Fully merged | Local branch deleted. Delete remote with `git push origin --delete feat/extractor-core`. |
+| `test/pytest-and-ci` | Fully merged | Local branch deleted. Delete remote with `git push origin --delete test/pytest-and-ci`. |
+| `chore/bootstrap-workflows` | Stale, contains generated artifacts and prose `runner.py` | Track cleanup in `docs/issues/bootstrap-workflows-redux.md`; rebuild executable runner and clean workflows. |
+| `feat/history-crawl` | Stale persistence prototype with large tracked HTML | Track salvage in `docs/issues/history-persistence-refactor.md`; rebuild persistence layer without committing outputs. |
+
+> Note: Remote deletions failed locally due to missing push credentials; run the commands above from an authenticated environment to finish the cleanup.
+
+## Governance Helper Rebuild
+- Implement `runner.py` with `--apply` / `--self-test` and template bundle under `governance/templates/`.
+- Provide pytest coverage (`tests/test_runner_cli.py`) verifying dry-run and apply behaviour.
+- Document workflows in `README.md` and `CHANGELOG.md`; ensure Project 3 cards include dates.
+
+## Project Management Rhythm
+- Update [Project 3 / Gantt view](https://github.com/users/g0udurix/projects/3/views/2) after every planning session. Map each active branch to a single project item.
+- Ensure each Project 3 card has explicit start and target dates so the Gantt view renders correctly.
+- Keep only one feature branch in flight per engineer; park additional ideas as issues.
+- Document every test command run before opening a PR (tests + ingestion smoke). Attach the command list to the issue or PR template.
+- Maintain `CHANGELOG.md` for user-visible changes; update it as part of each feature branch wrap-up.
+- Re-run the governance helper (`python runner.py --apply --self-test`) once the executable version lands; record changes in `CHANGELOG.md`.
+
 ## Coordination
 - Use labels `status/*`, `priority/*`, and `area/extractor` consistently.
 - Run `python -m pytest` before every PR; for governance changes also run `python runner.py --apply --self-test`.
