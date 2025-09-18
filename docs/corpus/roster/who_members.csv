@@ -1,4 +1,252 @@
-slug,url,language,instrument,category,requires_headless,content_type,issue_ref,notes,status
-france,https://www.legifrance.gouv.fr/codes/id/LEGITEXT000006072050/,fr,FR_CodeTravail,national,true,html,docs/issues/france-legifrance-block.md,,active
-brazil,https://www.gov.br/trabalho-e-previdencia/pt-br/assuntos/inspecao/seguranca-e-saude-no-trabalho/normas-regulamentadoras/nr-35.pdf,pt,BR_NR35_TrabalhoEmAltura,national,false,pdf,,,active
-who,https://apps.who.int/iris/bitstream/handle/10665/339923/9789240028494-eng.pdf,en,WHO_GlobalStrategy_OSH_2021_2025,international,false,pdf,,,active
+slug,country,iso,url,language,instrument,category,requires_headless,content_type,issue_ref,notes,status
+france,France,FRA,https://www.legifrance.gouv.fr/codes/id/LEGITEXT000006072050/,fr,FR_CodeTravail,national,true,html,docs/issues/france-legifrance-block.md,,active
+brazil,Brazil,BRA,https://www.gov.br/trabalho-e-previdencia/pt-br/assuntos/inspecao/seguranca-e-saude-no-trabalho/normas-regulamentadoras/nr-35.pdf,pt,BR_NR35_TrabalhoEmAltura,national,false,pdf,,NR-35 PDF,active
+who,World Health Organization,WHO,https://apps.who.int/iris/bitstream/handle/10665/339923/9789240028494-eng.pdf,en,WHO_GlobalStrategy_OSH_2021_2025,international,false,pdf,,Global strategy,active
+afghanistan,Afghanistan,AFG,,,,unknown,false,html,,WHO member placeholder,todo
+albania,Albania,ALB,,,,unknown,false,html,,WHO member placeholder,todo
+algeria,Algeria,DZA,,,,unknown,false,html,,WHO member placeholder,todo
+american_samoa,American Samoa,ASM,,,,unknown,false,html,,WHO member placeholder,todo
+andorra,Andorra,AND,,,,unknown,false,html,,WHO member placeholder,todo
+angola,Angola,AGO,,,,unknown,false,html,,WHO member placeholder,todo
+anguilla,Anguilla,AIA,,,,unknown,false,html,,WHO member placeholder,todo
+antarctica,Antarctica,ATA,,,,unknown,false,html,,WHO member placeholder,todo
+antigua_and_barbuda,Antigua and Barbuda,ATG,,,,unknown,false,html,,WHO member placeholder,todo
+argentina,Argentina,ARG,,,,unknown,false,html,,WHO member placeholder,todo
+armenia,Armenia,ARM,,,,unknown,false,html,,WHO member placeholder,todo
+aruba,Aruba,ABW,,,,unknown,false,html,,WHO member placeholder,todo
+australia,Australia,AUS,,,,unknown,false,html,,WHO member placeholder,todo
+austria,Austria,AUT,,,,unknown,false,html,,WHO member placeholder,todo
+azerbaijan,Azerbaijan,AZE,,,,unknown,false,html,,WHO member placeholder,todo
+bahamas,Bahamas,BHS,,,,unknown,false,html,,WHO member placeholder,todo
+bahrain,Bahrain,BHR,,,,unknown,false,html,,WHO member placeholder,todo
+bangladesh,Bangladesh,BGD,,,,unknown,false,html,,WHO member placeholder,todo
+barbados,Barbados,BRB,,,,unknown,false,html,,WHO member placeholder,todo
+belarus,Belarus,BLR,,,,unknown,false,html,,WHO member placeholder,todo
+belgium,Belgium,BEL,,,,unknown,false,html,,WHO member placeholder,todo
+belize,Belize,BLZ,,,,unknown,false,html,,WHO member placeholder,todo
+benin,Benin,BEN,,,,unknown,false,html,,WHO member placeholder,todo
+bermuda,Bermuda,BMU,,,,unknown,false,html,,WHO member placeholder,todo
+bhutan,Bhutan,BTN,,,,unknown,false,html,,WHO member placeholder,todo
+bolivia,Bolivia,BOL,,,,unknown,false,html,,WHO member placeholder,todo
+bosnia_and_herzegovina,Bosnia and Herzegovina,BIH,,,,unknown,false,html,,WHO member placeholder,todo
+botswana,Botswana,BWA,,,,unknown,false,html,,WHO member placeholder,todo
+bouvet_island,Bouvet Island,BVT,,,,unknown,false,html,,WHO member placeholder,todo
+british_indian_ocean_territory,British Indian Ocean Territory,IOT,,,,unknown,false,html,,WHO member placeholder,todo
+british_virgin_islands,British Virgin Islands,VGB,,,,unknown,false,html,,WHO member placeholder,todo
+brunei,Brunei,BRN,,,,unknown,false,html,,WHO member placeholder,todo
+bulgaria,Bulgaria,BGR,,,,unknown,false,html,,WHO member placeholder,todo
+burkina_faso,Burkina Faso,BFA,,,,unknown,false,html,,WHO member placeholder,todo
+burundi,Burundi,BDI,,,,unknown,false,html,,WHO member placeholder,todo
+cambodia,Cambodia,KHM,,,,unknown,false,html,,WHO member placeholder,todo
+cameroon,Cameroon,CMR,,,,unknown,false,html,,WHO member placeholder,todo
+canada,Canada,CAN,,,,unknown,false,html,,WHO member placeholder,todo
+cape_verde,Cape Verde,CPV,,,,unknown,false,html,,WHO member placeholder,todo
+caribbean_netherlands,Caribbean Netherlands,BES,,,,unknown,false,html,,WHO member placeholder,todo
+cayman_islands,Cayman Islands,CYM,,,,unknown,false,html,,WHO member placeholder,todo
+central_african_republic,Central African Republic,CAF,,,,unknown,false,html,,WHO member placeholder,todo
+chad,Chad,TCD,,,,unknown,false,html,,WHO member placeholder,todo
+chile,Chile,CHL,,,,unknown,false,html,,WHO member placeholder,todo
+china,China,CHN,,,,unknown,false,html,,WHO member placeholder,todo
+christmas_island,Christmas Island,CXR,,,,unknown,false,html,,WHO member placeholder,todo
+cocos_(keeling)_islands,Cocos (Keeling) Islands,CCK,,,,unknown,false,html,,WHO member placeholder,todo
+colombia,Colombia,COL,,,,unknown,false,html,,WHO member placeholder,todo
+comoros,Comoros,COM,,,,unknown,false,html,,WHO member placeholder,todo
+cook_islands,Cook Islands,COK,,,,unknown,false,html,,WHO member placeholder,todo
+costa_rica,Costa Rica,CRI,,,,unknown,false,html,,WHO member placeholder,todo
+croatia,Croatia,HRV,,,,unknown,false,html,,WHO member placeholder,todo
+cuba,Cuba,CUB,,,,unknown,false,html,,WHO member placeholder,todo
+curaçao,Curaçao,CUW,,,,unknown,false,html,,WHO member placeholder,todo
+cyprus,Cyprus,CYP,,,,unknown,false,html,,WHO member placeholder,todo
+czechia,Czechia,CZE,,,,unknown,false,html,,WHO member placeholder,todo
+dr_congo,DR Congo,COD,,,,unknown,false,html,,WHO member placeholder,todo
+denmark,Denmark,DNK,,,,unknown,false,html,,WHO member placeholder,todo
+djibouti,Djibouti,DJI,,,,unknown,false,html,,WHO member placeholder,todo
+dominica,Dominica,DMA,,,,unknown,false,html,,WHO member placeholder,todo
+dominican_republic,Dominican Republic,DOM,,,,unknown,false,html,,WHO member placeholder,todo
+ecuador,Ecuador,ECU,,,,unknown,false,html,,WHO member placeholder,todo
+egypt,Egypt,EGY,,,,unknown,false,html,,WHO member placeholder,todo
+el_salvador,El Salvador,SLV,,,,unknown,false,html,,WHO member placeholder,todo
+equatorial_guinea,Equatorial Guinea,GNQ,,,,unknown,false,html,,WHO member placeholder,todo
+eritrea,Eritrea,ERI,,,,unknown,false,html,,WHO member placeholder,todo
+estonia,Estonia,EST,,,,unknown,false,html,,WHO member placeholder,todo
+eswatini,Eswatini,SWZ,,,,unknown,false,html,,WHO member placeholder,todo
+ethiopia,Ethiopia,ETH,,,,unknown,false,html,,WHO member placeholder,todo
+falkland_islands,Falkland Islands,FLK,,,,unknown,false,html,,WHO member placeholder,todo
+faroe_islands,Faroe Islands,FRO,,,,unknown,false,html,,WHO member placeholder,todo
+fiji,Fiji,FJI,,,,unknown,false,html,,WHO member placeholder,todo
+finland,Finland,FIN,,,,unknown,false,html,,WHO member placeholder,todo
+french_guiana,French Guiana,GUF,,,,unknown,false,html,,WHO member placeholder,todo
+french_polynesia,French Polynesia,PYF,,,,unknown,false,html,,WHO member placeholder,todo
+french_southern_and_antarctic_lands,French Southern and Antarctic Lands,ATF,,,,unknown,false,html,,WHO member placeholder,todo
+gabon,Gabon,GAB,,,,unknown,false,html,,WHO member placeholder,todo
+gambia,Gambia,GMB,,,,unknown,false,html,,WHO member placeholder,todo
+georgia,Georgia,GEO,,,,unknown,false,html,,WHO member placeholder,todo
+germany,Germany,DEU,,,,unknown,false,html,,WHO member placeholder,todo
+ghana,Ghana,GHA,,,,unknown,false,html,,WHO member placeholder,todo
+gibraltar,Gibraltar,GIB,,,,unknown,false,html,,WHO member placeholder,todo
+greece,Greece,GRC,,,,unknown,false,html,,WHO member placeholder,todo
+greenland,Greenland,GRL,,,,unknown,false,html,,WHO member placeholder,todo
+grenada,Grenada,GRD,,,,unknown,false,html,,WHO member placeholder,todo
+guadeloupe,Guadeloupe,GLP,,,,unknown,false,html,,WHO member placeholder,todo
+guam,Guam,GUM,,,,unknown,false,html,,WHO member placeholder,todo
+guatemala,Guatemala,GTM,,,,unknown,false,html,,WHO member placeholder,todo
+guernsey,Guernsey,GGY,,,,unknown,false,html,,WHO member placeholder,todo
+guinea,Guinea,GIN,,,,unknown,false,html,,WHO member placeholder,todo
+guinea-bissau,Guinea-Bissau,GNB,,,,unknown,false,html,,WHO member placeholder,todo
+guyana,Guyana,GUY,,,,unknown,false,html,,WHO member placeholder,todo
+haiti,Haiti,HTI,,,,unknown,false,html,,WHO member placeholder,todo
+heard_island_and_mcdonald_islands,Heard Island and McDonald Islands,HMD,,,,unknown,false,html,,WHO member placeholder,todo
+honduras,Honduras,HND,,,,unknown,false,html,,WHO member placeholder,todo
+hong_kong,Hong Kong,HKG,,,,unknown,false,html,,WHO member placeholder,todo
+hungary,Hungary,HUN,,,,unknown,false,html,,WHO member placeholder,todo
+iceland,Iceland,ISL,,,,unknown,false,html,,WHO member placeholder,todo
+india,India,IND,,,,unknown,false,html,,WHO member placeholder,todo
+indonesia,Indonesia,IDN,,,,unknown,false,html,,WHO member placeholder,todo
+iran,Iran,IRN,,,,unknown,false,html,,WHO member placeholder,todo
+iraq,Iraq,IRQ,,,,unknown,false,html,,WHO member placeholder,todo
+ireland,Ireland,IRL,,,,unknown,false,html,,WHO member placeholder,todo
+isle_of_man,Isle of Man,IMN,,,,unknown,false,html,,WHO member placeholder,todo
+israel,Israel,ISR,,,,unknown,false,html,,WHO member placeholder,todo
+italy,Italy,ITA,,,,unknown,false,html,,WHO member placeholder,todo
+ivory_coast,Ivory Coast,CIV,,,,unknown,false,html,,WHO member placeholder,todo
+jamaica,Jamaica,JAM,,,,unknown,false,html,,WHO member placeholder,todo
+japan,Japan,JPN,,,,unknown,false,html,,WHO member placeholder,todo
+jersey,Jersey,JEY,,,,unknown,false,html,,WHO member placeholder,todo
+jordan,Jordan,JOR,,,,unknown,false,html,,WHO member placeholder,todo
+kazakhstan,Kazakhstan,KAZ,,,,unknown,false,html,,WHO member placeholder,todo
+kenya,Kenya,KEN,,,,unknown,false,html,,WHO member placeholder,todo
+kiribati,Kiribati,KIR,,,,unknown,false,html,,WHO member placeholder,todo
+kosovo,Kosovo,UNK,,,,unknown,false,html,,WHO member placeholder,todo
+kuwait,Kuwait,KWT,,,,unknown,false,html,,WHO member placeholder,todo
+kyrgyzstan,Kyrgyzstan,KGZ,,,,unknown,false,html,,WHO member placeholder,todo
+laos,Laos,LAO,,,,unknown,false,html,,WHO member placeholder,todo
+latvia,Latvia,LVA,,,,unknown,false,html,,WHO member placeholder,todo
+lebanon,Lebanon,LBN,,,,unknown,false,html,,WHO member placeholder,todo
+lesotho,Lesotho,LSO,,,,unknown,false,html,,WHO member placeholder,todo
+liberia,Liberia,LBR,,,,unknown,false,html,,WHO member placeholder,todo
+libya,Libya,LBY,,,,unknown,false,html,,WHO member placeholder,todo
+liechtenstein,Liechtenstein,LIE,,,,unknown,false,html,,WHO member placeholder,todo
+lithuania,Lithuania,LTU,,,,unknown,false,html,,WHO member placeholder,todo
+luxembourg,Luxembourg,LUX,,,,unknown,false,html,,WHO member placeholder,todo
+macau,Macau,MAC,,,,unknown,false,html,,WHO member placeholder,todo
+madagascar,Madagascar,MDG,,,,unknown,false,html,,WHO member placeholder,todo
+malawi,Malawi,MWI,,,,unknown,false,html,,WHO member placeholder,todo
+malaysia,Malaysia,MYS,,,,unknown,false,html,,WHO member placeholder,todo
+maldives,Maldives,MDV,,,,unknown,false,html,,WHO member placeholder,todo
+mali,Mali,MLI,,,,unknown,false,html,,WHO member placeholder,todo
+malta,Malta,MLT,,,,unknown,false,html,,WHO member placeholder,todo
+marshall_islands,Marshall Islands,MHL,,,,unknown,false,html,,WHO member placeholder,todo
+martinique,Martinique,MTQ,,,,unknown,false,html,,WHO member placeholder,todo
+mauritania,Mauritania,MRT,,,,unknown,false,html,,WHO member placeholder,todo
+mauritius,Mauritius,MUS,,,,unknown,false,html,,WHO member placeholder,todo
+mayotte,Mayotte,MYT,,,,unknown,false,html,,WHO member placeholder,todo
+mexico,Mexico,MEX,,,,unknown,false,html,,WHO member placeholder,todo
+micronesia,Micronesia,FSM,,,,unknown,false,html,,WHO member placeholder,todo
+moldova,Moldova,MDA,,,,unknown,false,html,,WHO member placeholder,todo
+monaco,Monaco,MCO,,,,unknown,false,html,,WHO member placeholder,todo
+mongolia,Mongolia,MNG,,,,unknown,false,html,,WHO member placeholder,todo
+montenegro,Montenegro,MNE,,,,unknown,false,html,,WHO member placeholder,todo
+montserrat,Montserrat,MSR,,,,unknown,false,html,,WHO member placeholder,todo
+morocco,Morocco,MAR,,,,unknown,false,html,,WHO member placeholder,todo
+mozambique,Mozambique,MOZ,,,,unknown,false,html,,WHO member placeholder,todo
+myanmar,Myanmar,MMR,,,,unknown,false,html,,WHO member placeholder,todo
+namibia,Namibia,NAM,,,,unknown,false,html,,WHO member placeholder,todo
+nauru,Nauru,NRU,,,,unknown,false,html,,WHO member placeholder,todo
+nepal,Nepal,NPL,,,,unknown,false,html,,WHO member placeholder,todo
+netherlands,Netherlands,NLD,,,,unknown,false,html,,WHO member placeholder,todo
+new_caledonia,New Caledonia,NCL,,,,unknown,false,html,,WHO member placeholder,todo
+new_zealand,New Zealand,NZL,,,,unknown,false,html,,WHO member placeholder,todo
+nicaragua,Nicaragua,NIC,,,,unknown,false,html,,WHO member placeholder,todo
+niger,Niger,NER,,,,unknown,false,html,,WHO member placeholder,todo
+nigeria,Nigeria,NGA,,,,unknown,false,html,,WHO member placeholder,todo
+niue,Niue,NIU,,,,unknown,false,html,,WHO member placeholder,todo
+norfolk_island,Norfolk Island,NFK,,,,unknown,false,html,,WHO member placeholder,todo
+north_korea,North Korea,PRK,,,,unknown,false,html,,WHO member placeholder,todo
+north_macedonia,North Macedonia,MKD,,,,unknown,false,html,,WHO member placeholder,todo
+northern_mariana_islands,Northern Mariana Islands,MNP,,,,unknown,false,html,,WHO member placeholder,todo
+norway,Norway,NOR,,,,unknown,false,html,,WHO member placeholder,todo
+oman,Oman,OMN,,,,unknown,false,html,,WHO member placeholder,todo
+pakistan,Pakistan,PAK,,,,unknown,false,html,,WHO member placeholder,todo
+palau,Palau,PLW,,,,unknown,false,html,,WHO member placeholder,todo
+palestine,Palestine,PSE,,,,unknown,false,html,,WHO member placeholder,todo
+panama,Panama,PAN,,,,unknown,false,html,,WHO member placeholder,todo
+papua_new_guinea,Papua New Guinea,PNG,,,,unknown,false,html,,WHO member placeholder,todo
+paraguay,Paraguay,PRY,,,,unknown,false,html,,WHO member placeholder,todo
+peru,Peru,PER,,,,unknown,false,html,,WHO member placeholder,todo
+philippines,Philippines,PHL,,,,unknown,false,html,,WHO member placeholder,todo
+pitcairn_islands,Pitcairn Islands,PCN,,,,unknown,false,html,,WHO member placeholder,todo
+poland,Poland,POL,,,,unknown,false,html,,WHO member placeholder,todo
+portugal,Portugal,PRT,,,,unknown,false,html,,WHO member placeholder,todo
+puerto_rico,Puerto Rico,PRI,,,,unknown,false,html,,WHO member placeholder,todo
+qatar,Qatar,QAT,,,,unknown,false,html,,WHO member placeholder,todo
+republic_of_the_congo,Republic of the Congo,COG,,,,unknown,false,html,,WHO member placeholder,todo
+romania,Romania,ROU,,,,unknown,false,html,,WHO member placeholder,todo
+russia,Russia,RUS,,,,unknown,false,html,,WHO member placeholder,todo
+rwanda,Rwanda,RWA,,,,unknown,false,html,,WHO member placeholder,todo
+réunion,Réunion,REU,,,,unknown,false,html,,WHO member placeholder,todo
+saint_barthélemy,Saint Barthélemy,BLM,,,,unknown,false,html,,WHO member placeholder,todo
+"saint_helena,_ascension_and_tristan_da_cunha","Saint Helena, Ascension and Tristan da Cunha",SHN,,,,unknown,false,html,,WHO member placeholder,todo
+saint_kitts_and_nevis,Saint Kitts and Nevis,KNA,,,,unknown,false,html,,WHO member placeholder,todo
+saint_lucia,Saint Lucia,LCA,,,,unknown,false,html,,WHO member placeholder,todo
+saint_martin,Saint Martin,MAF,,,,unknown,false,html,,WHO member placeholder,todo
+saint_pierre_and_miquelon,Saint Pierre and Miquelon,SPM,,,,unknown,false,html,,WHO member placeholder,todo
+saint_vincent_and_the_grenadines,Saint Vincent and the Grenadines,VCT,,,,unknown,false,html,,WHO member placeholder,todo
+samoa,Samoa,WSM,,,,unknown,false,html,,WHO member placeholder,todo
+san_marino,San Marino,SMR,,,,unknown,false,html,,WHO member placeholder,todo
+saudi_arabia,Saudi Arabia,SAU,,,,unknown,false,html,,WHO member placeholder,todo
+senegal,Senegal,SEN,,,,unknown,false,html,,WHO member placeholder,todo
+serbia,Serbia,SRB,,,,unknown,false,html,,WHO member placeholder,todo
+seychelles,Seychelles,SYC,,,,unknown,false,html,,WHO member placeholder,todo
+sierra_leone,Sierra Leone,SLE,,,,unknown,false,html,,WHO member placeholder,todo
+singapore,Singapore,SGP,,,,unknown,false,html,,WHO member placeholder,todo
+sint_maarten,Sint Maarten,SXM,,,,unknown,false,html,,WHO member placeholder,todo
+slovakia,Slovakia,SVK,,,,unknown,false,html,,WHO member placeholder,todo
+slovenia,Slovenia,SVN,,,,unknown,false,html,,WHO member placeholder,todo
+solomon_islands,Solomon Islands,SLB,,,,unknown,false,html,,WHO member placeholder,todo
+somalia,Somalia,SOM,,,,unknown,false,html,,WHO member placeholder,todo
+south_africa,South Africa,ZAF,,,,unknown,false,html,,WHO member placeholder,todo
+south_georgia,South Georgia,SGS,,,,unknown,false,html,,WHO member placeholder,todo
+south_korea,South Korea,KOR,,,,unknown,false,html,,WHO member placeholder,todo
+south_sudan,South Sudan,SSD,,,,unknown,false,html,,WHO member placeholder,todo
+spain,Spain,ESP,,,,unknown,false,html,,WHO member placeholder,todo
+sri_lanka,Sri Lanka,LKA,,,,unknown,false,html,,WHO member placeholder,todo
+sudan,Sudan,SDN,,,,unknown,false,html,,WHO member placeholder,todo
+suriname,Suriname,SUR,,,,unknown,false,html,,WHO member placeholder,todo
+svalbard_and_jan_mayen,Svalbard and Jan Mayen,SJM,,,,unknown,false,html,,WHO member placeholder,todo
+sweden,Sweden,SWE,,,,unknown,false,html,,WHO member placeholder,todo
+switzerland,Switzerland,CHE,,,,unknown,false,html,,WHO member placeholder,todo
+syria,Syria,SYR,,,,unknown,false,html,,WHO member placeholder,todo
+são_tomé_and_príncipe,São Tomé and Príncipe,STP,,,,unknown,false,html,,WHO member placeholder,todo
+taiwan,Taiwan,TWN,,,,unknown,false,html,,WHO member placeholder,todo
+tajikistan,Tajikistan,TJK,,,,unknown,false,html,,WHO member placeholder,todo
+tanzania,Tanzania,TZA,,,,unknown,false,html,,WHO member placeholder,todo
+thailand,Thailand,THA,,,,unknown,false,html,,WHO member placeholder,todo
+timor-leste,Timor-Leste,TLS,,,,unknown,false,html,,WHO member placeholder,todo
+togo,Togo,TGO,,,,unknown,false,html,,WHO member placeholder,todo
+tokelau,Tokelau,TKL,,,,unknown,false,html,,WHO member placeholder,todo
+tonga,Tonga,TON,,,,unknown,false,html,,WHO member placeholder,todo
+trinidad_and_tobago,Trinidad and Tobago,TTO,,,,unknown,false,html,,WHO member placeholder,todo
+tunisia,Tunisia,TUN,,,,unknown,false,html,,WHO member placeholder,todo
+turkey,Turkey,TUR,,,,unknown,false,html,,WHO member placeholder,todo
+turkmenistan,Turkmenistan,TKM,,,,unknown,false,html,,WHO member placeholder,todo
+turks_and_caicos_islands,Turks and Caicos Islands,TCA,,,,unknown,false,html,,WHO member placeholder,todo
+tuvalu,Tuvalu,TUV,,,,unknown,false,html,,WHO member placeholder,todo
+uganda,Uganda,UGA,,,,unknown,false,html,,WHO member placeholder,todo
+ukraine,Ukraine,UKR,,,,unknown,false,html,,WHO member placeholder,todo
+united_arab_emirates,United Arab Emirates,ARE,,,,unknown,false,html,,WHO member placeholder,todo
+united_kingdom,United Kingdom,GBR,,,,unknown,false,html,,WHO member placeholder,todo
+united_states,United States,USA,,,,unknown,false,html,,WHO member placeholder,todo
+united_states_minor_outlying_islands,United States Minor Outlying Islands,UMI,,,,unknown,false,html,,WHO member placeholder,todo
+united_states_virgin_islands,United States Virgin Islands,VIR,,,,unknown,false,html,,WHO member placeholder,todo
+uruguay,Uruguay,URY,,,,unknown,false,html,,WHO member placeholder,todo
+uzbekistan,Uzbekistan,UZB,,,,unknown,false,html,,WHO member placeholder,todo
+vanuatu,Vanuatu,VUT,,,,unknown,false,html,,WHO member placeholder,todo
+vatican_city,Vatican City,VAT,,,,unknown,false,html,,WHO member placeholder,todo
+venezuela,Venezuela,VEN,,,,unknown,false,html,,WHO member placeholder,todo
+vietnam,Vietnam,VNM,,,,unknown,false,html,,WHO member placeholder,todo
+wallis_and_futuna,Wallis and Futuna,WLF,,,,unknown,false,html,,WHO member placeholder,todo
+western_sahara,Western Sahara,ESH,,,,unknown,false,html,,WHO member placeholder,todo
+yemen,Yemen,YEM,,,,unknown,false,html,,WHO member placeholder,todo
+zambia,Zambia,ZMB,,,,unknown,false,html,,WHO member placeholder,todo
+zimbabwe,Zimbabwe,ZWE,,,,unknown,false,html,,WHO member placeholder,todo
+åland_islands,Åland Islands,ALA,,,,unknown,false,html,,WHO member placeholder,todo

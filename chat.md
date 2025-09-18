@@ -28,3 +28,4 @@
 - Added G20 manifests for Indonesia and Russia plus Middle East/Latin America set (Saudi Arabia, Iran, Lebanon, Argentina, Chile, Colombia, Peru, Jamaica, Dominican Republic, Cuba, Trinidad & Tobago, Barbados) with headless notes. Tests: `python -m pytest tests/test_manifest_integrity.py -q`, `python -m pytest -q`.
 - Added WHO occupational safety strategy manifest (`docs/corpus/manifests/who.json`); tests: `python -m pytest tests/test_manifest_integrity.py -q`, `python -m pytest -q`.
 - Manifest schema + automation scaffolding added (`scripts/corpus_ingest.py` extensions, `docs/corpus/manifest_schema.md`, `scripts/generate_manifests.py`, roster skeleton). Tests: `python -m pytest tests/test_manifest_integrity.py -q`, `python -m pytest -q`.
+- Seeded WHO roster dataset (`docs/corpus/roster/who_members.csv`) with global placeholders via `scripts/seed_who_roster.py`; ready for phased manifest generation.
