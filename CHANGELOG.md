@@ -3,6 +3,7 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
+- Added placeholder manifests for Equatorial Guinea, Eritrea, Estonia, Eswatini, Ethiopia, Falkland Islands, Faroe Islands, Fiji, French Guiana, and French Polynesia (status pending).
 - Added placeholder manifests for Croatia, Curaçao, Cyprus, Czechia, DR Congo, Denmark, Djibouti, Dominica, Ecuador, and El Salvador (status pending).
 - Added placeholder manifests for Cape Verde, Caribbean Netherlands, Cayman Islands, Central African Republic, Chad, Christmas Island, Cocos (Keeling) Islands, Comoros, Cook Islands, and Costa Rica (status pending).
 - Added placeholder manifests for Bouvet Island, British Indian Ocean Territory, British Virgin Islands, Brunei, Bulgaria, Burkina Faso, Burundi, Cambodia, Cameroon, and Canada (status pending).

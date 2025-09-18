@@ -4,6 +4,16 @@
 | --- | --- | --- | --- | --- |
 | FRA | France | docs/corpus/manifests/france.json | done | DataDome headless required |
 | BRA | Brazil | docs/corpus/manifests/brazil.json | done | PDF NR-35 |
+| GNQ | Equatorial Guinea | docs/corpus/manifests/equatorial_guinea.json | pending | Placeholder – research official OSH legislation |
+| ERI | Eritrea | docs/corpus/manifests/eritrea.json | pending | Placeholder – research official OSH legislation |
+| EST | Estonia | docs/corpus/manifests/estonia.json | pending | Placeholder – research official OSH legislation |
+| SWZ | Eswatini | docs/corpus/manifests/eswatini.json | pending | Placeholder – research official OSH legislation |
+| ETH | Ethiopia | docs/corpus/manifests/ethiopia.json | pending | Placeholder – research official OSH legislation |
+| FLK | Falkland Islands | docs/corpus/manifests/falkland_islands.json | pending | Placeholder – research official OSH legislation |
+| FRO | Faroe Islands | docs/corpus/manifests/faroe_islands.json | pending | Placeholder – research official OSH legislation |
+| FJI | Fiji | docs/corpus/manifests/fiji.json | pending | Placeholder – research official OSH legislation |
+| GUF | French Guiana | docs/corpus/manifests/french_guiana.json | pending | Placeholder – research official OSH legislation |
+| PYF | French Polynesia | docs/corpus/manifests/french_polynesia.json | pending | Placeholder – research official OSH legislation |
 | HRV | Croatia | docs/corpus/manifests/croatia.json | pending | Placeholder – research official OSH sources |
 | CUW | Curaçao | docs/corpus/manifests/curaçao.json | pending | Placeholder – research official OSH sources |
 | CYP | Cyprus | docs/corpus/manifests/cyprus.json | pending | Placeholder – research official OSH sources |
