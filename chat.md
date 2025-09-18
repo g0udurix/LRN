@@ -30,3 +30,4 @@
 - Manifest schema + automation scaffolding added (`scripts/corpus_ingest.py` extensions, `docs/corpus/manifest_schema.md`, `scripts/generate_manifests.py`, roster skeleton). Tests: `python -m pytest tests/test_manifest_integrity.py -q`, `python -m pytest -q`.
 - Seeded WHO roster dataset (`docs/corpus/roster/who_members.csv`) with global placeholders via `scripts/seed_who_roster.py`; ready for phased manifest generation.
 - Seeded roster with 251 WHO entries via `scripts/seed_who_roster.py`; report tool indicates 43 manifests completed to date (`python scripts/report_manifest_progress.py`).
+- Created placeholder manifests for initial WHO batch (Afghanistan, Albania, Algeria, American Samoa, Andorra) marked `status=pending`; roster updated.
