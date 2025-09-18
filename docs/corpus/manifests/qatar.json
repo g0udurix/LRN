@@ -1,0 +1,11 @@
+[
+  {
+    "url": "https://www.almeezan.qa/LawView.aspx?opt&LawID=3977&language=en",
+    "language": "en",
+    "instrument": "QA_LabourLaw_No14_2004",
+    "category": "national",
+    "requires_headless": true,
+    "content_type": "html",
+    "issue_ref": "docs/issues/qatar-almeezan-headless.md"
+  }
+]

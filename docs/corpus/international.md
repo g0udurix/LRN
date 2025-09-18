@@ -25,6 +25,27 @@ checksums.
 - **Germany:** Arbeitsschutzgesetz (ArbSchG) and Betriebssicherheitsverordnung (BetrSichV). Manifest: `docs/corpus/manifests/germany.json`.
 - **Japan:** Industrial Safety and Health Act and Industrial Safety and Health Ordinance (rope descent, scaffolding). Manifest: `docs/corpus/manifests/japan.json` (requires headless capture).
 - **China:** Work Safety Law of the People’s Republic of China (Chapter V). Manifest: `docs/corpus/manifests/china.json`; additional sector rules pending stable sources.
+- **Brazil:** NR-35 Trabalho em Altura (docs/corpus/manifests/brazil.json).
+- **Mexico:** NOM-009-STPS-2011 (docs/corpus/manifests/mexico.json).
+- **Spain:** Real Decreto 1627/1997 (docs/corpus/manifests/spain.json).
+- **Portugal:** Lei n.º 102/2009 (docs/corpus/manifests/portugal.json).
+- **Netherlands:** Working Conditions Act & Decree (docs/corpus/manifests/netherlands.json).
+- **Sweden:** AFS 2006:4 Work at Height (docs/corpus/manifests/sweden.json).
+- **Norway:** Workplace Regulations (docs/corpus/manifests/norway.json).
+- **Finland:** Occupational Safety and Health Act (docs/corpus/manifests/finland.json).
+- **Scandinavia (regional):** Nordic Safe Work at Height guidance (docs/corpus/manifests/scandinavia.json).
+- **New Zealand:** Health and Safety at Work Act 2015 (docs/corpus/manifests/new_zealand.json).
+- **South Korea:** Occupational Safety and Health Act (docs/corpus/manifests/south_korea.json).
+- **Singapore:** Workplace Safety and Health Act (docs/corpus/manifests/singapore.json).
+- **South Africa:** Occupational Health and Safety Act (docs/corpus/manifests/south_africa.json).
+- **Morocco:** Code du Travail provisions on safety (docs/corpus/manifests/morocco.json).
+- **Nigeria:** Factories Act (docs/corpus/manifests/nigeria.json).
+- **Egypt:** Labour Law No. 12/2003 safety chapters (docs/corpus/manifests/egypt.json).
+- **India:** Occupational Safety, Health and Working Conditions Code 2020 (docs/corpus/manifests/india.json).
+- **Thailand:** Occupational Safety, Health and Environment Act 2011 (docs/corpus/manifests/thailand.json).
+- **United Arab Emirates:** Federal Decree-Law 33/2021 (docs/corpus/manifests/uae.json).
+- **Qatar:** Labour Law No. 14 of 2004 (docs/corpus/manifests/qatar.json).
+- **Dubai:** Code of Construction Safety Practice (docs/corpus/manifests/dubai.json).
 
 ### Fall Protection & Window Cleaning Focus
 - **United States:** 29 CFR 1910 Subpart D (Walking-Working Surfaces) — §§1910.27 & 1910.28 cover rope descent systems and duty to provide fall protection for window cleaners; 29 CFR 1926 Subpart M (Fall Protection) for construction-led exterior maintenance. Federal corpus manifest: `docs/corpus/manifests/osha.json`.

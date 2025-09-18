@@ -1,0 +1,10 @@
+[
+  {
+    "url": "https://www.gov.br/trabalho-e-previdencia/pt-br/assuntos/inspecao/seguranca-e-saude-no-trabalho/normas-regulamentadoras/nr-35.pdf",
+    "language": "pt",
+    "instrument": "BR_NR35_TrabalhoEmAltura",
+    "category": "national",
+    "requires_headless": false,
+    "content_type": "pdf"
+  }
+]

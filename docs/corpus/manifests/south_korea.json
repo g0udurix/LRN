@@ -1,0 +1,11 @@
+[
+  {
+    "url": "https://elaw.klri.re.kr/eng_service/lawView.do?hseq=53048&lang=ENG",
+    "language": "en",
+    "instrument": "KR_OccupationalSafetyHealthAct",
+    "category": "national",
+    "requires_headless": true,
+    "content_type": "html",
+    "issue_ref": "docs/issues/korea-elaw-spa.md"
+  }
+]

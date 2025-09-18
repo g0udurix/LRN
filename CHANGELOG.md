@@ -1,0 +1,7 @@
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+## [Unreleased]
+- Added international manifests for EU Framework Directive 89/391/EEC, Netherlands, Scandinavia, Brazil, New Zealand, Korea, Singapore, South Africa, Morocco, Nigeria, Egypt, India, Thailand, UAE, Qatar, Dubai, Mexico, Spain, and Portugal, including headless capture notes where required.
+- Documented the manifest expansion workflow and WAF guidance (`docs/corpus/manifest_expansion_plan.md`, new issue dossiers).

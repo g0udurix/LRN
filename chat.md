@@ -23,3 +23,5 @@
   python scripts/corpus_ingest.py --manifest <manifest> --out-dir output_x --log-dir logs/ingestion --resume
   ```
 - Reference updated manifests under `docs/corpus/manifests/` for ingestion targets.
+- Manifest stream plan drafted in `docs/corpus/manifest_expansion_plan.md`; next step is auditing JSON manifests and scheduling headless capture runs.
+- Added manifests for new jurisdictions (EU Framework Directive, Netherlands, Scandinavia, Brazil, New Zealand, Korea, Singapore, South Africa, Morocco, Nigeria, Egypt, India, Thailand, UAE, Qatar, Dubai, Mexico, Spain, Portugal) with metadata and issue references; updated `docs/corpus/international.md` and `tests/test_manifest_integrity.py`. Tests: `python -m pytest tests/test_manifest_integrity.py -q`, `python -m pytest -q`.

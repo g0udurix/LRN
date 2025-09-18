@@ -1,0 +1,11 @@
+[
+  {
+    "url": "https://www.sgg.gov.ma/Portals/1/BO/2011/BO_5944_Fr.pdf",
+    "language": "fr",
+    "instrument": "MA_CodeDuTravail",
+    "category": "national",
+    "requires_headless": true,
+    "content_type": "pdf",
+    "issue_ref": "docs/issues/morocco-sgg-access.md"
+  }
+]

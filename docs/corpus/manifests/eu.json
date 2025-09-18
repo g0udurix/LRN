@@ -1,12 +1,26 @@
 [
   {
+    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:31989L0391&from=EN",
+    "language": "en",
+    "instrument": "EU_Directive_89_391_Framework",
+    "category": "international",
+    "requires_headless": false,
+    "content_type": "pdf"
+  },
+  {
     "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32001L0045&from=EN",
     "language": "en",
-    "instrument": "EU_Directive_2001_45_WorkAtHeight"
+    "instrument": "EU_Directive_2001_45_WorkAtHeight",
+    "category": "international",
+    "requires_headless": false,
+    "content_type": "pdf"
   },
   {
     "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32009L0104&from=EN",
     "language": "en",
-    "instrument": "EU_Directive_2009_104_WorkEquipment"
+    "instrument": "EU_Directive_2009_104_WorkEquipment",
+    "category": "international",
+    "requires_headless": false,
+    "content_type": "pdf"
   }
 ]

@@ -1,0 +1,11 @@
+[
+  {
+    "url": "https://dre.pt/dre/detalhe/lei/102-2009-535708",
+    "language": "pt",
+    "instrument": "PT_Lei_102_2009_SST",
+    "category": "national",
+    "requires_headless": true,
+    "content_type": "html",
+    "issue_ref": "docs/issues/portugal-dre-access.md"
+  }
+]
