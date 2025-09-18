@@ -4,6 +4,16 @@
 | --- | --- | --- | --- | --- |
 | FRA | France | docs/corpus/manifests/france.json | done | DataDome headless required |
 | BRA | Brazil | docs/corpus/manifests/brazil.json | done | PDF NR-35 |
+| MKD | North Macedonia | docs/corpus/manifests/north_macedonia.json | pending | Placeholder – research official OSH legislation |
+| MNP | Northern Mariana Islands | docs/corpus/manifests/northern_mariana_islands.json | pending | Placeholder – research official OSH legislation |
+| OMN | Oman | docs/corpus/manifests/oman.json | pending | Placeholder – research official OSH legislation |
+| PAK | Pakistan | docs/corpus/manifests/pakistan.json | pending | Placeholder – research official OSH legislation |
+| PLW | Palau | docs/corpus/manifests/palau.json | pending | Placeholder – research official OSH legislation |
+| PSE | Palestine | docs/corpus/manifests/palestine.json | pending | Placeholder – research official OSH legislation |
+| PAN | Panama | docs/corpus/manifests/panama.json | pending | Placeholder – research official OSH legislation |
+| PNG | Papua New Guinea | docs/corpus/manifests/papua_new_guinea.json | pending | Placeholder – research official OSH legislation |
+| PRY | Paraguay | docs/corpus/manifests/paraguay.json | pending | Placeholder – research official OSH legislation |
+| PHL | Philippines | docs/corpus/manifests/philippines.json | pending | Placeholder – research official OSH legislation |
 | MMR | Myanmar | docs/corpus/manifests/myanmar.json | pending | Placeholder – research official OSH legislation |
 | NAM | Namibia | docs/corpus/manifests/namibia.json | pending | Placeholder – research official OSH legislation |
 | NRU | Nauru | docs/corpus/manifests/nauru.json | pending | Placeholder – research official OSH legislation |
