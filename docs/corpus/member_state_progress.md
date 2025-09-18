@@ -4,6 +4,16 @@
 | --- | --- | --- | --- | --- |
 | FRA | France | docs/corpus/manifests/france.json | done | DataDome headless required |
 | BRA | Brazil | docs/corpus/manifests/brazil.json | done | PDF NR-35 |
+| VIR | United States Virgin Islands | docs/corpus/manifests/united_states_virgin_islands.json | pending | Placeholder – research official OSH legislation |
+| URY | Uruguay | docs/corpus/manifests/uruguay.json | pending | Placeholder – research official OSH legislation |
+| UZB | Uzbekistan | docs/corpus/manifests/uzbekistan.json | pending | Placeholder – research official OSH legislation |
+| VUT | Vanuatu | docs/corpus/manifests/vanuatu.json | pending | Placeholder – research official OSH legislation |
+| VAT | Vatican City | docs/corpus/manifests/vatican_city.json | pending | Placeholder – research official OSH legislation |
+| VEN | Venezuela | docs/corpus/manifests/venezuela.json | pending | Placeholder – research official OSH legislation |
+| VNM | Vietnam | docs/corpus/manifests/vietnam.json | pending | Placeholder – research official OSH legislation |
+| WLF | Wallis and Futuna | docs/corpus/manifests/wallis_and_futuna.json | pending | Placeholder – research official OSH legislation |
+| ESH | Western Sahara | docs/corpus/manifests/western_sahara.json | pending | Placeholder – research official OSH legislation |
+| YEM | Yemen | docs/corpus/manifests/yemen.json | pending | Placeholder – research official OSH legislation |
 | TUN | Tunisia | docs/corpus/manifests/tunisia.json | pending | Placeholder – research official OSH legislation |
 | TKM | Turkmenistan | docs/corpus/manifests/turkmenistan.json | pending | Placeholder – research official OSH legislation |
 | TCA | Turks and Caicos Islands | docs/corpus/manifests/turks_and_caicos_islands.json | pending | Placeholder – research official OSH legislation |
