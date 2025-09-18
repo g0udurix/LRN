@@ -32,3 +32,4 @@
 - Seeded roster with 251 WHO entries via `scripts/seed_who_roster.py`; report tool indicates 43 manifests completed to date (`python scripts/report_manifest_progress.py`).
 - Created placeholder manifests for initial WHO batch (Afghanistan, Albania, Algeria, American Samoa, Andorra) marked `status=pending`; roster updated.
 - Added second placeholder batch (Angola, Anguilla, Antarctica, Antigua and Barbuda, Armenia, Aruba, Austria, Azerbaijan, Bahamas, Bahrain); roster and progress table updated.
+- Added third placeholder batch (Bangladesh, Belarus, Belgium, Belize, Benin, Bermuda, Bhutan, Bolivia, Bosnia and Herzegovina, Botswana); progress table updated.
