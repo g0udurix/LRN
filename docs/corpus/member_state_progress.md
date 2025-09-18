@@ -4,6 +4,16 @@
 | --- | --- | --- | --- | --- |
 | FRA | France | docs/corpus/manifests/france.json | done | DataDome headless required |
 | BRA | Brazil | docs/corpus/manifests/brazil.json | done | PDF NR-35 |
+| GTM | Guatemala | docs/corpus/manifests/guatemala.json | pending | Placeholder – research official OSH legislation |
+| GGY | Guernsey | docs/corpus/manifests/guernsey.json | pending | Placeholder – research official OSH legislation |
+| GIN | Guinea | docs/corpus/manifests/guinea.json | pending | Placeholder – research official OSH legislation |
+| GNB | Guinea-Bissau | docs/corpus/manifests/guinea-bissau.json | pending | Placeholder – research official OSH legislation |
+| GUY | Guyana | docs/corpus/manifests/guyana.json | pending | Placeholder – research official OSH legislation |
+| HTI | Haiti | docs/corpus/manifests/haiti.json | pending | Placeholder – research official OSH legislation |
+| HMD | Heard Island and McDonald Islands | docs/corpus/manifests/heard_island_and_mcdonald_islands.json | pending | Placeholder – research official OSH legislation |
+| HND | Honduras | docs/corpus/manifests/honduras.json | pending | Placeholder – research official OSH legislation |
+| HKG | Hong Kong | docs/corpus/manifests/hong_kong.json | pending | Placeholder – research official OSH legislation |
+| HUN | Hungary | docs/corpus/manifests/hungary.json | pending | Placeholder – research official OSH legislation |
 | ATF | French Southern and Antarctic Lands | docs/corpus/manifests/french_southern_and_antarctic_lands.json | pending | Placeholder – research official OSH legislation |
 | GAB | Gabon | docs/corpus/manifests/gabon.json | pending | Placeholder – research official OSH legislation |
 | GMB | Gambia | docs/corpus/manifests/gambia.json | pending | Placeholder – research official OSH legislation |
