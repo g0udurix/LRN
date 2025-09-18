@@ -4,6 +4,16 @@
 | --- | --- | --- | --- | --- |
 | FRA | France | docs/corpus/manifests/france.json | done | DataDome headless required |
 | BRA | Brazil | docs/corpus/manifests/brazil.json | done | PDF NR-35 |
+| HRV | Croatia | docs/corpus/manifests/croatia.json | pending | Placeholder – research official OSH sources |
+| CUW | Curaçao | docs/corpus/manifests/curaçao.json | pending | Placeholder – research official OSH sources |
+| CYP | Cyprus | docs/corpus/manifests/cyprus.json | pending | Placeholder – research official OSH sources |
+| CZE | Czechia | docs/corpus/manifests/czechia.json | pending | Placeholder – research official OSH sources |
+| COD | DR Congo | docs/corpus/manifests/dr_congo.json | pending | Placeholder – research official OSH sources |
+| DNK | Denmark | docs/corpus/manifests/denmark.json | pending | Placeholder – research official OSH sources |
+| DJI | Djibouti | docs/corpus/manifests/djibouti.json | pending | Placeholder – research official OSH sources |
+| DMA | Dominica | docs/corpus/manifests/dominica.json | pending | Placeholder – research official OSH sources |
+| ECU | Ecuador | docs/corpus/manifests/ecuador.json | pending | Placeholder – research official OSH sources |
+| SLV | El Salvador | docs/corpus/manifests/el_salvador.json | pending | Placeholder – research official OSH sources |
 | CPV | Cape Verde | docs/corpus/manifests/cape_verde.json | pending | Placeholder – research official OSH legislation |
 | BES | Caribbean Netherlands | docs/corpus/manifests/caribbean_netherlands.json | pending | Placeholder – research official OSH legislation |
 | CYM | Cayman Islands | docs/corpus/manifests/cayman_islands.json | pending | Placeholder – research official OSH legislation |

@@ -35,3 +35,4 @@
 - Added third placeholder batch (Bangladesh, Belarus, Belgium, Belize, Benin, Bermuda, Bhutan, Bolivia, Bosnia and Herzegovina, Botswana); progress table updated.
 - Added fourth placeholder batch (Bouvet Island, British Indian Ocean Territory, British Virgin Islands, Brunei, Bulgaria, Burkina Faso, Burundi, Cambodia, Cameroon, Canada); roster/progress updated.
 - Added fifth placeholder batch (Cape Verde, Caribbean Netherlands, Cayman Islands, Central African Republic, Chad, Christmas Island, Cocos (Keeling) Islands, Comoros, Cook Islands, Costa Rica); roster/progress updated.
+- Added sixth placeholder batch (Croatia, Curaçao, Cyprus, Czechia, DR Congo, Denmark, Djibouti, Dominica, Ecuador, El Salvador); roster/progress updated.
