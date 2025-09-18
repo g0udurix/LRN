@@ -1,0 +1,25 @@
+# Session Notes (2025-09-17)
+
+## Context
+- Expanded jurisdiction manifests for Canada (QC, municipal pilots) and international OHS coverage (France, China, Germany, Japan, OSHA, etc.).
+- Added Playwright-backed fallback logic to `scripts/corpus_ingest.py` and `scripts/headless_fetch.py` to handle DataDome/WAF gateways (Legifrance, CanLII, Ville de Québec, gov.cn/npc.gov.cn).
+- Documentation (README, AGENTS, docs/corpus/*, docs/issues/*) now reflects headless workflow, Playwright setup, municipal/federal manifests, and monitoring guidance.
+- New manifests rely on external HTML/PDF copies stored outside git; ingestion tested via `python -m pytest` (pass).
+
+## Outstanding Follow-ups
+1. Locate an official Calgary-hosted PDF for Bylaw 33M2014 to replace the interim CanLII link (tracked in docs/issues/calgary-building-maintenance.md).
+2. Explore Legifrance API/licensing for automated bulk access beyond Playwright captures.
+3. Broaden China coverage (sector-specific regulations, municipal bylaws) once stable endpoints are confirmed.
+
+## Environment Tips for Resume
+- Reinstall Playwright dependencies if environment resets:
+  ```bash
+  python -m pip install playwright
+  playwright install chromium
+  ```
+- Use headless helper when manifests hit DataDome/WAF:
+  ```bash
+  python scripts/headless_fetch.py <url> --out /tmp/page.html --timeout 120000 --wait-until domcontentloaded
+  python scripts/corpus_ingest.py --manifest <manifest> --out-dir output_x --log-dir logs/ingestion --resume
+  ```
+- Reference updated manifests under `docs/corpus/manifests/` for ingestion targets.

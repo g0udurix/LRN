@@ -1,0 +1,52 @@
+[
+  {
+    "url": "https://laws-lois.justice.gc.ca/eng/acts/L-2/",
+    "language": "en",
+    "instrument": "CA_CanadaLabourCode_PartII"
+  },
+  {
+    "url": "https://laws-lois.justice.gc.ca/fra/lois/L-2/",
+    "language": "fr",
+    "instrument": "CA_CodeCanadienTravail_PartieII"
+  },
+  {
+    "url": "https://laws-lois.justice.gc.ca/eng/regulations/SOR-86-304/",
+    "language": "en",
+    "instrument": "CA_OccupationalHealthSafetyRegulations"
+  },
+  {
+    "url": "https://laws-lois.justice.gc.ca/fra/reglements/DORS-86-304/",
+    "language": "fr",
+    "instrument": "CA_ReglementSecuriteSanteTravail"
+  },
+  {
+    "url": "https://laws-lois.justice.gc.ca/eng/regulations/SOR-2011-87/",
+    "language": "en",
+    "instrument": "CA_AviationOHSRegulations"
+  },
+  {
+    "url": "https://laws-lois.justice.gc.ca/fra/reglements/DORS-2011-87/",
+    "language": "fr",
+    "instrument": "CA_ReglementOHS_Aeronautique"
+  },
+  {
+    "url": "https://laws-lois.justice.gc.ca/eng/regulations/SOR-2010-120/",
+    "language": "en",
+    "instrument": "CA_MaritimeOHSRegulations"
+  },
+  {
+    "url": "https://laws-lois.justice.gc.ca/fra/reglements/DORS-2010-120/",
+    "language": "fr",
+    "instrument": "CA_ReglementOHS_Maritime"
+  },
+  {
+    "url": "https://laws-lois.justice.gc.ca/eng/regulations/SOR-87-184/",
+    "language": "en",
+    "instrument": "CA_OnBoardTrainsOHSRegulations"
+  },
+  {
+    "url": "https://laws-lois.justice.gc.ca/fra/reglements/DORS-87-184/",
+    "language": "fr",
+    "instrument": "CA_ReglementOHS_Trains"
+  }
+]

@@ -5,13 +5,16 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import os
 import time
-from dataclasses import dataclass, asdict
+from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Dict, List, Optional
+from urllib.parse import urlparse
 
 import requests
+from requests import HTTPError
 from requests.utils import requote_uri
 
 
@@ -66,6 +69,58 @@ def _sha256(data: bytes) -> str:
     return h.hexdigest()
 
 
+def _should_use_headless(exc: HTTPError, entry: CorpusEntry, suffix: str) -> bool:
+    response = exc.response
+    if response is None:
+        return False
+    status = response.status_code
+    if suffix == '.pdf':
+        return False  # headless PDF capture not yet supported
+
+    host = (urlparse(response.url or entry.url).hostname or '').lower()
+    lowered_headers = {key.lower() for key in response.headers.keys()}
+
+    if 'x-datadome' in lowered_headers:
+        return True
+
+    datadome_hosts = {
+        'canlii.org',
+        'ville.quebec.qc.ca',
+        'legifrance.gouv.fr',
+        'legifrance.fr',
+    }
+    wafi_hosts = {
+        'gov.cn',
+        'npc.gov.cn',
+    }
+
+    if any(host.endswith(h) for h in datadome_hosts) and status in {403, 429, 500, 503}:
+        return True
+
+    if any(host.endswith(h) for h in wafi_hosts) and status in {302, 403, 404, 503}:
+        return True
+
+    return False
+
+
+def _headless_fetch(url: str, timeout: int) -> bytes:
+    try:
+        from playwright.sync_api import sync_playwright
+    except ImportError as exc:  # pragma: no cover - optional dep
+        raise RuntimeError('Playwright is required for headless fallback') from exc
+
+    timeout_ms = max(timeout * 1000, 10000)
+    with sync_playwright() as playwright:
+        browser = playwright.chromium.launch(headless=True)
+        context = browser.new_context()
+        page = context.new_page()
+        page.goto(url, wait_until='domcontentloaded', timeout=timeout_ms)
+        page.wait_for_timeout(2000)
+        content = page.content().encode('utf-8')
+        browser.close()
+    return content
+
+
 def fetch_entry(entry: CorpusEntry, session: requests.Session, options: IngestOptions) -> FetchResult:
     target_dir = options.out_dir / entry.instrument
     target_dir.mkdir(parents=True, exist_ok=True)
@@ -76,6 +131,8 @@ def fetch_entry(entry: CorpusEntry, session: requests.Session, options: IngestOp
         suffix = '.pdf'
     elif lowered_url.endswith('.json') or 'format=json' in lowered_url:
         suffix = '.json'
+    elif 'resultformat=html' in lowered_url:
+        suffix = '.html'
     target_path = target_dir / f"{entry.language}{suffix}"
 
     if options.resume and target_path.exists():
@@ -96,6 +153,11 @@ def fetch_entry(entry: CorpusEntry, session: requests.Session, options: IngestOp
         try:
             url = requote_uri(entry.url)
             headers: Dict[str, str] = {'Accept-Language': 'fr-CA,fr;q=0.9'} if entry.language.lower().startswith('fr') else {'Accept-Language': 'en-CA,en;q=0.9'}
+            host = (urlparse(url).hostname or '').lower()
+            if 'api.canlii.org' in host:
+                api_key = os.getenv('CANLII_API_KEY')
+                if api_key:
+                    headers['X-API-Key'] = api_key
             response = session.get(url, timeout=options.timeout, headers=headers)
             response.raise_for_status()
             data = response.content
@@ -112,6 +174,24 @@ def fetch_entry(entry: CorpusEntry, session: requests.Session, options: IngestOp
                 error=None,
                 fetched_at=datetime.now(tz=timezone.utc).isoformat(),
             )
+        except HTTPError as exc:  # pragma: no cover - network dependent
+            if _should_use_headless(exc, entry, suffix):
+                try:
+                    data = _headless_fetch(entry.url, options.timeout)
+                    target_path.write_bytes(data)
+                    return FetchResult(
+                        entry=entry,
+                        status='fetched',
+                        path=target_path,
+                        bytes=len(data),
+                        sha256=_sha256(data),
+                        error=None,
+                        fetched_at=datetime.now(tz=timezone.utc).isoformat(),
+                    )
+                except Exception as headless_exc:  # pragma: no cover - depends on playwright
+                    last_error = f"headless fallback failed: {headless_exc}"
+            else:
+                last_error = str(exc)
         except Exception as exc:  # pragma: no cover - network dependent
             last_error = str(exc)
             attempt += 1

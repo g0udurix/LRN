@@ -1,0 +1,22 @@
+[
+  {
+    "url": "https://www.legisquebec.gouv.qc.ca/fr/document/lc/S-2.1",
+    "language": "fr",
+    "instrument": "QC_LoiSanteSecuriteTravail"
+  },
+  {
+    "url": "https://www.legisquebec.gouv.qc.ca/en/document/lc/S-2.1",
+    "language": "en",
+    "instrument": "QC_OccupationalHealthSafetyAct"
+  },
+  {
+    "url": "https://www.legisquebec.gouv.qc.ca/fr/document/rc/S-2.1,%20r.%204",
+    "language": "fr",
+    "instrument": "QC_CodeSecuriteConstruction"
+  },
+  {
+    "url": "https://www.legisquebec.gouv.qc.ca/fr/document/rc/S-2.1,%20r.%2010",
+    "language": "fr",
+    "instrument": "QC_ReglementNettoyageVitres"
+  }
+]

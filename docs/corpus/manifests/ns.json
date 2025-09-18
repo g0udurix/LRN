@@ -1,0 +1,17 @@
+[
+  {
+    "url": "https://nslegislature.ca/sites/default/files/legc/statutes/occupational%20health%20and%20safety.pdf",
+    "language": "en",
+    "instrument": "NS_OccupationalHealthSafetyAct"
+  },
+  {
+    "url": "https://www.canlii.org/en/ns/laws/regu/ns-reg-52-2013/latest/ns-reg-52-2013.html",
+    "language": "en",
+    "instrument": "NS_OHS_GeneralRegulations_CanLII"
+  },
+  {
+    "url": "https://www.canlii.org/en/ns/laws/regu/ns-reg-2-96/latest/ns-reg-2-96.html",
+    "language": "en",
+    "instrument": "NS_FallProtectionAndScaffoldingRegulations_CanLII"
+  }
+]

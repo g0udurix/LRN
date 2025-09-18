@@ -1,4 +1,17 @@
 [
-  {"url": "https://www.legislation.gov.uk/ukpga/1974/37/data.json", "language": "en", "instrument": "UK_HSAWA1974"},
-  {"url": "https://www.legislation.gov.uk/uksi/1999/3242/data.json", "language": "en", "instrument": "UK_MHSWR1999"}
+  {
+    "url": "https://www.legislation.gov.uk/ukpga/1974/37/data.xml",
+    "language": "en",
+    "instrument": "UK_HSAWA1974"
+  },
+  {
+    "url": "https://www.legislation.gov.uk/uksi/1999/3242/data.xml",
+    "language": "en",
+    "instrument": "UK_MHSWR1999"
+  },
+  {
+    "url": "https://www.legislation.gov.uk/uksi/2005/735/data.xml",
+    "language": "en",
+    "instrument": "UK_WorkAtHeightRegulations2005"
+  }
 ]

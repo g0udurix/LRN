@@ -1,0 +1,17 @@
+[
+  {
+    "url": "https://www.princeedwardisland.ca/en/legislation/occupational-health-and-safety-act",
+    "language": "en",
+    "instrument": "PEI_OccupationalHealthSafetyAct"
+  },
+  {
+    "url": "https://www.princeedwardisland.ca/fr/legislation/loi-sur-la-sante-et-la-securite-au-travail",
+    "language": "fr",
+    "instrument": "PEI_LoiSanteSecuriteTravail"
+  },
+  {
+    "url": "https://www.princeedwardisland.ca/sites/default/files/legislation/O-01-01-Occupational%20Health%20And%20Safety%20Act%20General%20Regulations.pdf",
+    "language": "en",
+    "instrument": "PEI_OHS_GeneralRegulations"
+  }
+]

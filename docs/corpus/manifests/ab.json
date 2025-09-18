@@ -1,4 +1,22 @@
 [
-  {"url": "https://www.qp.alberta.ca/documents/Acts/O02.pdf", "language": "en", "instrument": "AB_OHS_Act_pdf"},
-  {"url": "https://www.qp.alberta.ca/documents/Regs/2009_087.pdf", "language": "en", "instrument": "AB_OHS_Code_pdf"}
+  {
+    "url": "https://www.canlii.org/en/ab/laws/statutes/sa-2017-c-o-2.1/latest/sa-2017-c-o-2.1.html",
+    "language": "en",
+    "instrument": "AB_OccupationalHealthSafetyAct_CanLII"
+  },
+  {
+    "url": "https://www.canlii.org/en/ab/laws/regu/alta-reg-184-2021/latest/alta-reg-184-2021.html",
+    "language": "en",
+    "instrument": "AB_OccupationalHealthSafetyRegulation_CanLII"
+  },
+  {
+    "url": "https://www.canlii.org/en/ab/laws/regu/alta-reg-191-2021/latest/alta-reg-191-2021.html",
+    "language": "en",
+    "instrument": "AB_OccupationalHealthSafetyCode_CanLII"
+  },
+  {
+    "url": "https://www.canlii.org/en/ab/laws/regu/alta-reg-62-2003/latest/alta-reg-62-2003.html",
+    "language": "en",
+    "instrument": "AB_WindowCleaningRegulation_CanLII"
+  }
 ]
