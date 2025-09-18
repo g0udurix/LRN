@@ -4,6 +4,16 @@
 | --- | --- | --- | --- | --- |
 | FRA | France | docs/corpus/manifests/france.json | done | DataDome headless required |
 | BRA | Brazil | docs/corpus/manifests/brazil.json | done | PDF NR-35 |
+| CPV | Cape Verde | docs/corpus/manifests/cape_verde.json | pending | Placeholder – research official OSH legislation |
+| BES | Caribbean Netherlands | docs/corpus/manifests/caribbean_netherlands.json | pending | Placeholder – research official OSH legislation |
+| CYM | Cayman Islands | docs/corpus/manifests/cayman_islands.json | pending | Placeholder – research official OSH legislation |
+| CAF | Central African Republic | docs/corpus/manifests/central_african_republic.json | pending | Placeholder – research official OSH legislation |
+| TCD | Chad | docs/corpus/manifests/chad.json | pending | Placeholder – research official OSH legislation |
+| CXR | Christmas Island | docs/corpus/manifests/christmas_island.json | pending | Placeholder – research official OSH legislation |
+| CCK | Cocos (Keeling) Islands | docs/corpus/manifests/cocos_(keeling)_islands.json | pending | Placeholder – research official OSH legislation |
+| COM | Comoros | docs/corpus/manifests/comoros.json | pending | Placeholder – research official OSH legislation |
+| COK | Cook Islands | docs/corpus/manifests/cook_islands.json | pending | Placeholder – research official OSH legislation |
+| CRI | Costa Rica | docs/corpus/manifests/costa_rica.json | pending | Placeholder – research official OSH legislation |
 | BVT | Bouvet Island | docs/corpus/manifests/bouvet_island.json | pending | Placeholder – research official OSH law |
 | IOT | British Indian Ocean Territory | docs/corpus/manifests/british_indian_ocean_territory.json | pending | Placeholder – research official OSH law |
 | VGB | British Virgin Islands | docs/corpus/manifests/british_virgin_islands.json | pending | Placeholder – research official OSH law |
