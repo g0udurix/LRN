@@ -1,0 +1,11 @@
+[
+  {
+    "url": "https://www.bcn.cl/leychile/navegar?idNorma=1120420",
+    "language": "es",
+    "instrument": "CL_DecretoSupremo594_1999",
+    "category": "national",
+    "requires_headless": true,
+    "content_type": "html",
+    "issue_ref": "docs/issues/chile-bcn-headless.md"
+  }
+]

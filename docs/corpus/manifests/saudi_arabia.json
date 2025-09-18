@@ -1,0 +1,11 @@
+[
+  {
+    "url": "https://laws.boe.gov.sa/Details/82373",
+    "language": "ar",
+    "instrument": "SA_OccupationalSafetyHealthLaw",
+    "category": "national",
+    "requires_headless": true,
+    "content_type": "html",
+    "issue_ref": "docs/issues/saudi-portal-headless.md"
+  }
+]

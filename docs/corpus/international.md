@@ -51,6 +51,18 @@ checksums.
 - **Romania:** Law 319/2006 (docs/corpus/manifests/romania.json).
 - **Turkey:** Occupational Health and Safety Law 6331 (docs/corpus/manifests/turkey.json).
 - **Israel:** Safety at Work Regulations (docs/corpus/manifests/israel.json).
+- **Saudi Arabia:** Occupational Safety and Health provisions (docs/corpus/manifests/saudi_arabia.json).
+- **Iran:** Labour Law safety chapters (docs/corpus/manifests/iran.json).
+- **Lebanon:** Labour Code safety provisions (docs/corpus/manifests/lebanon.json).
+- **Argentina:** Law 19.587 (docs/corpus/manifests/argentina.json).
+- **Chile:** Decreto Supremo 594/1999 (docs/corpus/manifests/chile.json).
+- **Colombia:** Resolution 1409/2012 (docs/corpus/manifests/colombia.json).
+- **Peru:** DS 005-2012-TR (docs/corpus/manifests/peru.json).
+- **Jamaica:** Occupational Safety and Health Bill 2017 (docs/corpus/manifests/jamaica.json).
+- **Dominican Republic:** Law 87-01 safety chapters (docs/corpus/manifests/dominican_republic.json).
+- **Cuba:** Decreto-Ley 146/2014 (docs/corpus/manifests/cuba.json).
+- **Trinidad and Tobago:** OSH Act 2004 (docs/corpus/manifests/trinidad_and_tobago.json).
+- **Barbados:** Safety and Health at Work Act 2005 (docs/corpus/manifests/barbados.json).
 
 ### Fall Protection & Window Cleaning Focus
 - **United States:** 29 CFR 1910 Subpart D (Walking-Working Surfaces) — §§1910.27 & 1910.28 cover rope descent systems and duty to provide fall protection for window cleaners; 29 CFR 1926 Subpart M (Fall Protection) for construction-led exterior maintenance. Federal corpus manifest: `docs/corpus/manifests/osha.json`.

@@ -1,0 +1,11 @@
+[
+  {
+    "url": "https://www.argentina.gob.ar/normativa/nacional/ley-19587-54590",
+    "language": "es",
+    "instrument": "AR_Law19587_HygieneSafety",
+    "category": "national",
+    "requires_headless": true,
+    "content_type": "html",
+    "issue_ref": "docs/issues/argentina-gov-headless.md"
+  }
+]

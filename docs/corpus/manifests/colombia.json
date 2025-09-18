@@ -1,0 +1,11 @@
+[
+  {
+    "url": "https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=54037",
+    "language": "es",
+    "instrument": "CO_Resolution1409_2012_RopeAccess",
+    "category": "national",
+    "requires_headless": true,
+    "content_type": "html",
+    "issue_ref": "docs/issues/colombia-funcionpublica-headless.md"
+  }
+]

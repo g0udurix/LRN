@@ -1,0 +1,11 @@
+[
+  {
+    "url": "https://rc.majlis.ir/fa/law/show/92741",
+    "language": "fa",
+    "instrument": "IR_LabourLaw_OSH_Chapters",
+    "category": "national",
+    "requires_headless": true,
+    "content_type": "html",
+    "issue_ref": "docs/issues/iran-majlis-headless.md"
+  }
+]
