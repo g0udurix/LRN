@@ -31,3 +31,4 @@
 - Seeded WHO roster dataset (`docs/corpus/roster/who_members.csv`) with global placeholders via `scripts/seed_who_roster.py`; ready for phased manifest generation.
 - Seeded roster with 251 WHO entries via `scripts/seed_who_roster.py`; report tool indicates 43 manifests completed to date (`python scripts/report_manifest_progress.py`).
 - Created placeholder manifests for initial WHO batch (Afghanistan, Albania, Algeria, American Samoa, Andorra) marked `status=pending`; roster updated.
+- Added second placeholder batch (Angola, Anguilla, Antarctica, Antigua and Barbuda, Armenia, Aruba, Austria, Azerbaijan, Bahamas, Bahrain); roster and progress table updated.
