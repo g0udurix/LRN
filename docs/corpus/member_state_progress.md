@@ -4,6 +4,16 @@
 | --- | --- | --- | --- | --- |
 | FRA | France | docs/corpus/manifests/france.json | done | DataDome headless required |
 | BRA | Brazil | docs/corpus/manifests/brazil.json | done | PDF NR-35 |
+| SVK | Slovakia | docs/corpus/manifests/slovakia.json | pending | Placeholder – research official OSH legislation |
+| SVN | Slovenia | docs/corpus/manifests/slovenia.json | pending | Placeholder – research official OSH legislation |
+| SLB | Solomon Islands | docs/corpus/manifests/solomon_islands.json | pending | Placeholder – research official OSH legislation |
+| SOM | Somalia | docs/corpus/manifests/somalia.json | pending | Placeholder – research official OSH legislation |
+| SGS | South Georgia | docs/corpus/manifests/south_georgia.json | pending | Placeholder – research official OSH legislation |
+| SSD | South Sudan | docs/corpus/manifests/south_sudan.json | pending | Placeholder – research official OSH legislation |
+| LKA | Sri Lanka | docs/corpus/manifests/sri_lanka.json | pending | Placeholder – research official OSH legislation |
+| SDN | Sudan | docs/corpus/manifests/sudan.json | pending | Placeholder – research official OSH legislation |
+| SUR | Suriname | docs/corpus/manifests/suriname.json | pending | Placeholder – research official OSH legislation |
+| SJM | Svalbard and Jan Mayen | docs/corpus/manifests/svalbard_and_jan_mayen.json | pending | Placeholder – research official OSH legislation |
 | MAF | Saint Martin | docs/corpus/manifests/saint_martin.json | pending | Placeholder – research official OSH legislation |
 | SPM | Saint Pierre and Miquelon | docs/corpus/manifests/saint_pierre_and_miquelon.json | pending | Placeholder – research official OSH legislation |
 | VCT | Saint Vincent and the Grenadines | docs/corpus/manifests/saint_vincent_and_the_grenadines.json | pending | Placeholder – research official OSH legislation |

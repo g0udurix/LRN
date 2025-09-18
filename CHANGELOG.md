@@ -3,6 +3,7 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
+- Added placeholder manifests for Slovakia, Slovenia, Solomon Islands, Somalia, South Georgia, South Sudan, Sri Lanka, Sudan, Suriname, and Svalbard and Jan Mayen (status pending).
 - Added placeholder manifests for Saint Martin, Saint Pierre and Miquelon, Saint Vincent and the Grenadines, Samoa, San Marino, Senegal, Serbia, Seychelles, Sierra Leone, and Sint Maarten (status pending).
 - Added placeholder manifests for Pitcairn Islands, Poland, Puerto Rico, Republic of the Congo, Rwanda, Réunion, Saint Barthélemy, Saint Helena/Ascension/Tristan da Cunha, Saint Kitts and Nevis, and Saint Lucia (status pending).
 - Added placeholder manifests for North Macedonia, Northern Mariana Islands, Oman, Pakistan, Palau, Palestine, Panama, Papua New Guinea, Paraguay, and Philippines (status pending).

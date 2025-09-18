@@ -47,3 +47,4 @@
 - Added fifteenth placeholder batch (North Macedonia, Northern Mariana Islands, Oman, Pakistan, Palau, Palestine, Panama, Papua New Guinea, Paraguay, Philippines); roster/progress updated.
 - Added sixteenth placeholder batch (Pitcairn Islands, Poland, Puerto Rico, Republic of the Congo, Rwanda, Réunion, Saint Barthélemy, Saint Helena/Ascension/Tristan da Cunha, Saint Kitts and Nevis, Saint Lucia); roster/progress updated.
 - Added seventeenth placeholder batch (Saint Martin, Saint Pierre and Miquelon, Saint Vincent and the Grenadines, Samoa, San Marino, Senegal, Serbia, Seychelles, Sierra Leone, Sint Maarten); roster/progress updated.
+- Added eighteenth placeholder batch (Slovakia, Slovenia, Solomon Islands, Somalia, South Georgia, South Sudan, Sri Lanka, Sudan, Suriname, Svalbard and Jan Mayen); roster/progress updated.
