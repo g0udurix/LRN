@@ -4,6 +4,16 @@
 | --- | --- | --- | --- | --- |
 | FRA | France | docs/corpus/manifests/france.json | done | DataDome headless required |
 | BRA | Brazil | docs/corpus/manifests/brazil.json | done | PDF NR-35 |
+| PCN | Pitcairn Islands | docs/corpus/manifests/pitcairn_islands.json | pending | Placeholder – research official OSH legislation |
+| POL | Poland | docs/corpus/manifests/poland.json | pending | Placeholder – research official OSH legislation |
+| PRI | Puerto Rico | docs/corpus/manifests/puerto_rico.json | pending | Placeholder – research official OSH legislation |
+| COG | Republic of the Congo | docs/corpus/manifests/republic_of_the_congo.json | pending | Placeholder – research official OSH legislation |
+| RWA | Rwanda | docs/corpus/manifests/rwanda.json | pending | Placeholder – research official OSH legislation |
+| REU | Réunion | docs/corpus/manifests/réunion.json | pending | Placeholder – research official OSH legislation |
+| BLM | Saint Barthélemy | docs/corpus/manifests/saint_barthélemy.json | pending | Placeholder – research official OSH legislation |
+| SHN | Saint Helena, Ascension and Tristan da Cunha | docs/corpus/manifests/saint_helena,_ascension_and_tristan_da_cunha.json | pending | Placeholder – research official OSH legislation |
+| KNA | Saint Kitts and Nevis | docs/corpus/manifests/saint_kitts_and_nevis.json | pending | Placeholder – research official OSH legislation |
+| LCA | Saint Lucia | docs/corpus/manifests/saint_lucia.json | pending | Placeholder – research official OSH legislation |
 | MKD | North Macedonia | docs/corpus/manifests/north_macedonia.json | pending | Placeholder – research official OSH legislation |
 | MNP | Northern Mariana Islands | docs/corpus/manifests/northern_mariana_islands.json | pending | Placeholder – research official OSH legislation |
 | OMN | Oman | docs/corpus/manifests/oman.json | pending | Placeholder – research official OSH legislation |

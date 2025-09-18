@@ -45,3 +45,4 @@
 - Added thirteenth placeholder batch (Mauritania, Mauritius, Mayotte, Micronesia, Moldova, Monaco, Mongolia, Montenegro, Montserrat, Mozambique); roster/progress updated.
 - Added fourteenth placeholder batch (Myanmar, Namibia, Nauru, Nepal, New Caledonia, Nicaragua, Niger, Niue, Norfolk Island, North Korea); roster/progress updated.
 - Added fifteenth placeholder batch (North Macedonia, Northern Mariana Islands, Oman, Pakistan, Palau, Palestine, Panama, Papua New Guinea, Paraguay, Philippines); roster/progress updated.
+- Added sixteenth placeholder batch (Pitcairn Islands, Poland, Puerto Rico, Republic of the Congo, Rwanda, Réunion, Saint Barthélemy, Saint Helena/Ascension/Tristan da Cunha, Saint Kitts and Nevis, Saint Lucia); roster/progress updated.
