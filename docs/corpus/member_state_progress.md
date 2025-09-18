@@ -4,6 +4,16 @@
 | --- | --- | --- | --- | --- |
 | FRA | France | docs/corpus/manifests/france.json | done | DataDome headless required |
 | BRA | Brazil | docs/corpus/manifests/brazil.json | done | PDF NR-35 |
+| MRT | Mauritania | docs/corpus/manifests/mauritania.json | pending | Placeholder – research official OSH legislation |
+| MUS | Mauritius | docs/corpus/manifests/mauritius.json | pending | Placeholder – research official OSH legislation |
+| MYT | Mayotte | docs/corpus/manifests/mayotte.json | pending | Placeholder – research official OSH legislation |
+| FSM | Micronesia | docs/corpus/manifests/micronesia.json | pending | Placeholder – research official OSH legislation |
+| MDA | Moldova | docs/corpus/manifests/moldova.json | pending | Placeholder – research official OSH legislation |
+| MCO | Monaco | docs/corpus/manifests/monaco.json | pending | Placeholder – research official OSH legislation |
+| MNG | Mongolia | docs/corpus/manifests/mongolia.json | pending | Placeholder – research official OSH legislation |
+| MNE | Montenegro | docs/corpus/manifests/montenegro.json | pending | Placeholder – research official OSH legislation |
+| MSR | Montserrat | docs/corpus/manifests/montserrat.json | pending | Placeholder – research official OSH legislation |
+| MOZ | Mozambique | docs/corpus/manifests/mozambique.json | pending | Placeholder – research official OSH legislation |
 | LUX | Luxembourg | docs/corpus/manifests/luxembourg.json | pending | Placeholder – research official OSH legislation |
 | MAC | Macau | docs/corpus/manifests/macau.json | pending | Placeholder – research official OSH legislation |
 | MDG | Madagascar | docs/corpus/manifests/madagascar.json | pending | Placeholder – research official OSH legislation |
