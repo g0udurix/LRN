@@ -4,6 +4,16 @@
 | --- | --- | --- | --- | --- |
 | FRA | France | docs/corpus/manifests/france.json | done | DataDome headless required |
 | BRA | Brazil | docs/corpus/manifests/brazil.json | done | PDF NR-35 |
+| MMR | Myanmar | docs/corpus/manifests/myanmar.json | pending | Placeholder – research official OSH legislation |
+| NAM | Namibia | docs/corpus/manifests/namibia.json | pending | Placeholder – research official OSH legislation |
+| NRU | Nauru | docs/corpus/manifests/nauru.json | pending | Placeholder – research official OSH legislation |
+| NPL | Nepal | docs/corpus/manifests/nepal.json | pending | Placeholder – research official OSH legislation |
+| NCL | New Caledonia | docs/corpus/manifests/new_caledonia.json | pending | Placeholder – research official OSH legislation |
+| NIC | Nicaragua | docs/corpus/manifests/nicaragua.json | pending | Placeholder – research official OSH legislation |
+| NER | Niger | docs/corpus/manifests/niger.json | pending | Placeholder – research official OSH legislation |
+| NIU | Niue | docs/corpus/manifests/niue.json | pending | Placeholder – research official OSH legislation |
+| NFK | Norfolk Island | docs/corpus/manifests/norfolk_island.json | pending | Placeholder – research official OSH legislation |
+| PRK | North Korea | docs/corpus/manifests/north_korea.json | pending | Placeholder – research official OSH legislation |
 | MRT | Mauritania | docs/corpus/manifests/mauritania.json | pending | Placeholder – research official OSH legislation |
 | MUS | Mauritius | docs/corpus/manifests/mauritius.json | pending | Placeholder – research official OSH legislation |
 | MYT | Mayotte | docs/corpus/manifests/mayotte.json | pending | Placeholder – research official OSH legislation |

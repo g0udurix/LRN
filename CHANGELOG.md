@@ -3,6 +3,7 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
+- Added placeholder manifests for Myanmar, Namibia, Nauru, Nepal, New Caledonia, Nicaragua, Niger, Niue, Norfolk Island, and North Korea (status pending).
 - Added placeholder manifests for Mauritania, Mauritius, Mayotte, Micronesia, Moldova, Monaco, Mongolia, Montenegro, Montserrat, and Mozambique (status pending).
 - Added placeholder manifests for Luxembourg, Macau, Madagascar, Malawi, Malaysia, Maldives, Mali, Malta, Marshall Islands, and Martinique (status pending).
 - Added placeholder manifests for Kosovo, Kuwait, Kyrgyzstan, Laos, Latvia, Lesotho, Liberia, Libya, Liechtenstein, and Lithuania (status pending).

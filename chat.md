@@ -43,3 +43,4 @@
 - Added eleventh placeholder batch (Kosovo, Kuwait, Kyrgyzstan, Laos, Latvia, Lesotho, Liberia, Libya, Liechtenstein, Lithuania); roster/progress updated.
 - Added twelfth placeholder batch (Luxembourg, Macau, Madagascar, Malawi, Malaysia, Maldives, Mali, Malta, Marshall Islands, Martinique); roster/progress updated.
 - Added thirteenth placeholder batch (Mauritania, Mauritius, Mayotte, Micronesia, Moldova, Monaco, Mongolia, Montenegro, Montserrat, Mozambique); roster/progress updated.
+- Added fourteenth placeholder batch (Myanmar, Namibia, Nauru, Nepal, New Caledonia, Nicaragua, Niger, Niue, Norfolk Island, North Korea); roster/progress updated.
