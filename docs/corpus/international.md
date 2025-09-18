@@ -50,7 +50,9 @@ checksums.
 - **Greece:** Law 3850/2010 (docs/corpus/manifests/greece.json).
 - **Romania:** Law 319/2006 (docs/corpus/manifests/romania.json).
 - **Turkey:** Occupational Health and Safety Law 6331 (docs/corpus/manifests/turkey.json).
+- **Indonesia:** Government Regulation No. 50/2012 (docs/corpus/manifests/indonesia.json).
 - **Israel:** Safety at Work Regulations (docs/corpus/manifests/israel.json).
+- **Russia:** Labour Code safety chapters (docs/corpus/manifests/russia.json).
 - **Saudi Arabia:** Occupational Safety and Health provisions (docs/corpus/manifests/saudi_arabia.json).
 - **Iran:** Labour Law safety chapters (docs/corpus/manifests/iran.json).
 - **Lebanon:** Labour Code safety provisions (docs/corpus/manifests/lebanon.json).

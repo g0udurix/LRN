@@ -1,0 +1,11 @@
+[
+  {
+    "url": "https://docs.cntd.ru/document/1200027923",
+    "language": "ru",
+    "instrument": "RU_LabourCode_SafetyChapters",
+    "category": "national",
+    "requires_headless": true,
+    "content_type": "html",
+    "issue_ref": "docs/issues/russia-cntd-headless.md"
+  }
+]

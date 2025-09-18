@@ -1,0 +1,11 @@
+[
+  {
+    "url": "https://jdih.kemnaker.go.id/katalog/peraturan/1208",
+    "language": "id",
+    "instrument": "ID_GovernmentRegulation_50_2012_OSHManagement",
+    "category": "national",
+    "requires_headless": true,
+    "content_type": "html",
+    "issue_ref": "docs/issues/indonesia-kemnaker-headless.md"
+  }
+]
