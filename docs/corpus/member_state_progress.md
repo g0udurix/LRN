@@ -4,6 +4,16 @@
 | --- | --- | --- | --- | --- |
 | FRA | France | docs/corpus/manifests/france.json | done | DataDome headless required |
 | BRA | Brazil | docs/corpus/manifests/brazil.json | done | PDF NR-35 |
+| MAF | Saint Martin | docs/corpus/manifests/saint_martin.json | pending | Placeholder – research official OSH legislation |
+| SPM | Saint Pierre and Miquelon | docs/corpus/manifests/saint_pierre_and_miquelon.json | pending | Placeholder – research official OSH legislation |
+| VCT | Saint Vincent and the Grenadines | docs/corpus/manifests/saint_vincent_and_the_grenadines.json | pending | Placeholder – research official OSH legislation |
+| WSM | Samoa | docs/corpus/manifests/samoa.json | pending | Placeholder – research official OSH legislation |
+| SMR | San Marino | docs/corpus/manifests/san_marino.json | pending | Placeholder – research official OSH legislation |
+| SEN | Senegal | docs/corpus/manifests/senegal.json | pending | Placeholder – research official OSH legislation |
+| SRB | Serbia | docs/corpus/manifests/serbia.json | pending | Placeholder – research official OSH legislation |
+| SYC | Seychelles | docs/corpus/manifests/seychelles.json | pending | Placeholder – research official OSH legislation |
+| SLE | Sierra Leone | docs/corpus/manifests/sierra_leone.json | pending | Placeholder – research official OSH legislation |
+| SXM | Sint Maarten | docs/corpus/manifests/sint_maarten.json | pending | Placeholder – research official OSH legislation |
 | PCN | Pitcairn Islands | docs/corpus/manifests/pitcairn_islands.json | pending | Placeholder – research official OSH legislation |
 | POL | Poland | docs/corpus/manifests/poland.json | pending | Placeholder – research official OSH legislation |
 | PRI | Puerto Rico | docs/corpus/manifests/puerto_rico.json | pending | Placeholder – research official OSH legislation |
