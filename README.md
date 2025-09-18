@@ -14,6 +14,16 @@ Command-line tools for turning LegisQuébec HTML into clean XHTML fragments, ann
 - `lrn/history.py` — history discovery, optional snapshotting, and HTML injection helpers.
 - `lrn/cli.py` — orchestrates the modules and exposes the `extract` subcommand / fetch-all entrypoint.
 
+
+## Documentation Map
+- Contributor playbooks: `AGENTS.MD`
+- Agent briefs: `docs/agents/`
+- Multitasking diagrams: `docs/diagrams/multitasking.md`
+- Corpus manifests: `docs/corpus/manifests/`
+- Manifest schema: `docs/corpus/manifest_schema.md`
+- WHO roster & progress: `docs/corpus/roster/`, `docs/corpus/member_state_progress.md`, `docs/corpus/who_rollout_plan.md`
+- Standards schema: `docs/standards/`
+
 ## Quick Start
 ```bash
 python -m lrn.cli extract --out-dir output path/to/local.html
@@ -47,6 +57,14 @@ python scripts/corpus_ingest.py --manifest docs/corpus/manifests/france.json --o
 python scripts/corpus_ingest.py --manifest docs/corpus/manifests/germany.json --out-dir output_de --log-dir logs/ingestion
 python scripts/corpus_ingest.py --manifest docs/corpus/manifests/japan.json --out-dir output_jp --log-dir logs/ingestion --resume
 python scripts/corpus_ingest.py --manifest docs/corpus/manifests/china.json --out-dir output_cn --log-dir logs/ingestion --resume
+
+# Governance helper
+python runner.py --self-test              # verify templates match
+python runner.py --apply --dry-run        # preview updates
+python runner.py --apply                  # sync governance templates
+
+# Generate manifests from roster
+python scripts/generate_manifests.py --preview
 ```
 CanLII-guarded portals (AB, NL, NS, NT, NU, YK) and Quebec City’s façade bylaw
 employ DataDome/anti-bot filters. Prime the download with
