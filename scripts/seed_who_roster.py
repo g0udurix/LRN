@@ -8,7 +8,7 @@ from pathlib import Path
 
 import requests
 
-WHO_MEMBERS_SOURCE = "https://restcountries.com/v3.1/all?fields=name,cca2,cca3"
+WHO_MEMBERS_SOURCE = "https://restcountries.com/v3.1/all?fields=name,cca2,cca3,independent,status"
 
 
 def fetch_countries() -> list[dict[str, str]]:
@@ -19,6 +19,10 @@ def fetch_countries() -> list[dict[str, str]]:
     for entry in data:
         name = entry.get("name", {}).get("common")
         if not name:
+            continue
+        independent = entry.get('independent', False)
+        status = entry.get('status', '')
+        if not (independent or status in {'official', 'officially-assigned'}):
             continue
         cca3 = entry.get("cca3") or entry.get("cca2") or name[:3].upper()
         countries.append({
@@ -81,9 +85,12 @@ def append_rows(path: Path, countries: list[dict[str, str]]) -> None:
 def main() -> int:
     parser = argparse.ArgumentParser(description="Seed WHO roster CSV with placeholder rows")
     parser.add_argument("--out", type=Path, default=Path("docs/corpus/roster/who_members.csv"))
+    parser.add_argument("--rewrite", action="store_true", help="Rewrite roster instead of appending")
     args = parser.parse_args()
 
     countries = fetch_countries()
+    if args.rewrite and args.out.exists():
+        args.out.unlink()
     append_rows(args.out, countries)
     return 0
 

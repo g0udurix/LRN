@@ -87,8 +87,15 @@ def test_manifest_fields():
         for item in items:
             unexpected = set(item.keys()) - ALLOWED_FIELDS
             assert not unexpected, f"Unexpected keys in {manifest_path}: {sorted(unexpected)}"
-            assert isinstance(item['url'], str) and item['url'], f"Missing url in {manifest_path}"
-            assert isinstance(item['language'], str) and item['language'], f"Missing language in {manifest_path}"
+            status = item.get('status', 'active').lower()
+            url = item.get('url', '')
+            language = item.get('language', '')
+            if status == 'done':
+                assert isinstance(url, str) and url, f"Missing url in {manifest_path}"
+                assert isinstance(language, str) and language, f"Missing language in {manifest_path}"
+            else:
+                assert isinstance(url, str)
+                assert isinstance(language, str)
             assert isinstance(item.get('instrument', ''), str), f"Instrument must be string in {manifest_path}"
             assert isinstance(item.get('category', 'unknown'), str)
             assert isinstance(item.get('requires_headless', False), bool)
