@@ -4,6 +4,16 @@
 | --- | --- | --- | --- | --- |
 | FRA | France | docs/corpus/manifests/france.json | done | DataDome headless required |
 | BRA | Brazil | docs/corpus/manifests/brazil.json | done | PDF NR-35 |
+| ISL | Iceland | docs/corpus/manifests/iceland.json | pending | Placeholder – research official OSH legislation |
+| IRQ | Iraq | docs/corpus/manifests/iraq.json | pending | Placeholder – research official OSH legislation |
+| IRL | Ireland | docs/corpus/manifests/ireland.json | pending | Placeholder – research official OSH legislation |
+| IMN | Isle of Man | docs/corpus/manifests/isle_of_man.json | pending | Placeholder – research official OSH legislation |
+| CIV | Ivory Coast | docs/corpus/manifests/ivory_coast.json | pending | Placeholder – research official OSH legislation |
+| JEY | Jersey | docs/corpus/manifests/jersey.json | pending | Placeholder – research official OSH legislation |
+| JOR | Jordan | docs/corpus/manifests/jordan.json | pending | Placeholder – research official OSH legislation |
+| KAZ | Kazakhstan | docs/corpus/manifests/kazakhstan.json | pending | Placeholder – research official OSH legislation |
+| KEN | Kenya | docs/corpus/manifests/kenya.json | pending | Placeholder – research official OSH legislation |
+| KIR | Kiribati | docs/corpus/manifests/kiribati.json | pending | Placeholder – research official OSH legislation |
 | GTM | Guatemala | docs/corpus/manifests/guatemala.json | pending | Placeholder – research official OSH legislation |
 | GGY | Guernsey | docs/corpus/manifests/guernsey.json | pending | Placeholder – research official OSH legislation |
 | GIN | Guinea | docs/corpus/manifests/guinea.json | pending | Placeholder – research official OSH legislation |
