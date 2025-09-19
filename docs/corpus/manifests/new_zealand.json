@@ -1,10 +1,13 @@
 [
   {
-    "url": "https://www.legislation.govt.nz/act/public/2015/0070/latest/whole.html",
+    "url": "https://www.legislation.govt.nz/act/public/2015/0070/latest/DLM5976660.html",
     "language": "en",
     "instrument": "NZ_HealthSafetyAtWorkAct_2015",
     "category": "national",
     "requires_headless": false,
-    "content_type": "html"
+    "content_type": "html",
+    "issue_ref": "docs/issues/newzealand-hsw-act.md",
+    "notes": "Health and Safety at Work Act 2015 (legislation.govt.nz).",
+    "status": "done"
   }
 ]

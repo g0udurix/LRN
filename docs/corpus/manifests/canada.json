@@ -1,12 +1,13 @@
 [
   {
-    "url": "",
-    "language": "",
-    "instrument": "",
-    "category": "national",
+    "url": "https://laws-lois.justice.gc.ca/eng/acts/L-2/page-9.html#docCont",
+    "language": "en",
+    "instrument": "CA_CanadaLabourCode_PartII",
+    "category": "federal",
     "requires_headless": false,
     "content_type": "html",
-    "status": "pending",
-    "notes": "Placeholder awaiting official occupational safety legislation URL."
+    "issue_ref": "docs/issues/canada-labour-code.md",
+    "notes": "Canada Labour Code Part II (Occupational Health and Safety).",
+    "status": "done"
   }
 ]

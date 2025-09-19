@@ -5,6 +5,9 @@
     "instrument": "NG_FactoriesAct_2004",
     "category": "national",
     "requires_headless": false,
-    "content_type": "pdf"
+    "content_type": "pdf",
+    "issue_ref": "docs/issues/nigeria-factories-act.md",
+    "notes": "Factories Act (Cap F1 LFN 2004) Nigeria.",
+    "status": "done"
   }
 ]

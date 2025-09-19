@@ -1,12 +1,13 @@
 [
   {
-    "url": "https://www.legislation.gov.au/Details/F2016C00382/Download",
+    "url": "https://www.legislation.gov.au/Series/F2011L02644",
     "language": "en",
-    "instrument": "AU_Model_WHS_Regulations"
-  },
-  {
-    "url": "https://www.legislation.gov.au/Details/F2017C00387/Download",
-    "language": "en",
-    "instrument": "AU_Model_WHS_Code_FallPrevention"
+    "instrument": "AU_Model_WHS_Regulations_2011",
+    "category": "national",
+    "requires_headless": false,
+    "content_type": "html",
+    "issue_ref": "docs/issues/australia-whs-regs.md",
+    "notes": "Model Work Health and Safety Regulations 2011 (legislation.gov.au).",
+    "status": "done"
   }
 ]

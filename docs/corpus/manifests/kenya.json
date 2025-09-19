@@ -1,12 +1,13 @@
 [
   {
-    "url": "",
-    "language": "",
-    "instrument": "",
+    "url": "https://labour.go.ke/download/the-occupational-safety-and-health-act-2007/",
+    "language": "en",
+    "instrument": "KE_OccupationalSafetyHealthAct_2007",
     "category": "national",
     "requires_headless": false,
-    "content_type": "html",
-    "status": "pending",
-    "notes": "Placeholder awaiting official occupational safety legislation URL."
+    "content_type": "pdf",
+    "issue_ref": "docs/issues/kenya-osh-act.md",
+    "notes": "Occupational Safety and Health Act, 2007 (Kenya).",
+    "status": "done"
   }
 ]

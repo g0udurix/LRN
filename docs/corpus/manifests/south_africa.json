@@ -1,10 +1,13 @@
 [
   {
-    "url": "https://www.gov.za/sites/default/files/gcis_document/201409/act-85-1993.pdf",
+    "url": "https://www.gov.za/documents/occupational-health-and-safety-act-85-1993-0",
     "language": "en",
     "instrument": "ZA_OccupationalHealthSafetyAct_1993",
     "category": "national",
     "requires_headless": false,
-    "content_type": "pdf"
+    "content_type": "html",
+    "issue_ref": "docs/issues/southafrica-ohs-act.md",
+    "notes": "Occupational Health and Safety Act 85 of 1993 (South Africa).",
+    "status": "done"
   }
 ]
