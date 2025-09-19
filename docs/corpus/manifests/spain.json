@@ -5,6 +5,9 @@
     "instrument": "ES_RD_1627_1997_Construction",
     "category": "national",
     "requires_headless": false,
-    "content_type": "html"
+    "content_type": "html",
+    "issue_ref": "docs/issues/spain-rd1627.md",
+    "notes": "Real Decreto 1627/1997 on minimum safety and health provisions at construction works.",
+    "status": "done"
   }
 ]

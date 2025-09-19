@@ -3,6 +3,7 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
+- Finalized manifests for Australia, New Zealand, Canada, South Africa, Kenya, Nigeria, Spain, Portugal, Netherlands, Sweden, and Finland with official sources and issue notes.
 - Added placeholder manifests for Zambia, Zimbabwe, and Åland Islands (status pending).
 - Added placeholder manifests for United States Virgin Islands, Uruguay, Uzbekistan, Vanuatu, Vatican City, Venezuela, Vietnam, Wallis and Futuna, Western Sahara, and Yemen (status pending).
 - Added placeholder manifests for Tunisia, Turkmenistan, Turks and Caicos Islands, Tuvalu, Uganda, Ukraine, United Arab Emirates, United Kingdom, United States, and United States Minor Outlying Islands (status pending).

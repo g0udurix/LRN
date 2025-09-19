@@ -2,9 +2,12 @@
   {
     "url": "https://www.finlex.fi/en/laki/kaannokset/2002/en20020738.pdf",
     "language": "en",
-    "instrument": "FI_OccupationalSafetyAct_738_2002",
+    "instrument": "FI_OccupationalSafetyHealthAct_738_2002",
     "category": "national",
     "requires_headless": false,
-    "content_type": "pdf"
+    "content_type": "pdf",
+    "issue_ref": "docs/issues/finland-osh-act.md",
+    "notes": "Occupational Safety and Health Act (738/2002) English translation on Finlex.",
+    "status": "done"
   }
 ]

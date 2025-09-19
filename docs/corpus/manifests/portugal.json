@@ -6,6 +6,8 @@
     "category": "national",
     "requires_headless": true,
     "content_type": "html",
-    "issue_ref": "docs/issues/portugal-dre-access.md"
+    "issue_ref": "docs/issues/portugal-dre-access.md",
+    "notes": "Lei n.º 102/2009 establishing the legal framework for safety and health at work.",
+    "status": "done"
   }
 ]

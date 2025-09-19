@@ -5,14 +5,9 @@
     "instrument": "NL_WorkingConditionsAct",
     "category": "national",
     "requires_headless": false,
-    "content_type": "html"
-  },
-  {
-    "url": "https://wetten.overheid.nl/BWBR0032921/2020-07-01",
-    "language": "nl",
-    "instrument": "NL_HealthSafetyDecree",
-    "category": "national",
-    "requires_headless": false,
-    "content_type": "html"
+    "content_type": "html",
+    "issue_ref": "docs/issues/netherlands-arbeidsomstandighedenwet.md",
+    "notes": "Arbeidsomstandighedenwet (Working Conditions Act) consolidated version.",
+    "status": "done"
   }
 ]

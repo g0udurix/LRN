@@ -5,6 +5,9 @@
     "instrument": "SE_AFS2006_4_WorkAtHeight",
     "category": "national",
     "requires_headless": false,
-    "content_type": "pdf"
+    "content_type": "pdf",
+    "issue_ref": "docs/issues/sweden-afs2006.md",
+    "notes": "Swedish Work Environment Authority provisions on work at height (AFS 2006:4).",
+    "status": "done"
   }
 ]

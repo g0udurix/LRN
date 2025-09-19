@@ -125,7 +125,7 @@
 | JEY | Jersey | docs/corpus/manifests/jersey.json | pending | Placeholder – research official OSH legislation |
 | JOR | Jordan | docs/corpus/manifests/jordan.json | pending | Placeholder – research official OSH legislation |
 | KAZ | Kazakhstan | docs/corpus/manifests/kazakhstan.json | pending | Placeholder – research official OSH legislation |
-| KEN | Kenya | docs/corpus/manifests/kenya.json | pending | Placeholder – research official OSH legislation |
+| KEN | Kenya | docs/corpus/manifests/kenya.json | done | Placeholder – research official OSH legislation |
 | KIR | Kiribati | docs/corpus/manifests/kiribati.json | pending | Placeholder – research official OSH legislation |
 | GTM | Guatemala | docs/corpus/manifests/guatemala.json | pending | Placeholder – research official OSH legislation |
 | GGY | Guernsey | docs/corpus/manifests/guernsey.json | pending | Placeholder – research official OSH legislation |
@@ -186,7 +186,7 @@
 | BDI | Burundi | docs/corpus/manifests/burundi.json | pending | Placeholder – research official OSH law |
 | KHM | Cambodia | docs/corpus/manifests/cambodia.json | pending | Placeholder – research official OSH law |
 | CMR | Cameroon | docs/corpus/manifests/cameroon.json | pending | Placeholder – research official OSH law |
-| CAN | Canada | docs/corpus/manifests/canada.json | pending | Placeholder – research official OSH law |
+| CAN | Canada | docs/corpus/manifests/canada.json | done | Placeholder – research official OSH law |
 | BGD | Bangladesh | docs/corpus/manifests/bangladesh.json | pending | Placeholder – research official OSH law |
 | BLR | Belarus | docs/corpus/manifests/belarus.json | pending | Placeholder – research official OSH law |
 | BEL | Belgium | docs/corpus/manifests/belgium.json | pending | Placeholder – research official OSH law |
