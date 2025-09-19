@@ -1,12 +1,13 @@
 [
   {
-    "url": "",
-    "language": "",
-    "instrument": "",
+    "url": "https://www.osha.gov/laws-regs/oshact/completeoshact",
+    "language": "en",
+    "instrument": "US_OccupationalSafetyHealthAct_1970",
     "category": "national",
     "requires_headless": false,
     "content_type": "html",
-    "status": "pending",
-    "notes": "Placeholder awaiting official occupational safety legislation URL."
+    "issue_ref": "docs/issues/us-osha-access.md",
+    "status": "done",
+    "notes": "OSH Act of 1970 consolidated page (osha.gov) covering federal OSH requirements."
   }
 ]

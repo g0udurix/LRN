@@ -1,12 +1,13 @@
 [
   {
-    "url": "",
-    "language": "",
-    "instrument": "",
+    "url": "https://www.mohre.gov.ae/-/media/Project/MOHRE/Media/mohre/pdf/uae-labour-law-federal-decree-law-no-33-of-2021_en.pdf",
+    "language": "en",
+    "instrument": "UAE_FederalDecreeLaw_33_2021",
     "category": "national",
     "requires_headless": false,
-    "content_type": "html",
-    "status": "pending",
-    "notes": "Placeholder awaiting official occupational safety legislation URL."
+    "content_type": "pdf",
+    "issue_ref": "docs/issues/uae-labour-law.md",
+    "status": "done",
+    "notes": "Federal Decree-Law No. 33 of 2021 on labour relations (OSH provisions)."
   }
 ]

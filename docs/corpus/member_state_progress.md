@@ -23,9 +23,9 @@
 | TUV | Tuvalu | docs/corpus/manifests/tuvalu.json | pending | Placeholder – research official OSH legislation |
 | UGA | Uganda | docs/corpus/manifests/uganda.json | pending | Placeholder – research official OSH legislation |
 | UKR | Ukraine | docs/corpus/manifests/ukraine.json | pending | Placeholder – research official OSH legislation |
-| ARE | United Arab Emirates | docs/corpus/manifests/united_arab_emirates.json | pending | Placeholder – research official OSH legislation |
-| GBR | United Kingdom | docs/corpus/manifests/united_kingdom.json | pending | Placeholder – research official OSH legislation |
-| USA | United States | docs/corpus/manifests/united_states.json | pending | Placeholder – research official OSH legislation |
+| ARE | United Arab Emirates | docs/corpus/manifests/united_arab_emirates.json | done | Placeholder – research official OSH legislation |
+| GBR | United Kingdom | docs/corpus/manifests/united_kingdom.json | done | Placeholder – research official OSH legislation |
+| USA | United States | docs/corpus/manifests/united_states.json | done | Placeholder – research official OSH legislation |
 | UMI | United States Minor Outlying Islands | docs/corpus/manifests/united_states_minor_outlying_islands.json | pending | Placeholder – research official OSH legislation |
 | CHE | Switzerland | docs/corpus/manifests/switzerland.json | pending | Placeholder – research official OSH legislation |
 | SYR | Syria | docs/corpus/manifests/syria.json | pending | Placeholder – research official OSH legislation |

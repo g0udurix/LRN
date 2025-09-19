@@ -1,12 +1,13 @@
 [
   {
-    "url": "",
-    "language": "",
-    "instrument": "",
+    "url": "https://www.legislation.gov.uk/uksi/2005/735/contents",
+    "language": "en",
+    "instrument": "UK_WorkAtHeight_Regulations_2005",
     "category": "national",
     "requires_headless": false,
     "content_type": "html",
-    "status": "pending",
-    "notes": "Placeholder awaiting official occupational safety legislation URL."
+    "issue_ref": "docs/issues/uk-work-at-height.md",
+    "status": "done",
+    "notes": "Work at Height Regulations 2005 (SI 2005/735) official UK legislation."
   }
 ]
