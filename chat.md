@@ -51,3 +51,4 @@
 - Added nineteenth placeholder batch (Switzerland, Syria, São Tomé and Príncipe, Taiwan, Tajikistan, Tanzania, Timor-Leste, Togo, Tokelau, Tonga); roster/progress updated.
 - Added twentieth placeholder batch (Tunisia, Turkmenistan, Turks and Caicos Islands, Tuvalu, Uganda, Ukraine, United Arab Emirates, United Kingdom, United States, United States Minor Outlying Islands); roster/progress updated.
 - Added twenty-first placeholder batch (United States Virgin Islands, Uruguay, Uzbekistan, Vanuatu, Vatican City, Venezuela, Vietnam, Wallis and Futuna, Western Sahara, Yemen); roster/progress updated.
+- Added final placeholder entries (Zambia, Zimbabwe, Åland Islands); roster/progress updated.

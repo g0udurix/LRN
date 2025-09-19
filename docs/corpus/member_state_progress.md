@@ -4,6 +4,9 @@
 | --- | --- | --- | --- | --- |
 | FRA | France | docs/corpus/manifests/france.json | done | DataDome headless required |
 | BRA | Brazil | docs/corpus/manifests/brazil.json | done | PDF NR-35 |
+| ZMB | Zambia | docs/corpus/manifests/zambia.json | pending | Placeholder – research official OSH legislation |
+| ZWE | Zimbabwe | docs/corpus/manifests/zimbabwe.json | pending | Placeholder – research official OSH legislation |
+| ALA | Åland Islands | docs/corpus/manifests/åland_islands.json | pending | Placeholder – research official OSH legislation |
 | VIR | United States Virgin Islands | docs/corpus/manifests/united_states_virgin_islands.json | pending | Placeholder – research official OSH legislation |
 | URY | Uruguay | docs/corpus/manifests/uruguay.json | pending | Placeholder – research official OSH legislation |
 | UZB | Uzbekistan | docs/corpus/manifests/uzbekistan.json | pending | Placeholder – research official OSH legislation |
